@@ -1,0 +1,128 @@
+
+
+	
+<html>
+<head>
+<topictype value="CLASSHEADER"/>
+<title>Class FileHandler</title>
+<LINK rel="stylesheet" type="text/css" href="templates/wwhelp.css">
+<SCRIPT SRC="templates/wwhelp.js"></SCRIPT>
+</head>
+<body leftmargin=0 topmargin=0>
+<table border=0 width="100%" bgcolor="lightblue" class="banner" cellspacing="3">
+<tr><td valign="center">
+
+
+<span class="projectname">OpenMedic Framework</span>
+</td></tr><tr><td>
+<span class="topicname">
+<img src="bmp/CLASSHEADER.gif"> Class FileHandler
+</span>
+</td></tr>
+</table>
+
+<div class="contentpane">
+<br>
+This class implements file-generic functionality.
+<br>
+
+
+
+<small>
+<br>
+<a href="http://msdn2.microsoft.com/en-us/library/System.Object.aspx" target="_1TY0XHK42">System.Object</a><br>
+&nbsp;&nbsp;<b>OpenMedIC.FileHandler</b><br>
+
+</small>
+
+
+
+
+
+<br>
+<table border="0" cellpadding="3" width="96%">
+<pre class="SyntaxBox">
+public class FileHandler : object
+</pre>
+</table>
+
+
+
+
+
+
+
+  
+
+<table border="0" cellpadding="3" width="95%">
+
+  
+</table>
+
+<h3 class="outdent">Class Members</h3>
+<br>
+<table class='detailtable' border='1' cellpadding='3' align='center' width='95%'><tr><th Width='165'>Member</td><th Width='350'>Description</td></tr><tr><td Align='Left' VAlign='Top'><img src="bmp/classconstructor.gif" align="left"> <a href="_1ty0xfpbm.htm" >Constructor</a></td>
+<td VAlign='Top'></td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classfield.gif" align="left"> <a href="_1ty0xfpc5.htm" >asciiValueDelim</a></td>
+<td VAlign='Top'>Sequence of characters that delimit values in an ASCII-value-formatted file, i.e. a file where the values are written as text rather than as binary  numbers.  This cannot be empty, and cannot start or end with one of these characters:  [0123456789+-.E] The value of this constant is RECOMMENDED TO BE an OpenMedICUtils.newLine, so the file can be read using the ReadLine(...) method(s).</td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classfield.gif" align="left"> <a href="_1ty0xfpc4.htm" >headerEndDelim</a></td>
+<td VAlign='Top'>Sequence of characters that mark the end of a header (and start of data).  Note that, in all cases, the headerEndDelim will be followed  by an asciiValueDelim before the actual data starts.</td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classfield.gif" align="left"> <a href="_1ty0xfpc1.htm" >headerRowLeader</a></td>
+<td VAlign='Top'>Sequence of characters that begins a header row.  The first character after the headerRowLeader sequence is the beginning of a header Tag.</td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classfield.gif" align="left"> <a href="_1ty0xfpc3.htm" >headerRowTrailer</a></td>
+<td VAlign='Top'>Sequence of characters that mark the end of a header row. Note that this CAN be empty and/or appear in a header value;  when parsing, you must look for either ( headerRowTrailer + headerRowLeader ) or ( headerRowTrailer + headerEndDelim ) as the end of the value. The value of this constant is RECOMMENDED TO BE an OpenMedICUtils.newLine, so the file can be read using the ReadLine(...) method(s).</td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classfield.gif" align="left"> <a href="_1ty0xfpc0.htm" >headerStartDelim</a></td>
+<td VAlign='Top'>Sequence of characters that indicate the start of a header.  When parsing, this should be looked for then thrown out.  If empty (""), then there is no start-of-header delimiter and none should be expected.</td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classfield.gif" align="left"> <a href="_1ty0xfpc2.htm" >headerTagDelim</a></td>
+<td VAlign='Top'>Sequence of characters that separate a tag from its value.  It cannot be empty, and it must be a sequence that will never appear in a tag.</td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classmethod.gif" align="left"> <a href="_1ty0xfpb7.htm" >cleanFileName</a></td>
+<td VAlign='Top'>Removes unwanted stuff from the passed file name. For now it just removes leading and trailing whitespace.<br><b><small>public static string cleanFileName( string fileName );</small></b></td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classmethod.gif" align="left"> <a href="_1ty0xfpb6.htm" >cleanPath</a></td>
+<td VAlign='Top'>Cleans up the passed path. For now it removes leading/trailing whitespace, and makes sure that the path ends with a delimiter.<br><b><small>public static string cleanPath( string inPath );</small></b></td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classmethod.gif" align="left"> <a href="_1ty0xfpap.htm" >clone</a></td>
+<td VAlign='Top'>Creates a new identical copy of this object.  The returned clone is completely independent of this object, and the two can be changed/updated/deleted without one affecting the other.<br><b><small>public FileHandler clone();</small></b></td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classmethod.gif" align="left"> <a href="_1ty0xfpb4.htm" >fileExists</a></td>
+<td VAlign='Top'>Determines whether the specified path/file exists on the current system<br><b><small>public static void fileExists( string filePathAndName );</small></b></td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classmethod.gif" align="left"> <a href="_1ty0xfpb5.htm" >fileNotExists</a></td>
+<td VAlign='Top'>Checks that the specified path/name, with or without certain used variants, do(es) not already exist.<br><b><small>public static void fileNotExists( string filePath,<br>	string fileName,<br>	bool withVariants );</small></b></td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classmethod.gif" align="left"> <a href="_1ty0xfpbk.htm" >getExt</a></td>
+<td VAlign='Top'>Extracts the extension from the file name;  if there is none, it returns an empty string ("").<br><b><small>public static string getExt( string fileName );</small></b></td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classmethod.gif" align="left"> <a href="_1ty0xfpbl.htm" >getTagFromLabel</a></td>
+<td VAlign='Top'>Returns the tag that the given value corresponds to, or throws an exception if there is no match. Note that the match must be exact and case-sensitive!<br><b><small>public static varTags getTagFromLabel( string tagValue );</small></b></td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classmethod.gif" align="left"> <a href="_1ty0xfpaq.htm" >setByTag</a></td>
+<td VAlign='Top'><br><b><small>public bool setByTag( varTags tag,<br>	string val );</small></b></td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classmethod.gif" align="left"> <a href="_1ty0xfpar.htm" >validatePath</a></td>
+<td VAlign='Top'>Determines whether filePath is a valid, existing path on the current system.<br><b><small>public static void validatePath( string filePath );</small></b></td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfpcf.htm" >dataFormat</a></td>
+<td VAlign='Top'>Data Formatting information (as text)</td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfpch.htm" >multiFileNum</a></td>
+<td VAlign='Top'>Current file number in a multi-file data set</td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfpci.htm" >startTime</a></td>
+<td VAlign='Top'>Data acquisition start time</td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfpcg.htm" >writerClassName</a></td>
+<td VAlign='Top'>Name of the class used to actually write the data</td></tr>
+</table><p>
+
+
+<h3 class="outdent">Requirements</h3>
+   
+
+<b>Namespace:</b> OpenMedIC<br>
+   
+
+   
+
+<b>Assembly:</b> openmedic.dll
+<br>
+   
+
+
+
+
+<br>
+</div>
+<hr>
+<small>Last Updated: <i>6/21/2006</i></small>
+
+<p><center><i>This page was generated by an unregistered version of <a href="http://www.west-wind.com/wwHelp">West Wind HTML Help Builder</a>.</span> <p></center></body>
+</html>

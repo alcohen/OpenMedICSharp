@@ -1,0 +1,705 @@
+<?xml version="1.0"?>
+<wwhelptopics>
+	<topic text="OpenMedic Framework" filename="INDEXPAGE" image="images/INDEX.gif" keywords="OpenMedic Framework;">
+	</topic>
+	<topic text="Class BuildingBlock" filename="_1TY0XFN5V" image="images/CLASSHEADER.gif" keywords="Class BuildingBlock;">
+		<topic text="BuildingBlock.addValue" filename="_1TY0XFN5W" image="images/CLASSMETHOD.gif" keywords="BuildingBlock.addValue;">
+		</topic>
+		<topic text="BuildingBlock.addValues" filename="_1TY0XFN5X" image="images/CLASSMETHOD.gif" keywords="BuildingBlock.addValues;">
+		</topic>
+	</topic>
+	<topic text="Class ChainInfo" filename="_1TY0XFNK7" image="images/CLASSHEADER.gif" keywords="Class ChainInfo;">
+		<topic text="ChainInfo Constructor" filename="_1TY0XFNKP" image="images/CLASSCONSTRUCTOR.gif" keywords="ChainInfo Constructor;">
+			<topic text="ChainInfo Constructor" filename="_1TY0XFNKQ" image="images/CLASSCONSTRUCTOR.gif" keywords="ChainInfo Constructor;">
+			</topic>
+		</topic>
+		<topic text="ChainInfo.clone" filename="_1TY0XFNKN" image="images/CLASSMETHOD.gif" keywords="ChainInfo.clone;">
+		</topic>
+		<topic text="ChainInfo.getTagFromValue" filename="_1TY0XFNKM" image="images/CLASSMETHOD.gif" keywords="ChainInfo.getTagFromValue;">
+		</topic>
+		<topic text="ChainInfo.getTagText" filename="_1TY0XFNK8" image="images/CLASSMETHOD.gif" keywords="ChainInfo.getTagText;">
+		</topic>
+		<topic text="ChainInfo.setByTag" filename="_1TY0XFNKO" image="images/CLASSMETHOD.gif" keywords="ChainInfo.setByTag;">
+		</topic>
+		<topic text="ChainInfo.dataInfo" filename="_1TY0XFNL3" image="images/CLASSPROPERTY.gif" keywords="ChainInfo.dataInfo;">
+		</topic>
+		<topic text="ChainInfo.fileInfo" filename="_1TY0XFNL5" image="images/CLASSPROPERTY.gif" keywords="ChainInfo.fileInfo;">
+		</topic>
+		<topic text="ChainInfo.patientInfo" filename="_1TY0XFNL4" image="images/CLASSPROPERTY.gif" keywords="ChainInfo.patientInfo;">
+		</topic>
+		<topic text="ChainInfo.samplingPeriodSec" filename="_1TY0XFNL2" image="images/CLASSPROPERTY.gif" keywords="ChainInfo.samplingPeriodSec;">
+		</topic>
+	</topic>
+	<topic text="Class CircularBuffer" filename="_1TY0XFNYY" image="images/CLASSHEADER.gif" keywords="Class CircularBuffer;">
+		<topic text="CircularBuffer Constructor" filename="_1TY0XFNZV" image="images/CLASSCONSTRUCTOR.gif" keywords="CircularBuffer Constructor;">
+		</topic>
+		<topic text="CircularBuffer.AddPoint" filename="_1TY0XFNZE" image="images/CLASSMETHOD.gif" keywords="CircularBuffer.AddPoint;">
+		</topic>
+		<topic text="CircularBuffer.AddPoints" filename="_1TY0XFNZF" image="images/CLASSMETHOD.gif" keywords="CircularBuffer.AddPoints;">
+		</topic>
+		<topic text="CircularBuffer.getPoint" filename="_1TY0XFNZU" image="images/CLASSMETHOD.gif" keywords="CircularBuffer.getPoint;">
+		</topic>
+		<topic text="CircularBuffer.GetPointsSince" filename="_1TY0XFNZH" image="images/CLASSMETHOD.gif" keywords="CircularBuffer.GetPointsSince;">
+			<topic text="CircularBuffer.GetPointsSince" filename="_1TY0XFNZT" image="images/CLASSMETHOD.gif" keywords="CircularBuffer.GetPointsSince;">
+			</topic>
+		</topic>
+		<topic text="CircularBuffer.Reset" filename="_1TY0XFNZG" image="images/CLASSMETHOD.gif" keywords="CircularBuffer.Reset;">
+		</topic>
+		<topic text="CircularBuffer.BuffLength" filename="_1TY0XFO09" image="images/CLASSPROPERTY.gif" keywords="CircularBuffer.BuffLength;">
+		</topic>
+		<topic text="CircularBuffer.CurrInputIndex" filename="_1TY0XFNZW" image="images/CLASSPROPERTY.gif" keywords="CircularBuffer.CurrInputIndex;">
+		</topic>
+	</topic>
+	<topic text="Class DataInfo" filename="_1TY0XFOE5" image="images/CLASSHEADER.gif" keywords="Class DataInfo;">
+		<topic text="DataInfo Constructor" filename="_1TY0XFOEK" image="images/CLASSCONSTRUCTOR.gif" keywords="DataInfo Constructor;">
+			<topic text="DataInfo Constructor" filename="_1TY0XFOEL" image="images/CLASSCONSTRUCTOR.gif" keywords="DataInfo Constructor;">
+			</topic>
+		</topic>
+		<topic text="DataInfo.clone" filename="_1TY0XFOE6" image="images/CLASSMETHOD.gif" keywords="DataInfo.clone;">
+		</topic>
+		<topic text="DataInfo.setByTag" filename="_1TY0XFOE7" image="images/CLASSMETHOD.gif" keywords="DataInfo.setByTag;">
+		</topic>
+		<topic text="DataInfo.BitsPerSample" filename="_1TY0XFOEO" image="images/CLASSPROPERTY.gif" keywords="DataInfo.BitsPerSample;">
+		</topic>
+		<topic text="DataInfo.DataDescription" filename="_1TY0XFOEM" image="images/CLASSPROPERTY.gif" keywords="DataInfo.DataDescription;">
+		</topic>
+		<topic text="DataInfo.FullScaleReferenceVoltage" filename="_1TY0XFOF0" image="images/CLASSPROPERTY.gif" keywords="DataInfo.FullScaleReferenceVoltage;">
+		</topic>
+		<topic text="DataInfo.ScaleMultiplier" filename="_1TY0XFOF1" image="images/CLASSPROPERTY.gif" keywords="DataInfo.ScaleMultiplier;">
+		</topic>
+		<topic text="DataInfo.StartDateTime" filename="_1TY0XFOEN" image="images/CLASSPROPERTY.gif" keywords="DataInfo.StartDateTime;">
+		</topic>
+		<topic text="DataInfo.ZeroOffset" filename="_1TY0XFOF2" image="images/CLASSPROPERTY.gif" keywords="DataInfo.ZeroOffset;">
+		</topic>
+		<topic text="DataInfo.ZeroReferenceVoltage" filename="_1TY0XFOEP" image="images/CLASSPROPERTY.gif" keywords="DataInfo.ZeroReferenceVoltage;">
+		</topic>
+	</topic>
+	<topic text="Class DataSource" filename="_1TY0XFOU7" image="images/CLASSHEADER.gif" keywords="Class DataSource;">
+		<topic text="DataSource Constructor" filename="_1TY0XFOUS" image="images/CLASSCONSTRUCTOR.gif" keywords="DataSource Constructor;">
+		</topic>
+		<topic text="DataSource.minTimerIntervalMSec" filename="_1TY0XFOV2" image="images/CLASSFIELD.gif" keywords="DataSource.minTimerIntervalMSec;">
+		</topic>
+		<topic text="DataSource.getNextValue" filename="_1TY0XFOUQ" image="images/CLASSMETHOD.gif" keywords="DataSource.getNextValue;">
+		</topic>
+		<topic text="DataSource.getNextValues" filename="_1TY0XFOUR" image="images/CLASSMETHOD.gif" keywords="DataSource.getNextValues;">
+		</topic>
+		<topic text="DataSource.init" filename="_1TY0XFOU8" image="images/CLASSMETHOD.gif" keywords="DataSource.init;">
+		</topic>
+		<topic text="DataSource.next" filename="_1TY0XFOUP" image="images/CLASSMETHOD.gif" keywords="DataSource.next;">
+		</topic>
+		<topic text="DataSource.pause" filename="_1TY0XFOUA" image="images/CLASSMETHOD.gif" keywords="DataSource.pause;">
+		</topic>
+		<topic text="DataSource.resume" filename="_1TY0XFOUN" image="images/CLASSMETHOD.gif" keywords="DataSource.resume;">
+		</topic>
+		<topic text="DataSource.Terminate" filename="_1TY0XFOU9" image="images/CLASSMETHOD.gif" keywords="DataSource.Terminate;">
+		</topic>
+		<topic text="DataSource.trigger" filename="_1TY0XFOUO" image="images/CLASSMETHOD.gif" keywords="DataSource.trigger;">
+		</topic>
+		<topic text="DataSource.autoOutput" filename="_1TY0XFOV4" image="images/CLASSPROPERTY.gif" keywords="DataSource.autoOutput;">
+		</topic>
+		<topic text="DataSource.stepSize" filename="_1TY0XFOV3" image="images/CLASSPROPERTY.gif" keywords="DataSource.stepSize;">
+		</topic>
+	</topic>
+	<topic text="Class FileHandler" filename="_1TY0XFPA9" image="images/CLASSHEADER.gif" keywords="Class FileHandler;">
+		<topic text="FileHandler Constructor" filename="_1TY0XFPBM" image="images/CLASSCONSTRUCTOR.gif" keywords="FileHandler Constructor;">
+		</topic>
+		<topic text="FileHandler.asciiValueDelim" filename="_1TY0XFPC5" image="images/CLASSFIELD.gif" keywords="FileHandler.asciiValueDelim;">
+		</topic>
+		<topic text="FileHandler.headerEndDelim" filename="_1TY0XFPC4" image="images/CLASSFIELD.gif" keywords="FileHandler.headerEndDelim;">
+		</topic>
+		<topic text="FileHandler.headerRowLeader" filename="_1TY0XFPC1" image="images/CLASSFIELD.gif" keywords="FileHandler.headerRowLeader;">
+		</topic>
+		<topic text="FileHandler.headerRowTrailer" filename="_1TY0XFPC3" image="images/CLASSFIELD.gif" keywords="FileHandler.headerRowTrailer;">
+		</topic>
+		<topic text="FileHandler.headerStartDelim" filename="_1TY0XFPC0" image="images/CLASSFIELD.gif" keywords="FileHandler.headerStartDelim;">
+		</topic>
+		<topic text="FileHandler.headerTagDelim" filename="_1TY0XFPC2" image="images/CLASSFIELD.gif" keywords="FileHandler.headerTagDelim;">
+		</topic>
+		<topic text="FileHandler.cleanFileName" filename="_1TY0XFPB7" image="images/CLASSMETHOD.gif" keywords="FileHandler.cleanFileName;">
+		</topic>
+		<topic text="FileHandler.cleanPath" filename="_1TY0XFPB6" image="images/CLASSMETHOD.gif" keywords="FileHandler.cleanPath;">
+		</topic>
+		<topic text="FileHandler.clone" filename="_1TY0XFPAP" image="images/CLASSMETHOD.gif" keywords="FileHandler.clone;">
+		</topic>
+		<topic text="FileHandler.fileExists" filename="_1TY0XFPB4" image="images/CLASSMETHOD.gif" keywords="FileHandler.fileExists;">
+		</topic>
+		<topic text="FileHandler.fileNotExists" filename="_1TY0XFPB5" image="images/CLASSMETHOD.gif" keywords="FileHandler.fileNotExists;">
+		</topic>
+		<topic text="FileHandler.getExt" filename="_1TY0XFPBK" image="images/CLASSMETHOD.gif" keywords="FileHandler.getExt;">
+		</topic>
+		<topic text="FileHandler.getTagFromLabel" filename="_1TY0XFPBL" image="images/CLASSMETHOD.gif" keywords="FileHandler.getTagFromLabel;">
+		</topic>
+		<topic text="FileHandler.setByTag" filename="_1TY0XFPAQ" image="images/CLASSMETHOD.gif" keywords="FileHandler.setByTag;">
+		</topic>
+		<topic text="FileHandler.validatePath" filename="_1TY0XFPAR" image="images/CLASSMETHOD.gif" keywords="FileHandler.validatePath;">
+		</topic>
+		<topic text="FileHandler.dataFormat" filename="_1TY0XFPCF" image="images/CLASSPROPERTY.gif" keywords="FileHandler.dataFormat;">
+		</topic>
+		<topic text="FileHandler.multiFileNum" filename="_1TY0XFPCH" image="images/CLASSPROPERTY.gif" keywords="FileHandler.multiFileNum;">
+		</topic>
+		<topic text="FileHandler.startTime" filename="_1TY0XFPCI" image="images/CLASSPROPERTY.gif" keywords="FileHandler.startTime;">
+		</topic>
+		<topic text="FileHandler.writerClassName" filename="_1TY0XFPCG" image="images/CLASSPROPERTY.gif" keywords="FileHandler.writerClassName;">
+		</topic>
+	</topic>
+	<topic text="Class FileReader" filename="_1TY0XFPTS" image="images/CLASSHEADER.gif" keywords="Class FileReader;">
+		<topic text="FileReader Constructor" filename="_1TY0XFPU9" image="images/CLASSCONSTRUCTOR.gif" keywords="FileReader Constructor;">
+			<topic text="FileReader Constructor" filename="_1TY0XFPUA" image="images/CLASSCONSTRUCTOR.gif" keywords="FileReader Constructor;">
+			</topic>
+		</topic>
+		<topic text="FileReader.init" filename="_1TY0XFPU8" image="images/CLASSMETHOD.gif" keywords="FileReader.init;">
+		</topic>
+		<topic text="FileReader.repeatAfterEndOfFile" filename="_1TY0XFPUN" image="images/CLASSPROPERTY.gif" keywords="FileReader.repeatAfterEndOfFile;">
+		</topic>
+	</topic>
+	<topic text="Class FileWriter" filename="_1TY0XFQDR" image="images/CLASSHEADER.gif" keywords="Class FileWriter;">
+		<topic text="FileWriter Constructor" filename="_1TY0XFQE8" image="images/CLASSCONSTRUCTOR.gif" keywords="FileWriter Constructor;">
+			<topic text="FileWriter Constructor" filename="_1TY0XFQE9" image="images/CLASSCONSTRUCTOR.gif" keywords="FileWriter Constructor;">
+			</topic>
+			<topic text="FileWriter Constructor" filename="_1TY0XFQEA" image="images/CLASSCONSTRUCTOR.gif" keywords="FileWriter Constructor;">
+			</topic>
+			<topic text="FileWriter Constructor" filename="_1TY0XFQEM" image="images/CLASSCONSTRUCTOR.gif" keywords="FileWriter Constructor;">
+			</topic>
+		</topic>
+		<topic text="FileWriter.addValue" filename="_1TY0XFQDT" image="images/CLASSMETHOD.gif" keywords="FileWriter.addValue;">
+		</topic>
+		<topic text="FileWriter.addValues" filename="_1TY0XFQE7" image="images/CLASSMETHOD.gif" keywords="FileWriter.addValues;">
+		</topic>
+		<topic text="FileWriter.init" filename="_1TY0XFQDS" image="images/CLASSMETHOD.gif" keywords="FileWriter.init;">
+		</topic>
+		<topic text="FileWriter.appendDateToFileName" filename="_1TY0XFQF7" image="images/CLASSPROPERTY.gif" keywords="FileWriter.appendDateToFileName;">
+		</topic>
+		<topic text="FileWriter.appendExistingFile" filename="_1TY0XFQF6" image="images/CLASSPROPERTY.gif" keywords="FileWriter.appendExistingFile;">
+		</topic>
+		<topic text="FileWriter.appendTimeToFileName" filename="_1TY0XFQF8" image="images/CLASSPROPERTY.gif" keywords="FileWriter.appendTimeToFileName;">
+		</topic>
+		<topic text="FileWriter.createNewFileDaily" filename="_1TY0XFQFH" image="images/CLASSPROPERTY.gif" keywords="FileWriter.createNewFileDaily;">
+		</topic>
+		<topic text="FileWriter.createNewFileWhenMaxSize" filename="_1TY0XFQFJ" image="images/CLASSPROPERTY.gif" keywords="FileWriter.createNewFileWhenMaxSize;">
+		</topic>
+		<topic text="FileWriter.fileFullName" filename="_1TY0XFQEP" image="images/CLASSPROPERTY.gif" keywords="FileWriter.fileFullName;">
+		</topic>
+		<topic text="FileWriter.fileName" filename="_1TY0XFQEO" image="images/CLASSPROPERTY.gif" keywords="FileWriter.fileName;">
+		</topic>
+		<topic text="FileWriter.filePath" filename="_1TY0XFQEN" image="images/CLASSPROPERTY.gif" keywords="FileWriter.filePath;">
+		</topic>
+		<topic text="FileWriter.filePathName" filename="_1TY0XFQF2" image="images/CLASSPROPERTY.gif" keywords="FileWriter.filePathName;">
+		</topic>
+		<topic text="FileWriter.maxAllowedFileSize" filename="_1TY0XFQFI" image="images/CLASSPROPERTY.gif" keywords="FileWriter.maxAllowedFileSize;">
+		</topic>
+		<topic text="FileWriter.overwriteExistingFile" filename="_1TY0XFQF5" image="images/CLASSPROPERTY.gif" keywords="FileWriter.overwriteExistingFile;">
+		</topic>
+		<topic text="FileWriter.valuesWriteMode" filename="_1TY0XFQF4" image="images/CLASSPROPERTY.gif" keywords="FileWriter.valuesWriteMode;">
+		</topic>
+		<topic text="FileWriter.writeValuesAsAscii" filename="_1TY0XFQF3" image="images/CLASSPROPERTY.gif" keywords="FileWriter.writeValuesAsAscii;">
+		</topic>
+	</topic>
+	<topic text="Class Filter" filename="_1TY0XFQVZ" image="images/CLASSHEADER.gif" keywords="Class Filter;">
+		<topic text="Filter Constructor" filename="_1TY0XFQW0" image="images/CLASSCONSTRUCTOR.gif" keywords="Filter Constructor;">
+		</topic>
+		<topic text="Filter.filterDelay" filename="_1TY0XFQWF" image="images/CLASSPROPERTY.gif" keywords="Filter.filterDelay;">
+		</topic>
+	</topic>
+	<topic text="Class FIRFilter" filename="_1TY0XFRQD" image="images/CLASSHEADER.gif" keywords="Class FIRFilter;">
+		<topic text="FIRFilter Constructor" filename="_1TY0XFRQG" image="images/CLASSCONSTRUCTOR.gif" keywords="FIRFilter Constructor;">
+		</topic>
+		<topic text="FIRFilter.addValue" filename="_1TY0XFRQE" image="images/CLASSMETHOD.gif" keywords="FIRFilter.addValue;">
+		</topic>
+		<topic text="FIRFilter.addValues" filename="_1TY0XFRQF" image="images/CLASSMETHOD.gif" keywords="FIRFilter.addValues;">
+		</topic>
+		<topic text="FIRFilter.Bypass" filename="_1TY0XFRQT" image="images/CLASSPROPERTY.gif" keywords="FIRFilter.Bypass;">
+		</topic>
+	</topic>
+	<topic text="Class FunctionGen" filename="_1TY0XFSAR" image="images/CLASSHEADER.gif" keywords="Class FunctionGen;">
+		<topic text="FunctionGen Constructor" filename="_1TY0XFSAT" image="images/CLASSCONSTRUCTOR.gif" keywords="FunctionGen Constructor;">
+		</topic>
+		<topic text="FunctionGen.init" filename="_1TY0XFSAS" image="images/CLASSMETHOD.gif" keywords="FunctionGen.init;">
+		</topic>
+		<topic text="FunctionGen.outputMultiplier" filename="_1TY0XFSB7" image="images/CLASSPROPERTY.gif" keywords="FunctionGen.outputMultiplier;">
+		</topic>
+	</topic>
+	<topic text="Class GraphBase" filename="_1TY0XFSW1" image="images/CLASSHEADER.gif" keywords="Class GraphBase;">
+		<topic text="GraphBase Constructor" filename="_1TY0XFSWW" image="images/CLASSCONSTRUCTOR.gif" keywords="GraphBase Constructor;">
+		</topic>
+		<topic text="GraphBase.XAxisChanged" filename="_1TY0XFSZY" image="images/CLASSEVENT.gif" keywords="GraphBase.XAxisChanged;">
+		</topic>
+		<topic text="GraphBase.YAxisChanged" filename="_1TY0XFSZZ" image="images/CLASSEVENT.gif" keywords="GraphBase.YAxisChanged;">
+		</topic>
+		<topic text="GraphBase.Reset" filename="_1TY0XFSWH" image="images/CLASSMETHOD.gif" keywords="GraphBase.Reset;">
+		</topic>
+		<topic text="GraphBase.AutoRedraw" filename="_1TY0XFSXC" image="images/CLASSPROPERTY.gif" keywords="GraphBase.AutoRedraw;">
+		</topic>
+		<topic text="GraphBase.BorderBevelWidth" filename="_1TY0XFSXD" image="images/CLASSPROPERTY.gif" keywords="GraphBase.BorderBevelWidth;">
+		</topic>
+		<topic text="GraphBase.BorderMargin" filename="_1TY0XFSXE" image="images/CLASSPROPERTY.gif" keywords="GraphBase.BorderMargin;">
+		</topic>
+		<topic text="GraphBase.Font" filename="_1TY0XFSXF" image="images/CLASSPROPERTY.gif" keywords="GraphBase.Font;">
+		</topic>
+		<topic text="GraphBase.ForeColor" filename="_1TY0XFSXG" image="images/CLASSPROPERTY.gif" keywords="GraphBase.ForeColor;">
+		</topic>
+		<topic text="GraphBase.GSBackColor" filename="_1TY0XFSXH" image="images/CLASSPROPERTY.gif" keywords="GraphBase.GSBackColor;">
+		</topic>
+		<topic text="GraphBase.GSBevelWidth" filename="_1TY0XFSXR" image="images/CLASSPROPERTY.gif" keywords="GraphBase.GSBevelWidth;">
+		</topic>
+		<topic text="GraphBase.GSBottom" filename="_1TY0XFSXS" image="images/CLASSPROPERTY.gif" keywords="GraphBase.GSBottom;">
+		</topic>
+		<topic text="GraphBase.GSLeft" filename="_1TY0XFSXT" image="images/CLASSPROPERTY.gif" keywords="GraphBase.GSLeft;">
+		</topic>
+		<topic text="GraphBase.GSRight" filename="_1TY0XFSXU" image="images/CLASSPROPERTY.gif" keywords="GraphBase.GSRight;">
+		</topic>
+		<topic text="GraphBase.GSTop" filename="_1TY0XFSXV" image="images/CLASSPROPERTY.gif" keywords="GraphBase.GSTop;">
+		</topic>
+		<topic text="GraphBase.PixelsPerXUnit" filename="_1TY0XFSXW" image="images/CLASSPROPERTY.gif" keywords="GraphBase.PixelsPerXUnit;">
+		</topic>
+		<topic text="GraphBase.PixelsPerYUnit" filename="_1TY0XFSY7" image="images/CLASSPROPERTY.gif" keywords="GraphBase.PixelsPerYUnit;">
+		</topic>
+		<topic text="GraphBase.RightToLeft" filename="_1TY0XFSY8" image="images/CLASSPROPERTY.gif" keywords="GraphBase.RightToLeft;">
+		</topic>
+		<topic text="GraphBase.TitleFont" filename="_1TY0XFSY9" image="images/CLASSPROPERTY.gif" keywords="GraphBase.TitleFont;">
+		</topic>
+		<topic text="GraphBase.TitleText" filename="_1TY0XFSYA" image="images/CLASSPROPERTY.gif" keywords="GraphBase.TitleText;">
+		</topic>
+		<topic text="GraphBase.WFColor" filename="_1TY0XFSYB" image="images/CLASSPROPERTY.gif" keywords="GraphBase.WFColor;">
+		</topic>
+		<topic text="GraphBase.WFWidth" filename="_1TY0XFSYC" image="images/CLASSPROPERTY.gif" keywords="GraphBase.WFWidth;">
+		</topic>
+		<topic text="GraphBase.XAxisDispMax" filename="_1TY0XFSYN" image="images/CLASSPROPERTY.gif" keywords="GraphBase.XAxisDispMax;">
+		</topic>
+		<topic text="GraphBase.XAxisDispMin" filename="_1TY0XFSYO" image="images/CLASSPROPERTY.gif" keywords="GraphBase.XAxisDispMin;">
+		</topic>
+		<topic text="GraphBase.XAxisNumberFont" filename="_1TY0XFSYP" image="images/CLASSPROPERTY.gif" keywords="GraphBase.XAxisNumberFont;">
+		</topic>
+		<topic text="GraphBase.XAxisNumberFormat" filename="_1TY0XFSYQ" image="images/CLASSPROPERTY.gif" keywords="GraphBase.XAxisNumberFormat;">
+		</topic>
+		<topic text="GraphBase.XAxisTicLength" filename="_1TY0XFSYR" image="images/CLASSPROPERTY.gif" keywords="GraphBase.XAxisTicLength;">
+		</topic>
+		<topic text="GraphBase.XAxisTicWidth" filename="_1TY0XFSZ2" image="images/CLASSPROPERTY.gif" keywords="GraphBase.XAxisTicWidth;">
+		</topic>
+		<topic text="GraphBase.YAxisCaptionFont" filename="_1TY0XFSZ3" image="images/CLASSPROPERTY.gif" keywords="GraphBase.YAxisCaptionFont;">
+		</topic>
+		<topic text="GraphBase.YAxisCaptionText" filename="_1TY0XFSZ4" image="images/CLASSPROPERTY.gif" keywords="GraphBase.YAxisCaptionText;">
+		</topic>
+		<topic text="GraphBase.YAxisDispMax" filename="_1TY0XFSZ5" image="images/CLASSPROPERTY.gif" keywords="GraphBase.YAxisDispMax;">
+		</topic>
+		<topic text="GraphBase.YAxisDispMin" filename="_1TY0XFSZ6" image="images/CLASSPROPERTY.gif" keywords="GraphBase.YAxisDispMin;">
+		</topic>
+		<topic text="GraphBase.YAxisMaxNumTics" filename="_1TY0XFSZI" image="images/CLASSPROPERTY.gif" keywords="GraphBase.YAxisMaxNumTics;">
+		</topic>
+		<topic text="GraphBase.YAxisNumberFont" filename="_1TY0XFSZJ" image="images/CLASSPROPERTY.gif" keywords="GraphBase.YAxisNumberFont;">
+		</topic>
+		<topic text="GraphBase.YAxisNumberFormat" filename="_1TY0XFSZK" image="images/CLASSPROPERTY.gif" keywords="GraphBase.YAxisNumberFormat;">
+		</topic>
+		<topic text="GraphBase.YAxisTicLength" filename="_1TY0XFSZL" image="images/CLASSPROPERTY.gif" keywords="GraphBase.YAxisTicLength;">
+		</topic>
+		<topic text="GraphBase.YAxisTicWidth" filename="_1TY0XFSZM" image="images/CLASSPROPERTY.gif" keywords="GraphBase.YAxisTicWidth;">
+		</topic>
+	</topic>
+	<topic text="Class NewDataTrigger" filename="_1TY0XFU7C" image="images/CLASSHEADER.gif" keywords="Class NewDataTrigger;">
+		<topic text="NewDataTrigger Constructor" filename="_1TY0XFU87" image="images/CLASSCONSTRUCTOR.gif" keywords="NewDataTrigger Constructor;">
+		</topic>
+		<topic text="NewDataTrigger.minRefreshMSec" filename="_1TY0XFU88" image="images/CLASSFIELD.gif" keywords="NewDataTrigger.minRefreshMSec;">
+		</topic>
+		<topic text="NewDataTrigger.addValue" filename="_1TY0XFU7T" image="images/CLASSMETHOD.gif" keywords="NewDataTrigger.addValue;">
+		</topic>
+		<topic text="NewDataTrigger.addValues" filename="_1TY0XFU7U" image="images/CLASSMETHOD.gif" keywords="NewDataTrigger.addValues;">
+		</topic>
+		<topic text="NewDataTrigger.init" filename="_1TY0XFU7S" image="images/CLASSMETHOD.gif" keywords="NewDataTrigger.init;">
+		</topic>
+	</topic>
+	<topic text="Class OpenMedICUtils" filename="_1TY0XFUNE" image="images/CLASSHEADER.gif" keywords="Class OpenMedICUtils;">
+		<topic text="OpenMedICUtils Constructor" filename="_1TY0XFUNW" image="images/CLASSCONSTRUCTOR.gif" keywords="OpenMedICUtils Constructor;">
+		</topic>
+		<topic text="OpenMedICUtils.debugMode" filename="_1TY0XFUO9" image="images/CLASSFIELD.gif" keywords="OpenMedICUtils.debugMode;">
+		</topic>
+		<topic text="OpenMedICUtils.doPrint" filename="_1TY0XFUOA" image="images/CLASSFIELD.gif" keywords="OpenMedICUtils.doPrint;">
+		</topic>
+		<topic text="OpenMedICUtils.newLine" filename="_1TY0XFUOB" image="images/CLASSFIELD.gif" keywords="OpenMedICUtils.newLine;">
+		</topic>
+		<topic text="OpenMedICUtils.debugPrint" filename="_1TY0XFUNV" image="images/CLASSMETHOD.gif" keywords="OpenMedICUtils.debugPrint;">
+		</topic>
+		<topic text="OpenMedICUtils.isEmpty" filename="_1TY0XFUNU" image="images/CLASSMETHOD.gif" keywords="OpenMedICUtils.isEmpty;">
+		</topic>
+	</topic>
+	<topic text="Class PassThroughFilter" filename="_1TY0XFV88" image="images/CLASSHEADER.gif" keywords="Class PassThroughFilter;">
+		<topic text="PassThroughFilter Constructor" filename="_1TY0XFV8P" image="images/CLASSCONSTRUCTOR.gif" keywords="PassThroughFilter Constructor;">
+		</topic>
+		<topic text="PassThroughFilter.addValue" filename="_1TY0XFV89" image="images/CLASSMETHOD.gif" keywords="PassThroughFilter.addValue;">
+		</topic>
+		<topic text="PassThroughFilter.addValues" filename="_1TY0XFV8O" image="images/CLASSMETHOD.gif" keywords="PassThroughFilter.addValues;">
+		</topic>
+	</topic>
+	<topic text="Class PatientInfo" filename="_1TY0XFVSN" image="images/CLASSHEADER.gif" keywords="Class PatientInfo;">
+		<topic text="PatientInfo Constructor" filename="_1TY0XFVV8" image="images/CLASSCONSTRUCTOR.gif" keywords="PatientInfo Constructor;">
+			<topic text="PatientInfo Constructor" filename="_1TY0XFVV9" image="images/CLASSCONSTRUCTOR.gif" keywords="PatientInfo Constructor;">
+			</topic>
+			<topic text="PatientInfo Constructor" filename="_1TY0XFVVO" image="images/CLASSCONSTRUCTOR.gif" keywords="PatientInfo Constructor;">
+			</topic>
+		</topic>
+		<topic text="PatientInfo.clone" filename="_1TY0XFVUU" image="images/CLASSMETHOD.gif" keywords="PatientInfo.clone;">
+		</topic>
+		<topic text="PatientInfo.setByTag" filename="_1TY0XFVUT" image="images/CLASSMETHOD.gif" keywords="PatientInfo.setByTag;">
+		</topic>
+		<topic text="PatientInfo.Addr1" filename="_1TY0XFVWJ" image="images/CLASSPROPERTY.gif" keywords="PatientInfo.Addr1;">
+		</topic>
+		<topic text="PatientInfo.Addr2" filename="_1TY0XFVWK" image="images/CLASSPROPERTY.gif" keywords="PatientInfo.Addr2;">
+		</topic>
+		<topic text="PatientInfo.Age" filename="_1TY0XFVX1" image="images/CLASSPROPERTY.gif" keywords="PatientInfo.Age;">
+		</topic>
+		<topic text="PatientInfo.City" filename="_1TY0XFVWL" image="images/CLASSPROPERTY.gif" keywords="PatientInfo.City;">
+		</topic>
+		<topic text="PatientInfo.Country" filename="_1TY0XFVX0" image="images/CLASSPROPERTY.gif" keywords="PatientInfo.Country;">
+		</topic>
+		<topic text="PatientInfo.DOB" filename="_1TY0XFVXE" image="images/CLASSPROPERTY.gif" keywords="PatientInfo.DOB;">
+		</topic>
+		<topic text="PatientInfo.DOBstring" filename="_1TY0XFVX2" image="images/CLASSPROPERTY.gif" keywords="PatientInfo.DOBstring;">
+		</topic>
+		<topic text="PatientInfo.FirstName" filename="_1TY0XFVVQ" image="images/CLASSPROPERTY.gif" keywords="PatientInfo.FirstName;">
+		</topic>
+		<topic text="PatientInfo.FullAddress" filename="_1TY0XFVXG" image="images/CLASSPROPERTY.gif" keywords="PatientInfo.FullAddress;">
+		</topic>
+		<topic text="PatientInfo.FullName" filename="_1TY0XFVXF" image="images/CLASSPROPERTY.gif" keywords="PatientInfo.FullName;">
+		</topic>
+		<topic text="PatientInfo.LastName" filename="_1TY0XFVW5" image="images/CLASSPROPERTY.gif" keywords="PatientInfo.LastName;">
+		</topic>
+		<topic text="PatientInfo.MiddleName" filename="_1TY0XFVW4" image="images/CLASSPROPERTY.gif" keywords="PatientInfo.MiddleName;">
+		</topic>
+		<topic text="PatientInfo.PatientID" filename="_1TY0XFVVP" image="images/CLASSPROPERTY.gif" keywords="PatientInfo.PatientID;">
+		</topic>
+		<topic text="PatientInfo.Prefix" filename="_1TY0XFVW6" image="images/CLASSPROPERTY.gif" keywords="PatientInfo.Prefix;">
+		</topic>
+		<topic text="PatientInfo.State" filename="_1TY0XFVWM" image="images/CLASSPROPERTY.gif" keywords="PatientInfo.State;">
+		</topic>
+		<topic text="PatientInfo.Suffix" filename="_1TY0XFVW7" image="images/CLASSPROPERTY.gif" keywords="PatientInfo.Suffix;">
+		</topic>
+		<topic text="PatientInfo.Zip" filename="_1TY0XFVWZ" image="images/CLASSPROPERTY.gif" keywords="PatientInfo.Zip;">
+		</topic>
+	</topic>
+	<topic text="Class RTGraph" filename="_1TY0XFWZL" image="images/CLASSHEADER.gif" keywords="Class RTGraph;">
+		<topic text="RTGraph Constructor" filename="_1TY0XFX02" image="images/CLASSCONSTRUCTOR.gif" keywords="RTGraph Constructor;">
+		</topic>
+		<topic text="RTGraph.DrawNew" filename="_1TY0XFWZN" image="images/CLASSMETHOD.gif" keywords="RTGraph.DrawNew;">
+		</topic>
+		<topic text="RTGraph.RedrawGraph" filename="_1TY0XFWZM" image="images/CLASSMETHOD.gif" keywords="RTGraph.RedrawGraph;">
+		</topic>
+		<topic text="RTGraph.Reset" filename="_1TY0XFX01" image="images/CLASSMETHOD.gif" keywords="RTGraph.Reset;">
+		</topic>
+		<topic text="RTGraph.CursColor" filename="_1TY0XFX0J" image="images/CLASSPROPERTY.gif" keywords="RTGraph.CursColor;">
+		</topic>
+		<topic text="RTGraph.CursForeWidth" filename="_1TY0XFX0I" image="images/CLASSPROPERTY.gif" keywords="RTGraph.CursForeWidth;">
+		</topic>
+		<topic text="RTGraph.CursWidth" filename="_1TY0XFX0H" image="images/CLASSPROPERTY.gif" keywords="RTGraph.CursWidth;">
+		</topic>
+		<topic text="RTGraph.WFThis" filename="_1TY0XFX0K" image="images/CLASSPROPERTY.gif" keywords="RTGraph.WFThis;">
+		</topic>
+		<topic text="RTGraph.XAxisDispMin" filename="_1TY0XFX0W" image="images/CLASSPROPERTY.gif" keywords="RTGraph.XAxisDispMin;">
+		</topic>
+	</topic>
+	<topic text="Class Sample" filename="_1TY0XFXHU" image="images/CLASSHEADER.gif" keywords="Class Sample;">
+		<topic text="Sample Constructor" filename="_1TY0XFXIQ" image="images/CLASSCONSTRUCTOR.gif" keywords="Sample Constructor;">
+			<topic text="Sample Constructor" filename="_1TY0XFXIR" image="images/CLASSCONSTRUCTOR.gif" keywords="Sample Constructor;">
+			</topic>
+		</topic>
+		<topic text="Sample.copyFrom" filename="_1TY0XFXHV" image="images/CLASSMETHOD.gif" keywords="Sample.copyFrom;">
+		</topic>
+		<topic text="Sample.copyTo" filename="_1TY0XFXI9" image="images/CLASSMETHOD.gif" keywords="Sample.copyTo;">
+		</topic>
+		<topic text="Sample.ToString" filename="_1TY0XFXIA" image="images/CLASSMETHOD.gif" keywords="Sample.ToString;">
+			<topic text="Sample.ToString" filename="_1TY0XFXIP" image="images/CLASSMETHOD.gif" keywords="Sample.ToString;">
+			</topic>
+		</topic>
+		<topic text="Sample.sampleValue" filename="_1TY0XFXJ5" image="images/CLASSPROPERTY.gif" keywords="Sample.sampleValue;">
+		</topic>
+	</topic>
+	<topic text="Class Samples" filename="_1TY0XFYDI" image="images/CLASSHEADER.gif" keywords="Class Samples;">
+		<topic text="Samples Constructor" filename="_1TY0XFYDZ" image="images/CLASSCONSTRUCTOR.gif" keywords="Samples Constructor;">
+		</topic>
+		<topic text="Samples.getRange" filename="_1TY0XFYDJ" image="images/CLASSMETHOD.gif" keywords="Samples.getRange;">
+		</topic>
+		<topic text="Samples.setRange" filename="_1TY0XFYDY" image="images/CLASSMETHOD.gif" keywords="Samples.setRange;">
+		</topic>
+		<topic text="Samples.Item" filename="_1TY0XFYEG" image="images/CLASSPROPERTY.gif" keywords="Samples.Item;">
+		</topic>
+		<topic text="Samples.maxSize" filename="_1TY0XFYEE" image="images/CLASSPROPERTY.gif" keywords="Samples.maxSize;">
+		</topic>
+		<topic text="Samples.size" filename="_1TY0XFYEF" image="images/CLASSPROPERTY.gif" keywords="Samples.size;">
+		</topic>
+	</topic>
+	<topic text="Class Sender" filename="_1TY0XFYWM" image="images/CLASSHEADER.gif" keywords="Class Sender;">
+		<topic text="Sender.addFollower" filename="_1TY0XFYX3" image="images/CLASSMETHOD.gif" keywords="Sender.addFollower;">
+		</topic>
+		<topic text="Sender.dropFollower" filename="_1TY0XFYXH" image="images/CLASSMETHOD.gif" keywords="Sender.dropFollower;">
+		</topic>
+		<topic text="Sender.init" filename="_1TY0XFYX2" image="images/CLASSMETHOD.gif" keywords="Sender.init;">
+		</topic>
+		<topic text="Sender.sendValue" filename="_1TY0XFYXI" image="images/CLASSMETHOD.gif" keywords="Sender.sendValue;">
+		</topic>
+		<topic text="Sender.sendValues" filename="_1TY0XFYXJ" image="images/CLASSMETHOD.gif" keywords="Sender.sendValues;">
+		</topic>
+		<topic text="Sender.Terminate" filename="_1TY0XFYX1" image="images/CLASSMETHOD.gif" keywords="Sender.Terminate;">
+		</topic>
+		<topic text="Sender.initDataValues" filename="_1TY0XFYXX" image="images/CLASSPROPERTY.gif" keywords="Sender.initDataValues;">
+		</topic>
+	</topic>
+	<topic text="Class SineWaveGen" filename="_1TY0XFZD4" image="images/CLASSHEADER.gif" keywords="Class SineWaveGen;">
+		<topic text="SineWaveGen Constructor" filename="_1TY0XFZD5" image="images/CLASSCONSTRUCTOR.gif" keywords="SineWaveGen Constructor;">
+		</topic>
+	</topic>
+	<topic text="Class SquareWaveGen" filename="_1TY0XFZRF" image="images/CLASSHEADER.gif" keywords="Class SquareWaveGen;">
+		<topic text="SquareWaveGen Constructor" filename="_1TY0XFZRG" image="images/CLASSCONSTRUCTOR.gif" keywords="SquareWaveGen Constructor;">
+		</topic>
+	</topic>
+	<topic text="Class TimerThread" filename="_1TY0XG0BE" image="images/CLASSHEADER.gif" keywords="Class TimerThread;">
+		<topic text="TimerThread Constructor" filename="_1TY0XG0EG" image="images/CLASSCONSTRUCTOR.gif" keywords="TimerThread Constructor;">
+		</topic>
+		<topic text="TimerThread.Pause" filename="_1TY0XG0E2" image="images/CLASSMETHOD.gif" keywords="TimerThread.Pause;">
+		</topic>
+		<topic text="TimerThread.Release" filename="_1TY0XG0BF" image="images/CLASSMETHOD.gif" keywords="TimerThread.Release;">
+		</topic>
+		<topic text="TimerThread.Resume" filename="_1TY0XG0EF" image="images/CLASSMETHOD.gif" keywords="TimerThread.Resume;">
+		</topic>
+		<topic text="TimerThread.Start" filename="_1TY0XG0E0" image="images/CLASSMETHOD.gif" keywords="TimerThread.Start;">
+		</topic>
+		<topic text="TimerThread.Stop" filename="_1TY0XG0E1" image="images/CLASSMETHOD.gif" keywords="TimerThread.Stop;">
+		</topic>
+	</topic>
+	<topic text="Class TriangleWaveGen" filename="_1TY0XG14W" image="images/CLASSHEADER.gif" keywords="Class TriangleWaveGen;">
+		<topic text="TriangleWaveGen Constructor" filename="_1TY0XG15C" image="images/CLASSCONSTRUCTOR.gif" keywords="TriangleWaveGen Constructor;">
+		</topic>
+	</topic>
+	<topic text="Class WaveformBuffer" filename="_1TY0XG25D" image="images/CLASSHEADER.gif" keywords="Class WaveformBuffer;">
+		<topic text="WaveformBuffer Constructor" filename="_1TY0XG27J" image="images/CLASSCONSTRUCTOR.gif" keywords="WaveformBuffer Constructor;">
+		</topic>
+		<topic text="WaveformBuffer.addValue" filename="_1TY0XG25E" image="images/CLASSMETHOD.gif" keywords="WaveformBuffer.addValue;">
+		</topic>
+		<topic text="WaveformBuffer.addValues" filename="_1TY0XG25T" image="images/CLASSMETHOD.gif" keywords="WaveformBuffer.addValues;">
+		</topic>
+		<topic text="WaveformBuffer.Clear" filename="_1TY0XG273" image="images/CLASSMETHOD.gif" keywords="WaveformBuffer.Clear;">
+		</topic>
+		<topic text="WaveformBuffer.getPoints" filename="_1TY0XG25U" image="images/CLASSMETHOD.gif" keywords="WaveformBuffer.getPoints;">
+			<topic text="WaveformBuffer.getPoints" filename="_1TY0XG268" image="images/CLASSMETHOD.gif" keywords="WaveformBuffer.getPoints;">
+			</topic>
+		</topic>
+		<topic text="WaveformBuffer.BufferSize" filename="_1TY0XG27L" image="images/CLASSPROPERTY.gif" keywords="WaveformBuffer.BufferSize;">
+		</topic>
+		<topic text="WaveformBuffer.CurrentInputIndex" filename="_1TY0XG27Z" image="images/CLASSPROPERTY.gif" keywords="WaveformBuffer.CurrentInputIndex;">
+		</topic>
+		<topic text="WaveformBuffer.NumSamples" filename="_1TY0XG280" image="images/CLASSPROPERTY.gif" keywords="WaveformBuffer.NumSamples;">
+		</topic>
+		<topic text="WaveformBuffer.samplePeriod" filename="_1TY0XG27K" image="images/CLASSPROPERTY.gif" keywords="WaveformBuffer.samplePeriod;">
+		</topic>
+	</topic>
+	<topic text="Class WaveGen" filename="_1TY0XG2O1" image="images/CLASSHEADER.gif" keywords="Class WaveGen;">
+		<topic text="WaveGen Constructor" filename="_1TY0XG2O2" image="images/CLASSCONSTRUCTOR.gif" keywords="WaveGen Constructor;">
+		</topic>
+		<topic text="WaveGen.frequency" filename="_1TY0XG2OG" image="images/CLASSPROPERTY.gif" keywords="WaveGen.frequency;">
+		</topic>
+	</topic>
+	<topic text="Class WFAnalysisDisplay" filename="_1TY0XG35T" image="images/CLASSHEADER.gif" keywords="Class WFAnalysisDisplay;">
+		<topic text="WFAnalysisDisplay Constructor" filename="_1TY0XG369" image="images/CLASSCONSTRUCTOR.gif" keywords="WFAnalysisDisplay Constructor;">
+		</topic>
+		<topic text="WFAnalysisDisplay.CursColor" filename="_1TY0XG375" image="images/CLASSPROPERTY.gif" keywords="WFAnalysisDisplay.CursColor;">
+		</topic>
+		<topic text="WFAnalysisDisplay.CursLineWidth" filename="_1TY0XG3CE" image="images/CLASSPROPERTY.gif" keywords="WFAnalysisDisplay.CursLineWidth;">
+		</topic>
+		<topic text="WFAnalysisDisplay.CursRadius" filename="_1TY0XG39Q" image="images/CLASSPROPERTY.gif" keywords="WFAnalysisDisplay.CursRadius;">
+		</topic>
+		<topic text="WFAnalysisDisplay.CursX" filename="_1TY0XG3AL" image="images/CLASSPROPERTY.gif" keywords="WFAnalysisDisplay.CursX;">
+		</topic>
+		<topic text="WFAnalysisDisplay.CursY" filename="_1TY0XG3B1" image="images/CLASSPROPERTY.gif" keywords="WFAnalysisDisplay.CursY;">
+		</topic>
+		<topic text="WFAnalysisDisplay.LastCursPos" filename="_1TY0XG3B2" image="images/CLASSPROPERTY.gif" keywords="WFAnalysisDisplay.LastCursPos;">
+		</topic>
+		<topic text="WFAnalysisDisplay.Period" filename="_1TY0XG374" image="images/CLASSPROPERTY.gif" keywords="WFAnalysisDisplay.Period;">
+		</topic>
+		<topic text="WFAnalysisDisplay.Waveform" filename="_1TY0XG36P" image="images/CLASSPROPERTY.gif" keywords="WFAnalysisDisplay.Waveform;">
+		</topic>
+		<topic text="WFAnalysisDisplay.WfStartTime" filename="_1TY0XG36R" image="images/CLASSPROPERTY.gif" keywords="WFAnalysisDisplay.WfStartTime;">
+		</topic>
+		<topic text="WFAnalysisDisplay.WfVisible" filename="_1TY0XG36Q" image="images/CLASSPROPERTY.gif" keywords="WFAnalysisDisplay.WfVisible;">
+		</topic>
+		<topic text="WFAnalysisDisplay.XMajorGridColor" filename="_1TY0XG3BH" image="images/CLASSPROPERTY.gif" keywords="WFAnalysisDisplay.XMajorGridColor;">
+		</topic>
+		<topic text="WFAnalysisDisplay.XMajorGridInterval" filename="_1TY0XG3B3" image="images/CLASSPROPERTY.gif" keywords="WFAnalysisDisplay.XMajorGridInterval;">
+		</topic>
+		<topic text="WFAnalysisDisplay.XMinorGridColor" filename="_1TY0XG3BW" image="images/CLASSPROPERTY.gif" keywords="WFAnalysisDisplay.XMinorGridColor;">
+		</topic>
+		<topic text="WFAnalysisDisplay.XMinorGridInterval" filename="_1TY0XG3BI" image="images/CLASSPROPERTY.gif" keywords="WFAnalysisDisplay.XMinorGridInterval;">
+		</topic>
+		<topic text="WFAnalysisDisplay.YMajorGridColor" filename="_1TY0XG3BY" image="images/CLASSPROPERTY.gif" keywords="WFAnalysisDisplay.YMajorGridColor;">
+		</topic>
+		<topic text="WFAnalysisDisplay.YMajorGridInterval" filename="_1TY0XG3BX" image="images/CLASSPROPERTY.gif" keywords="WFAnalysisDisplay.YMajorGridInterval;">
+		</topic>
+		<topic text="WFAnalysisDisplay.YMinorGridColor" filename="_1TY0XG3CD" image="images/CLASSPROPERTY.gif" keywords="WFAnalysisDisplay.YMinorGridColor;">
+		</topic>
+		<topic text="WFAnalysisDisplay.YMinorGridInterval" filename="_1TY0XG3CC" image="images/CLASSPROPERTY.gif" keywords="WFAnalysisDisplay.YMinorGridInterval;">
+		</topic>
+	</topic>
+	<topic text="Class WfdbAccess" filename="_1TY0XG3UK" image="images/CLASSHEADER.gif" keywords="Class WfdbAccess;">
+		<topic text="WfdbAccess.newLine" filename="_1TY0XG3X6" image="images/CLASSFIELD.gif" keywords="WfdbAccess.newLine;">
+		</topic>
+		<topic text="WfdbAccess.CloseAnnotation" filename="_1TY0XG3WR" image="images/CLASSMETHOD.gif" keywords="WfdbAccess.CloseAnnotation;">
+		</topic>
+		<topic text="WfdbAccess.CloseWfdb" filename="_1TY0XG3V1" image="images/CLASSMETHOD.gif" keywords="WfdbAccess.CloseWfdb;">
+		</topic>
+		<topic text="WfdbAccess.GetAnnotation" filename="_1TY0XG3WQ" image="images/CLASSMETHOD.gif" keywords="WfdbAccess.GetAnnotation;">
+		</topic>
+		<topic text="WfdbAccess.GetErrMsgFromReturnID" filename="_1TY0XG3V2" image="images/CLASSMETHOD.gif" keywords="WfdbAccess.GetErrMsgFromReturnID;">
+		</topic>
+		<topic text="WfdbAccess.GetHeaderInfoStrings" filename="_1TY0XG3VW" image="images/CLASSMETHOD.gif" keywords="WfdbAccess.GetHeaderInfoStrings;">
+		</topic>
+		<topic text="WfdbAccess.GetSamplingFrequency" filename="_1TY0XG3VG" image="images/CLASSMETHOD.gif" keywords="WfdbAccess.GetSamplingFrequency;">
+		</topic>
+		<topic text="WfdbAccess.GetSearchPath" filename="_1TY0XG3UL" image="images/CLASSMETHOD.gif" keywords="WfdbAccess.GetSearchPath;">
+		</topic>
+		<topic text="WfdbAccess.GetSigInfoArray" filename="_1TY0XG3VX" image="images/CLASSMETHOD.gif" keywords="WfdbAccess.GetSigInfoArray;">
+		</topic>
+		<topic text="WfdbAccess.GetSignalCount" filename="_1TY0XG3VF" image="images/CLASSMETHOD.gif" keywords="WfdbAccess.GetSignalCount;">
+		</topic>
+		<topic text="WfdbAccess.GetSignalFrame" filename="_1TY0XG3WB" image="images/CLASSMETHOD.gif" keywords="WfdbAccess.GetSignalFrame;">
+		</topic>
+		<topic text="WfdbAccess.GetSignalInfo" filename="_1TY0XG3VV" image="images/CLASSMETHOD.gif" keywords="WfdbAccess.GetSignalInfo;">
+		</topic>
+		<topic text="WfdbAccess.OpenAnnotation" filename="_1TY0XG3WC" image="images/CLASSMETHOD.gif" keywords="WfdbAccess.OpenAnnotation;">
+		</topic>
+		<topic text="WfdbAccess.SetSearchPath" filename="_1TY0XG3V0" image="images/CLASSMETHOD.gif" keywords="WfdbAccess.SetSearchPath;">
+		</topic>
+	</topic>
+	<topic text="Class WfdbException" filename="_1TY0XG4BH" image="images/CLASSHEADER.gif" keywords="Class WfdbException;">
+	</topic>
+	<topic text="Class WfdbReader" filename="_1TY0XG4UL" image="images/CLASSHEADER.gif" keywords="Class WfdbReader;">
+		<topic text="WfdbReader Constructor" filename="_1TY0XG4V2" image="images/CLASSCONSTRUCTOR.gif" keywords="WfdbReader Constructor;">
+		</topic>
+		<topic text="WfdbReader.init" filename="_1TY0XG4UM" image="images/CLASSMETHOD.gif" keywords="WfdbReader.init;">
+		</topic>
+		<topic text="WfdbReader.ReleaseWfdb" filename="_1TY0XG4V1" image="images/CLASSMETHOD.gif" keywords="WfdbReader.ReleaseWfdb;">
+		</topic>
+		<topic text="WfdbReader.recordComplete" filename="_1TY0XG4VH" image="images/CLASSPROPERTY.gif" keywords="WfdbReader.recordComplete;">
+		</topic>
+		<topic text="WfdbReader.SamplingPeriod" filename="_1TY0XG4VG" image="images/CLASSPROPERTY.gif" keywords="WfdbReader.SamplingPeriod;">
+		</topic>
+		<topic text="WfdbReader.WfdbPath" filename="_1TY0XG4VW" image="images/CLASSPROPERTY.gif" keywords="WfdbReader.WfdbPath;">
+		</topic>
+	</topic>
+	<topic text="Delegate refreshDelegate" filename="_1TY0XFWGI" image="images/DELEGATE.gif" keywords="Delegate refreshDelegate;">
+		<topic text="refreshDelegate Constructor" filename="_1TY0XFWHE" image="images/CLASSCONSTRUCTOR.gif" keywords="refreshDelegate Constructor;">
+		</topic>
+		<topic text="refreshDelegate.BeginInvoke" filename="_1TY0XFWGZ" image="images/CLASSMETHOD.gif" keywords="refreshDelegate.BeginInvoke;">
+		</topic>
+		<topic text="refreshDelegate.EndInvoke" filename="_1TY0XFWHD" image="images/CLASSMETHOD.gif" keywords="refreshDelegate.EndInvoke;">
+		</topic>
+		<topic text="refreshDelegate.Invoke" filename="_1TY0XFWGY" image="images/CLASSMETHOD.gif" keywords="refreshDelegate.Invoke;">
+		</topic>
+	</topic>
+	<topic text="Delegate XAxisChangedHandler" filename="_1TY0XG5D9" image="images/DELEGATE.gif" keywords="Delegate XAxisChangedHandler;">
+		<topic text="XAxisChangedHandler Constructor" filename="_1TY0XG5DP" image="images/CLASSCONSTRUCTOR.gif" keywords="XAxisChangedHandler Constructor;">
+		</topic>
+		<topic text="XAxisChangedHandler.BeginInvoke" filename="_1TY0XG5DB" image="images/CLASSMETHOD.gif" keywords="XAxisChangedHandler.BeginInvoke;">
+		</topic>
+		<topic text="XAxisChangedHandler.EndInvoke" filename="_1TY0XG5DO" image="images/CLASSMETHOD.gif" keywords="XAxisChangedHandler.EndInvoke;">
+		</topic>
+		<topic text="XAxisChangedHandler.Invoke" filename="_1TY0XG5DA" image="images/CLASSMETHOD.gif" keywords="XAxisChangedHandler.Invoke;">
+		</topic>
+	</topic>
+	<topic text="Delegate YAxisChangedHandler" filename="_1TY0XG5RK" image="images/DELEGATE.gif" keywords="Delegate YAxisChangedHandler;">
+		<topic text="YAxisChangedHandler Constructor" filename="_1TY0XG5SG" image="images/CLASSCONSTRUCTOR.gif" keywords="YAxisChangedHandler Constructor;">
+		</topic>
+		<topic text="YAxisChangedHandler.BeginInvoke" filename="_1TY0XG5S0" image="images/CLASSMETHOD.gif" keywords="YAxisChangedHandler.BeginInvoke;">
+		</topic>
+		<topic text="YAxisChangedHandler.EndInvoke" filename="_1TY0XG5S1" image="images/CLASSMETHOD.gif" keywords="YAxisChangedHandler.EndInvoke;">
+		</topic>
+		<topic text="YAxisChangedHandler.Invoke" filename="_1TY0XG5RL" image="images/CLASSMETHOD.gif" keywords="YAxisChangedHandler.Invoke;">
+		</topic>
+	</topic>
+	<topic text="Enumeration BevelDirection" filename="_1TY0XFMB2" image="images/ENUM.gif" keywords="Enumeration BevelDirection;">
+		<topic text="BevelDirection.Inward" filename="_1TY0XFMBH" image="images/CLASSFIELD.gif" keywords="BevelDirection.Inward;">
+		</topic>
+		<topic text="BevelDirection.Outward" filename="_1TY0XFMB3" image="images/CLASSFIELD.gif" keywords="BevelDirection.Outward;">
+		</topic>
+	</topic>
+	<topic text="Enumeration BevelStyle" filename="_1TY0XFMPD" image="images/ENUM.gif" keywords="Enumeration BevelStyle;">
+		<topic text="BevelStyle.Raised" filename="_1TY0XFMPU" image="images/CLASSFIELD.gif" keywords="BevelStyle.Raised;">
+		</topic>
+		<topic text="BevelStyle.Sunk" filename="_1TY0XFMPT" image="images/CLASSFIELD.gif" keywords="BevelStyle.Sunk;">
+		</topic>
+	</topic>
+	<topic text="Enumeration filterTypes" filename="_1TY0XFRAB" image="images/ENUM.gif" keywords="Enumeration filterTypes;">
+		<topic text="filterTypes.FIR" filename="_1TY0XFRAR" image="images/CLASSFIELD.gif" keywords="filterTypes.FIR;">
+		</topic>
+		<topic text="filterTypes.IIR" filename="_1TY0XFRAQ" image="images/CLASSFIELD.gif" keywords="filterTypes.IIR;">
+		</topic>
+		<topic text="filterTypes.Other" filename="_1TY0XFRAS" image="images/CLASSFIELD.gif" keywords="filterTypes.Other;">
+		</topic>
+	</topic>
+	<topic text="Enumeration LastCall" filename="_1TY0XFTSL" image="images/ENUM.gif" keywords="Enumeration LastCall;">
+		<topic text="LastCall.LastCall_SignalCount" filename="_1TY0XFTT0" image="images/CLASSFIELD.gif" keywords="LastCall.LastCall_SignalCount;">
+		</topic>
+		<topic text="LastCall.LastCall_SignalInfo" filename="_1TY0XFTT1" image="images/CLASSFIELD.gif" keywords="LastCall.LastCall_SignalInfo;">
+		</topic>
+	</topic>
+	<topic text="Enumeration varTags" filename="_1TY0XG1MP" image="images/ENUM.gif" keywords="Enumeration varTags;">
+		<topic text="varTags.Addr1" filename="_1TY0XG1PC" image="images/CLASSFIELD.gif" keywords="varTags.Addr1;">
+		</topic>
+		<topic text="varTags.Addr2" filename="_1TY0XG1PD" image="images/CLASSFIELD.gif" keywords="varTags.Addr2;">
+		</topic>
+		<topic text="varTags.Age" filename="_1TY0XG1Q6" image="images/CLASSFIELD.gif" keywords="varTags.Age;">
+		</topic>
+		<topic text="varTags.bitsPerSample" filename="_1TY0XG1O2" image="images/CLASSFIELD.gif" keywords="varTags.bitsPerSample;">
+		</topic>
+		<topic text="varTags.City" filename="_1TY0XG1PE" image="images/CLASSFIELD.gif" keywords="varTags.City;">
+		</topic>
+		<topic text="varTags.Country" filename="_1TY0XG1PS" image="images/CLASSFIELD.gif" keywords="varTags.Country;">
+		</topic>
+		<topic text="varTags.dataDescription" filename="_1TY0XG1O0" image="images/CLASSFIELD.gif" keywords="varTags.dataDescription;">
+		</topic>
+		<topic text="varTags.dataFormat" filename="_1TY0XG1NK" image="images/CLASSFIELD.gif" keywords="varTags.dataFormat;">
+		</topic>
+		<topic text="varTags.DOB" filename="_1TY0XG1Q7" image="images/CLASSFIELD.gif" keywords="varTags.DOB;">
+		</topic>
+		<topic text="varTags.FirstName" filename="_1TY0XG1OX" image="images/CLASSFIELD.gif" keywords="varTags.FirstName;">
+		</topic>
+		<topic text="varTags.FullAddress" filename="_1TY0XG1Q9" image="images/CLASSFIELD.gif" keywords="varTags.FullAddress;">
+		</topic>
+		<topic text="varTags.FullName" filename="_1TY0XG1Q8" image="images/CLASSFIELD.gif" keywords="varTags.FullName;">
+		</topic>
+		<topic text="varTags.fullScaleReferenceVoltage" filename="_1TY0XG1OG" image="images/CLASSFIELD.gif" keywords="varTags.fullScaleReferenceVoltage;">
+		</topic>
+		<topic text="varTags.LastName" filename="_1TY0XG1OZ" image="images/CLASSFIELD.gif" keywords="varTags.LastName;">
+		</topic>
+		<topic text="varTags.MiddleName" filename="_1TY0XG1OY" image="images/CLASSFIELD.gif" keywords="varTags.MiddleName;">
+		</topic>
+		<topic text="varTags.multiFileNum" filename="_1TY0XG1NM" image="images/CLASSFIELD.gif" keywords="varTags.multiFileNum;">
+		</topic>
+		<topic text="varTags.PatientID" filename="_1TY0XG1PT" image="images/CLASSFIELD.gif" keywords="varTags.PatientID;">
+		</topic>
+		<topic text="varTags.Prefix" filename="_1TY0XG1OW" image="images/CLASSFIELD.gif" keywords="varTags.Prefix;">
+		</topic>
+		<topic text="varTags.samplingPeriodSec" filename="_1TY0XG1N5" image="images/CLASSFIELD.gif" keywords="varTags.samplingPeriodSec;">
+		</topic>
+		<topic text="varTags.scaleMultiplier" filename="_1TY0XG1OH" image="images/CLASSFIELD.gif" keywords="varTags.scaleMultiplier;">
+		</topic>
+		<topic text="varTags.startDateTime" filename="_1TY0XG1O1" image="images/CLASSFIELD.gif" keywords="varTags.startDateTime;">
+		</topic>
+		<topic text="varTags.startTime" filename="_1TY0XG1NN" image="images/CLASSFIELD.gif" keywords="varTags.startTime;">
+		</topic>
+		<topic text="varTags.State" filename="_1TY0XG1PQ" image="images/CLASSFIELD.gif" keywords="varTags.State;">
+		</topic>
+		<topic text="varTags.Suffix" filename="_1TY0XG1PB" image="images/CLASSFIELD.gif" keywords="varTags.Suffix;">
+		</topic>
+		<topic text="varTags.writerClassName" filename="_1TY0XG1NL" image="images/CLASSFIELD.gif" keywords="varTags.writerClassName;">
+		</topic>
+		<topic text="varTags.zeroOffset" filename="_1TY0XG1OV" image="images/CLASSFIELD.gif" keywords="varTags.zeroOffset;">
+		</topic>
+		<topic text="varTags.zeroReferenceVoltage" filename="_1TY0XG1O3" image="images/CLASSFIELD.gif" keywords="varTags.zeroReferenceVoltage;">
+		</topic>
+		<topic text="varTags.Zip" filename="_1TY0XG1PR" image="images/CLASSFIELD.gif" keywords="varTags.Zip;">
+		</topic>
+	</topic>
+	<topic text="Interface IReceiver" filename="_1TY0XFTEP" image="images/INTERFACE.gif" keywords="Interface IReceiver;">
+		<topic text="IReceiver.addValue" filename="_1TY0XFTF4" image="images/CLASSMETHOD.gif" keywords="IReceiver.addValue;">
+		</topic>
+		<topic text="IReceiver.addValues" filename="_1TY0XFTF5" image="images/CLASSMETHOD.gif" keywords="IReceiver.addValues;">
+		</topic>
+		<topic text="IReceiver.init" filename="_1TY0XFTEQ" image="images/CLASSMETHOD.gif" keywords="IReceiver.init;">
+		</topic>
+	</topic>
+</wwhelptopics>

@@ -1,0 +1,1856 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+</HEAD><BODY>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="OpenMedic Framework">
+		<param name="Local" value="INDEXPAGE.htm">
+		<param name="ImageNumber" value="3">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class BuildingBlock">
+		<param name="Local" value="_1TY0XFN5V.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="addValue">
+		<param name="Local" value="_1TY0XFN5W.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="addValues">
+		<param name="Local" value="_1TY0XFN5X.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class ChainInfo">
+		<param name="Local" value="_1TY0XFNK7.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFNKP.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFNKQ.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="clone">
+		<param name="Local" value="_1TY0XFNKN.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="getTagFromValue">
+		<param name="Local" value="_1TY0XFNKM.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="getTagText">
+		<param name="Local" value="_1TY0XFNK8.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="setByTag">
+		<param name="Local" value="_1TY0XFNKO.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="dataInfo">
+		<param name="Local" value="_1TY0XFNL3.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="fileInfo">
+		<param name="Local" value="_1TY0XFNL5.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="patientInfo">
+		<param name="Local" value="_1TY0XFNL4.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="samplingPeriodSec">
+		<param name="Local" value="_1TY0XFNL2.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class CircularBuffer">
+		<param name="Local" value="_1TY0XFNYY.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFNZV.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="AddPoint">
+		<param name="Local" value="_1TY0XFNZE.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="AddPoints">
+		<param name="Local" value="_1TY0XFNZF.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="getPoint">
+		<param name="Local" value="_1TY0XFNZU.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetPointsSince">
+		<param name="Local" value="_1TY0XFNZH.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetPointsSince">
+		<param name="Local" value="_1TY0XFNZT.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Reset">
+		<param name="Local" value="_1TY0XFNZG.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="BuffLength">
+		<param name="Local" value="_1TY0XFO09.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CurrInputIndex">
+		<param name="Local" value="_1TY0XFNZW.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class DataInfo">
+		<param name="Local" value="_1TY0XFOE5.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFOEK.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFOEL.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="clone">
+		<param name="Local" value="_1TY0XFOE6.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="setByTag">
+		<param name="Local" value="_1TY0XFOE7.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="BitsPerSample">
+		<param name="Local" value="_1TY0XFOEO.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DataDescription">
+		<param name="Local" value="_1TY0XFOEM.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FullScaleReferenceVoltage">
+		<param name="Local" value="_1TY0XFOF0.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ScaleMultiplier">
+		<param name="Local" value="_1TY0XFOF1.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="StartDateTime">
+		<param name="Local" value="_1TY0XFOEN.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ZeroOffset">
+		<param name="Local" value="_1TY0XFOF2.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ZeroReferenceVoltage">
+		<param name="Local" value="_1TY0XFOEP.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class DataSource">
+		<param name="Local" value="_1TY0XFOU7.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFOUS.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="minTimerIntervalMSec">
+		<param name="Local" value="_1TY0XFOV2.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="getNextValue">
+		<param name="Local" value="_1TY0XFOUQ.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="getNextValues">
+		<param name="Local" value="_1TY0XFOUR.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="init">
+		<param name="Local" value="_1TY0XFOU8.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="next">
+		<param name="Local" value="_1TY0XFOUP.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="pause">
+		<param name="Local" value="_1TY0XFOUA.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="resume">
+		<param name="Local" value="_1TY0XFOUN.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Terminate">
+		<param name="Local" value="_1TY0XFOU9.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="trigger">
+		<param name="Local" value="_1TY0XFOUO.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="autoOutput">
+		<param name="Local" value="_1TY0XFOV4.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="stepSize">
+		<param name="Local" value="_1TY0XFOV3.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class FileHandler">
+		<param name="Local" value="_1TY0XFPA9.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFPBM.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="asciiValueDelim">
+		<param name="Local" value="_1TY0XFPC5.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="headerEndDelim">
+		<param name="Local" value="_1TY0XFPC4.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="headerRowLeader">
+		<param name="Local" value="_1TY0XFPC1.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="headerRowTrailer">
+		<param name="Local" value="_1TY0XFPC3.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="headerStartDelim">
+		<param name="Local" value="_1TY0XFPC0.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="headerTagDelim">
+		<param name="Local" value="_1TY0XFPC2.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="cleanFileName">
+		<param name="Local" value="_1TY0XFPB7.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="cleanPath">
+		<param name="Local" value="_1TY0XFPB6.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="clone">
+		<param name="Local" value="_1TY0XFPAP.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="fileExists">
+		<param name="Local" value="_1TY0XFPB4.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="fileNotExists">
+		<param name="Local" value="_1TY0XFPB5.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="getExt">
+		<param name="Local" value="_1TY0XFPBK.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="getTagFromLabel">
+		<param name="Local" value="_1TY0XFPBL.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="setByTag">
+		<param name="Local" value="_1TY0XFPAQ.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="validatePath">
+		<param name="Local" value="_1TY0XFPAR.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="dataFormat">
+		<param name="Local" value="_1TY0XFPCF.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="multiFileNum">
+		<param name="Local" value="_1TY0XFPCH.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="startTime">
+		<param name="Local" value="_1TY0XFPCI.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="writerClassName">
+		<param name="Local" value="_1TY0XFPCG.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class FileReader">
+		<param name="Local" value="_1TY0XFPTS.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFPU9.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFPUA.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="init">
+		<param name="Local" value="_1TY0XFPU8.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="repeatAfterEndOfFile">
+		<param name="Local" value="_1TY0XFPUN.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class FileWriter">
+		<param name="Local" value="_1TY0XFQDR.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFQE8.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFQE9.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFQEA.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFQEM.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="addValue">
+		<param name="Local" value="_1TY0XFQDT.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="addValues">
+		<param name="Local" value="_1TY0XFQE7.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="init">
+		<param name="Local" value="_1TY0XFQDS.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="appendDateToFileName">
+		<param name="Local" value="_1TY0XFQF7.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="appendExistingFile">
+		<param name="Local" value="_1TY0XFQF6.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="appendTimeToFileName">
+		<param name="Local" value="_1TY0XFQF8.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="createNewFileDaily">
+		<param name="Local" value="_1TY0XFQFH.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="createNewFileWhenMaxSize">
+		<param name="Local" value="_1TY0XFQFJ.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="fileFullName">
+		<param name="Local" value="_1TY0XFQEP.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="fileName">
+		<param name="Local" value="_1TY0XFQEO.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="filePath">
+		<param name="Local" value="_1TY0XFQEN.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="filePathName">
+		<param name="Local" value="_1TY0XFQF2.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="maxAllowedFileSize">
+		<param name="Local" value="_1TY0XFQFI.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="overwriteExistingFile">
+		<param name="Local" value="_1TY0XFQF5.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="valuesWriteMode">
+		<param name="Local" value="_1TY0XFQF4.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="writeValuesAsAscii">
+		<param name="Local" value="_1TY0XFQF3.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class Filter">
+		<param name="Local" value="_1TY0XFQVZ.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFQW0.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="filterDelay">
+		<param name="Local" value="_1TY0XFQWF.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class FIRFilter">
+		<param name="Local" value="_1TY0XFRQD.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFRQG.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="addValue">
+		<param name="Local" value="_1TY0XFRQE.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="addValues">
+		<param name="Local" value="_1TY0XFRQF.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Bypass">
+		<param name="Local" value="_1TY0XFRQT.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class FunctionGen">
+		<param name="Local" value="_1TY0XFSAR.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFSAT.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="init">
+		<param name="Local" value="_1TY0XFSAS.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="outputMultiplier">
+		<param name="Local" value="_1TY0XFSB7.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class GraphBase">
+		<param name="Local" value="_1TY0XFSW1.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFSWW.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XAxisChanged">
+		<param name="Local" value="_1TY0XFSZY.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="YAxisChanged">
+		<param name="Local" value="_1TY0XFSZZ.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Reset">
+		<param name="Local" value="_1TY0XFSWH.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="AutoRedraw">
+		<param name="Local" value="_1TY0XFSXC.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="BorderBevelWidth">
+		<param name="Local" value="_1TY0XFSXD.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="BorderMargin">
+		<param name="Local" value="_1TY0XFSXE.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Font">
+		<param name="Local" value="_1TY0XFSXF.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ForeColor">
+		<param name="Local" value="_1TY0XFSXG.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GSBackColor">
+		<param name="Local" value="_1TY0XFSXH.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GSBevelWidth">
+		<param name="Local" value="_1TY0XFSXR.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GSBottom">
+		<param name="Local" value="_1TY0XFSXS.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GSLeft">
+		<param name="Local" value="_1TY0XFSXT.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GSRight">
+		<param name="Local" value="_1TY0XFSXU.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GSTop">
+		<param name="Local" value="_1TY0XFSXV.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PixelsPerXUnit">
+		<param name="Local" value="_1TY0XFSXW.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PixelsPerYUnit">
+		<param name="Local" value="_1TY0XFSY7.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="RightToLeft">
+		<param name="Local" value="_1TY0XFSY8.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TitleFont">
+		<param name="Local" value="_1TY0XFSY9.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TitleText">
+		<param name="Local" value="_1TY0XFSYA.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WFColor">
+		<param name="Local" value="_1TY0XFSYB.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WFWidth">
+		<param name="Local" value="_1TY0XFSYC.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XAxisDispMax">
+		<param name="Local" value="_1TY0XFSYN.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XAxisDispMin">
+		<param name="Local" value="_1TY0XFSYO.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XAxisNumberFont">
+		<param name="Local" value="_1TY0XFSYP.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XAxisNumberFormat">
+		<param name="Local" value="_1TY0XFSYQ.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XAxisTicLength">
+		<param name="Local" value="_1TY0XFSYR.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XAxisTicWidth">
+		<param name="Local" value="_1TY0XFSZ2.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="YAxisCaptionFont">
+		<param name="Local" value="_1TY0XFSZ3.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="YAxisCaptionText">
+		<param name="Local" value="_1TY0XFSZ4.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="YAxisDispMax">
+		<param name="Local" value="_1TY0XFSZ5.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="YAxisDispMin">
+		<param name="Local" value="_1TY0XFSZ6.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="YAxisMaxNumTics">
+		<param name="Local" value="_1TY0XFSZI.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="YAxisNumberFont">
+		<param name="Local" value="_1TY0XFSZJ.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="YAxisNumberFormat">
+		<param name="Local" value="_1TY0XFSZK.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="YAxisTicLength">
+		<param name="Local" value="_1TY0XFSZL.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="YAxisTicWidth">
+		<param name="Local" value="_1TY0XFSZM.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class NewDataTrigger">
+		<param name="Local" value="_1TY0XFU7C.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFU87.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="minRefreshMSec">
+		<param name="Local" value="_1TY0XFU88.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="addValue">
+		<param name="Local" value="_1TY0XFU7T.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="addValues">
+		<param name="Local" value="_1TY0XFU7U.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="init">
+		<param name="Local" value="_1TY0XFU7S.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class OpenMedICUtils">
+		<param name="Local" value="_1TY0XFUNE.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFUNW.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="debugMode">
+		<param name="Local" value="_1TY0XFUO9.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="doPrint">
+		<param name="Local" value="_1TY0XFUOA.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="newLine">
+		<param name="Local" value="_1TY0XFUOB.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="debugPrint">
+		<param name="Local" value="_1TY0XFUNV.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="isEmpty">
+		<param name="Local" value="_1TY0XFUNU.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class PassThroughFilter">
+		<param name="Local" value="_1TY0XFV88.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFV8P.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="addValue">
+		<param name="Local" value="_1TY0XFV89.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="addValues">
+		<param name="Local" value="_1TY0XFV8O.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class PatientInfo">
+		<param name="Local" value="_1TY0XFVSN.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFVV8.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFVV9.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFVVO.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="clone">
+		<param name="Local" value="_1TY0XFVUU.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="setByTag">
+		<param name="Local" value="_1TY0XFVUT.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Addr1">
+		<param name="Local" value="_1TY0XFVWJ.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Addr2">
+		<param name="Local" value="_1TY0XFVWK.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Age">
+		<param name="Local" value="_1TY0XFVX1.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="City">
+		<param name="Local" value="_1TY0XFVWL.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Country">
+		<param name="Local" value="_1TY0XFVX0.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DOB">
+		<param name="Local" value="_1TY0XFVXE.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DOBstring">
+		<param name="Local" value="_1TY0XFVX2.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FirstName">
+		<param name="Local" value="_1TY0XFVVQ.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FullAddress">
+		<param name="Local" value="_1TY0XFVXG.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FullName">
+		<param name="Local" value="_1TY0XFVXF.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="LastName">
+		<param name="Local" value="_1TY0XFVW5.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="MiddleName">
+		<param name="Local" value="_1TY0XFVW4.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PatientID">
+		<param name="Local" value="_1TY0XFVVP.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Prefix">
+		<param name="Local" value="_1TY0XFVW6.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="State">
+		<param name="Local" value="_1TY0XFVWM.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Suffix">
+		<param name="Local" value="_1TY0XFVW7.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Zip">
+		<param name="Local" value="_1TY0XFVWZ.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class RTGraph">
+		<param name="Local" value="_1TY0XFWZL.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFX02.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DrawNew">
+		<param name="Local" value="_1TY0XFWZN.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="RedrawGraph">
+		<param name="Local" value="_1TY0XFWZM.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Reset">
+		<param name="Local" value="_1TY0XFX01.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CursColor">
+		<param name="Local" value="_1TY0XFX0J.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CursForeWidth">
+		<param name="Local" value="_1TY0XFX0I.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CursWidth">
+		<param name="Local" value="_1TY0XFX0H.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WFThis">
+		<param name="Local" value="_1TY0XFX0K.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XAxisDispMin">
+		<param name="Local" value="_1TY0XFX0W.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class Sample">
+		<param name="Local" value="_1TY0XFXHU.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFXIQ.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFXIR.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="copyFrom">
+		<param name="Local" value="_1TY0XFXHV.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="copyTo">
+		<param name="Local" value="_1TY0XFXI9.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ToString">
+		<param name="Local" value="_1TY0XFXIA.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ToString">
+		<param name="Local" value="_1TY0XFXIP.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="sampleValue">
+		<param name="Local" value="_1TY0XFXJ5.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class Samples">
+		<param name="Local" value="_1TY0XFYDI.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFYDZ.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="getRange">
+		<param name="Local" value="_1TY0XFYDJ.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="setRange">
+		<param name="Local" value="_1TY0XFYDY.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Item">
+		<param name="Local" value="_1TY0XFYEG.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="maxSize">
+		<param name="Local" value="_1TY0XFYEE.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="size">
+		<param name="Local" value="_1TY0XFYEF.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class Sender">
+		<param name="Local" value="_1TY0XFYWM.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="addFollower">
+		<param name="Local" value="_1TY0XFYX3.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="dropFollower">
+		<param name="Local" value="_1TY0XFYXH.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="init">
+		<param name="Local" value="_1TY0XFYX2.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="sendValue">
+		<param name="Local" value="_1TY0XFYXI.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="sendValues">
+		<param name="Local" value="_1TY0XFYXJ.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Terminate">
+		<param name="Local" value="_1TY0XFYX1.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="initDataValues">
+		<param name="Local" value="_1TY0XFYXX.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class SineWaveGen">
+		<param name="Local" value="_1TY0XFZD4.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFZD5.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class SquareWaveGen">
+		<param name="Local" value="_1TY0XFZRF.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFZRG.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class TimerThread">
+		<param name="Local" value="_1TY0XG0BE.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XG0EG.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Pause">
+		<param name="Local" value="_1TY0XG0E2.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Release">
+		<param name="Local" value="_1TY0XG0BF.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Resume">
+		<param name="Local" value="_1TY0XG0EF.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Start">
+		<param name="Local" value="_1TY0XG0E0.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Stop">
+		<param name="Local" value="_1TY0XG0E1.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class TriangleWaveGen">
+		<param name="Local" value="_1TY0XG14W.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XG15C.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class WaveformBuffer">
+		<param name="Local" value="_1TY0XG25D.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XG27J.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="addValue">
+		<param name="Local" value="_1TY0XG25E.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="addValues">
+		<param name="Local" value="_1TY0XG25T.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Clear">
+		<param name="Local" value="_1TY0XG273.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="getPoints">
+		<param name="Local" value="_1TY0XG25U.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="getPoints">
+		<param name="Local" value="_1TY0XG268.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="BufferSize">
+		<param name="Local" value="_1TY0XG27L.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CurrentInputIndex">
+		<param name="Local" value="_1TY0XG27Z.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="NumSamples">
+		<param name="Local" value="_1TY0XG280.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="samplePeriod">
+		<param name="Local" value="_1TY0XG27K.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class WaveGen">
+		<param name="Local" value="_1TY0XG2O1.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XG2O2.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="frequency">
+		<param name="Local" value="_1TY0XG2OG.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class WFAnalysisDisplay">
+		<param name="Local" value="_1TY0XG35T.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XG369.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CursColor">
+		<param name="Local" value="_1TY0XG375.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CursLineWidth">
+		<param name="Local" value="_1TY0XG3CE.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CursRadius">
+		<param name="Local" value="_1TY0XG39Q.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CursX">
+		<param name="Local" value="_1TY0XG3AL.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CursY">
+		<param name="Local" value="_1TY0XG3B1.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="LastCursPos">
+		<param name="Local" value="_1TY0XG3B2.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Period">
+		<param name="Local" value="_1TY0XG374.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Waveform">
+		<param name="Local" value="_1TY0XG36P.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WfStartTime">
+		<param name="Local" value="_1TY0XG36R.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WfVisible">
+		<param name="Local" value="_1TY0XG36Q.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XMajorGridColor">
+		<param name="Local" value="_1TY0XG3BH.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XMajorGridInterval">
+		<param name="Local" value="_1TY0XG3B3.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XMinorGridColor">
+		<param name="Local" value="_1TY0XG3BW.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XMinorGridInterval">
+		<param name="Local" value="_1TY0XG3BI.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="YMajorGridColor">
+		<param name="Local" value="_1TY0XG3BY.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="YMajorGridInterval">
+		<param name="Local" value="_1TY0XG3BX.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="YMinorGridColor">
+		<param name="Local" value="_1TY0XG3CD.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="YMinorGridInterval">
+		<param name="Local" value="_1TY0XG3CC.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class WfdbAccess">
+		<param name="Local" value="_1TY0XG3UK.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="newLine">
+		<param name="Local" value="_1TY0XG3X6.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CloseAnnotation">
+		<param name="Local" value="_1TY0XG3WR.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CloseWfdb">
+		<param name="Local" value="_1TY0XG3V1.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetAnnotation">
+		<param name="Local" value="_1TY0XG3WQ.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetErrMsgFromReturnID">
+		<param name="Local" value="_1TY0XG3V2.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetHeaderInfoStrings">
+		<param name="Local" value="_1TY0XG3VW.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetSamplingFrequency">
+		<param name="Local" value="_1TY0XG3VG.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetSearchPath">
+		<param name="Local" value="_1TY0XG3UL.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetSigInfoArray">
+		<param name="Local" value="_1TY0XG3VX.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetSignalCount">
+		<param name="Local" value="_1TY0XG3VF.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetSignalFrame">
+		<param name="Local" value="_1TY0XG3WB.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetSignalInfo">
+		<param name="Local" value="_1TY0XG3VV.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="OpenAnnotation">
+		<param name="Local" value="_1TY0XG3WC.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="SetSearchPath">
+		<param name="Local" value="_1TY0XG3V0.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class WfdbException">
+		<param name="Local" value="_1TY0XG4BH.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class WfdbReader">
+		<param name="Local" value="_1TY0XG4UL.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XG4V2.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="init">
+		<param name="Local" value="_1TY0XG4UM.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ReleaseWfdb">
+		<param name="Local" value="_1TY0XG4V1.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="recordComplete">
+		<param name="Local" value="_1TY0XG4VH.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="SamplingPeriod">
+		<param name="Local" value="_1TY0XG4VG.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WfdbPath">
+		<param name="Local" value="_1TY0XG4VW.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Delegate refreshDelegate">
+		<param name="Local" value="_1TY0XFWGI.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFWHE.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="BeginInvoke">
+		<param name="Local" value="_1TY0XFWGZ.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="EndInvoke">
+		<param name="Local" value="_1TY0XFWHD.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Invoke">
+		<param name="Local" value="_1TY0XFWGY.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Delegate XAxisChangedHandler">
+		<param name="Local" value="_1TY0XG5D9.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XG5DP.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="BeginInvoke">
+		<param name="Local" value="_1TY0XG5DB.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="EndInvoke">
+		<param name="Local" value="_1TY0XG5DO.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Invoke">
+		<param name="Local" value="_1TY0XG5DA.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Delegate YAxisChangedHandler">
+		<param name="Local" value="_1TY0XG5RK.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XG5SG.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="BeginInvoke">
+		<param name="Local" value="_1TY0XG5S0.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="EndInvoke">
+		<param name="Local" value="_1TY0XG5S1.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Invoke">
+		<param name="Local" value="_1TY0XG5RL.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Enumeration BevelDirection">
+		<param name="Local" value="_1TY0XFMB2.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Inward">
+		<param name="Local" value="_1TY0XFMBH.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Outward">
+		<param name="Local" value="_1TY0XFMB3.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Enumeration BevelStyle">
+		<param name="Local" value="_1TY0XFMPD.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Raised">
+		<param name="Local" value="_1TY0XFMPU.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Sunk">
+		<param name="Local" value="_1TY0XFMPT.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Enumeration filterTypes">
+		<param name="Local" value="_1TY0XFRAB.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FIR">
+		<param name="Local" value="_1TY0XFRAR.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="IIR">
+		<param name="Local" value="_1TY0XFRAQ.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Other">
+		<param name="Local" value="_1TY0XFRAS.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Enumeration LastCall">
+		<param name="Local" value="_1TY0XFTSL.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="LastCall_SignalCount">
+		<param name="Local" value="_1TY0XFTT0.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="LastCall_SignalInfo">
+		<param name="Local" value="_1TY0XFTT1.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Enumeration varTags">
+		<param name="Local" value="_1TY0XG1MP.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Addr1">
+		<param name="Local" value="_1TY0XG1PC.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Addr2">
+		<param name="Local" value="_1TY0XG1PD.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Age">
+		<param name="Local" value="_1TY0XG1Q6.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="bitsPerSample">
+		<param name="Local" value="_1TY0XG1O2.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="City">
+		<param name="Local" value="_1TY0XG1PE.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Country">
+		<param name="Local" value="_1TY0XG1PS.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="dataDescription">
+		<param name="Local" value="_1TY0XG1O0.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="dataFormat">
+		<param name="Local" value="_1TY0XG1NK.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DOB">
+		<param name="Local" value="_1TY0XG1Q7.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FirstName">
+		<param name="Local" value="_1TY0XG1OX.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FullAddress">
+		<param name="Local" value="_1TY0XG1Q9.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FullName">
+		<param name="Local" value="_1TY0XG1Q8.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="fullScaleReferenceVoltage">
+		<param name="Local" value="_1TY0XG1OG.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="LastName">
+		<param name="Local" value="_1TY0XG1OZ.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="MiddleName">
+		<param name="Local" value="_1TY0XG1OY.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="multiFileNum">
+		<param name="Local" value="_1TY0XG1NM.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PatientID">
+		<param name="Local" value="_1TY0XG1PT.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Prefix">
+		<param name="Local" value="_1TY0XG1OW.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="samplingPeriodSec">
+		<param name="Local" value="_1TY0XG1N5.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="scaleMultiplier">
+		<param name="Local" value="_1TY0XG1OH.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="startDateTime">
+		<param name="Local" value="_1TY0XG1O1.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="startTime">
+		<param name="Local" value="_1TY0XG1NN.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="State">
+		<param name="Local" value="_1TY0XG1PQ.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Suffix">
+		<param name="Local" value="_1TY0XG1PB.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="writerClassName">
+		<param name="Local" value="_1TY0XG1NL.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="zeroOffset">
+		<param name="Local" value="_1TY0XG1OV.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="zeroReferenceVoltage">
+		<param name="Local" value="_1TY0XG1O3.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Zip">
+		<param name="Local" value="_1TY0XG1PR.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Interface IReceiver">
+		<param name="Local" value="_1TY0XFTEP.htm">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="addValue">
+		<param name="Local" value="_1TY0XFTF4.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="addValues">
+		<param name="Local" value="_1TY0XFTF5.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="init">
+		<param name="Local" value="_1TY0XFTEQ.htm">
+		<param name="ImageNumber" value="11">
+		</OBJECT>
+</UL>
+</UL>
+</BODY></HTML>

@@ -1,0 +1,113 @@
+
+
+	
+<html>
+<head>
+<topictype value="CLASSHEADER"/>
+<title>Class DataSource</title>
+<LINK rel="stylesheet" type="text/css" href="templates/wwhelp.css">
+<SCRIPT SRC="templates/wwhelp.js"></SCRIPT>
+</head>
+<body leftmargin=0 topmargin=0>
+<table border=0 width="100%" bgcolor="lightblue" class="banner" cellspacing="3">
+<tr><td valign="center">
+
+
+<span class="projectname">OpenMedic Framework</span>
+</td></tr><tr><td>
+<span class="topicname">
+<img src="bmp/CLASSHEADER.gif"> Class DataSource
+</span>
+</td></tr>
+</table>
+
+<div class="contentpane">
+<br>
+An abstract class for any source of data, such as:<p>-&gt; Function Generator; -&gt; File Reader; -&gt; Data Acquisition.<p>NOTE:  If this is used with autoOutput = TRUE, you MUST call the Terminate() method when done otherwise there is no guarantee that the class will unload  properly.
+<br>
+
+
+
+<small>
+<br>
+<a href="http://msdn2.microsoft.com/en-us/library/System.Object.aspx" target="_1TY0XHK38">System.Object</a><br>
+&nbsp;&nbsp;<a href="_1ty0xfywm.htm" >OpenMedIC.Sender</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>OpenMedIC.DataSource</b><br>
+
+</small>
+
+
+
+
+
+<br>
+<table border="0" cellpadding="3" width="96%">
+<pre class="SyntaxBox">
+public class abstract DataSource : Sender
+</pre>
+</table>
+
+
+
+
+
+
+
+  
+
+<table border="0" cellpadding="3" width="95%">
+
+  
+</table>
+
+<h3 class="outdent">Class Members</h3>
+<br>
+<table class='detailtable' border='1' cellpadding='3' align='center' width='95%'><tr><th Width='165'>Member</td><th Width='350'>Description</td></tr><tr><td Align='Left' VAlign='Top'><img src="bmp/classconstructor.gif" align="left"> <a href="_1ty0xfous.htm" >Constructor</a></td>
+<td VAlign='Top'>Default Constructor for DataSource. If autoOutput, then this object will output one Sample every secondsPerStep to its Followers;  if not autoOutput, then it will only generate output when requested by a call to trigger() or getNextValue() or getNextValues(int).</td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classfield.gif" align="left"> <a href="_1ty0xfov2.htm" >minTimerIntervalMSec</a></td>
+<td VAlign='Top'>Minimum timer interval period;  if data samples have a shorter interval than this, then the timer is set to a default interval and multiple samples will be generated  for each timer tick.</td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classmethod.gif" align="left"> <a href="_1ty0xfouq.htm" >getNextValue</a></td>
+<td VAlign='Top'>Generates and returns the next function value to be returned, IF there is one. If there is no new value and wait = true, it waits for the next value then returns it;  otherwise it leaves val unchanged and returns FALSE.<br><b><small>public bool getNextValue( Sample val,<br>	bool wait );</small></b></td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classmethod.gif" align="left"> <a href="_1ty0xfour.htm" >getNextValues</a></td>
+<td VAlign='Top'>Generates and returns the next available function values up to vals.size. If there are less than that many values available (including 0), it returns  the available values and adjusts vals.size;  if there are at least that many new values available, then it returns exactly vals.size values.<br><b><small>public void getNextValues( Samples vals );</small></b></td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classmethod.gif" align="left"> <a href="_1ty0xfou8.htm" >init</a></td>
+<td VAlign='Top'>Initialize the data run with the appropriate info/parameters. Note that a class should tolerate multiple init(...) calls without being destroyed then re-instantiated, and there should be nothing carried over from a previous run after init(...) has returned.<br><b><small>public virtual void init( ChainInfo iData );</small></b></td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classmethod.gif" align="left"> <a href="_1ty0xfoup.htm" >next</a></td>
+<td VAlign='Top'>Generates the next sample(s), then outputs it/them to the followers.<br><b><small>public void next();</small></b></td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classmethod.gif" align="left"> <a href="_1ty0xfoua.htm" >pause</a></td>
+<td VAlign='Top'>Stops data acquisition/generation until resume() is called. Calls to pause() while the DataSource is already paused are ignored.<br><b><small>public void pause();</small></b></td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classmethod.gif" align="left"> <a href="_1ty0xfoun.htm" >resume</a></td>
+<td VAlign='Top'>Resumes data acquisition/generation after a pause (). If a pause () was not called previously then this call is ignored. Calls to resume() while not paused will be ignored.<br><b><small>public void resume();</small></b></td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classmethod.gif" align="left"> <a href="_1ty0xfou9.htm" >Terminate</a></td>
+<td VAlign='Top'>Terminates timer thread(s) as necessary for clean completion of the code.<br><b><small>public virtual void Terminate();</small></b></td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classmethod.gif" align="left"> <a href="_1ty0xfouo.htm" >trigger</a></td>
+<td VAlign='Top'>Gets the interval from now to the last time the trigger was called ( OR from init() ) and outputs the appropriate number of samples.<br><b><small>public virtual void trigger();</small></b></td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfov4.htm" >autoOutput</a></td>
+<td VAlign='Top'>Determines whether data is output based on internal parameters or should wait for external input.</td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfov3.htm" >stepSize</a></td>
+<td VAlign='Top'>Step size, in seconds. A data source that generates one sample per millisecond would have  a step size of 0.001 (1/1000).</td></tr>
+</table><p>
+
+
+<h3 class="outdent">Requirements</h3>
+   
+
+<b>Namespace:</b> OpenMedIC<br>
+   
+
+   
+
+<b>Assembly:</b> openmedic.dll
+<br>
+   
+
+
+
+
+<br>
+</div>
+<hr>
+<small>Last Updated: <i>6/21/2006</i></small>
+
+<p><center><i>This page was generated by an unregistered version of <a href="http://www.west-wind.com/wwHelp">West Wind HTML Help Builder</a>.</span> <p></center></body>
+</html>

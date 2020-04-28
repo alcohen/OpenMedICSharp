@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B3EDF8A1-1CF9-4AD5-884F-0BA184911243}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>OpenMedIC</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>OpenMedIC</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>OpenMedIC.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>0</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>OpenMedIC.xml</DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>0</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C5, Version=1.0.1.0, Culture=neutral, PublicKeyToken=06a1b38866503b69, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\C5.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="wfdb-sharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=8d66245bb09542e8">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\WINDOWS\system32\wfdb-sharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BuildingBlock.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CircularBuffer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataSource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FileHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FileLogger.cs" />
+    <Compile Include="FileReader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FileWriter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Filter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FIRFilter.cs" />
+    <Compile Include="FunctionGen.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ChainInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GraphBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphBase.Designer.cs">
+      <DependentUpon>GraphBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IReceiver.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NewDataTrigger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OpenMedICUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PassThroughFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PatientInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RTDisp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sample.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Samples.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sender.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SineWaveGen.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SquareWaveGen.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TimerThread.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TriangleWaveGen.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WaveformBuffer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WaveGen.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WFAnalysisDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WFAnalysisDisplay.Designer.cs">
+      <DependentUpon>WFAnalysisDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WfdbAccess.cs" />
+    <Compile Include="WfdbException.cs" />
+    <Compile Include="WfdbReader.cs" />
+    <EmbeddedResource Include="GraphBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GraphBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTDisp.resx">
+      <DependentUpon>RTDisp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WFAnalysisDisplay.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WFAnalysisDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RTGraph.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WFAnalysisDisplay.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

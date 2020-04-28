@@ -1,0 +1,2653 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="West Wind HTML Help Builder">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ChainInfo Constructor">
+		<param name="Local" value="_1TY0XFNKP.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFNKP.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ChainInfo Constructor">
+		<param name="Local" value="_1TY0XFNKQ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFNKQ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CircularBuffer Constructor">
+		<param name="Local" value="_1TY0XFNZV.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFNZV.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DataInfo Constructor">
+		<param name="Local" value="_1TY0XFOEK.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFOEK.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DataInfo Constructor">
+		<param name="Local" value="_1TY0XFOEL.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFOEL.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DataSource Constructor">
+		<param name="Local" value="_1TY0XFOUS.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFOUS.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FIRFilter Constructor">
+		<param name="Local" value="_1TY0XFRQG.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFRQG.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileHandler Constructor">
+		<param name="Local" value="_1TY0XFPBM.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFPBM.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileReader Constructor">
+		<param name="Local" value="_1TY0XFPU9.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFPU9.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileReader Constructor">
+		<param name="Local" value="_1TY0XFPUA.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFPUA.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileWriter Constructor">
+		<param name="Local" value="_1TY0XFQE8.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFQE8.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileWriter Constructor">
+		<param name="Local" value="_1TY0XFQE9.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFQE9.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileWriter Constructor">
+		<param name="Local" value="_1TY0XFQEA.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFQEA.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileWriter Constructor">
+		<param name="Local" value="_1TY0XFQEM.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFQEM.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Filter Constructor">
+		<param name="Local" value="_1TY0XFQW0.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFQW0.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FunctionGen Constructor">
+		<param name="Local" value="_1TY0XFSAT.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFSAT.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase Constructor">
+		<param name="Local" value="_1TY0XFSWW.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFSWW.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="NewDataTrigger Constructor">
+		<param name="Local" value="_1TY0XFU87.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFU87.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="OpenMedICUtils Constructor">
+		<param name="Local" value="_1TY0XFUNW.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFUNW.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PassThroughFilter Constructor">
+		<param name="Local" value="_1TY0XFV8P.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFV8P.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PatientInfo Constructor">
+		<param name="Local" value="_1TY0XFVV8.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFVV8.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PatientInfo Constructor">
+		<param name="Local" value="_1TY0XFVV9.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFVV9.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PatientInfo Constructor">
+		<param name="Local" value="_1TY0XFVVO.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFVVO.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="RTGraph Constructor">
+		<param name="Local" value="_1TY0XFX02.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFX02.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Sample Constructor">
+		<param name="Local" value="_1TY0XFXIQ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFXIQ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Sample Constructor">
+		<param name="Local" value="_1TY0XFXIR.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFXIR.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Samples Constructor">
+		<param name="Local" value="_1TY0XFYDZ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFYDZ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="SineWaveGen Constructor">
+		<param name="Local" value="_1TY0XFZD5.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFZD5.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="SquareWaveGen Constructor">
+		<param name="Local" value="_1TY0XFZRG.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFZRG.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TimerThread Constructor">
+		<param name="Local" value="_1TY0XG0EG.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XG0EG.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TriangleWaveGen Constructor">
+		<param name="Local" value="_1TY0XG15C.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XG15C.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WFAnalysisDisplay Constructor">
+		<param name="Local" value="_1TY0XG369.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XG369.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WaveGen Constructor">
+		<param name="Local" value="_1TY0XG2O2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XG2O2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WaveformBuffer Constructor">
+		<param name="Local" value="_1TY0XG27J.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XG27J.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WfdbReader Constructor">
+		<param name="Local" value="_1TY0XG4V2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XG4V2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XAxisChangedHandler Constructor">
+		<param name="Local" value="_1TY0XG5DP.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XG5DP.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="YAxisChangedHandler Constructor">
+		<param name="Local" value="_1TY0XG5SG.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XG5SG.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="refreshDelegate Constructor">
+		<param name="Local" value="_1TY0XFWHE.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Constructor">
+		<param name="Local" value="_1TY0XFWHE.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.XAxisChanged">
+		<param name="Local" value="_1TY0XFSZY.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XAxisChanged">
+		<param name="Local" value="_1TY0XFSZY.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.YAxisChanged">
+		<param name="Local" value="_1TY0XFSZZ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="YAxisChanged">
+		<param name="Local" value="_1TY0XFSZZ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="BevelDirection.Inward">
+		<param name="Local" value="_1TY0XFMBH.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Inward">
+		<param name="Local" value="_1TY0XFMBH.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="BevelDirection.Outward">
+		<param name="Local" value="_1TY0XFMB3.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Outward">
+		<param name="Local" value="_1TY0XFMB3.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="BevelStyle.Raised">
+		<param name="Local" value="_1TY0XFMPU.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Raised">
+		<param name="Local" value="_1TY0XFMPU.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="BevelStyle.Sunk">
+		<param name="Local" value="_1TY0XFMPT.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Sunk">
+		<param name="Local" value="_1TY0XFMPT.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DataSource.minTimerIntervalMSec">
+		<param name="Local" value="_1TY0XFOV2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="minTimerIntervalMSec">
+		<param name="Local" value="_1TY0XFOV2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileHandler.asciiValueDelim">
+		<param name="Local" value="_1TY0XFPC5.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="asciiValueDelim">
+		<param name="Local" value="_1TY0XFPC5.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileHandler.headerEndDelim">
+		<param name="Local" value="_1TY0XFPC4.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="headerEndDelim">
+		<param name="Local" value="_1TY0XFPC4.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileHandler.headerRowLeader">
+		<param name="Local" value="_1TY0XFPC1.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="headerRowLeader">
+		<param name="Local" value="_1TY0XFPC1.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileHandler.headerRowTrailer">
+		<param name="Local" value="_1TY0XFPC3.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="headerRowTrailer">
+		<param name="Local" value="_1TY0XFPC3.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileHandler.headerStartDelim">
+		<param name="Local" value="_1TY0XFPC0.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="headerStartDelim">
+		<param name="Local" value="_1TY0XFPC0.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileHandler.headerTagDelim">
+		<param name="Local" value="_1TY0XFPC2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="headerTagDelim">
+		<param name="Local" value="_1TY0XFPC2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="LastCall.LastCall_SignalCount">
+		<param name="Local" value="_1TY0XFTT0.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="LastCall_SignalCount">
+		<param name="Local" value="_1TY0XFTT0.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="LastCall.LastCall_SignalInfo">
+		<param name="Local" value="_1TY0XFTT1.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="LastCall_SignalInfo">
+		<param name="Local" value="_1TY0XFTT1.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="NewDataTrigger.minRefreshMSec">
+		<param name="Local" value="_1TY0XFU88.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="minRefreshMSec">
+		<param name="Local" value="_1TY0XFU88.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="OpenMedICUtils.debugMode">
+		<param name="Local" value="_1TY0XFUO9.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="debugMode">
+		<param name="Local" value="_1TY0XFUO9.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="OpenMedICUtils.doPrint">
+		<param name="Local" value="_1TY0XFUOA.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="doPrint">
+		<param name="Local" value="_1TY0XFUOA.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="OpenMedICUtils.newLine">
+		<param name="Local" value="_1TY0XFUOB.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="newLine">
+		<param name="Local" value="_1TY0XFUOB.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WfdbAccess.newLine">
+		<param name="Local" value="_1TY0XG3X6.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="newLine">
+		<param name="Local" value="_1TY0XG3X6.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="filterTypes.FIR">
+		<param name="Local" value="_1TY0XFRAR.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FIR">
+		<param name="Local" value="_1TY0XFRAR.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="filterTypes.IIR">
+		<param name="Local" value="_1TY0XFRAQ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="IIR">
+		<param name="Local" value="_1TY0XFRAQ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="filterTypes.Other">
+		<param name="Local" value="_1TY0XFRAS.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Other">
+		<param name="Local" value="_1TY0XFRAS.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="varTags.Addr1">
+		<param name="Local" value="_1TY0XG1PC.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Addr1">
+		<param name="Local" value="_1TY0XG1PC.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="varTags.Addr2">
+		<param name="Local" value="_1TY0XG1PD.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Addr2">
+		<param name="Local" value="_1TY0XG1PD.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="varTags.Age">
+		<param name="Local" value="_1TY0XG1Q6.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Age">
+		<param name="Local" value="_1TY0XG1Q6.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="varTags.City">
+		<param name="Local" value="_1TY0XG1PE.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="City">
+		<param name="Local" value="_1TY0XG1PE.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="varTags.Country">
+		<param name="Local" value="_1TY0XG1PS.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Country">
+		<param name="Local" value="_1TY0XG1PS.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="varTags.DOB">
+		<param name="Local" value="_1TY0XG1Q7.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DOB">
+		<param name="Local" value="_1TY0XG1Q7.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="varTags.FirstName">
+		<param name="Local" value="_1TY0XG1OX.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FirstName">
+		<param name="Local" value="_1TY0XG1OX.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="varTags.FullAddress">
+		<param name="Local" value="_1TY0XG1Q9.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FullAddress">
+		<param name="Local" value="_1TY0XG1Q9.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="varTags.FullName">
+		<param name="Local" value="_1TY0XG1Q8.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FullName">
+		<param name="Local" value="_1TY0XG1Q8.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="varTags.LastName">
+		<param name="Local" value="_1TY0XG1OZ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="LastName">
+		<param name="Local" value="_1TY0XG1OZ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="varTags.MiddleName">
+		<param name="Local" value="_1TY0XG1OY.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="MiddleName">
+		<param name="Local" value="_1TY0XG1OY.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="varTags.PatientID">
+		<param name="Local" value="_1TY0XG1PT.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PatientID">
+		<param name="Local" value="_1TY0XG1PT.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="varTags.Prefix">
+		<param name="Local" value="_1TY0XG1OW.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Prefix">
+		<param name="Local" value="_1TY0XG1OW.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="varTags.State">
+		<param name="Local" value="_1TY0XG1PQ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="State">
+		<param name="Local" value="_1TY0XG1PQ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="varTags.Suffix">
+		<param name="Local" value="_1TY0XG1PB.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Suffix">
+		<param name="Local" value="_1TY0XG1PB.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="varTags.Zip">
+		<param name="Local" value="_1TY0XG1PR.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Zip">
+		<param name="Local" value="_1TY0XG1PR.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="varTags.bitsPerSample">
+		<param name="Local" value="_1TY0XG1O2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="bitsPerSample">
+		<param name="Local" value="_1TY0XG1O2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="varTags.dataDescription">
+		<param name="Local" value="_1TY0XG1O0.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="dataDescription">
+		<param name="Local" value="_1TY0XG1O0.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="varTags.dataFormat">
+		<param name="Local" value="_1TY0XG1NK.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="dataFormat">
+		<param name="Local" value="_1TY0XG1NK.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="varTags.fullScaleReferenceVoltage">
+		<param name="Local" value="_1TY0XG1OG.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="fullScaleReferenceVoltage">
+		<param name="Local" value="_1TY0XG1OG.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="varTags.multiFileNum">
+		<param name="Local" value="_1TY0XG1NM.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="multiFileNum">
+		<param name="Local" value="_1TY0XG1NM.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="varTags.samplingPeriodSec">
+		<param name="Local" value="_1TY0XG1N5.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="samplingPeriodSec">
+		<param name="Local" value="_1TY0XG1N5.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="varTags.scaleMultiplier">
+		<param name="Local" value="_1TY0XG1OH.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="scaleMultiplier">
+		<param name="Local" value="_1TY0XG1OH.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="varTags.startDateTime">
+		<param name="Local" value="_1TY0XG1O1.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="startDateTime">
+		<param name="Local" value="_1TY0XG1O1.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="varTags.startTime">
+		<param name="Local" value="_1TY0XG1NN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="startTime">
+		<param name="Local" value="_1TY0XG1NN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="varTags.writerClassName">
+		<param name="Local" value="_1TY0XG1NL.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="writerClassName">
+		<param name="Local" value="_1TY0XG1NL.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="varTags.zeroOffset">
+		<param name="Local" value="_1TY0XG1OV.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="zeroOffset">
+		<param name="Local" value="_1TY0XG1OV.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="varTags.zeroReferenceVoltage">
+		<param name="Local" value="_1TY0XG1O3.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="zeroReferenceVoltage">
+		<param name="Local" value="_1TY0XG1O3.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class BuildingBlock">
+		<param name="Local" value="_1TY0XFN5V.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class ChainInfo">
+		<param name="Local" value="_1TY0XFNK7.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class CircularBuffer">
+		<param name="Local" value="_1TY0XFNYY.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class DataInfo">
+		<param name="Local" value="_1TY0XFOE5.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class DataSource">
+		<param name="Local" value="_1TY0XFOU7.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class FIRFilter">
+		<param name="Local" value="_1TY0XFRQD.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class FileHandler">
+		<param name="Local" value="_1TY0XFPA9.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class FileReader">
+		<param name="Local" value="_1TY0XFPTS.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class FileWriter">
+		<param name="Local" value="_1TY0XFQDR.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class Filter">
+		<param name="Local" value="_1TY0XFQVZ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class FunctionGen">
+		<param name="Local" value="_1TY0XFSAR.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class GraphBase">
+		<param name="Local" value="_1TY0XFSW1.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class NewDataTrigger">
+		<param name="Local" value="_1TY0XFU7C.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class OpenMedICUtils">
+		<param name="Local" value="_1TY0XFUNE.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class PassThroughFilter">
+		<param name="Local" value="_1TY0XFV88.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class PatientInfo">
+		<param name="Local" value="_1TY0XFVSN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class RTGraph">
+		<param name="Local" value="_1TY0XFWZL.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class Sample">
+		<param name="Local" value="_1TY0XFXHU.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class Samples">
+		<param name="Local" value="_1TY0XFYDI.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class Sender">
+		<param name="Local" value="_1TY0XFYWM.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class SineWaveGen">
+		<param name="Local" value="_1TY0XFZD4.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class SquareWaveGen">
+		<param name="Local" value="_1TY0XFZRF.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class TimerThread">
+		<param name="Local" value="_1TY0XG0BE.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class TriangleWaveGen">
+		<param name="Local" value="_1TY0XG14W.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class WFAnalysisDisplay">
+		<param name="Local" value="_1TY0XG35T.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class WaveGen">
+		<param name="Local" value="_1TY0XG2O1.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class WaveformBuffer">
+		<param name="Local" value="_1TY0XG25D.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class WfdbAccess">
+		<param name="Local" value="_1TY0XG3UK.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class WfdbException">
+		<param name="Local" value="_1TY0XG4BH.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Class WfdbReader">
+		<param name="Local" value="_1TY0XG4UL.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="BuildingBlock.addValue">
+		<param name="Local" value="_1TY0XFN5W.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="addValue">
+		<param name="Local" value="_1TY0XFN5W.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="BuildingBlock.addValues">
+		<param name="Local" value="_1TY0XFN5X.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="addValues">
+		<param name="Local" value="_1TY0XFN5X.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ChainInfo.clone">
+		<param name="Local" value="_1TY0XFNKN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="clone">
+		<param name="Local" value="_1TY0XFNKN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ChainInfo.getTagFromValue">
+		<param name="Local" value="_1TY0XFNKM.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="getTagFromValue">
+		<param name="Local" value="_1TY0XFNKM.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ChainInfo.getTagText">
+		<param name="Local" value="_1TY0XFNK8.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="getTagText">
+		<param name="Local" value="_1TY0XFNK8.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ChainInfo.setByTag">
+		<param name="Local" value="_1TY0XFNKO.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="setByTag">
+		<param name="Local" value="_1TY0XFNKO.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CircularBuffer.AddPoint">
+		<param name="Local" value="_1TY0XFNZE.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="AddPoint">
+		<param name="Local" value="_1TY0XFNZE.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CircularBuffer.AddPoints">
+		<param name="Local" value="_1TY0XFNZF.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="AddPoints">
+		<param name="Local" value="_1TY0XFNZF.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CircularBuffer.GetPointsSince">
+		<param name="Local" value="_1TY0XFNZH.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetPointsSince">
+		<param name="Local" value="_1TY0XFNZH.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CircularBuffer.GetPointsSince">
+		<param name="Local" value="_1TY0XFNZT.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetPointsSince">
+		<param name="Local" value="_1TY0XFNZT.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CircularBuffer.Reset">
+		<param name="Local" value="_1TY0XFNZG.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Reset">
+		<param name="Local" value="_1TY0XFNZG.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CircularBuffer.getPoint">
+		<param name="Local" value="_1TY0XFNZU.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="getPoint">
+		<param name="Local" value="_1TY0XFNZU.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DataInfo.clone">
+		<param name="Local" value="_1TY0XFOE6.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="clone">
+		<param name="Local" value="_1TY0XFOE6.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DataInfo.setByTag">
+		<param name="Local" value="_1TY0XFOE7.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="setByTag">
+		<param name="Local" value="_1TY0XFOE7.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DataSource.Terminate">
+		<param name="Local" value="_1TY0XFOU9.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Terminate">
+		<param name="Local" value="_1TY0XFOU9.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DataSource.getNextValue">
+		<param name="Local" value="_1TY0XFOUQ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="getNextValue">
+		<param name="Local" value="_1TY0XFOUQ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DataSource.getNextValues">
+		<param name="Local" value="_1TY0XFOUR.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="getNextValues">
+		<param name="Local" value="_1TY0XFOUR.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DataSource.init">
+		<param name="Local" value="_1TY0XFOU8.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="init">
+		<param name="Local" value="_1TY0XFOU8.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DataSource.next">
+		<param name="Local" value="_1TY0XFOUP.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="next">
+		<param name="Local" value="_1TY0XFOUP.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DataSource.pause">
+		<param name="Local" value="_1TY0XFOUA.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="pause">
+		<param name="Local" value="_1TY0XFOUA.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DataSource.resume">
+		<param name="Local" value="_1TY0XFOUN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="resume">
+		<param name="Local" value="_1TY0XFOUN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DataSource.trigger">
+		<param name="Local" value="_1TY0XFOUO.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="trigger">
+		<param name="Local" value="_1TY0XFOUO.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FIRFilter.addValue">
+		<param name="Local" value="_1TY0XFRQE.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="addValue">
+		<param name="Local" value="_1TY0XFRQE.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FIRFilter.addValues">
+		<param name="Local" value="_1TY0XFRQF.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="addValues">
+		<param name="Local" value="_1TY0XFRQF.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileHandler.cleanFileName">
+		<param name="Local" value="_1TY0XFPB7.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="cleanFileName">
+		<param name="Local" value="_1TY0XFPB7.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileHandler.cleanPath">
+		<param name="Local" value="_1TY0XFPB6.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="cleanPath">
+		<param name="Local" value="_1TY0XFPB6.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileHandler.clone">
+		<param name="Local" value="_1TY0XFPAP.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="clone">
+		<param name="Local" value="_1TY0XFPAP.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileHandler.fileExists">
+		<param name="Local" value="_1TY0XFPB4.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="fileExists">
+		<param name="Local" value="_1TY0XFPB4.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileHandler.fileNotExists">
+		<param name="Local" value="_1TY0XFPB5.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="fileNotExists">
+		<param name="Local" value="_1TY0XFPB5.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileHandler.getExt">
+		<param name="Local" value="_1TY0XFPBK.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="getExt">
+		<param name="Local" value="_1TY0XFPBK.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileHandler.getTagFromLabel">
+		<param name="Local" value="_1TY0XFPBL.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="getTagFromLabel">
+		<param name="Local" value="_1TY0XFPBL.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileHandler.setByTag">
+		<param name="Local" value="_1TY0XFPAQ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="setByTag">
+		<param name="Local" value="_1TY0XFPAQ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileHandler.validatePath">
+		<param name="Local" value="_1TY0XFPAR.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="validatePath">
+		<param name="Local" value="_1TY0XFPAR.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileReader.init">
+		<param name="Local" value="_1TY0XFPU8.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="init">
+		<param name="Local" value="_1TY0XFPU8.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileWriter.addValue">
+		<param name="Local" value="_1TY0XFQDT.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="addValue">
+		<param name="Local" value="_1TY0XFQDT.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileWriter.addValues">
+		<param name="Local" value="_1TY0XFQE7.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="addValues">
+		<param name="Local" value="_1TY0XFQE7.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileWriter.init">
+		<param name="Local" value="_1TY0XFQDS.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="init">
+		<param name="Local" value="_1TY0XFQDS.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FunctionGen.init">
+		<param name="Local" value="_1TY0XFSAS.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="init">
+		<param name="Local" value="_1TY0XFSAS.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.Reset">
+		<param name="Local" value="_1TY0XFSWH.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Reset">
+		<param name="Local" value="_1TY0XFSWH.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="IReceiver.addValue">
+		<param name="Local" value="_1TY0XFTF4.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="addValue">
+		<param name="Local" value="_1TY0XFTF4.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="IReceiver.addValues">
+		<param name="Local" value="_1TY0XFTF5.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="addValues">
+		<param name="Local" value="_1TY0XFTF5.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="IReceiver.init">
+		<param name="Local" value="_1TY0XFTEQ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="init">
+		<param name="Local" value="_1TY0XFTEQ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="NewDataTrigger.addValue">
+		<param name="Local" value="_1TY0XFU7T.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="addValue">
+		<param name="Local" value="_1TY0XFU7T.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="NewDataTrigger.addValues">
+		<param name="Local" value="_1TY0XFU7U.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="addValues">
+		<param name="Local" value="_1TY0XFU7U.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="NewDataTrigger.init">
+		<param name="Local" value="_1TY0XFU7S.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="init">
+		<param name="Local" value="_1TY0XFU7S.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="OpenMedICUtils.debugPrint">
+		<param name="Local" value="_1TY0XFUNV.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="debugPrint">
+		<param name="Local" value="_1TY0XFUNV.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="OpenMedICUtils.isEmpty">
+		<param name="Local" value="_1TY0XFUNU.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="isEmpty">
+		<param name="Local" value="_1TY0XFUNU.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PassThroughFilter.addValue">
+		<param name="Local" value="_1TY0XFV89.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="addValue">
+		<param name="Local" value="_1TY0XFV89.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PassThroughFilter.addValues">
+		<param name="Local" value="_1TY0XFV8O.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="addValues">
+		<param name="Local" value="_1TY0XFV8O.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PatientInfo.clone">
+		<param name="Local" value="_1TY0XFVUU.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="clone">
+		<param name="Local" value="_1TY0XFVUU.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PatientInfo.setByTag">
+		<param name="Local" value="_1TY0XFVUT.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="setByTag">
+		<param name="Local" value="_1TY0XFVUT.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="RTGraph.DrawNew">
+		<param name="Local" value="_1TY0XFWZN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DrawNew">
+		<param name="Local" value="_1TY0XFWZN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="RTGraph.RedrawGraph">
+		<param name="Local" value="_1TY0XFWZM.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="RedrawGraph">
+		<param name="Local" value="_1TY0XFWZM.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="RTGraph.Reset">
+		<param name="Local" value="_1TY0XFX01.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Reset">
+		<param name="Local" value="_1TY0XFX01.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Sample.ToString">
+		<param name="Local" value="_1TY0XFXIA.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ToString">
+		<param name="Local" value="_1TY0XFXIA.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Sample.ToString">
+		<param name="Local" value="_1TY0XFXIP.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ToString">
+		<param name="Local" value="_1TY0XFXIP.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Sample.copyFrom">
+		<param name="Local" value="_1TY0XFXHV.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="copyFrom">
+		<param name="Local" value="_1TY0XFXHV.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Sample.copyTo">
+		<param name="Local" value="_1TY0XFXI9.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="copyTo">
+		<param name="Local" value="_1TY0XFXI9.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Samples.getRange">
+		<param name="Local" value="_1TY0XFYDJ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="getRange">
+		<param name="Local" value="_1TY0XFYDJ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Samples.setRange">
+		<param name="Local" value="_1TY0XFYDY.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="setRange">
+		<param name="Local" value="_1TY0XFYDY.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Sender.Terminate">
+		<param name="Local" value="_1TY0XFYX1.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Terminate">
+		<param name="Local" value="_1TY0XFYX1.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Sender.addFollower">
+		<param name="Local" value="_1TY0XFYX3.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="addFollower">
+		<param name="Local" value="_1TY0XFYX3.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Sender.dropFollower">
+		<param name="Local" value="_1TY0XFYXH.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="dropFollower">
+		<param name="Local" value="_1TY0XFYXH.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Sender.init">
+		<param name="Local" value="_1TY0XFYX2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="init">
+		<param name="Local" value="_1TY0XFYX2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Sender.sendValue">
+		<param name="Local" value="_1TY0XFYXI.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="sendValue">
+		<param name="Local" value="_1TY0XFYXI.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Sender.sendValues">
+		<param name="Local" value="_1TY0XFYXJ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="sendValues">
+		<param name="Local" value="_1TY0XFYXJ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TimerThread.Pause">
+		<param name="Local" value="_1TY0XG0E2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Pause">
+		<param name="Local" value="_1TY0XG0E2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TimerThread.Release">
+		<param name="Local" value="_1TY0XG0BF.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Release">
+		<param name="Local" value="_1TY0XG0BF.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TimerThread.Resume">
+		<param name="Local" value="_1TY0XG0EF.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Resume">
+		<param name="Local" value="_1TY0XG0EF.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TimerThread.Start">
+		<param name="Local" value="_1TY0XG0E0.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Start">
+		<param name="Local" value="_1TY0XG0E0.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TimerThread.Stop">
+		<param name="Local" value="_1TY0XG0E1.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Stop">
+		<param name="Local" value="_1TY0XG0E1.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WaveformBuffer.Clear">
+		<param name="Local" value="_1TY0XG273.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Clear">
+		<param name="Local" value="_1TY0XG273.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WaveformBuffer.addValue">
+		<param name="Local" value="_1TY0XG25E.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="addValue">
+		<param name="Local" value="_1TY0XG25E.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WaveformBuffer.addValues">
+		<param name="Local" value="_1TY0XG25T.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="addValues">
+		<param name="Local" value="_1TY0XG25T.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WaveformBuffer.getPoints">
+		<param name="Local" value="_1TY0XG25U.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="getPoints">
+		<param name="Local" value="_1TY0XG25U.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WaveformBuffer.getPoints">
+		<param name="Local" value="_1TY0XG268.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="getPoints">
+		<param name="Local" value="_1TY0XG268.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WfdbAccess.CloseAnnotation">
+		<param name="Local" value="_1TY0XG3WR.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CloseAnnotation">
+		<param name="Local" value="_1TY0XG3WR.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WfdbAccess.CloseWfdb">
+		<param name="Local" value="_1TY0XG3V1.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CloseWfdb">
+		<param name="Local" value="_1TY0XG3V1.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WfdbAccess.GetAnnotation">
+		<param name="Local" value="_1TY0XG3WQ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetAnnotation">
+		<param name="Local" value="_1TY0XG3WQ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WfdbAccess.GetErrMsgFromReturnID">
+		<param name="Local" value="_1TY0XG3V2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetErrMsgFromReturnID">
+		<param name="Local" value="_1TY0XG3V2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WfdbAccess.GetHeaderInfoStrings">
+		<param name="Local" value="_1TY0XG3VW.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetHeaderInfoStrings">
+		<param name="Local" value="_1TY0XG3VW.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WfdbAccess.GetSamplingFrequency">
+		<param name="Local" value="_1TY0XG3VG.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetSamplingFrequency">
+		<param name="Local" value="_1TY0XG3VG.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WfdbAccess.GetSearchPath">
+		<param name="Local" value="_1TY0XG3UL.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetSearchPath">
+		<param name="Local" value="_1TY0XG3UL.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WfdbAccess.GetSigInfoArray">
+		<param name="Local" value="_1TY0XG3VX.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetSigInfoArray">
+		<param name="Local" value="_1TY0XG3VX.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WfdbAccess.GetSignalCount">
+		<param name="Local" value="_1TY0XG3VF.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetSignalCount">
+		<param name="Local" value="_1TY0XG3VF.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WfdbAccess.GetSignalFrame">
+		<param name="Local" value="_1TY0XG3WB.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetSignalFrame">
+		<param name="Local" value="_1TY0XG3WB.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WfdbAccess.GetSignalInfo">
+		<param name="Local" value="_1TY0XG3VV.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GetSignalInfo">
+		<param name="Local" value="_1TY0XG3VV.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WfdbAccess.OpenAnnotation">
+		<param name="Local" value="_1TY0XG3WC.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="OpenAnnotation">
+		<param name="Local" value="_1TY0XG3WC.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WfdbAccess.SetSearchPath">
+		<param name="Local" value="_1TY0XG3V0.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="SetSearchPath">
+		<param name="Local" value="_1TY0XG3V0.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WfdbReader.ReleaseWfdb">
+		<param name="Local" value="_1TY0XG4V1.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ReleaseWfdb">
+		<param name="Local" value="_1TY0XG4V1.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WfdbReader.init">
+		<param name="Local" value="_1TY0XG4UM.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="init">
+		<param name="Local" value="_1TY0XG4UM.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XAxisChangedHandler.BeginInvoke">
+		<param name="Local" value="_1TY0XG5DB.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="BeginInvoke">
+		<param name="Local" value="_1TY0XG5DB.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XAxisChangedHandler.EndInvoke">
+		<param name="Local" value="_1TY0XG5DO.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="EndInvoke">
+		<param name="Local" value="_1TY0XG5DO.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XAxisChangedHandler.Invoke">
+		<param name="Local" value="_1TY0XG5DA.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Invoke">
+		<param name="Local" value="_1TY0XG5DA.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="YAxisChangedHandler.BeginInvoke">
+		<param name="Local" value="_1TY0XG5S0.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="BeginInvoke">
+		<param name="Local" value="_1TY0XG5S0.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="YAxisChangedHandler.EndInvoke">
+		<param name="Local" value="_1TY0XG5S1.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="EndInvoke">
+		<param name="Local" value="_1TY0XG5S1.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="YAxisChangedHandler.Invoke">
+		<param name="Local" value="_1TY0XG5RL.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Invoke">
+		<param name="Local" value="_1TY0XG5RL.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="refreshDelegate.BeginInvoke">
+		<param name="Local" value="_1TY0XFWGZ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="BeginInvoke">
+		<param name="Local" value="_1TY0XFWGZ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="refreshDelegate.EndInvoke">
+		<param name="Local" value="_1TY0XFWHD.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="EndInvoke">
+		<param name="Local" value="_1TY0XFWHD.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="refreshDelegate.Invoke">
+		<param name="Local" value="_1TY0XFWGY.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Invoke">
+		<param name="Local" value="_1TY0XFWGY.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ChainInfo.dataInfo">
+		<param name="Local" value="_1TY0XFNL3.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="dataInfo">
+		<param name="Local" value="_1TY0XFNL3.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ChainInfo.fileInfo">
+		<param name="Local" value="_1TY0XFNL5.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="fileInfo">
+		<param name="Local" value="_1TY0XFNL5.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ChainInfo.patientInfo">
+		<param name="Local" value="_1TY0XFNL4.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="patientInfo">
+		<param name="Local" value="_1TY0XFNL4.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ChainInfo.samplingPeriodSec">
+		<param name="Local" value="_1TY0XFNL2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="samplingPeriodSec">
+		<param name="Local" value="_1TY0XFNL2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CircularBuffer.BuffLength">
+		<param name="Local" value="_1TY0XFO09.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="BuffLength">
+		<param name="Local" value="_1TY0XFO09.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CircularBuffer.CurrInputIndex">
+		<param name="Local" value="_1TY0XFNZW.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CurrInputIndex">
+		<param name="Local" value="_1TY0XFNZW.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DataInfo.BitsPerSample">
+		<param name="Local" value="_1TY0XFOEO.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="BitsPerSample">
+		<param name="Local" value="_1TY0XFOEO.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DataInfo.DataDescription">
+		<param name="Local" value="_1TY0XFOEM.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DataDescription">
+		<param name="Local" value="_1TY0XFOEM.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DataInfo.FullScaleReferenceVoltage">
+		<param name="Local" value="_1TY0XFOF0.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FullScaleReferenceVoltage">
+		<param name="Local" value="_1TY0XFOF0.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DataInfo.ScaleMultiplier">
+		<param name="Local" value="_1TY0XFOF1.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ScaleMultiplier">
+		<param name="Local" value="_1TY0XFOF1.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DataInfo.StartDateTime">
+		<param name="Local" value="_1TY0XFOEN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="StartDateTime">
+		<param name="Local" value="_1TY0XFOEN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DataInfo.ZeroOffset">
+		<param name="Local" value="_1TY0XFOF2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ZeroOffset">
+		<param name="Local" value="_1TY0XFOF2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DataInfo.ZeroReferenceVoltage">
+		<param name="Local" value="_1TY0XFOEP.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ZeroReferenceVoltage">
+		<param name="Local" value="_1TY0XFOEP.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DataSource.autoOutput">
+		<param name="Local" value="_1TY0XFOV4.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="autoOutput">
+		<param name="Local" value="_1TY0XFOV4.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DataSource.stepSize">
+		<param name="Local" value="_1TY0XFOV3.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="stepSize">
+		<param name="Local" value="_1TY0XFOV3.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FIRFilter.Bypass">
+		<param name="Local" value="_1TY0XFRQT.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Bypass">
+		<param name="Local" value="_1TY0XFRQT.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileHandler.dataFormat">
+		<param name="Local" value="_1TY0XFPCF.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="dataFormat">
+		<param name="Local" value="_1TY0XFPCF.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileHandler.multiFileNum">
+		<param name="Local" value="_1TY0XFPCH.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="multiFileNum">
+		<param name="Local" value="_1TY0XFPCH.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileHandler.startTime">
+		<param name="Local" value="_1TY0XFPCI.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="startTime">
+		<param name="Local" value="_1TY0XFPCI.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileHandler.writerClassName">
+		<param name="Local" value="_1TY0XFPCG.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="writerClassName">
+		<param name="Local" value="_1TY0XFPCG.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileReader.repeatAfterEndOfFile">
+		<param name="Local" value="_1TY0XFPUN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="repeatAfterEndOfFile">
+		<param name="Local" value="_1TY0XFPUN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileWriter.appendDateToFileName">
+		<param name="Local" value="_1TY0XFQF7.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="appendDateToFileName">
+		<param name="Local" value="_1TY0XFQF7.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileWriter.appendExistingFile">
+		<param name="Local" value="_1TY0XFQF6.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="appendExistingFile">
+		<param name="Local" value="_1TY0XFQF6.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileWriter.appendTimeToFileName">
+		<param name="Local" value="_1TY0XFQF8.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="appendTimeToFileName">
+		<param name="Local" value="_1TY0XFQF8.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileWriter.createNewFileDaily">
+		<param name="Local" value="_1TY0XFQFH.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="createNewFileDaily">
+		<param name="Local" value="_1TY0XFQFH.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileWriter.createNewFileWhenMaxSize">
+		<param name="Local" value="_1TY0XFQFJ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="createNewFileWhenMaxSize">
+		<param name="Local" value="_1TY0XFQFJ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileWriter.fileFullName">
+		<param name="Local" value="_1TY0XFQEP.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="fileFullName">
+		<param name="Local" value="_1TY0XFQEP.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileWriter.fileName">
+		<param name="Local" value="_1TY0XFQEO.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="fileName">
+		<param name="Local" value="_1TY0XFQEO.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileWriter.filePath">
+		<param name="Local" value="_1TY0XFQEN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="filePath">
+		<param name="Local" value="_1TY0XFQEN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileWriter.filePathName">
+		<param name="Local" value="_1TY0XFQF2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="filePathName">
+		<param name="Local" value="_1TY0XFQF2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileWriter.maxAllowedFileSize">
+		<param name="Local" value="_1TY0XFQFI.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="maxAllowedFileSize">
+		<param name="Local" value="_1TY0XFQFI.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileWriter.overwriteExistingFile">
+		<param name="Local" value="_1TY0XFQF5.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="overwriteExistingFile">
+		<param name="Local" value="_1TY0XFQF5.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileWriter.valuesWriteMode">
+		<param name="Local" value="_1TY0XFQF4.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="valuesWriteMode">
+		<param name="Local" value="_1TY0XFQF4.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileWriter.writeValuesAsAscii">
+		<param name="Local" value="_1TY0XFQF3.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="writeValuesAsAscii">
+		<param name="Local" value="_1TY0XFQF3.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Filter.filterDelay">
+		<param name="Local" value="_1TY0XFQWF.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="filterDelay">
+		<param name="Local" value="_1TY0XFQWF.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FunctionGen.outputMultiplier">
+		<param name="Local" value="_1TY0XFSB7.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="outputMultiplier">
+		<param name="Local" value="_1TY0XFSB7.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.AutoRedraw">
+		<param name="Local" value="_1TY0XFSXC.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="AutoRedraw">
+		<param name="Local" value="_1TY0XFSXC.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.BorderBevelWidth">
+		<param name="Local" value="_1TY0XFSXD.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="BorderBevelWidth">
+		<param name="Local" value="_1TY0XFSXD.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.BorderMargin">
+		<param name="Local" value="_1TY0XFSXE.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="BorderMargin">
+		<param name="Local" value="_1TY0XFSXE.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.Font">
+		<param name="Local" value="_1TY0XFSXF.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Font">
+		<param name="Local" value="_1TY0XFSXF.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.ForeColor">
+		<param name="Local" value="_1TY0XFSXG.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ForeColor">
+		<param name="Local" value="_1TY0XFSXG.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.GSBackColor">
+		<param name="Local" value="_1TY0XFSXH.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GSBackColor">
+		<param name="Local" value="_1TY0XFSXH.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.GSBevelWidth">
+		<param name="Local" value="_1TY0XFSXR.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GSBevelWidth">
+		<param name="Local" value="_1TY0XFSXR.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.GSBottom">
+		<param name="Local" value="_1TY0XFSXS.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GSBottom">
+		<param name="Local" value="_1TY0XFSXS.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.GSLeft">
+		<param name="Local" value="_1TY0XFSXT.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GSLeft">
+		<param name="Local" value="_1TY0XFSXT.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.GSRight">
+		<param name="Local" value="_1TY0XFSXU.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GSRight">
+		<param name="Local" value="_1TY0XFSXU.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.GSTop">
+		<param name="Local" value="_1TY0XFSXV.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GSTop">
+		<param name="Local" value="_1TY0XFSXV.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.PixelsPerXUnit">
+		<param name="Local" value="_1TY0XFSXW.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PixelsPerXUnit">
+		<param name="Local" value="_1TY0XFSXW.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.PixelsPerYUnit">
+		<param name="Local" value="_1TY0XFSY7.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PixelsPerYUnit">
+		<param name="Local" value="_1TY0XFSY7.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.RightToLeft">
+		<param name="Local" value="_1TY0XFSY8.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="RightToLeft">
+		<param name="Local" value="_1TY0XFSY8.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.TitleFont">
+		<param name="Local" value="_1TY0XFSY9.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TitleFont">
+		<param name="Local" value="_1TY0XFSY9.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.TitleText">
+		<param name="Local" value="_1TY0XFSYA.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TitleText">
+		<param name="Local" value="_1TY0XFSYA.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.WFColor">
+		<param name="Local" value="_1TY0XFSYB.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WFColor">
+		<param name="Local" value="_1TY0XFSYB.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.WFWidth">
+		<param name="Local" value="_1TY0XFSYC.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WFWidth">
+		<param name="Local" value="_1TY0XFSYC.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.XAxisDispMax">
+		<param name="Local" value="_1TY0XFSYN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XAxisDispMax">
+		<param name="Local" value="_1TY0XFSYN.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.XAxisDispMin">
+		<param name="Local" value="_1TY0XFSYO.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XAxisDispMin">
+		<param name="Local" value="_1TY0XFSYO.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.XAxisNumberFont">
+		<param name="Local" value="_1TY0XFSYP.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XAxisNumberFont">
+		<param name="Local" value="_1TY0XFSYP.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.XAxisNumberFormat">
+		<param name="Local" value="_1TY0XFSYQ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XAxisNumberFormat">
+		<param name="Local" value="_1TY0XFSYQ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.XAxisTicLength">
+		<param name="Local" value="_1TY0XFSYR.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XAxisTicLength">
+		<param name="Local" value="_1TY0XFSYR.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.XAxisTicWidth">
+		<param name="Local" value="_1TY0XFSZ2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XAxisTicWidth">
+		<param name="Local" value="_1TY0XFSZ2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.YAxisCaptionFont">
+		<param name="Local" value="_1TY0XFSZ3.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="YAxisCaptionFont">
+		<param name="Local" value="_1TY0XFSZ3.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.YAxisCaptionText">
+		<param name="Local" value="_1TY0XFSZ4.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="YAxisCaptionText">
+		<param name="Local" value="_1TY0XFSZ4.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.YAxisDispMax">
+		<param name="Local" value="_1TY0XFSZ5.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="YAxisDispMax">
+		<param name="Local" value="_1TY0XFSZ5.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.YAxisDispMin">
+		<param name="Local" value="_1TY0XFSZ6.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="YAxisDispMin">
+		<param name="Local" value="_1TY0XFSZ6.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.YAxisMaxNumTics">
+		<param name="Local" value="_1TY0XFSZI.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="YAxisMaxNumTics">
+		<param name="Local" value="_1TY0XFSZI.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.YAxisNumberFont">
+		<param name="Local" value="_1TY0XFSZJ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="YAxisNumberFont">
+		<param name="Local" value="_1TY0XFSZJ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.YAxisNumberFormat">
+		<param name="Local" value="_1TY0XFSZK.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="YAxisNumberFormat">
+		<param name="Local" value="_1TY0XFSZK.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.YAxisTicLength">
+		<param name="Local" value="_1TY0XFSZL.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="YAxisTicLength">
+		<param name="Local" value="_1TY0XFSZL.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="GraphBase.YAxisTicWidth">
+		<param name="Local" value="_1TY0XFSZM.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="YAxisTicWidth">
+		<param name="Local" value="_1TY0XFSZM.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PatientInfo.Addr1">
+		<param name="Local" value="_1TY0XFVWJ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Addr1">
+		<param name="Local" value="_1TY0XFVWJ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PatientInfo.Addr2">
+		<param name="Local" value="_1TY0XFVWK.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Addr2">
+		<param name="Local" value="_1TY0XFVWK.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PatientInfo.Age">
+		<param name="Local" value="_1TY0XFVX1.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Age">
+		<param name="Local" value="_1TY0XFVX1.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PatientInfo.City">
+		<param name="Local" value="_1TY0XFVWL.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="City">
+		<param name="Local" value="_1TY0XFVWL.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PatientInfo.Country">
+		<param name="Local" value="_1TY0XFVX0.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Country">
+		<param name="Local" value="_1TY0XFVX0.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PatientInfo.DOB">
+		<param name="Local" value="_1TY0XFVXE.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DOB">
+		<param name="Local" value="_1TY0XFVXE.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PatientInfo.DOBstring">
+		<param name="Local" value="_1TY0XFVX2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="DOBstring">
+		<param name="Local" value="_1TY0XFVX2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PatientInfo.FirstName">
+		<param name="Local" value="_1TY0XFVVQ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FirstName">
+		<param name="Local" value="_1TY0XFVVQ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PatientInfo.FullAddress">
+		<param name="Local" value="_1TY0XFVXG.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FullAddress">
+		<param name="Local" value="_1TY0XFVXG.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PatientInfo.FullName">
+		<param name="Local" value="_1TY0XFVXF.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FullName">
+		<param name="Local" value="_1TY0XFVXF.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PatientInfo.LastName">
+		<param name="Local" value="_1TY0XFVW5.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="LastName">
+		<param name="Local" value="_1TY0XFVW5.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PatientInfo.MiddleName">
+		<param name="Local" value="_1TY0XFVW4.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="MiddleName">
+		<param name="Local" value="_1TY0XFVW4.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PatientInfo.PatientID">
+		<param name="Local" value="_1TY0XFVVP.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PatientID">
+		<param name="Local" value="_1TY0XFVVP.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PatientInfo.Prefix">
+		<param name="Local" value="_1TY0XFVW6.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Prefix">
+		<param name="Local" value="_1TY0XFVW6.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PatientInfo.State">
+		<param name="Local" value="_1TY0XFVWM.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="State">
+		<param name="Local" value="_1TY0XFVWM.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PatientInfo.Suffix">
+		<param name="Local" value="_1TY0XFVW7.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Suffix">
+		<param name="Local" value="_1TY0XFVW7.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="PatientInfo.Zip">
+		<param name="Local" value="_1TY0XFVWZ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Zip">
+		<param name="Local" value="_1TY0XFVWZ.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="RTGraph.CursColor">
+		<param name="Local" value="_1TY0XFX0J.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CursColor">
+		<param name="Local" value="_1TY0XFX0J.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="RTGraph.CursForeWidth">
+		<param name="Local" value="_1TY0XFX0I.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CursForeWidth">
+		<param name="Local" value="_1TY0XFX0I.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="RTGraph.CursWidth">
+		<param name="Local" value="_1TY0XFX0H.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CursWidth">
+		<param name="Local" value="_1TY0XFX0H.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="RTGraph.WFThis">
+		<param name="Local" value="_1TY0XFX0K.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WFThis">
+		<param name="Local" value="_1TY0XFX0K.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="RTGraph.XAxisDispMin">
+		<param name="Local" value="_1TY0XFX0W.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XAxisDispMin">
+		<param name="Local" value="_1TY0XFX0W.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Sample.sampleValue">
+		<param name="Local" value="_1TY0XFXJ5.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="sampleValue">
+		<param name="Local" value="_1TY0XFXJ5.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Samples.Item">
+		<param name="Local" value="_1TY0XFYEG.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Item">
+		<param name="Local" value="_1TY0XFYEG.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Samples.maxSize">
+		<param name="Local" value="_1TY0XFYEE.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="maxSize">
+		<param name="Local" value="_1TY0XFYEE.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Samples.size">
+		<param name="Local" value="_1TY0XFYEF.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="size">
+		<param name="Local" value="_1TY0XFYEF.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Sender.initDataValues">
+		<param name="Local" value="_1TY0XFYXX.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="initDataValues">
+		<param name="Local" value="_1TY0XFYXX.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WFAnalysisDisplay.CursColor">
+		<param name="Local" value="_1TY0XG375.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CursColor">
+		<param name="Local" value="_1TY0XG375.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WFAnalysisDisplay.CursLineWidth">
+		<param name="Local" value="_1TY0XG3CE.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CursLineWidth">
+		<param name="Local" value="_1TY0XG3CE.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WFAnalysisDisplay.CursRadius">
+		<param name="Local" value="_1TY0XG39Q.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CursRadius">
+		<param name="Local" value="_1TY0XG39Q.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WFAnalysisDisplay.CursX">
+		<param name="Local" value="_1TY0XG3AL.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CursX">
+		<param name="Local" value="_1TY0XG3AL.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WFAnalysisDisplay.CursY">
+		<param name="Local" value="_1TY0XG3B1.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CursY">
+		<param name="Local" value="_1TY0XG3B1.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WFAnalysisDisplay.LastCursPos">
+		<param name="Local" value="_1TY0XG3B2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="LastCursPos">
+		<param name="Local" value="_1TY0XG3B2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WFAnalysisDisplay.Period">
+		<param name="Local" value="_1TY0XG374.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Period">
+		<param name="Local" value="_1TY0XG374.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WFAnalysisDisplay.Waveform">
+		<param name="Local" value="_1TY0XG36P.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Waveform">
+		<param name="Local" value="_1TY0XG36P.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WFAnalysisDisplay.WfStartTime">
+		<param name="Local" value="_1TY0XG36R.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WfStartTime">
+		<param name="Local" value="_1TY0XG36R.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WFAnalysisDisplay.WfVisible">
+		<param name="Local" value="_1TY0XG36Q.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WfVisible">
+		<param name="Local" value="_1TY0XG36Q.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WFAnalysisDisplay.XMajorGridColor">
+		<param name="Local" value="_1TY0XG3BH.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XMajorGridColor">
+		<param name="Local" value="_1TY0XG3BH.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WFAnalysisDisplay.XMajorGridInterval">
+		<param name="Local" value="_1TY0XG3B3.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XMajorGridInterval">
+		<param name="Local" value="_1TY0XG3B3.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WFAnalysisDisplay.XMinorGridColor">
+		<param name="Local" value="_1TY0XG3BW.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XMinorGridColor">
+		<param name="Local" value="_1TY0XG3BW.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WFAnalysisDisplay.XMinorGridInterval">
+		<param name="Local" value="_1TY0XG3BI.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="XMinorGridInterval">
+		<param name="Local" value="_1TY0XG3BI.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WFAnalysisDisplay.YMajorGridColor">
+		<param name="Local" value="_1TY0XG3BY.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="YMajorGridColor">
+		<param name="Local" value="_1TY0XG3BY.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WFAnalysisDisplay.YMajorGridInterval">
+		<param name="Local" value="_1TY0XG3BX.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="YMajorGridInterval">
+		<param name="Local" value="_1TY0XG3BX.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WFAnalysisDisplay.YMinorGridColor">
+		<param name="Local" value="_1TY0XG3CD.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="YMinorGridColor">
+		<param name="Local" value="_1TY0XG3CD.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WFAnalysisDisplay.YMinorGridInterval">
+		<param name="Local" value="_1TY0XG3CC.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="YMinorGridInterval">
+		<param name="Local" value="_1TY0XG3CC.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WaveGen.frequency">
+		<param name="Local" value="_1TY0XG2OG.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="frequency">
+		<param name="Local" value="_1TY0XG2OG.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WaveformBuffer.BufferSize">
+		<param name="Local" value="_1TY0XG27L.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="BufferSize">
+		<param name="Local" value="_1TY0XG27L.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WaveformBuffer.CurrentInputIndex">
+		<param name="Local" value="_1TY0XG27Z.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="CurrentInputIndex">
+		<param name="Local" value="_1TY0XG27Z.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WaveformBuffer.NumSamples">
+		<param name="Local" value="_1TY0XG280.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="NumSamples">
+		<param name="Local" value="_1TY0XG280.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WaveformBuffer.samplePeriod">
+		<param name="Local" value="_1TY0XG27K.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="samplePeriod">
+		<param name="Local" value="_1TY0XG27K.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WfdbReader.SamplingPeriod">
+		<param name="Local" value="_1TY0XG4VG.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="SamplingPeriod">
+		<param name="Local" value="_1TY0XG4VG.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WfdbReader.WfdbPath">
+		<param name="Local" value="_1TY0XG4VW.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WfdbPath">
+		<param name="Local" value="_1TY0XG4VW.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WfdbReader.recordComplete">
+		<param name="Local" value="_1TY0XG4VH.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="recordComplete">
+		<param name="Local" value="_1TY0XG4VH.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Delegate XAxisChangedHandler">
+		<param name="Local" value="_1TY0XG5D9.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Delegate YAxisChangedHandler">
+		<param name="Local" value="_1TY0XG5RK.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Delegate refreshDelegate">
+		<param name="Local" value="_1TY0XFWGI.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Enumeration BevelDirection">
+		<param name="Local" value="_1TY0XFMB2.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Enumeration BevelStyle">
+		<param name="Local" value="_1TY0XFMPD.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Enumeration LastCall">
+		<param name="Local" value="_1TY0XFTSL.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Enumeration filterTypes">
+		<param name="Local" value="_1TY0XFRAB.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Enumeration varTags">
+		<param name="Local" value="_1TY0XG1MP.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Interface IReceiver">
+		<param name="Local" value="_1TY0XFTEP.htm">
+		</OBJECT>
+</UL>
+</BODY></HTML>

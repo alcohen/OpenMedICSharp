@@ -1,0 +1,122 @@
+
+
+	
+<html>
+<head>
+<topictype value="CLASSHEADER"/>
+<title>Class FileWriter</title>
+<LINK rel="stylesheet" type="text/css" href="templates/wwhelp.css">
+<SCRIPT SRC="templates/wwhelp.js"></SCRIPT>
+</head>
+<body leftmargin=0 topmargin=0>
+<table border=0 width="100%" bgcolor="lightblue" class="banner" cellspacing="3">
+<tr><td valign="center">
+
+
+<span class="projectname">OpenMedic Framework</span>
+</td></tr><tr><td>
+<span class="topicname">
+<img src="bmp/CLASSHEADER.gif"> Class FileWriter
+</span>
+</td></tr>
+</table>
+
+<div class="contentpane">
+<br>
+Creates a file with the desired path/filename and an appropriate header (or appends to an existing one if appropriate), and writes to it the passed input data, one row per sample.<p>The class offers options for:<p>-&gt; Writing the values as ASCII text (more universally readable) 			 or binary values (about 3x more compact); -&gt; Limiting the maximum file size (and what to do then); -&gt; Appending creation date and/or time to the name; -&gt; Starting a new file on a new day; -&gt; Replacing or appending to an existing file; -&gt; [FUTURE ENH - create dir if not existing]; -&gt; [FUTURE ENH - put date in dir name not file name].<p>Default values:<p>-&gt; Writing the values as ASCII text:  default = TRUE; -&gt; Limiting the maximum file size:  default = FALSE; -&gt; Appending creation date and/or time:  default = FALSE; -&gt; Starting a new file on a new day:  default = FALSE; -&gt; Replacing or appending to an existing file:  default = FALSE; -&gt; [FUTURE ENH - create dir if not existing:  default = FALSE]; -&gt; [FUTURE ENH - put date in dir name not file name:  default = FALSE].<p>Note the following required data to be passed to the init(ChainInfo) method:<p>-&gt; All cases: 	-&gt; -&gt; Data Sampling period, in seconds.<p>-&gt; When writing the date to a file: 	-&gt; -&gt; DataInfo.dataDescription = Text Description of File Contents; 	-&gt; -&gt; DataInfo.startDateTime = Start Date/Time (can be left blank to  				initialize to when this class instance is created); 	-&gt; -&gt; DataInfo.bitsPerSample = data sample accuracy.  For raw analog 				data, this is the number of bits used to generate the number; 				for calibrated-value digital inputs, this is the precision to 				which the values have been acquired, calibrated, and manipulated.
+<br>
+
+
+
+<small>
+<br>
+<a href="http://msdn2.microsoft.com/en-us/library/System.Object.aspx" target="_1TY0XHK5D">System.Object</a><br>
+&nbsp;&nbsp;<b>OpenMedIC.FileWriter</b><br>
+
+</small>
+
+
+
+
+
+<br>
+<table border="0" cellpadding="3" width="96%">
+<pre class="SyntaxBox">
+public class FileWriter : object, IReceiver
+</pre>
+</table>
+
+
+
+
+
+
+
+  
+
+<table border="0" cellpadding="3" width="95%">
+
+  
+</table>
+
+<h3 class="outdent">Class Members</h3>
+<br>
+<table class='detailtable' border='1' cellpadding='3' align='center' width='95%'><tr><th Width='165'>Member</td><th Width='350'>Description</td></tr><tr><td Align='Left' VAlign='Top'><img src="bmp/classconstructor.gif" align="left"> <a href="_1ty0xfqe8.htm" >Constructor</a></td>
+<td VAlign='Top'>basic constructor:  only requires file path and file name.</td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classmethod.gif" align="left"> <a href="_1ty0xfqdt.htm" >addValue</a></td>
+<td VAlign='Top'>Write the new value to the file.  Includes the logic to check for: size overflow (if needed); "new day, new file" (if needed).<br><b><small>public sealed void addValue( Sample newValue );</small></b></td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classmethod.gif" align="left"> <a href="_1ty0xfqe7.htm" >addValues</a></td>
+<td VAlign='Top'>Write the array of values to the file. Currently just calls addValue ( Sample ) a number of times;  a more efficient algorithm would build a string to be added, and add it all at once, doing the necessary checks -- same as addValue ( Sample )  does, only made more complex by the presence of a variable number of values, where some may fit in the old file but not all, etc. If that were done, then addValue ( Sample ) could in turn call this method...<br><b><small>public sealed void addValues( Samples newValues );</small></b></td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classmethod.gif" align="left"> <a href="_1ty0xfqds.htm" >init</a></td>
+<td VAlign='Top'>Begin file writing, by ensuring the file exists and applying a header to it. The header contents are based on the data in iData, and possibly other data.<br><b><small>public sealed void init( ChainInfo iData );</small></b></td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfqf7.htm" >appendDateToFileName</a></td>
+<td VAlign='Top'>If TRUE, then the actual filename is formed as follows: [fileName minus extension, if any]_YYYY-MM-DD[.extension, if any] where YYYY-MM-DD are the date of file creation. This can be combined with appendTimeToFileName;  if so, the actual filename is formed as follows: [fileName minus extension, if any]_YYYY-MM-DD_HH-NN-SS[.extension, if any]</td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfqf6.htm" >appendExistingFile</a></td>
+<td VAlign='Top'>What to do if the file we are trying to create already exists, and overwriteExistingFile is FALSE.  If this is TRUE, then we append to the existing file (with a new header);  if this is FALSE, then we raise an exception.  Note also that this cannot be TRUE if  writeValuesAsAscii is false, since (at this time) binary-value  files are incompatible with multiple headers.</td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfqf8.htm" >appendTimeToFileName</a></td>
+<td VAlign='Top'>If TRUE, then the actual filename is formed as follows: [fileName minus extension, if any]_HH-NN-SS[.extension, if any] where HH-NN-SS are the hour, minutes, second of file creation. This can be combined with appendDateToFileName;  if so, the actual filename is formed as follows: [fileName minus extension, if any]_YYYY-MM-DD_HH-NN-SS[.extension, if any]</td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfqfh.htm" >createNewFileDaily</a></td>
+<td VAlign='Top'>If TRUE, then the first write on a day different from the last write creates a new file, complete with header.  This option requires that appendDateToFileName be TRUE.</td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfqfj.htm" >createNewFileWhenMaxSize</a></td>
+<td VAlign='Top'>Specifies what to do when the file grows to maxAllowedFileSize. If TRUE, then a new file is created (this requires that  appendDateToFileName and/or appendTimeToFileName be TRUE); If FALSE, then all writing stops. If maxAllowedFileSize is 0 (i.e. off), this flag is not used.</td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfqep.htm" >fileFullName</a></td>
+<td VAlign='Top'>Name of the actual file being written to.  In some cases this is the same as fileName; if any filename modifier is used (e.g., appendDateToFileName = TRUE and/or appendTimeToFileName = TRUE), then they are different.</td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfqeo.htm" >fileName</a></td>
+<td VAlign='Top'>Root of the name of the file.  If any filename modifier is used (e.g., appendDateToFileName = TRUE and/or appendTimeToFileName = TRUE), then the actual filename is different (see fileFullName);  otherwise they are the same.</td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfqen.htm" >filePath</a></td>
+<td VAlign='Top'>The path to the file;  returned value will always include a trailing delimiter</td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfqf2.htm" >filePathName</a></td>
+<td VAlign='Top'>path and name of the actual file being written to.  This is equivalent to this.filePath + this.fileFullName .</td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfqfi.htm" >maxAllowedFileSize</a></td>
+<td VAlign='Top'>Maximum allowed file size, in bytes.  If the next write would cause the file to exceed the specified size, then writing to that file stops. If createNewFileWhenMaxSize is TRUE, then a new file is created;  this also requires that appendDateToFileName and/or appendTimeToFileName be TRUE.  If createNewFileWhenMaxSize is FALSE, then all writing stops.</td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfqf5.htm" >overwriteExistingFile</a></td>
+<td VAlign='Top'>Whether we overwrite an existing file when attempting to create a new file.  If this is false, the behavior depends on the value of appendExistingFile.</td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfqf4.htm" >valuesWriteMode</a></td>
+<td VAlign='Top'>What mode is being used for data writing:  "ASCII"  or "Binary"</td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfqf3.htm" >writeValuesAsAscii</a></td>
+<td VAlign='Top'>Whether the data values are written as ASCII character or as binary values.  A float value will occupy up to 14 ASCII characters (i.e. 14 bytes on disk), but always exactly 4 bytes as a binary.  ASCII has the advantage of being readable by  humans and many other programs, such as spreadsheet programs.</td></tr>
+</table><p>
+
+
+<h3 class="outdent">Requirements</h3>
+   
+
+<b>Namespace:</b> OpenMedIC<br>
+   
+
+   
+
+<b>Assembly:</b> openmedic.dll
+<br>
+   
+
+
+
+
+<br>
+</div>
+<hr>
+<small>Last Updated: <i>6/21/2006</i></small>
+
+<p><center><i>This page was generated by an unregistered version of <a href="http://www.west-wind.com/wwHelp">West Wind HTML Help Builder</a>.</span> <p></center></body>
+</html>

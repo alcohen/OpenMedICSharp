@@ -1,0 +1,3357 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OpenMedIC</name>
+    </assembly>
+    <members>
+        <member name="T:OpenMedIC.BuildingBlock">
+            <summary>
+            The abstract BuildingBlock class is the core specification of a building
+            block in the OpenMedIC system.
+            
+            Any OpenMedIC component that can be added to a functional sequence needs to
+            be a BuildingBlock object.  This includes any object except for Display
+            and data sources (FileReader, Acquisition, ...?).
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.BuildingBlock.addValue(OpenMedIC.Sample)">
+            <summary>
+            Default:  propagates the Sample to all followers 
+            </summary>
+            <param name="newValue"></param>
+        </member>
+        <member name="M:OpenMedIC.BuildingBlock.addValues(OpenMedIC.Samples)">
+            <summary>
+            Default:  propagates the Samples to all followers 
+            </summary>
+            <param name="newValues">Zero-based array of samples.
+                                    Note that the OLDEST sample is newValues[0]</param>
+        </member>
+        <member name="T:OpenMedIC.CircularBuffer">
+            <summary>
+            A circular buffer of Samples.  Handles wrap-around and multi-threading appropriately.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.CircularBuffer.#ctor(System.Int32)">
+            <summary>
+            Create a new CircularBuffer object of the specified size (length).
+            </summary>
+            <param name="Length">Maximum number of samples that will be storable in this
+            				CircularBuffer.</param>
+        </member>
+        <member name="F:OpenMedIC.CircularBuffer.hasData">
+            <summary>
+            Set to false before until data is added
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.CircularBuffer.nextInputIndex">
+            <summary>
+            The index of the next waveform element to be written; 
+            keeps growing, does not roll back to zero when 
+            the last element of buffer is passed
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.CircularBuffer.CurrInputIndex">
+            <summary>
+            The index of the most recent waveform element to be written; 
+            keeps growing, does not roll back to zero when 
+            the last element of buffer is passed
+            Returns -1 if there is no data yet
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.CircularBuffer.nextBufferIndex">
+            <summary>
+            The index of the next buffer element to be written; 
+            Rolls back to zero when 
+            the last element of buffer is passed
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.CircularBuffer.AddPoint(OpenMedIC.Sample)">
+            <summary>
+            Adds a single point to the end of the buffer
+            </summary>
+            <param name="point">Point being added</param>
+        </member>
+        <member name="M:OpenMedIC.CircularBuffer.AddPoints(OpenMedIC.Samples)">
+            <summary>
+            Adds an array of data points to the buffer
+            </summary>
+            <param name="Points">Array of floats to add</param>
+        </member>
+        <member name="M:OpenMedIC.CircularBuffer.Reset">
+            <summary>
+            Clears the buffer and resets it to a newly-initialized state
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.CircularBuffer.GetPointsSince(System.Int64,OpenMedIC.Samples)">
+            <summary>
+            Returns all points added to circular buffer since a given InputIndex
+            </summary>
+            <param name="SinceIndex">Return points after this InputIndex</param>
+            <param name="PointsSince">Array in which points are passed back</param>
+        </member>
+        <member name="M:OpenMedIC.CircularBuffer.GetPointsSince(System.Int64,System.Int32,OpenMedIC.Samples)">
+            <summary>
+            Returns up to MaxCount points added to circular buffer since a given InputIndex
+            </summary>
+            <param name="SinceIndex">Return points starting at this InputIndex</param>
+            <param name="MaxCount">Max. number of points to return; actual returned points may be less!</param>
+            <param name="PointsSince">Array in which points are passed back</param>
+        </member>
+        <member name="M:OpenMedIC.CircularBuffer.getPoint(System.Int32)">
+            <summary>
+            Retrieves a single point that is backOffset samples in the past.
+            </summary>
+            <param name="backOffset">Number of samples back; 0 equals "last sample added"</param>
+            <returns>The appropriate Sample</returns>
+        </member>
+        <member name="P:OpenMedIC.CircularBuffer.BuffLength">
+            <summary>
+            Length of circular buffer
+            </summary>
+        </member>
+        <member name="T:OpenMedIC.DataInfo">
+            <summary>
+            Stores data-related information for an acquisition run.
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.DataInfo.description">
+            <summary>
+            Description of this data acquisition run
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.DataInfo.startTime">
+            <summary>
+            data run start date/time;  default = Now
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.DataInfo.bitsPerSamp">
+            <summary>
+            Number of bits per sample (usually it's the number of bits in the A/D)
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.DataInfo.zeroRefVoltage">
+            <summary>
+            Voltage that corresponds to a digital value of 0.0
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.DataInfo.fullScaleRefVoltage">
+            <summary>
+            Voltage that corresponds to a digital value of [all 1s]
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.DataInfo.valUnits">
+            <summary>
+            Units (label) that apply to the data values, e.g., "mV" or "microAmps"
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.DataInfo.scaleMultip">
+            <summary>
+            Scale multiplier (if calibration was performed)
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.DataInfo.offset">
+            <summary>
+            Offset from zero of the values (if calibration was performed)
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.DataInfo.clone">
+            <summary>
+            Creates a new identical copy of this object.  The returned clone is completely
+            independent of this object, and the two can be changed/updated/deleted without
+            one affecting the other.
+            </summary>
+            <returns>An identical copy of this object</returns>
+        </member>
+        <member name="M:OpenMedIC.DataInfo.setByTag(OpenMedIC.ChainInfo.varTags,System.String)">
+            <summary>
+            Assign a property referencing it by the tag associated with it.
+            </summary>
+            <param name="tag">A varTags value</param>
+            <param name="val">Value to assign</param>
+            <returns>TRUE if the assignment was successful, FALSE otherwise.</returns>
+        </member>
+        <member name="M:OpenMedIC.DataInfo.#ctor">
+            <summary>
+            Default constructor;  empty description, startTime = now
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.DataInfo.#ctor(System.String,System.String)">
+            <summary>
+            Default constructor;  initializes description and startTime from the 
+            passed parameters.
+            </summary>
+            <param name="dataDescription">Verbose description of the data</param>
+            <param name="startDateTime">start date/time of the data's acquisition</param>
+        </member>
+        <member name="P:OpenMedIC.DataInfo.DataDescription">
+            <summary>
+            Description of this data acquisition run
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.DataInfo.StartDateTime">
+            <summary>
+            data run start date/time;  default = Now
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.DataInfo.BitsPerSample">
+            <summary>
+            Number of bits per sample (usually it's the number of bits in the A/D)
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.DataInfo.ZeroReferenceVoltage">
+            <summary>
+            Sample value that corresponds to a digital value of [all zeros].
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.DataInfo.FullScaleReferenceVoltage">
+            <summary>
+            Sample value that corresponds to a digital value of [all 1s]
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.DataInfo.ValueUnits">
+            <summary>
+            Units that apply to the data values.  This can be any arbitrary label, e.g., "mV" 
+            or "microAmps" or "Smoots"
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.DataInfo.ScaleMultiplier">
+            <summary>
+            Scale multiplier (if calibration was performed).  This is the value by which we divide
+            the A/D integer output to get a value in the specified (or implied) units.
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.DataInfo.ZeroOffset">
+            <summary>
+            Offset from zero of the values (if calibration was performed).  This is the value in
+            A/D units that corresponds to an input of 0.0 ValueUnits.
+            </summary>
+        </member>
+        <member name="T:OpenMedIC.DataSource">
+            <summary>
+            An abstract class for any source of data, such as:
+            
+            -&gt; Function Generator;
+            -&gt; File Reader;
+            -&gt; Data Acquisition.
+            
+            NOTE:  If this is used with autoOutput = TRUE, you MUST call the Terminate()
+            method when done otherwise there is no guarantee that the class will unload 
+            properly.
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.DataSource.ticksPerSecond">
+            <summary>
+            Number of ticks in a second;  1 tick = 100 nanoseconds => 1 second = 10 million ticks
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.DataSource.minTimerIntervalMSec">
+            <summary>
+            Minimum timer interval period;  if data samples have a shorter interval than this,
+            then the timer is set to a default interval and multiple samples will be generated 
+            for each timer tick.
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.DataSource.lastStep">
+            <summary>
+            Store the last step for which we generated a value.
+            This value should be reset appropriately for any cyclical function.
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.DataSource.ticksPerStep">
+            <summary>
+            Conversion of the step period in "ticks" (internal Windows time format)
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.DataSource.lastOutput">
+            <summary>
+            when the last sample was output, as a DateTime
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.DataSource.autoSend">
+            <summary>
+            Whether to automatically output data when it's available, 
+            or wait for a trigger() or getNextValue[s](...)
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.DataSource.isPaused">
+            <summary>
+            Tracks when an autoSend DataSource is paused.
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.DataSource.dataFinished">
+            <summary>
+            A variable that can be set to interrupt data outputting, presumably because the data
+            source ran out of actual data, possibly in the middle of a block being sent (or requested).
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.DataSource.sendTimer">
+            <summary>
+            Thread used to trigger sending of data at specific intervals
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.DataSource.#ctor(System.Double,System.Boolean)">
+            <summary>
+            Default Constructor for DataSource.
+            If autoOutput, then this object will output one Sample every secondsPerStep
+            to its Followers;  if not autoOutput, then it will only generate output when
+            requested by a call to trigger() or getNextValue() or getNextValues(int).
+            </summary>
+            <param name="secondsPerStep">Interval between samples, in seconds or fraction thereof,
+            				e.g. 1 KHz = 1 ms per sample would have secondsPerStep = 0.001</param>
+            <param name="autoOutput">If true, then we push data out to the Followers;
+            				if false, we wait for whoever to pull out the data</param>
+        </member>
+        <member name="M:OpenMedIC.DataSource.Finalize">
+            <summary>
+            Destructor.  DO NOT COUNT ON THIS for clean-up!
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.DataSource.init(OpenMedIC.ChainInfo)">
+            <summary>
+            Initialize the data run with the appropriate info/parameters.
+            Note that a class should tolerate multiple init(...) calls without being destroyed
+            then re-instantiated, and there should be nothing carried over from a previous run
+            after init(...) has returned.
+            </summary>
+            <param name="iData">An object containing all necessary/relevant data for this
+            data run.</param>
+        </member>
+        <member name="M:OpenMedIC.DataSource.Terminate">
+            <summary>
+            Terminates timer thread(s) as necessary for clean completion of the code.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.DataSource.pause">
+            <summary>
+            Stops data acquisition/generation until resume() is called.
+            Calls to pause() while the DataSource is already paused are ignored.
+            
+            NOTE that this only applies to autoOutput mode;  in non-autoOutput mode this
+            method is ignored.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.DataSource.resume">
+            <summary>
+            Resumes data acquisition/generation after a pause ().
+            If a pause () was not called previously then this call is ignored.
+            Calls to resume() while not paused will be ignored.
+            
+            NOTE that this only applies to autoOutput mode;  in non-autoOutput mode this
+            method is ignored.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.DataSource.trigger">
+            <summary>
+            Gets the interval from now to the last time the trigger was called
+            ( OR from init() ) and outputs the appropriate number of samples.
+            
+            Works by outputting to each Follower the result of calling NextVal().
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.DataSource.next">
+            <summary>
+            Generates the next sample(s), then outputs it/them to the followers.
+            
+            If the next sample is not available yet, then this method does nothing.
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.DataSource.stepSize">
+            <summary>
+            Step size, in seconds.
+            A data source that generates one sample per millisecond would have 
+            a step size of 0.001 (1/1000).
+            
+            NOTE:  stepSize will be rounded to the nearest 100 nanoseconds.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.DataSource.getNextValue(OpenMedIC.Sample,System.Boolean)">
+            <summary>
+            Generates and returns the next function value to be returned, IF there is one.
+            If there is no new value and wait = true, it waits for the next value then returns
+            it;  otherwise it leaves val unchanged and returns FALSE.
+            </summary>
+            <param name="val">Sample whose value to set with the value to return</param>
+            <param name="wait">If TRUE, then the function waits for data if none is
+            					currently available;  if FALSE and no data is available,
+            					then it returns FALSE and leaves val unchanged</param>
+            <returns>TRUE if a value was set;  FALSE otherwise</returns>
+        </member>
+        <member name="M:OpenMedIC.DataSource.getNextValCertified(OpenMedIC.Sample)">
+            <summary>
+            This is the only official way of retrieving values from nextVal ();
+            that's because it keeps stuff in sync that would otherwise be done by
+            various different places.
+            </summary>
+            <param name="val">Value to be populated</param>
+        </member>
+        <member name="M:OpenMedIC.DataSource.getNextValues(OpenMedIC.Samples)">
+            <summary>
+            Generates and returns the next available function values up to vals.size.
+            If there are less than that many values available (including 0), it returns 
+            the available values and adjusts vals.size;  if there are at least that many
+            new values available, then it returns exactly vals.size values.
+            
+            The returned array has Sample[0] as the OLDEST sample;  see also 
+            IReceiver.addValues(Samples).
+            </summary>
+            <param name="vals">Samples array, with .size set to the max. number of
+            		samples desired.</param>
+        </member>
+        <member name="P:OpenMedIC.DataSource.autoOutput">
+            <summary>
+            Determines whether data is output based on internal parameters or 
+            should wait for external input.
+            
+            Internal parameters include:
+            
+            -&gt; data periodicity (e.g., a new sample is available);
+            -&gt; external data source has a new sample;
+            -&gt; local buffer (nearly?) full.
+            
+            External input means a call to one of:
+            
+            -&gt; trigger();
+            -&gt; getNextValue();
+            -&gt; getNextValues(int).
+            
+            Note that, even if autoOutput = TRUE, calls to the "external input" methods 
+            will still work, but if there is no data, getNextValue(true) will hang until 
+            the next value becomes available.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.DataSource.nextVal">
+            <summary>
+            This actually generates the next value in the sequence.
+            </summary>
+            <returns>The next available value</returns>
+        </member>
+        <member name="M:OpenMedIC.DataSource.nextValReady(System.Boolean)">
+            <summary>
+            Determines whether there is a next value ready for output:
+            
+            -&gt; If there is a next value available, it returns TRUE;
+            -&gt; If wait = TRUE  and there is no new value, it waits until a value is available;
+            -&gt; If wait = FALSE and there is no new value, it returns FALSE.
+            
+            Waiting is determined on how much time must elapse before the next sample is 
+            available;  the method waits for that period then checks again for availability,
+            and gets into a very short delay loop waiting.
+            </summary>
+            <param name="wait">Determines behavior if a value is not available.  If TRUE, then
+            			the method waits for the next value to be available then returns TRUE;
+            			otherwise, it returns immediately FALSE.</param>
+            <returns>-&gt; If there is a next value available, it returns TRUE;
+            		 -&gt; If wait = TRUE  and there is no new value, it waits until a value is available;
+            		 -&gt; If wait = FALSE and there is no new value, it returns FALSE.
+            </returns>
+        </member>
+        <member name="M:OpenMedIC.DataSource.hasNextVal">
+            <summary>
+            Determines how many next values we have to return.
+            If this returns 1 or more, then a call to getNextVal(FALSE) should always 
+            return a meaningful value;  if this returns 0, then a call to 
+            getNextVal(TRUE) should be expected to wait for some time before returning.
+            </summary>
+            <returns>the number of values ready to be returned, if any.  Never returns
+            		less than 0</returns>
+        </member>
+        <member name="T:OpenMedIC.FileHandler">
+            <summary>
+            This class implements file-generic functionality.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.FileHandler.clone">
+            <summary>
+            Creates a new identical copy of this object.  The returned clone is completely
+            independent of this object, and the two can be changed/updated/deleted without
+            one affecting the other.
+            </summary>
+            <returns>An identical copy of this object</returns>
+        </member>
+        <member name="P:OpenMedIC.FileHandler.dataFormat">
+            <summary>
+            Data Formatting information (as text)
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.FileHandler.writerClassName">
+            <summary>
+            Name of the class used to actually write the data
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.FileHandler.multiFileNum">
+            <summary>
+            Current file number in a multi-file data set
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.FileHandler.startTime">
+            <summary>
+            Data acquisition start time
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.FileHandler.setByTag(OpenMedIC.ChainInfo.varTags,System.String)">
+            <summary>
+            Assign a property referencing it by the tag associated with it.
+            </summary>
+            <param name="tag">A varTags value</param>
+            <param name="val">Value to assign</param>
+            <returns>TRUE if the assignment was successful, FALSE otherwise.</returns>
+        </member>
+        <member name="F:OpenMedIC.FileHandler.headerStartDelim">
+            <summary>
+            Sequence of characters that indicate the start of a header.  When parsing,
+            this should be looked for then thrown out.  If empty (""), then there is no
+            start-of-header delimiter and none should be expected.
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FileHandler.headerRowLeader">
+            <summary>
+            Sequence of characters that begins a header row.  The first character after
+            the headerRowLeader sequence is the beginning of a header Tag.
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FileHandler.headerTagDelim">
+            <summary>
+            Sequence of characters that separate a tag from its value.  It cannot be
+            empty, and it must be a sequence that will never appear in a tag.
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FileHandler.headerRowTrailer">
+            <summary>
+            Sequence of characters that mark the end of a header row.
+            Note that this CAN be empty and/or appear in a header value;  when parsing,
+            you must look for either ( headerRowTrailer + headerRowLeader ) or
+            ( headerRowTrailer + headerEndDelim ) as the end of the value.
+            The value of this constant is RECOMMENDED TO BE an OpenMedICUtils.newLine,
+            so the file can be read using the ReadLine(...) method(s).
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FileHandler.headerEndDelim">
+            <summary>
+            Sequence of characters that mark the end of a header (and start of 
+            data).  Note that, in all cases, the headerEndDelim will be followed 
+            by an asciiValueDelim before the actual data starts.
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FileHandler.asciiValueDelim">
+            <summary>
+            Sequence of characters that delimit values in an ASCII-value-formatted file,
+            i.e. a file where the values are written as text rather than as binary 
+            numbers.  This cannot be empty, and cannot start or end with one of these
+            characters:  [0123456789+-.E]
+            The value of this constant is RECOMMENDED TO BE an OpenMedICUtils.newLine,
+            so the file can be read using the ReadLine(...) method(s).
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.FileHandler.validatePath(System.String)">
+            <summary>
+            Determines whether filePath is a valid, existing path on the current system.
+            </summary>
+            <param name="filePath">directory path</param>
+        </member>
+        <member name="M:OpenMedIC.FileHandler.fileExists(System.String)">
+            <summary>
+            Determines whether the specified path/file exists on the current system
+            </summary>
+            <param name="filePathAndName">file name and location</param>
+        </member>
+        <member name="M:OpenMedIC.FileHandler.fileNotExists(System.String,System.String,System.Boolean)">
+            <summary>
+            Checks that the specified path/name, with or without certain used variants, 
+            do(es) not already exist.
+            </summary>
+            <param name="filePath"></param>
+            <param name="fileName"></param>
+            <param name="withVariants"></param>
+        </member>
+        <member name="M:OpenMedIC.FileHandler.cleanPath(System.String)">
+            <summary>
+            Cleans up the passed path.
+            For now it removes leading/trailing whitespace, and makes sure that
+            the path ends with a delimiter.
+            </summary>
+            <param name="inPath">File Path to clean</param>
+            <returns>cleaned file path</returns>
+        </member>
+        <member name="M:OpenMedIC.FileHandler.cleanFileName(System.String)">
+            <summary>
+            Removes unwanted stuff from the passed file name.
+            For now it just removes leading and trailing whitespace.
+            </summary>
+            <param name="fileName">file name to be cleaned</param>
+            <returns>Cleaned file name</returns>
+        </member>
+        <member name="M:OpenMedIC.FileHandler.getExt(System.String)">
+            <summary>
+            Extracts the extension from the file name;  if there is none, it
+            returns an empty string ("").
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenMedIC.FileHandler.getTagFromLabel(System.String)">
+            <summary>
+            Returns the tag that the given value corresponds to, or throws an
+            exception if there is no match.
+            Note that the match must be exact and case-sensitive!
+            </summary>
+            <param name="tagValue">Tag Value to match to varTags tags</param>
+            <returns>The appropriate tag;  throws an exception if no match.
+            	Note that the match must be exact and case-sensitive!</returns>
+        </member>
+        <member name="M:OpenMedIC.FileHandler.getPath(System.String)">
+            <summary>
+            Parses pathAndFileName to extract the leading path component, including
+            a trailing delimiter.
+            If the passed value doesn't contain a path, then it returns an empty string.
+            </summary>
+            <param name="pathAndFileName">A path and file name string with the appropriate
+            		delimiters for the current OS</param>
+            <returns>The path component, including a trailing delimiter</returns>
+        </member>
+        <member name="M:OpenMedIC.FileHandler.getFileName(System.String)">
+            <summary>
+            Parses pathAndFileName to extract the trailing filename component, NOT including
+            a leading delimiter.
+            If the passed value doesn't contain a file name, then it returns an empty string.
+            </summary>
+            <param name="pathAndFileName">A path and file name string with the appropriate
+            		delimiters for the current OS</param>
+            <returns>The file name component, NOT including a leading delimiter</returns>
+        </member>
+        <member name="T:OpenMedIC.FileLogger">
+            <summary>
+            Creates a NEW file with the specified path/filename and an appropriate header,
+            and writes to it the passed input data, one row per sample.
+            
+            The class is hard-coded for:
+            
+            -&gt; Writing the values as ASCII text (more universally readable)
+            -&gt; Appending creation date and/or time to the name;
+            
+            The class offers options for:
+            
+            -&gt; Limiting the maximum file size (and what to do then);
+            -&gt; Starting a new file on a new day;
+            -&gt; [FUTURE ENH - create dir if not existing];
+            -&gt; [FUTURE ENH - put date in dir name not file name].
+            
+            Default values:
+            
+            -&gt; Limiting the maximum file size:  default = FALSE;
+            -&gt; Starting a new file on a new day:  default = FALSE;
+            -&gt; [FUTURE ENH - create dir if not existing:  default = FALSE];
+            -&gt; [FUTURE ENH - put date in dir name not file name:  default = FALSE].
+            
+            Note the following required data to be passed to the init(ChainInfo) method:
+            
+            -&gt; A file name prefix (goes before the date/time stamp and extension)
+            
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.FileLogger.#ctor(System.String,System.String)">
+            <summary>
+            Constructor:  only requires file path and root of file name.
+            -&gt; Writing the values as ASCII text:  TRUE;
+            -&gt; Limiting the maximum file size:  FALSE;
+            -&gt; Appending creation date and/or time:  TRUE;
+            -&gt; Starting a new file on a new day:  FALSE;
+            -&gt; Replacing or appending to an existing file:  FALSE;
+            -&gt; [FUTURE ENH - create dir if not existing:  FALSE];
+            -&gt; [FUTURE ENH - put date in dir name not file name:  FALSE].
+            </summary>
+            <param name="filePath">Must be a valid, writeable path</param>
+            <param name="fileName">Must be a valid file name that does NOT already exist in filePath</param>
+        </member>
+        <member name="T:OpenMedIC.FileReader">
+            <summary>
+            Reads the header and data from a file, typically generated by a FileWriter
+            class, and outputs the data as a DataSource would.
+            
+            Note that, for now, a FileReader will only read data from a single file; if
+            a FileWriter wrote multiple files for a single acquisition (e.g. because 
+            they were changed every day, or were changed whenever they reached a 
+            certain size), then new functionality would be needed to read the 
+            consecutive files.
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FileReader.fPath">
+            <summary>
+            Path location for the file being read
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FileReader.fName">
+            <summary>
+            Name of file being read
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FileReader.fPathName">
+            <summary>
+            Path/Name being read ( = fPath + "/" + fName)
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FileReader.bufferSeconds">
+            <summary>
+            How many seconds do we want to buffer
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FileReader.minBufferSampleSec">
+            <summary>
+            minimum sample period below which we buffer
+            (and above which we don't buffer)
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FileReader.textBuffer">
+            <summary>
+            Buffer for ASCII files
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FileReader.binaryBuffer">
+            <summary>
+            Buffer for binary files
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FileReader.bufferPointer">
+            <summary>
+            Current value in the buffer (i.e. the next one to retrieve)
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FileReader.repeat">
+            <summary>
+            True if we start again from the start of the file after hitting the end
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FileReader.curReadStartPos">
+            <summary>
+            Pointer inside the file, for SEEK methods:
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FileReader.writtenAsAscii">
+            <summary>
+            How is data stored?  Ascii text (readable but inefficient) 
+            vs. binary (efficient but unreadable)
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FileReader.initValues">
+            <summary>
+            Header information storage -- save the actual ChainInfo object
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.FileReader.#ctor(System.Double,System.Boolean,System.String,System.String)">
+            <summary>
+            Full constructor:  requires file path and file name.
+            Also loads header from file.
+            </summary>
+            <param name="secondsPerStep">Interval between samples, in seconds or fraction thereof,
+            				e.g. 1 KHz = 1 ms per sample would have secondsPerStep = 0.001.  If
+            				autoOutput is TRUE and the file header has its own sample period value,
+            				then this param is ignored and the value in the file header is used 
+            				instead.</param>
+            <param name="autoOutput">If TRUE, then we push data out to the Followers AND try to
+            				use the sample period value from the file header; if FALSE, we wait
+            				for whoever to pull out the data.</param>
+            <param name="filePath">Must be an existing file path, with or without trailing slash</param>
+            <param name="fileName">Must be an existing file name</param>
+        </member>
+        <member name="M:OpenMedIC.FileReader.initBuffer">
+            <summary>
+            Initialize the read buffer
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.FileReader.shiftArray(System.Array)">
+            <summary>
+            Shifts the data, from bufferPointer to the end of the array, to the
+            beginning of the array.
+            </summary>
+            <param name="buffer">Buffer array values</param>
+        </member>
+        <member name="M:OpenMedIC.FileReader.readTextFileIntoBuffer(System.Int32,System.Int32)">
+            <summary>
+             Reads UP TO the specified number of values from a text file to the
+             text buffer.  If the specified number is not available, buffSize 
+             is updated accordingly.
+            </summary>
+            <param name="size">Max number of values to read into the buffer;
+            		cannot be greater than buffSize - offset</param>
+            <param name="offset">Offset into array to write to (e.g., if we don't
+            		want to wipe out part of the array)</param>
+        </member>
+        <member name="M:OpenMedIC.FileReader.readBinaryFileIntoBuffer(System.Int32,System.Int32)">
+            <summary>
+             Reads UP TO the specified number of values from a binary file to the
+             binary buffer.  If the specified number is not available, buffSize 
+             is updated accordingly.
+            </summary>
+            <param name="size">Max number of values to read into the buffer;
+            		cannot be greater than buffSize</param>
+            <param name="offset">Offset into array to write to (e.g., if we don't
+            		want to wipe out part of the array)</param>
+        </member>
+        <member name="M:OpenMedIC.FileReader.parseHeaderRow(System.String)">
+            <summary>
+            Parses the input row, returning the Tag and Value in a tagValuePair.
+             Note: this method REQUIRES that the rowLeader and RowTrailer be present
+            </summary>
+            <param name="row">String containing a row of data from the file header</param>
+            <returns>The Tag-Value pair extracted from the row</returns>
+        </member>
+        <member name="M:OpenMedIC.FileReader.nextVal">
+            <summary>
+            Determines the next value in the sequence - in this case, the
+            next value from the read buffer that must be output.
+            </summary>
+            <returns>The next available value</returns>
+        </member>
+        <member name="M:OpenMedIC.FileReader.init(OpenMedIC.ChainInfo)">
+            <summary>
+            Override default behavior to:
+            - Save a local copy
+            - Get file header info
+            - Update iData accordingly
+            - Allow using header info to drive the output rates
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.FileReader.repeatAfterEndOfFile">
+            <summary>
+            If TRUE, then this reader will start again from the beginning of
+            the file after it reaches the end;  if FALSE, it will stop 
+            outputting data (if autoOutput) or output all zeros (if NOT 
+            autoOutput).
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.FileReader.ReadComplete">
+            <summary>
+            Return whether the file reading has completed.  Returns FALSE if reading
+            hasn't started or if reading hasn't reached the end of the file yet, otherwise
+            returns true.
+            </summary>
+        </member>
+        <member name="T:OpenMedIC.FileWriter">
+            <summary>
+            Creates a file with the desired path/filename and an appropriate header
+            (or appends to an existing one if appropriate), and writes to it the passed
+            input data, one row per sample.
+            
+            The class offers options for:
+            
+            -&gt; Writing the values as ASCII text (more universally readable)
+            			 or binary values (about 3x more compact);
+            -&gt; Limiting the maximum file size (and what to do then);
+            -&gt; Appending creation date and/or time to the name;
+            -&gt; Starting a new file on a new day;
+            -&gt; Replacing or appending to an existing file;
+            -&gt; [FUTURE ENH - create dir if not existing];
+            -&gt; [FUTURE ENH - put date in dir name not file name].
+            
+            Default values:
+            
+            -&gt; Writing the values as ASCII text:  default = TRUE;
+            -&gt; Limiting the maximum file size:  default = FALSE;
+            -&gt; Appending creation date and/or time:  default = FALSE;
+            -&gt; Starting a new file on a new day:  default = FALSE;
+            -&gt; Replacing or appending to an existing file:  default = FALSE;
+            -&gt; [FUTURE ENH - create dir if not existing:  default = FALSE];
+            -&gt; [FUTURE ENH - put date in dir name not file name:  default = FALSE].
+            
+            Note the following required data to be passed to the init(ChainInfo) method:
+            
+            -&gt; All cases:
+            	-&gt; -&gt; Data Sampling period, in seconds.
+            
+            -&gt; When writing the date to a file:
+            	-&gt; -&gt; DataInfo.dataDescription = Text Description of File Contents;
+            	-&gt; -&gt; DataInfo.startDateTime = Start Date/Time (can be left blank to 
+            				initialize to when this class instance is created);
+            	-&gt; -&gt; DataInfo.bitsPerSample = data sample accuracy.  For raw analog
+            				data, this is the number of bits used to generate the number;
+            				for calibrated-value digital inputs, this is the precision to
+            				which the values have been acquired, calibrated, and manipulated.
+            
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FileWriter.fPath">
+            <summary>
+            Local storage of file data
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FileWriter.fName">
+            <summary>
+            Local storage of file data
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FileWriter.fExt">
+            <summary>
+            Local storage of file data
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FileWriter.fCurFullName">
+            <summary>
+            Local storage of file data
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FileWriter.writeAsAscii">
+            <summary>
+            How is data stored?  Ascii text (readable but inefficient) 
+            vs. binary (efficient but unreadable)
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FileWriter.overwriteExisting">
+            <summary>
+            How to handle if the file already exists:
+            
+            -&gt; overwrite              =&gt; delete old file and create new;
+            -&gt; !overwrite AND  append =&gt; append data to the end of the old file;
+            -&gt; !overwrite and !append =&gt; throws an exception.
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FileWriter.appendExisting">
+            <summary>
+            How to handle if the file already exists:
+            
+            -&gt; overwrite              =&gt; delete old file and create new;
+            -&gt; !overwrite AND  append =&gt; append data to the end of the old file;
+            -&gt; !overwrite AND !append =&gt; throws an exception.
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FileWriter.wantDate">
+            <summary>
+            if TRUE, then it appends the creation date to the file name
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FileWriter.wantTime">
+            <summary>
+            if TRUE, then it appends the creation time to the file name
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FileWriter.recycleDaily">
+            <summary>
+            if TRUE AND wantDate is TRUE, then it starts a new file at the first
+            write that occurs on a different day from the last write.  If wantDate
+            is FALSE, then trying to set this to TRUE throws an exception.
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FileWriter.lastWriteDay">
+            <summary>
+            Day when we last wrote to the current file.  Set when the file is written to.
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FileWriter.curFileCount">
+            <summary>
+            File counter for multi-file modes (incremented in buildHeader () )
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FileWriter.maxSize">
+            <summary>
+            Max allowed file size, in bytes;  0 = "no max size"
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FileWriter.newWhenMax">
+            <summary>
+            if TRUE,  then we start a new file when the current one hits maxSize;
+            if FALSE, then we stop writing when the current file hits maxSize.
+            Trying to set to TRUE with maxSize = 0 throws an exception.
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FileWriter.doneWriting">
+            <summary>
+            Set to TRUE if we are to not write data to file anymore.  Typically this
+            happens when maxSize > 0, newWhenMax = FALSE, and the file size has been
+            exceeded.  Set and cleared in text only.
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FileWriter.initValues">
+            <summary>
+            Header information storage -- save the actual ChainInfo object
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FileWriter.bufferSeconds">
+            <summary>
+            How many seconds do we want to buffer
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FileWriter.minBufferSampleSec">
+            <summary>
+            minimum sample period below which we sample
+            (and above which we don't sample)
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.FileWriter.#ctor(System.String,System.String)">
+            <summary>
+            basic constructor:  only requires file path and file name.
+            
+            For greater flexibility in specifying a file name, see other constructors.
+            </summary>
+            <param name="filePath">Must be an existing file path, with or without trailing slash</param>
+            <param name="fileName">Must be a valid file name that does NOT already exist in filePath</param>
+        </member>
+        <member name="M:OpenMedIC.FileWriter.#ctor(System.String,System.String,System.Boolean,System.Int64,System.Boolean)">
+            <summary>
+            Allows setting behavior dependent on reaching a certain file size.
+            Using this constructor with createnewFileWhenMaxSize = TRUE
+            will set appendDateToFileName and appendTimeToFileName to TRUE.
+            </summary>
+            <param name="filePath">Must be an existing file path, with or without 
+            			trailing slash</param>
+            <param name="fileName">Must be a valid file name that does NOT already 
+            			exist in filePath (including any of its permutations of the
+            			form "nameroot*.ext")</param>
+            <param name="writeValuesAsAscii">If TRUE, then values will be written in
+            			ASCII (human-readable) format;  if FALSE, they will be 
+            			written in binary format.</param>
+            <param name="maxAllowedFileSize">If zero, then there is no limitation on
+            			file size;  otherwise, the file size will be limited to the
+            			specified number of bytes.</param>
+            <param name="createNewFileWhenMaxSize">What to do if the file size grows
+            			past the specified number of bytes.  If TRUE, then a new
+            			file is created;  if FALSE, then writing stops.</param>
+        </member>
+        <member name="M:OpenMedIC.FileWriter.#ctor(System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Collection of parameters for tweaking file name.
+            </summary>
+            <param name="filePath">Must be an existing file path, with or without 
+            			trailing slash</param>
+            <param name="fileName">Must be a valid file name that does NOT already 
+            			exist in filePath (including any of its permutations of the
+            			form "nameroot*.ext")</param>
+            <param name="writeValuesAsAscii">If TRUE, then values will be written in
+            			ASCII (human-readable) format;  if FALSE, they will be 
+            			written in binary format.</param>
+            <param name="createNewFileDaily">If TRUE, then the first write on a date
+            			different from the last write causes a new file to be 
+            			created.  This requires that appendDateToFileName = TRUE</param>
+            <param name="overwriteExistingFile">If TRUE, then file creation will
+            			overwrite an existing file with the same name.</param>
+            <param name="appendExistingFile">If TRUE, then file creation will do
+            			nothing if a file with the same name already exists.  Note
+            			that this requires that overwriteExistingFile = FALSE</param>
+            <param name="appendDateToFileName">If TRUE, then the creation date is
+            			added to the file name (before the extension, if any)</param>
+            <param name="appendTimeToFileName">If TRUE, then the creation time is
+            			added to the file name (before the extension, if any).  If
+            			appendDateToFileName = TRUE, then the time is added AFTER
+            			the date.</param>
+        </member>
+        <member name="M:OpenMedIC.FileWriter.#ctor(System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int64,System.Boolean)">
+            <summary>
+            This constructor exposes all externally-settable parameters.  Note that
+            some interdependencies between parameters may cause exceptions to be
+            thrown if values don't mesh appropriately.
+            </summary>
+            <param name="filePath">Must be an existing file path, with or without 
+            			trailing slash</param>
+            <param name="fileName">Must be a valid file name that does NOT already 
+            			exist in filePath (including any of its permutations of the
+            			form "nameroot*.ext")</param>
+            <param name="writeValuesAsAscii">If TRUE, then values will be written in
+            			ASCII (human-readable) format;  if FALSE, they will be 
+            			written in binary format.</param>
+            <param name="createNewFileDaily">If TRUE, then the first write on a date
+            			different from the last write causes a new file to be 
+            			created.  This requires that appendDateToFileName = TRUE</param>
+            <param name="overwriteExistingFile">If TRUE, then file creation will
+            			overwrite an existing file with the same name.</param>
+            <param name="appendExistingFile">If TRUE, then file creation will do
+            			nothing if a file with the same name already exists.  Note
+            			that this requires that overwriteExistingFile = FALSE</param>
+            <param name="appendDateToFileName">If TRUE, then the creation date is
+            			added to the file name (before the extension, if any)</param>
+            <param name="appendTimeToFileName">If TRUE, then the creation time is
+            			added to the file name (before the extension, if any).  If
+            			appendDateToFileName = TRUE, then the time is added AFTER
+            			the date.</param>
+            <param name="maxAllowedFileSize">If zero, then there is no limitation on
+            			file size;  otherwise, the file size will be limited to the
+            			specified number of bytes.</param>
+            <param name="createNewFileWhenMaxSize">What to do if the file size grows
+            			past the specified number of bytes.  If TRUE, then a new
+            			file is created;  if FALSE, then writing stops.  Note that
+            			TRUE requires that appendDateToFileName and/or 
+            			appendTimeToFileName be TRUE.</param>
+        </member>
+        <member name="M:OpenMedIC.FileWriter.Finalize">
+            <summary>
+            Release any resources that require manual releasing for proper shutdown
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.FileWriter.initBuffer">
+            <summary>
+            Initialize the write buffer
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.FileWriter.init(OpenMedIC.ChainInfo)">
+            <summary>
+            Begin file writing, by ensuring the file exists and applying a header to it.
+            The header contents are based on the data in iData, and possibly other data.
+            </summary>
+            <param name="iData">Information on the data to be written</param>
+        </member>
+        <member name="M:OpenMedIC.FileWriter.addValue(OpenMedIC.Sample)">
+            <summary>
+            Write the new value to the file.  Includes the logic to check for: 
+            size overflow (if needed);
+            "new day, new file" (if needed).
+            </summary>
+            <param name="newValue">new value to be written to file</param>
+        </member>
+        <member name="M:OpenMedIC.FileWriter.addValues(OpenMedIC.Samples)">
+            <summary>
+            Write the array of values to the file.
+            Currently just calls addValue ( Sample ) a number of times;  a more
+            efficient algorithm would build a string to be added, and add it all
+            at once, doing the necessary checks -- same as addValue ( Sample ) 
+            does, only made more complex by the presence of a variable number of
+            values, where some may fit in the old file but not all, etc.
+            If that were done, then addValue ( Sample ) could in turn call this
+            method...
+            </summary>
+            <param name="newValues">Array of input values</param>
+        </member>
+        <member name="M:OpenMedIC.FileWriter.buildHeader">
+            <summary>
+            Retrieves appropriate header information from the InitInfo, and turns it
+            into a long string formatted as tagname/value pair rows, like this:
+            <code># [tagname]:  [value] [OpenMedICUtils.newLine]</code>
+            The header is terminated by a row that starts with:
+            <code>##</code>
+            When parsing the file, one should ignore all that is on the same line
+            as the header terminator, through (including) a [OpenMedICUtils.newLine] 
+            that will end the line.
+            </summary>
+            <returns>A string that can be written to a file to serve as comprehensive
+            		header information</returns>
+        </member>
+        <member name="M:OpenMedIC.FileWriter.writeToFile(System.String,System.Boolean)">
+            <summary>
+            Writes the specified string to file, with buffering.  If immediate, then
+            it flushes the buffer immediately.  Note that the string is written as
+            ASCII characters, so this method is not usable to write binary data to 
+            the file.  A NewLine (OpenMedICUtils.newLine) is added at the end of the string.
+            </summary>
+            <param name="Value">ASCII string to append to the file.  If this is null, then
+            			nothing is appended (not even the line feed).  To add an empty
+            			line, submit an empty string ("") instead</param>
+            <param name="immediate">If TRUE, then write immediately what is in the buffer
+            			(i.e. flush the buffer whether it's time or not)</param>
+        </member>
+        <member name="M:OpenMedIC.FileWriter.writeTextBufferToFile">
+            <summary>
+            WARNING -- NEVER CALL THIS METHOD DIRECTLY!
+            Always use writeToFile ( string, bool )
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.FileWriter.writeCallback">
+            <summary>
+            Manages call-backs for async file writes.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.FileWriter.writeToFile(System.Single,System.Boolean)">
+            <summary>
+            Writes the specified number to file.
+            If we are writing values in ASCIII format, then this method calls
+            writeToFile ( string );  if not, then it writes it as a binary value.  
+            Note that values written as binary are NOT a human-readable series of 
+            characters, and there are no delimiters between values.
+            Note also, that if you only want to flush the buffers without writing 
+            anything new, you cannot use this method;  use instead, 
+            writeToFile ( (string) null, true ).
+            </summary>
+            <param name="Value">float value to append to the file</param>
+            <param name="immediate">If TRUE, then write immediately what is in the buffer
+            			(i.e. flush the buffer whether it's time or not)</param>
+        </member>
+        <member name="M:OpenMedIC.FileWriter.writeBinaryBufferToFile">
+            <summary>
+            WARNING -- NEVER CALL THIS METHOD DIRECTLY!
+            Always use writeToFile ( float, bool )
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.FileWriter.flushBuffer">
+            <summary>
+            Writes whatever is in the buffers to file.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.FileWriter.getFileFullName">
+            <summary>
+            Generate the appropriate file name based on the root name and
+            all the relevant flag values.
+            </summary>
+            <returns>A full file name</returns>
+        </member>
+        <member name="M:OpenMedIC.FileWriter.getFileFullName(System.String)">
+            <summary>
+            Generate the appropriate file name based on the passed param and
+            all the relevant flag values.
+            
+            Relevant flags are:
+            
+            -&gt; wantDate;
+            -&gt; wantTime.
+            </summary>
+            <param name="fileName">a file name to use in building the full name</param>
+            <returns>A full file name</returns>
+        </member>
+        <member name="M:OpenMedIC.FileWriter.getPreExt(System.String)">
+            <summary>
+            Returns all the text in fileName that comes before the extension.
+            If there is no extension, the returned string is identical to fileName.
+            If there is an extension, the period is NOT returned.
+            </summary>
+            <param name="fileName">File name to parse</param>
+            <returns>All the text in fileName that comes before the extension</returns>
+        </member>
+        <member name="P:OpenMedIC.FileWriter.filePath">
+            <summary>
+            The path to the file;  returned value will always include a trailing delimiter
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.FileWriter.fileName">
+            <summary>
+            Root of the name of the file.  If any filename modifier is used (e.g.,
+            appendDateToFileName = TRUE and/or appendTimeToFileName = TRUE), then
+            the actual filename is different (see fileFullName);  otherwise they
+            are the same.
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.FileWriter.fileFullName">
+            <summary>
+            Name of the actual file being written to.  In some cases this is
+            the same as fileName; if any filename modifier is used (e.g.,
+            appendDateToFileName = TRUE and/or appendTimeToFileName = TRUE),
+            then they are different.
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.FileWriter.filePathName">
+            <summary>
+            path and name of the actual file being written to.  This is 
+            equivalent to this.filePath + this.fileFullName .
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.FileWriter.writeValuesAsAscii">
+            <summary>
+            Whether the data values are written as ASCII character or as
+            binary values.  A float value will occupy up to 14 ASCII
+            characters (i.e. 14 bytes on disk), but always exactly 4 bytes
+            as a binary.  ASCII has the advantage of being readable by 
+            humans and many other programs, such as spreadsheet programs.
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.FileWriter.valuesWriteMode">
+            <summary>
+            What mode is being used for data writing:  "ASCII"  or "Binary"
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.FileWriter.overwriteExistingFile">
+            <summary>
+            Whether we overwrite an existing file when attempting to create a
+            new file.  If this is false, the behavior depends on the value of
+            appendExistingFile.
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.FileWriter.appendExistingFile">
+            <summary>
+            What to do if the file we are trying to create already exists, and
+            overwriteExistingFile is FALSE.  If this is TRUE, then we append to
+            the existing file (with a new header);  if this is FALSE, then we
+            raise an exception.  Note also that this cannot be TRUE if 
+            writeValuesAsAscii is false, since (at this time) binary-value 
+            files are incompatible with multiple headers.
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.FileWriter.appendDateToFileName">
+            <summary>
+            If TRUE, then the actual filename is formed as follows:
+            [fileName minus extension, if any]_YYYY-MM-DD[.extension, if any]
+            where YYYY-MM-DD are the date of file creation.
+            This can be combined with appendTimeToFileName;  if so, the actual
+            filename is formed as follows:
+            [fileName minus extension, if any]_YYYY-MM-DD_HH-NN-SS[.extension, if any]
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.FileWriter.appendTimeToFileName">
+            <summary>
+            If TRUE, then the actual filename is formed as follows:
+            [fileName minus extension, if any]_HH-NN-SS[.extension, if any]
+            where HH-NN-SS are the hour, minutes, second of file creation.
+            This can be combined with appendDateToFileName;  if so, the actual
+            filename is formed as follows:
+            [fileName minus extension, if any]_YYYY-MM-DD_HH-NN-SS[.extension, if any]
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.FileWriter.createNewFileDaily">
+            <summary>
+            If TRUE, then the first write on a day different from the last write
+            creates a new file, complete with header.  This option requires that
+            appendDateToFileName be TRUE.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.FileWriter.checkAndSetMaxSizeParams(System.Int64,System.Boolean)">
+            <summary>
+            Does sanity-checking on the passed values before saving them to
+            the internal variables.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.FileWriter.checkMaxSizeParams(System.Int64,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Does sanity-checking on the passed input parameters.
+            </summary>
+            <returns>TRUE if the params are consistent with each other</returns>
+        </member>
+        <member name="P:OpenMedIC.FileWriter.maxAllowedFileSize">
+            <summary>
+            Maximum allowed file size, in bytes.  If the next write would cause
+            the file to exceed the specified size, then writing to that file stops.
+            If createNewFileWhenMaxSize is TRUE, then a new file is created;  this
+            also requires that appendDateToFileName and/or appendTimeToFileName
+            be TRUE.  If createNewFileWhenMaxSize is FALSE, then all writing stops.
+            
+            Note that if this value is changed after starting, then the next write
+            will take it into account, but the previous writes will be unaffected.
+            In other words, if you set this to less than the current file size, the
+            size will not become smaller.
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.FileWriter.createNewFileWhenMaxSize">
+            <summary>
+            Specifies what to do when the file grows to maxAllowedFileSize.
+            If TRUE, then a new file is created (this requires that 
+            appendDateToFileName and/or appendTimeToFileName be TRUE);
+            If FALSE, then all writing stops.
+            If maxAllowedFileSize is 0 (i.e. off), this flag is not used.
+            </summary>
+        </member>
+        <member name="T:OpenMedIC.Filter">
+            <summary>
+            Summary description for Filter.
+            
+            The Filter class exists for the purpose of defining a common structure
+            for all OpenMedIC filters.
+            
+            As the filters become more complex, this class can evolve to encompass
+            all the new needed functionality.
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.Filter.delay">
+            <summary>
+            Delay, in number of bins, between input and output of values in this
+            filter.
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.Filter.delayBuffer">
+            <summary>
+            Buffer used to store values for the delay
+            </summary>
+        </member>
+        <member name="T:OpenMedIC.Filter.filterTypes">
+            <summary>
+            Allowed types of filter
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.Filter.filterTypes.IIR">
+            <summary>
+            Infinite Impulse Response filter
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.Filter.filterTypes.FIR">
+            <summary>
+            Finite Impulse Response filter
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.Filter.filterTypes.Other">
+            <summary>
+            Any other type, TBD (should not be used;  rather, new types should be added)
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.Filter.#ctor(System.Int32)">
+            <summary>
+            Initializes new Filter object
+            </summary>
+            <param name="delayBins">Delay (in number of samples) between filter input and output.</param>
+        </member>
+        <member name="P:OpenMedIC.Filter.filterDelay">
+            <summary>
+            Delay, in number of samples, between input and output of values in this
+            filter.
+            </summary>
+        </member>
+        <member name="T:OpenMedIC.FIRFilter">
+            <summary>
+            The FIRFilter is a Finite Impulse Response filter.
+            It doesn't have risk of instability of perpetual propagation of impulses.
+            This initial version expects the order and coefficients to be passed in,
+            thereby forcing the instantiator to calculate coefficients -- but the coefficients
+            will include all parameters for the filter.
+            The filter will implement a delay equal to the filter order minus one, to avoid
+            start-up erratic behavior.
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FIRFilter.order">
+            <summary>
+            Stores the filter order
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FIRFilter.coeffs">
+            <summary>
+            Stores the array of FIR coefficients
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FIRFilter.bypass">
+            <summary>
+            Indicates whether we apply the filter or bypass it
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.FIRFilter.#ctor(System.Double[]@)">
+            <summary>
+            The only input is the coefficients array, from which we deduce the order and
+            the delay.
+            </summary>
+            <param name="coefficients">Array of coefficients, where the first element of
+                the array is the one applied to the current value, and the last element is
+                applied to the oldest value.</param>
+        </member>
+        <member name="M:OpenMedIC.FIRFilter.addValue(OpenMedIC.Sample)">
+            <summary>
+            Output a sample delayed by our internal delay, then add the new sample 
+            to the delay circular buffer.
+            </summary>
+            <param name="newValue">New input value</param>
+        </member>
+        <member name="M:OpenMedIC.FIRFilter.addValues(OpenMedIC.Samples)">
+            <summary>
+            Generic AddValues:  propagates the value to all followers.  Note that it will 
+            lock the delay buffer to avoid data corruption.
+            </summary>
+            <param name="newValues">Zero-based array of samples.
+                                    Note that the OLDEST sample is newValues[0]</param>
+        </member>
+        <member name="P:OpenMedIC.FIRFilter.Bypass">
+            <summary>
+            Allows bypassing the filtering, i.e. making this object behave 
+            like a straight pass-through filter instead of a FIR filter.
+            </summary>
+        </member>
+        <member name="T:OpenMedIC.FunctionGen">
+            <summary>
+            Generic function generator class.
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.FunctionGen.scale">
+            <summary>
+            This is a multiplier for output amplitude;  note that, depending on the
+            function, the actual output amplitude may have positive or negative values
+            greater than this.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.FunctionGen.#ctor(System.Double,System.Boolean)">
+            <param name="secondsPerStep">Interval between samples, in seconds or fraction thereof,
+            				e.g. 1 KHz = 1 ms per sample would have secondsPerStep = 0.001</param>
+            <param name="autoOutput">If true, then we push data out to the Followers;
+            				if false, we wait for whoever to pull out the data</param>
+        </member>
+        <member name="M:OpenMedIC.FunctionGen.init(OpenMedIC.ChainInfo)">
+            <summary>
+            Initialize the object;  if this is .
+            </summary>
+            <param name="iData">Passed up only</param>
+        </member>
+        <member name="P:OpenMedIC.FunctionGen.outputMultiplier">
+            <summary>
+            A multiplying factor for the function output.  
+            Can be negative, but cannot be zero!
+            </summary>
+        </member>
+        <member name="T:OpenMedIC.ChainInfo">
+            <summary>
+            Stores the data needed for initialization of a chain.
+            Note the following required data:
+            
+            -&gt; All cases:
+            	-&gt; -&gt; Data Sampling period, in seconds.
+            
+            -&gt; When writing the date to a file:
+            	-&gt; -&gt; DataInfo.dataDescription = Text Description of File Contents;
+            	-&gt; -&gt; DataInfo.startDateTime = Start Date/Time (can be left blank to 
+            				initialize to when this class instance is created);
+            	-&gt; -&gt; DataInfo.bitsPerSample = data sample accuracy.  For raw analog
+            				data, this is the number of bits used to generate the number;
+            				for calibrated-value digital inputs, this is the precision to
+            				which the values have been acquired, calibrated, and manipulated.
+            </summary>
+        </member>
+        <member name="T:OpenMedIC.ChainInfo.tagValuePair">
+            <summary>
+            Tag Name-Value Pair objects:
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.ChainInfo.tagValuePair.tagName">
+            <summary>
+            Name of the tag
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.ChainInfo.tagValuePair.tagValue">
+            <summary>
+            Value of the tag
+            </summary>
+        </member>
+        <member name="T:OpenMedIC.ChainInfo.varTags">
+            <summary>
+            List of tags relating to properties available from this class.
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.ChainInfo.varTags.samplingPeriodSec">
+            <summary>
+            Tag for the sampling period, in seconds (20 Hz would correspond to 0.05)
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.ChainInfo.varTags.dataFormat">
+            <summary>
+            Tag for the data format (binary or text)
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.ChainInfo.varTags.writerClassName">
+            <summary>
+            Tag for name of the writer class being used
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.ChainInfo.varTags.multiFileNum">
+            <summary>
+            Tag for current file number in multi-file-writing mode
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.ChainInfo.varTags.startTime">
+            <summary>
+            Tag for the time when the file was started
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.ChainInfo.varTags.dataDescription">
+            <summary>
+            Tag for the verbose data description
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.ChainInfo.varTags.startDateTime">
+            <summary>
+            Tag for the date and time when data acquisition started 
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.ChainInfo.varTags.bitsPerSample">
+            <summary>
+            Tag for the number of bits in a sample
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.ChainInfo.varTags.zeroReferenceVoltage">
+            <summary>
+            Tag for the integer (data in) value that corresponds to zero 
+            volts
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.ChainInfo.varTags.fullScaleReferenceVoltage">
+            <summary>
+            Tag for the integer (data in) value that corresponds to "full 
+            scale"
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.ChainInfo.varTags.scaleMultiplier">
+            <summary>
+            Tag for the value by which the data in values must be multiplied,
+            to obtain a correct voltage out value
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.ChainInfo.varTags.zeroOffset">
+            <summary>
+            Tag for how much to offset the data in so that a value of zero
+            corresponds to zero volts
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.ChainInfo.varTags.Prefix">
+            <summary>
+            Tag for patient name's prefix (e.g., "Mr.", "Ms.", "Dr.")
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.ChainInfo.varTags.FirstName">
+            <summary>
+            Tag for patient's first name (given name)
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.ChainInfo.varTags.MiddleName">
+            <summary>
+            Tag for patient's middle name, possibly the maiden name
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.ChainInfo.varTags.LastName">
+            <summary>
+            Tag for the patient's last name (surname)
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.ChainInfo.varTags.Suffix">
+            <summary>
+            Tag for patient name's suffix (e.g., "MD", "PhD")
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.ChainInfo.varTags.Addr1">
+            <summary>
+            Tag for patient's address, line 1
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.ChainInfo.varTags.Addr2">
+            <summary>
+            Tag for patient's address, line 2
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.ChainInfo.varTags.City">
+            <summary>
+            Tag for patient's address, name of city/post office
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.ChainInfo.varTags.State">
+            <summary>
+            Tag for patient's address, name of state
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.ChainInfo.varTags.Zip">
+            <summary>
+            Tag for patient's address, zip code
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.ChainInfo.varTags.Country">
+            <summary>
+            Tag for patient's address, name of country
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.ChainInfo.varTags.PatientID">
+            <summary>
+            Tag for a Patient ID number
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.ChainInfo.varTags.Age">
+            <summary>
+            Tag for patient's age at the time of data acquisition
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.ChainInfo.varTags.DOB">
+            <summary>
+            Tag for patient's date of birth
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.ChainInfo.varTags.FullName">
+            <summary>
+            Tag for the full patient name, including prefix, first, middle, 
+            last, and suffix
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.ChainInfo.varTags.FullAddress">
+            <summary>
+            Tag for the full patient address, including addr1, addr2, city,
+            state, zip, and country
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.ChainInfo.tagValues">
+            <summary>
+            Ordered storage of tag-value pairs
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.ChainInfo.#cctor">
+            <summary>
+            Initializes the tagValues Hashtable (required for 
+            at least some static methods).
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.ChainInfo.getTagText(System.Enum)">
+            <summary>
+            Returns the tag text corresponding to the passed varTags value.
+            If tagID is not recognized, then it returns "[Unknown]".
+            </summary>
+            <param name="tagID">A varTags value identifying the property whose tag
+            			text is wanted</param>
+            <returns>the tag text corresponding to the tagID.  If it's not recognized,
+            			it returns "[Unknown]"</returns>
+        </member>
+        <member name="M:OpenMedIC.ChainInfo.getTagFromValue(System.String)">
+            <summary>
+            Returns the tag that the given value corresponds to, or throws an
+            exception if there is no match.
+            Note that the match must be exact and case-sensitive!
+            </summary>
+            <param name="val">Tag Value to match to varTags tags</param>
+            <returns>The appropriate tag;  throws an exception if no match.
+            	Note that the match must be exact and case-sensitive!</returns>
+        </member>
+        <member name="M:OpenMedIC.ChainInfo.clone">
+            <summary>
+            Creates a duplicate copy of this object and all its data.
+            </summary>
+            <returns>A new ChainInfo object identical to this one</returns>
+        </member>
+        <member name="M:OpenMedIC.ChainInfo.setByTag(OpenMedIC.ChainInfo.varTags,System.String)">
+            <summary>
+            Assign a property referencing it by the tag associated with it.
+            </summary>
+            <param name="tag">A varTags value</param>
+            <param name="val">Value to assign</param>
+            <returns>TRUE if the assignment was successful, FALSE otherwise.</returns>
+        </member>
+        <member name="M:OpenMedIC.ChainInfo.#ctor">
+            <summary>
+            Basic constructor;  requires no parameters.
+            Note that the sampling rate will be filled in by the data source.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.ChainInfo.#ctor(OpenMedIC.PatientInfo,OpenMedIC.DataInfo)">
+            <summary>
+            Full constructor, requiring the patient info and the data information.
+            </summary>
+            <param name="patientData">Object containing all relevant information 
+                about the patient the data belongs to (can be null)</param>
+            <param name="dataParams">Object containing all available information
+                about the data itself (can be null)</param>
+        </member>
+        <member name="P:OpenMedIC.ChainInfo.samplingPeriodSec">
+            <summary>
+            The current sampling period, in seconds
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.ChainInfo.dataInfo">
+            <summary>
+            Exposes the current DataInfo structure, which contains 
+            all relevant information about the data.
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.ChainInfo.patientInfo">
+            <summary>
+            Exposes the current PatientInfo structure, which contains 
+            all relevant information about the current patient.
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.ChainInfo.fileInfo">
+            <summary>
+            Exposes the current FileInfo structure, which contains 
+            methods and information for the file being written to (if any).
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.GraphBase.borderBevelWidth">
+            <summary>
+            Width (pixels) of bevel surrounding the control
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.GraphBase.borderMargin">
+            <summary>
+            Margin (pixels) between contents of control and outer bevel
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.GraphBase.gsBevelWidth">
+            <summary>
+            Bevel width (pixels) of graphing surface
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.GraphBase.gsBottom">
+            <summary>
+            Width (pixels) between bottom edge of graphing surface and bottom edge of component
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.GraphBase.gsLeft">
+            <summary>
+            Width (pixels) between left edge of graphing surface and left edge of component
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.GraphBase.gsRight">
+            <summary>
+            Width (pixels) between right edge of graphing surface and right edge of component
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.GraphBase.gsTop">
+            <summary>
+            Width (pixels) between top edge of graphing surface and top edge of component
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.GraphBase.OffscreenBitmap">
+            <summary>
+            Used to double buffer waveform display
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.GraphBase.OffscreenDC">
+            <summary>
+            Used to double buffer waveform display
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.GraphBase.OnscreenDC">
+            <summary>
+            Used to double buffer waveform display
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.GraphBase.titleFont">
+            <summary>
+            Font of title displayed on text
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.GraphBase.titleText">
+            <summary>
+            Title displayed on graph
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.GraphBase.wfBGBrush">
+            <summary>
+            Brush used for erasing background
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.GraphBase.wfColor">
+            <summary>
+            Waveform color
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.GraphBase.wfPen">
+            <summary>
+            Pen used for drawing the waveform
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.GraphBase.wfWidth">
+            <summary>
+            Waveform width (pixels)
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.GraphBase.xAxisDispMax">
+            <summary>
+            Maximum value displayed on X axis
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.GraphBase.xAxisDispMin">
+            <summary>
+            Minimum value displayed on X axis
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.GraphBase.xAxisNumberFont">
+            <summary>
+            Font of Y Axis Numbers
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.GraphBase.xAxisNumberFormat">
+            <summary>
+            Format of Y Axis Numbers
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.GraphBase.xAxisTicLength">
+            <summary>
+            Length (pixels) of X Axis Tics
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.GraphBase.xAxisTicWidth">
+            <summary>
+            Width (pixels) of X Axis Tics
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.GraphBase.yAxisCaptionFont">
+            <summary>
+            Font of Y Axis Caption
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.GraphBase.yAxisCaptionText">
+            <summary>
+            Caption displayed for the Y Axis (unit of measurement)
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.GraphBase.yAxisDispMax">
+            <summary>
+            Maximum value displayed on Y axis
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.GraphBase.yAxisDispMin">
+            <summary>
+            Minimum value displayed on Y axis
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.GraphBase.yAxisMaxNumTics">
+            <summary>
+            Maximum Number of Y Axis Tics
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.GraphBase.yAxisNumberFont">
+            <summary>
+            Font of Y Axis Numbers
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.GraphBase.yAxisNumberFormat">
+            <summary>
+            Format of Y Axis Numbers
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.GraphBase.yAxisNumberMaxWidth">
+            <summary>
+            Maximum width (pixels) of a Y Axis number, if it goes to scientific notation
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.GraphBase.yAxisTicLength">
+            <summary>
+            Length (pixels) of Y Axis Tics
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.GraphBase.yAxisTicWidth">
+            <summary>
+            Width (pixels) of Y Axis Tics
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.GraphBase.DrawBevel(System.Drawing.Graphics,System.Drawing.Rectangle,System.Int32,OpenMedIC.GraphBase.BevelStyle,OpenMedIC.GraphBase.BevelDirection)">
+            <summary>
+            Draws a bevel around a rectangle
+            </summary>
+            <param name="GS">Graphics surface to draw on</param>
+            <param name="ReferenceBorder">Rectangle representing the starting border of the bevel</param>
+            <param name="Width">Border width (pixels)</param>
+            <param name="Style">Sunk or raised</param>
+            <param name="Direction">Direction to draw, referenced to ReferenceBorder</param>
+        </member>
+        <member name="P:OpenMedIC.GraphBase.AutoRedraw">
+            <summary>
+            Gets or sets a value indicating whether [auto redraw].
+            </summary>
+            <value><c>true</c> if [auto redraw]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:OpenMedIC.GraphBase.BorderBevelWidth">
+            <summary>
+            Width (pixels) of bevel surrounding the control
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.GraphBase.BorderMargin">
+            <summary>
+            Gets or sets the border margin.
+            </summary>
+            <value>The border margin.</value>
+        </member>
+        <member name="P:OpenMedIC.GraphBase.Font">
+            <summary>
+            Irrelevant base class property
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.GraphBase.ForeColor">
+            <summary>
+            Irrelevant base class property
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.GraphBase.GSBackColor">
+            <summary>
+            Background color of graphing surface
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.GraphBase.GSBevelWidth">
+            <summary>
+            Bevel width (pixels) of graphing surface
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.GraphBase.GSBottom">
+            <summary>
+            Width (pixels) between bottom edge of graphing surface and bottom edge of component
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.GraphBase.GSLeft">
+            <summary>
+            Width (pixels) between left edge of graphing surface and left edge of component
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.GraphBase.GSRight">
+            <summary>
+            Width (pixels) between right edge of graphing surface and right edge of component
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.GraphBase.GSTop">
+            <summary>
+            Width (pixels) between top edge of graphing surface and bottom of title
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.GraphBase.RightToLeft">
+            <summary>
+            Irrelevant base class property
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.GraphBase.TitleFont">
+            <summary>
+            Font of title displayed on text
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.GraphBase.TitleText">
+            <summary>
+            Title displayed on graph
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.GraphBase.WFColor">
+            <summary>
+            Waveform color
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.GraphBase.WFWidth">
+            <summary>
+            Waveform width (pixels)
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.GraphBase.XAxisDispMax">
+            <summary>
+            Maximum displayed on X Axis
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.GraphBase.XAxisDispMin">
+            <summary>
+            Minimum displayed on X Axis
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.GraphBase.XAxisNumberFont">
+            <summary>
+            Font of X Axis Numbers
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.GraphBase.XAxisNumberFormat">
+            <summary>
+            Format of X Axis Numbers
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.GraphBase.XAxisTicLength">
+            <summary>
+            Length (pixels) of X Axis Tics
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.GraphBase.XAxisTicWidth">
+            <summary>
+            Width (pixels) of X Axis Tics
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.GraphBase.YAxisCaptionFont">
+            <summary>
+            Font of Y Axis Caption
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.GraphBase.YAxisCaptionText">
+            <summary>
+            Caption displayed for the Y Axis (unit of measurement)
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.GraphBase.YAxisDispMax">
+            <summary>
+            Maximum value displayed on Y axis
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.GraphBase.YAxisDispMin">
+            <summary>
+            Minimum value displayed on Y axis
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.GraphBase.YAxisMaxNumTics">
+            <summary>
+            Maximum Number of Y Axis Tics
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.GraphBase.YAxisNumberFont">
+            <summary>
+            Font of Y Axis Numbers
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.GraphBase.YAxisNumberFormat">
+            <summary>
+            Format of Y Axis Numbers
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.GraphBase.YAxisTicLength">
+            <summary>
+            Length (pixels) of Y Axis Tics
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.GraphBase.YAxisTicWidth">
+            <summary>
+            Width (pixels) of Y Axis Tics
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.GraphBase.SaveToFile(System.String)">
+            <summary>
+            Save the image currently in the display to a file with the specified
+            path and file name, and with an extension of .BMP (any extension
+            specified in the file name will be treated as part of the file name).
+            If the file already exists, it is overwritten.
+            </summary>
+            <param name="filePathName">A valid path and file name, WITHOUT the
+            		extension, to which to save the current bitmap</param>
+        </member>
+        <member name="M:OpenMedIC.GraphBase.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:OpenMedIC.GraphBase.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:OpenMedIC.IReceiver">
+            <summary>
+            Specifies the Data Receiving interface for OpenMedIC Building Blocks.
+            
+            A Receiver is a component that receives data from a Sender.
+            The purpose for the interface is to maintain daisy-chaining compatibility in
+            components where it's relevant, and where it's not relevant it allows to break it
+            deliberately by not implementing IReceiver.
+            
+            The interface for a Receiver specifies an init() method to initialize the component,
+            and two methods to pass data to the Receiver:  individual sample and sample array.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.IReceiver.init(OpenMedIC.ChainInfo)">
+            <summary>
+            Initialize myself.
+            </summary>
+            <param name="iData"></param>
+        </member>
+        <member name="M:OpenMedIC.IReceiver.addValue(OpenMedIC.Sample)">
+            <summary>
+            A new sample is available, and it must be processed and/or propagated
+            to the followers as appropriate.
+            </summary>
+            <param name="newValue"></param>
+        </member>
+        <member name="M:OpenMedIC.IReceiver.addValues(OpenMedIC.Samples)">
+            <summary>
+            A number of new samples are available, and they must be processed 
+            and/or propagated to the followers as appropriate.
+            </summary>
+            <param name="newValues">Zero-based array of samples.
+                                    Note that the OLDEST sample is newValues[0]</param>
+        </member>
+        <member name="T:OpenMedIC.NewDataTrigger">
+            <summary>
+            This class implements an IReceiver, for the purpose of triggering a method 
+            (delegate) call when there is new data coming through, and thus being able
+            to do without other timers.
+            This would normally be used to drive a display refresh and/or trigger a 
+            DataSource created with autoOutput = false.
+            
+            Usage:
+            <code>
+            	NewDataTrigger myTrigger = new NewDataTrigger 
+            		( new NewDataTrigger.refreshDelegate ( [function to call] ),
+            		  true, true );
+            	[Any Sender].addFollower ( myTrigger );
+            </code>
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.NewDataTrigger.minRefreshMSec">
+            <summary>
+            The minimum amount of time between refreshes
+            </summary>
+        </member>
+        <member name="T:OpenMedIC.NewDataTrigger.refreshDelegate">
+            <summary>
+            Delegate to be used for new NewDataTrigger instance creation
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.NewDataTrigger.#ctor(OpenMedIC.NewDataTrigger.refreshDelegate,System.Boolean,System.Boolean)">
+            <summary>
+            Creates a new instance with the appropriate parameters to run.
+            </summary>
+            <param name="refresher">Delegate of the method to be called for a trigger</param>
+            <param name="triggerOnAddValue">If TRUE, then refresher is called when addValue(Sample) is called</param>
+            <param name="triggerOnAddValues">If TRUE, then refresher is called when addValues(Samples) is called</param>
+        </member>
+        <member name="M:OpenMedIC.NewDataTrigger.init(OpenMedIC.ChainInfo)">
+            <summary>
+            Initialize myself.
+            </summary>
+            <param name="iData"></param>
+        </member>
+        <member name="M:OpenMedIC.NewDataTrigger.addValue(OpenMedIC.Sample)">
+            <summary>
+            A new sample is available, and it must be processed and/or propagated
+            to the followers as appropriate.
+            </summary>
+            <param name="newValue"></param>
+        </member>
+        <member name="M:OpenMedIC.NewDataTrigger.addValues(OpenMedIC.Samples)">
+            <summary>
+            A number of new samples are available, and they must be processed 
+            and/or propagated to the followers as appropriate.
+            </summary>
+            <param name="newValues">Zero-based array of samples.
+                                    Note that the OLDEST sample is newValues[0]</param>
+        </member>
+        <member name="T:OpenMedIC.OpenMedICUtils">
+            <summary>
+            Stores general-purpose utility methods and constants.
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.OpenMedICUtils.debugMode">
+            <summary>
+            Flag used to enable special functionality for debugging.  See code for details.
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.OpenMedICUtils.doPrint">
+            <summary>
+            Debugging-mode flag to enable stdout printing of debug statements.  See code for details.
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.OpenMedICUtils.newLine">
+            <summary>
+            Definition of new-line character sequence, used in writing to files 
+            or to screen.  The current value is the DOS/Windows/Notepad new-line
+            sequence, CR-LF.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.OpenMedICUtils.isEmpty(System.String)">
+            <summary>
+            Determines whether a string is null or empty, and returns true if it's either.
+            </summary>
+            <param name="val">string to be tested</param>
+            <returns>True if the string is null OR empty;  false if it's neither.</returns>
+        </member>
+        <member name="M:OpenMedIC.OpenMedICUtils.debugPrint(System.String)">
+            <summary>
+            Conditional debug print statement:  if OpenMedICUtils.debugMode then it
+            prints, otherwise it's a no-op
+            </summary>
+            <param name="msg">text to be displayed</param>
+        </member>
+        <member name="T:OpenMedIC.PassThroughFilter">
+            <summary>
+            The PassThroughFilter is the simplest filter:  it passes inputs straight
+            through, without altering the value and without delay.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.PassThroughFilter.#ctor(System.Int32)">
+            <summary>
+            Constructor;  functionally it's a pass-through to the base class'
+            (the Filter class) constructor.
+            </summary>
+            <param name="delayBins">Delay (in number of samples) between filter input 
+                and output.</param>
+        </member>
+        <member name="M:OpenMedIC.PassThroughFilter.addValue(OpenMedIC.Sample)">
+            <summary>
+            Output a sample delayed by our internal delay, then add the new sample 
+            to the delay circular buffer.
+            </summary>
+            <param name="newValue">New input value</param>
+        </member>
+        <member name="M:OpenMedIC.PassThroughFilter.addValues(OpenMedIC.Samples)">
+            <summary>
+            Generic AddValues:  propagates the value to all followers.  Note that it will 
+            lock the delay buffer to avoid data corruption.
+            </summary>
+            <param name="newValues">Zero-based array of samples.
+                                    Note that the OLDEST sample is newValues[0]</param>
+        </member>
+        <member name="T:OpenMedIC.PatientInfo">
+            <summary>
+            Stores and returns patient info as desired.
+            If convenient, you can assign the full name to any one of the Name fields,
+            and the whole address to any one of the Address fields (except Country), and
+            they will be returned correctly by the fullName and fullAddress properties.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.PatientInfo.setByTag(OpenMedIC.ChainInfo.varTags,System.String)">
+            <summary>
+            Assign a property referencing it by the tag associated with it.
+            </summary>
+            <param name="tag">A varTags value</param>
+            <param name="val">Value to assign</param>
+            <returns>TRUE if the assignment was successful, FALSE otherwise.</returns>
+        </member>
+        <member name="M:OpenMedIC.PatientInfo.clone">
+            <summary>
+            Creates a duplicate copy of this object and all its data.
+            </summary>
+            <returns>A new PatientInfo object identical to this one</returns>
+        </member>
+        <member name="M:OpenMedIC.PatientInfo.#ctor(System.String,System.String,System.String)">
+            <summary>
+            This constructor only sets patient name.
+            If convenient, you can assign the full name to any one of the Name fields,
+            and it will still be returned correctly by the fullName property.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.PatientInfo.#ctor(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            This constructor only sets patient address.
+            If convenient, you can assign the whole address to any one of the Address 
+            fields (except Country), and it will be returned correctly by the 
+            fullAddress property.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.PatientInfo.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Storage for patient information, to be propagated to all the followers of
+            this object at init time.
+            All parameters can be left blank, but can't be left out.
+            </summary>
+            <param name="FirstName">First Name (Given Name)</param>
+            <param name="MiddleName">Middle Name</param>
+            <param name="LastName">Last Name (Surname)</param>
+            <param name="Addr1">Address line 1</param>
+            <param name="Addr2">Address line 2</param>
+            <param name="City">Address city</param>
+            <param name="State">Address state</param>
+            <param name="Zip">Address zip code</param>
+            <param name="Country">Address country</param>
+        </member>
+        <member name="P:OpenMedIC.PatientInfo.PatientID">
+            <summary>
+            Unique patient identifier string
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.PatientInfo.FirstName">
+            <summary>
+            Patient's first name (Given Name)
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.PatientInfo.MiddleName">
+            <summary>
+            Patient's middle name
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.PatientInfo.LastName">
+            <summary>
+            Patient's last name (Surname)
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.PatientInfo.Prefix">
+            <summary>
+            Patient's prefix to their name, e.g., "Mr.", "Ms.", "Dr."
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.PatientInfo.Suffix">
+            <summary>
+            Patient's suffix to their name, e.g., "MD, PhD", "Jr."
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.PatientInfo.Addr1">
+            <summary>
+            Patient's address, line 1
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.PatientInfo.Addr2">
+            <summary>
+            Patient's address, line 2
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.PatientInfo.City">
+            <summary>
+            Patient's address, city
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.PatientInfo.State">
+            <summary>
+            Patient's address, state
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.PatientInfo.Zip">
+            <summary>
+            Patient's address zip code
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.PatientInfo.Country">
+            <summary>
+            Patient's address, name of the country
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.PatientInfo.Age">
+            <summary>
+            Patient's age at this time
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.PatientInfo.DOBstring">
+            <summary>
+            Patient's date of birth, as a formatted string
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.PatientInfo.DOB">
+            <summary>
+            Patient's date of birth, as a DateTime number
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.PatientInfo.FullName">
+            <summary>
+            The full name as a formatted concatenation of 
+            prefix, first, middle, last, suffix
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.PatientInfo.FullAddress">
+            <summary>
+            The address as a formatted concatenation of 
+            Addr1, Addr2, City, State Zip (Country)
+            </summary>
+        </member>
+        <member name="T:OpenMedIC.RTGraph">
+            <summary>
+            Summary description for UserControl1.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.RTGraph.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.RTGraph.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.RTGraph.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.RTGraph.cursPen">
+            <summary>
+            Pen used for drawing the cursor
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.RTGraph.cursWidth">
+            <summary>
+            Width (pixels) of cursor
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.RTGraph.cursForeWidth">
+            <summary>
+            Width (pixels) of cleared area in fron of cursor
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.RTGraph.cursColor">
+            <summary>
+            color of cursor
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.RTGraph.InSamples">
+             <summary>
+            for passing samples from waveform buffer to this component
+             </summary>		
+        </member>
+        <member name="F:OpenMedIC.RTGraph.LatestPixelDisplayed">
+            <summary>
+            The pixel on the graphing surface most recently written to the screen
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.RTGraph.CursWidth">
+            <summary>
+            Width (pixels) of cursor
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.RTGraph.CursForeWidth">
+            <summary>
+            Width (pixels) of cleared area in fron of cursor
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.RTGraph.CursColor">
+            <summary>
+            color of cursor
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.RTGraph.RedrawGraph">
+            <summary>
+            Redraws entire waveform from scratch
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.RTGraph.DrawNew">
+            <summary>
+            Draws points acquired since last draw
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.RTGraph.wfThis">
+            <summary>
+            Real-time waveform to be displayed on this graph
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.RTGraph.WFThis">
+            <summary>
+            Real-time waveform to be displayed on this graph
+            </summary>
+        </member>
+        <member name="T:OpenMedIC.Sample">
+            <summary>
+            Summary description for Sample.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.Sample.#ctor">
+            <summary>
+            Constructor;  initializes the value to 0
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.Sample.#ctor(System.Single)">
+            <summary>
+            Constructor;  initializes the value to the passed param.
+            </summary>
+            <param name="sampleValue">Initial value for new Sample</param>
+        </member>
+        <member name="P:OpenMedIC.Sample.sampleValue">
+            <summary>
+            Get or set the Sample's value
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.Sample.copyFrom(OpenMedIC.Sample)">
+            <summary>
+            Set this Sample's value to be the same as the passed Sample's value
+            </summary>
+            <param name="newVal">Sample whose value to copy</param>
+        </member>
+        <member name="M:OpenMedIC.Sample.copyTo(OpenMedIC.Sample)">
+            <summary>
+            Sets the passed Sample's value to be the same as this Sample's value
+            </summary>
+            <param name="newVal">Sample whose value to update</param>
+        </member>
+        <member name="M:OpenMedIC.Sample.ToString">
+            <summary>
+            Returns the Sample's current value as a string.
+            </summary>
+            <returns>The Sample's current value as a string</returns>
+        </member>
+        <member name="M:OpenMedIC.Sample.ToString(System.Int32)">
+            <summary>
+            Returns the Sample's current value as a string, rounded to the specified number
+            of significant digits
+            </summary>
+            <param name="significantDigits">Max. number of significant digits in the returned 
+                string</param>
+            <returns>The Sample's current value as a string, rounded to the specified number
+                of significant digits</returns>
+        </member>
+        <member name="T:OpenMedIC.Samples">
+            <summary>
+            This is a variable-size array of Sample objects.  Its purpose is to initialize
+            to a fixed max. size, then have its Sample objs. be updated without re-instantiating
+            them each time.
+            
+            The "current size" of the array is a window of the desired size into a subset 
+            of the internal array;  again, resizing does not require re-instantiation.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.Samples.#ctor(System.Int32)">
+            <summary>
+            Constructor.  Note that size is also initialized to maxSize.
+            </summary>
+            <param name="maxSize">maximum number of samples that this Samples object can hold.  
+            						Must be between 0 and one giga (1024 * 1024 * 1024).</param>
+        </member>
+        <member name="P:OpenMedIC.Samples.maxSize">
+            <summary>
+            The maximum allowed size for the array, as determined at initialization time.
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.Samples.size">
+            <summary>
+            The current valid-data size of the array.  This value is to be set by the code
+            that populates the array, and retrieved by the code that reads the array.
+            
+            size cannot be less than 0 or greater than maxSize;  attempting to set it 
+            to such a value will throw an ArgumentOutOfRangeException.
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.Samples.Item(System.Int32)">
+            <summary>
+            Used to retrieve an individual Sample for setting or retrieving its value(s).
+            
+            Note that this method does not know or care about how values are read from or
+            written into a Sample.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.Samples.getRange(OpenMedIC.Samples,System.Int32,System.Int32)">
+            <summary>
+            Returns the range of values starting at index "from" through index "to", inclusive.
+            </summary>
+            <param name="range">where to write the desired range</param>
+            <param name="from">index (zero-based) of first returned value</param>
+            <param name="to">index (zero-based) of last returned value</param>
+        </member>
+        <member name="M:OpenMedIC.Samples.setRange(OpenMedIC.Samples,System.Int32,System.Int32)">
+            <summary>
+            Sets the range of values starting at index "from" through index "to", inclusive,
+            to the values contained in the input range.
+            </summary>
+            <param name="range">data to apply to the desired range</param>
+            <param name="from">index (zero-based) of first returned value</param>
+            <param name="to">index (zero-based) of last returned value</param>
+        </member>
+        <member name="T:OpenMedIC.Sender">
+            <summary>
+            Specifies the Data Sender standard for OpenMedIC Building Blocks.
+            
+            A Sender is a component that transmits data to a Receiver (see also IReceiver).
+            This class, like an interface, maintains daisy-chaining compatibility in
+            components where it's relevant, and where it's not relevant it allows to break it
+            deliberately by not implementing Sender.
+            
+            A Sender specifies an init() method to initialize the component, and two methods
+            to add and remove Followers to the Sender.  A Follower is an IReceiver.
+            
+            Note that it is not unusual for a Sender to be also an IReceiver (see BuildingBlock).
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.Sender.initVals">
+            <summary>
+            Stores the initialization data that defined this run;  exposed as a read-only property.
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.Sender.stepPeriod">
+            <summary>
+            The number of seconds duration of a step.
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.Sender.followers">
+            <summary>
+            The array of followers to send data to.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.Sender.Terminate">
+            <summary>
+            Do what is necessary for clean completion of the code.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.Sender.init(OpenMedIC.ChainInfo)">
+            <summary>
+            Initializes the current object with whatever params it needs, and
+            propagates the initialization to all its followers.
+            </summary>
+            <param name="iData">number of seconds between data samples, e.g. 1 millisec = 0.001</param>
+        </member>
+        <member name="P:OpenMedIC.Sender.initDataValues">
+            <summary>
+            Exposes the array of initialization values for all the channels
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.Sender.addFollower(OpenMedIC.IReceiver)">
+            <summary>
+            Adds the given IReceiver to the list of followers, 
+            avoiding duplicates.
+            </summary>
+            <param name="follower"></param>
+        </member>
+        <member name="M:OpenMedIC.Sender.dropFollower(OpenMedIC.IReceiver)">
+            <summary>
+            Removes the given follower, if present, from the list of followers.
+            </summary>
+            <param name="follower"></param>
+        </member>
+        <member name="M:OpenMedIC.Sender.GetFollowers(System.Collections.ArrayList)">
+            <summary>
+            Copies the current list of Followers to the given ArrayList.
+            </summary>
+            <param name="Followers">List to which we add the current Followers</param>
+        </member>
+        <member name="M:OpenMedIC.Sender.sendValue(OpenMedIC.Sample)">
+            <summary>
+            propagates the Sample to all followers 
+            </summary>
+            <param name="newValue"></param>
+        </member>
+        <member name="M:OpenMedIC.Sender.sendValues(OpenMedIC.Samples)">
+            <summary>
+            propagates the Samples to all followers 
+            </summary>
+            <param name="newValues">Note that the OLDEST sample is newValues[0]</param>
+        </member>
+        <member name="T:OpenMedIC.SineWaveGen">
+            <summary>
+            Generates a sine wave, of the desired frequency and step size.
+            
+            The frequency is in hertz (cycles per second);  the step size in seconds.
+            
+            If there are less than 2 steps per cycle the constructor will fail.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.SineWaveGen.#ctor(System.Double,System.Boolean,System.Double)">
+            <summary>
+            Creates new instance of a sine wave generator with the specified characteristics.
+            </summary>
+            <param name="secondsPerStep">Interval between samples, in seconds or fraction thereof,
+            				e.g. 1 KHz = 1 ms per sample would have secondsPerStep = 0.001</param>
+            <param name="autoOutput">If true, then we push data out to the Followers;
+            				if false, we wait for whoever to pull out the data</param>
+            <param name="sineWaveFrequency">Frequency, in Hertz, of the generated sine wave.
+            				A value that would correspond to less than 2 samples per cycle
+            				will throw an exception.</param>
+        </member>
+        <member name="M:OpenMedIC.SineWaveGen.nextVal">
+            <summary>
+            Generate the next sine wave value.
+            The current "angle" is:  ( stepPeriod / (1/frequency)=period ) * (2 pi) * (lastStep + 1)
+            This is equal to:  ( 2 * PI * (lastStep+1) ) * (frequency * stepPeriod)
+            </summary>
+            <returns>Next value</returns>
+        </member>
+        <member name="T:OpenMedIC.SquareWaveGen">
+            <summary>
+            Summary description for SquareWaveGen.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.SquareWaveGen.#ctor(System.Double,System.Boolean,System.Double)">
+            <summary>
+            Creates new instance of a square wave generator with the specified characteristics.
+            </summary>
+            <param name="secondsPerStep">Interval between samples, in seconds or fraction thereof,
+            				e.g. 1 KHz = 1 ms per sample would have secondsPerStep = 0.001</param>
+            <param name="autoOutput">If true, then we push data out to the Followers;
+            				if false, we wait for whoever to pull out the data</param>
+            <param name="squareWaveFrequency">Frequency, in Hertz, of the generated square wave.
+            				A value that would correspond to less than 2 samples per cycle
+            				will throw an exception.</param>
+        </member>
+        <member name="M:OpenMedIC.SquareWaveGen.nextVal">
+            <summary>
+            Generate the next square wave value.
+            The current "angle" is:  ( stepPeriod / (1/frequency)=period ) * (2 pi) * (lastStep + 1)
+            This is equal to:  ( 2 * PI * (lastStep+1) ) * (frequency * stepPeriod)
+            The return amplitude is based on (angle / (PI/2)), i.e. which cycle quarter we're in
+            	= ( (2 PI * (lastStep+1) * freq * stepPeriod) / (0.5 PI) ) modulo 4
+            	= ( 4 * (lastStep+1) ) * (freq * stepPeriod) modulo 4
+            
+            -&gt; If (angle / PI/2) .gt.= 0 and (angle / PI/2) .lt. 1:  output =  1;
+            -&gt; If (angle / PI/2) .gt.= 1 and (angle / PI/2) .lt. 2:  output = -1;
+            -&gt; If (angle / PI/2) .gt.= 2 and (angle / PI/2) .lt. 3:  output =  1;
+            -&gt; If (angle / PI/2) .gt.= 3 and (angle / PI/2) .lt. 4:  output = -1.
+            </summary>
+            <returns>Next appropriate square-wave value</returns>
+        </member>
+        <member name="T:OpenMedIC.TimerThread">
+            <summary>
+            This class is used to start a Timer in a separate thread.  The thread waits
+            for a specified amount of time (interval), then executes a specific method.
+            
+            Unless the TimerThread is created with blocking = true, the executed 
+            method runs in a separate thread from the Timer;  this means that, if the 
+            method takes longer than [interval] to execute, it will be called again
+            before the first call has completed.
+            
+            The method called by the Timer at the end of each interval is set
+            when the Timer is created.
+            Note that you cannot change the target method; to do so, you must create
+            a new Timer.  This is to avoid serious confusion, since the target method
+            really defines the Timer.
+            
+            The Timer's interval (in microseconds) is set when started, and can be
+            changed by stopping then restarting the timer.
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.TimerThread.isRunning">
+            <summary>
+            True if the timer is running, regardless of whether it's paused or not
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.TimerThread.isPaused">
+            <summary>
+            True if the timer is paused;  it usually implies isRunning = true
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.TimerThread.mustStop">
+            <summary>
+            True if the timer must stop as soon as possible.  This is used to let
+            currently-spawned threads know that they must go away ASAP.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.TimerThread.#ctor(System.Threading.ThreadStart,System.Boolean)">
+            <summary>
+            Sets the callback function for this thread.  a ThreadStart is obtained by calling:
+            "new System.Threading.ThreadStart ( myObject.myMethod );", as in:
+            <code>
+            ...
+            myObj = new thisObj ();
+            myTimer = new System.Threading.ThreadStart ( new ThreadStart(myObj.myMethod) );
+            ...
+            </code>
+            </summary>
+            <param name="callbackFn">A valid ThreadStart (see comment for the Constructor)</param>
+            <param name="blocking">if true, then the timer pauses during execution of the method,
+            				then starts the next interval only after the method has completed.
+            				If false, the timer starts the next interval during execution, which 
+            				means that the delay between the end of one execution and the start 
+            				of the next will be less than the specified interval, and can also
+            				be negative (i.e. overlap of method executions).</param>
+        </member>
+        <member name="M:OpenMedIC.TimerThread.Finalize">
+            <summary>
+            Releases any resources that need releasing for proper shut-down
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.TimerThread.Release">
+            <summary>
+            Releases any resources that need releasing for proper shut-down
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.TimerThread.Start(System.Int64)">
+            <summary>
+            Starts the timer.  Note the the first execution of the callback Function occurs
+            only after one interval.
+            
+            If the timer is already running, this command is ignored.
+            </summary>
+            <param name="intervalMillisecs">Interval between executions</param>
+        </member>
+        <member name="M:OpenMedIC.TimerThread.UpdatePeriod(System.Int64)">
+            <summary>
+            Changes the interval between triggers for a RUNNING timer.  If the timer is not
+            running already, nothing happens.
+            Note that the currently-running interval may not be affected.
+            </summary>
+            <param name="intervalMillisecs">New desired interval between executions</param>
+        </member>
+        <member name="M:OpenMedIC.TimerThread.Stop">
+            <summary>
+            Stops the timer, if it is running.  The same timer can be restarted 
+            by calling Start().
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.TimerThread.Pause">
+            <summary>
+            Pauses execution of the timer.  When resuming, the timer 
+            will start again from where it left off.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.TimerThread.Resume">
+            <summary>
+            Resumes execution of the timer.  The timer will start again from where it
+            left off, EXCEPT that the period between ticks may or may not be honored
+            for the interval during which the timer is paused.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.TimerThread.SleepTime">
+            <summary>
+            Sleeps for the specified sleep time, EXCEPT that it breaks up intervals
+            greater than one second into the appropriate number of 1-second intervals
+            followed by the difference, to contain the max. latency when stopping the
+            thread.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.TimerThread.Loop">
+            <summary>
+            This is the main loop executed by mainThread.
+            Its job is to start a new worker thread then wait for it to be done,
+            then sleep for the specified amount of time before starting another new 
+            worker thread.
+            </summary>
+        </member>
+        <member name="T:OpenMedIC.TriangleWaveGen">
+            <summary>
+            Generates a triangle wave, of the desired frequency and step size.
+            
+            The frequency is in hertz (cycles per second);  the step size in seconds.
+            
+            If there are less than 2 steps per cycle the constructor will fail.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.TriangleWaveGen.#ctor(System.Double,System.Boolean,System.Double)">
+            <summary>
+            Creates new instance of a triangle wave generator with the specified characteristics.
+            </summary>
+            <param name="secondsPerStep">Interval between samples, in seconds or fraction thereof,
+            				e.g. 1 KHz = 1 ms per sample would have secondsPerStep = 0.001</param>
+            <param name="autoOutput">If true, then we push data out to the Followers;
+            				if false, we wait for whoever to pull out the data</param>
+            <param name="triangleWaveFrequency">Frequency, in Hertz, of the generated triangle wave.
+            				A value that would correspond to less than 2 samples per cycle
+            				will throw an exception.</param>
+        </member>
+        <member name="M:OpenMedIC.TriangleWaveGen.nextVal">
+            <summary>
+            Generate the next triangle wave value.
+            The current "angle" is:  ( stepPeriod / (1/frequency)=period ) * (2 pi) * (lastStep + 1)
+            This is equal to:  ( 2 * PI * (lastStep+1) ) * (frequency * stepPeriod)
+            The return amplitude is based on (angle / (PI/2)), i.e. which cycle quarter we're in
+            	= ( (2 PI * (lastStep+1) * freq * stepPeriod) / (0.5 PI) ) modulo 4
+            	= ( 4 * (lastStep+1) ) * (freq * stepPeriod) modulo 4
+            -&gt; If (angle / PI/2) .gt.= 0 and (angle / PI/2) .lt. 1:  output = angle;
+            -&gt; If (angle / PI/2) .gt.= 1 and (angle / PI/2) .lt. 3:  output = 2 - angle;
+            -&gt; If (angle / PI/2) .gt.= 3 and (angle / PI/2) .lt. 4:  output = -4 + angle.
+            </summary>
+            <returns>Next appropriate value</returns>
+        </member>
+        <member name="T:OpenMedIC.WaveformBuffer">
+            <summary>
+            Stores the data for a Waveform in a circular buffer, exposing methods for
+            retrieving the data in formats that are convenient for the Display class.
+            
+            The fact that a WaveformBuffer is a BuildingBlock means that it can be followed
+            by other BuildingBlocks and IReceivers, such as filters, FileWriters, other
+            WaveformBuffers, etc.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.WaveformBuffer.#ctor(System.Int32)">
+            <summary>
+            Constructor;  initializes the circular buffer used by this instance.
+            </summary>
+            <param name="BufferSize"></param>
+        </member>
+        <member name="M:OpenMedIC.WaveformBuffer.addValue(OpenMedIC.Sample)">
+            <summary>
+            Adds the new Value to the Circular Buffer, then resumes default behavior
+            </summary>
+            <param name="newValue"></param>
+        </member>
+        <member name="M:OpenMedIC.WaveformBuffer.addValues(OpenMedIC.Samples)">
+            <summary>
+            Adds the new Values to the Circular Buffer, then resumes default behavior
+            </summary>
+            <param name="newValues">Zero-based array of samples.
+                                    Note that the OLDEST sample is newValues[0]</param>
+        </member>
+        <member name="M:OpenMedIC.WaveformBuffer.getPoints(OpenMedIC.Samples,System.Single,System.Int64)">
+            <summary>
+            Retrieves the desired data points and puts them in the passed Samples object.
+            If the requested number of points is more than are available, it returns
+            what it has.
+            
+            Note that if StartingIndex is more than MaxSeconds in the past, only the last
+            MaxSeconds worth of data is returned.
+            </summary>
+            <param name="Points">Object for data point storage</param>
+            <param name="MaxSeconds">Max. number of seconds of data to return</param>
+            <param name="StartingIndex">Starting index of data to return</param>
+            <returns>The actual Starting index of the returned data.  This is the same 
+            			as StartingIndex if StartingIndex is no more than MaxSeconds 
+            			in the past.</returns>
+        </member>
+        <member name="M:OpenMedIC.WaveformBuffer.getPoints(OpenMedIC.Samples,System.Single)">
+            <summary>
+            Retrieves the desired data points and puts them in the passed Samples object.
+            </summary>
+            <param name="Points">Object for data point storage</param>
+            <param name="MaxSeconds">Max. number of seconds of data to return;  if there are
+            				less than that number of seconds available, it returns only
+            				what is available.</param>
+            <returns>The Starting index for the returned data.</returns>
+        </member>
+        <member name="P:OpenMedIC.WaveformBuffer.samplePeriod">
+            <summary>
+            The sample period (seconds per sample) of data acquisition.
+            a 1 KHz sampling rate corresponds to a sample period of 0.001 seconds
+            per sample.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.WaveformBuffer.Clear">
+            <summary>
+            Clears the buffer to an empty state
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.WaveformBuffer.BufferSize">
+            <summary>
+            The size of the current WaveformBuffer, i.e. the number of samples it
+            is capable of containing.
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.WaveformBuffer.CurrentInputIndex">
+            <summary>
+            The index (a.k.a. sample number) of the most recently added sample in the
+            Waveform Buffer.
+            Note that this value continues ad infinitum, wrapping back to zero only if
+            the storage capacity of a signed long is exceeded 
+            (2**63 - 1 = 9,223,372,036,854,775,807).
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.WaveformBuffer.NumSamples">
+            <summary>
+            The number of valid samples in the current WaveformBuffer.
+            </summary>
+        </member>
+        <member name="T:OpenMedIC.WaveGen">
+            <summary>
+            Summary description for WaveGen.
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.WaveGen.waveFrequency">
+            <summary>
+            Frequency of the generated waveform, in hertz
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.WaveGen.#ctor(System.Double,System.Boolean,System.Double)">
+            <summary>
+            Creates new instance of a wavefrorm generator with the specified characteristics.
+            </summary>
+            <param name="secondsPerStep">Interval between samples, in seconds or fraction thereof,
+            				e.g. 1 KHz = 1 ms per sample would have secondsPerStep = 0.001</param>
+            <param name="autoOutput">If true, then we push data out to the Followers;
+            				if false, we wait for whoever to pull out the data</param>
+            <param name="waveformFrequency">Frequency, in Hertz, of the generated waveform.
+            				A value that would correspond to less than 2 samples per cycle
+            				will throw an exception.</param>
+        </member>
+        <member name="P:OpenMedIC.WaveGen.frequency">
+            <summary>
+            Function frequency, in hertz (cycles per second).
+            A 1-KHz function would have a frequency of 1000.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.WaveGen.getAngle(System.Int64)">
+            <summary>
+            Determines which cycle quarter we are in based on which step we are in.
+            A quarter is one of:  1, 2, 3, or 4 (1 = 0-90deg; 2 = 90-180; 3 = 180-270;
+            4 = 270-360).
+            </summary>
+            <param name="step"></param>
+            <returns></returns>
+        </member>
+        <member name="P:OpenMedIC.WFAnalysisDisplay.Waveform">
+            <summary>
+            Gets or sets the waveform.
+            </summary>
+            <value>The waveform.</value>
+        </member>
+        <member name="F:OpenMedIC.WFAnalysisDisplay.wfVisible">
+            <summary>
+            Is waveform visible
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.WFAnalysisDisplay.WfVisible">
+            <summary>
+            Gets or sets a value indicating whether [wf visible].
+            </summary>
+            <value><c>true</c> if [wf visible]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="F:OpenMedIC.WFAnalysisDisplay.wfStartTime">
+            <summary>
+            Start time in seconds (usually 0)
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.WFAnalysisDisplay.WfStartTime">
+            <summary>
+            Gets or sets the wf start time in seconds.
+            </summary>
+            <value>The wf start time.</value>
+        </member>
+        <member name="M:OpenMedIC.WFAnalysisDisplay.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:WFAnalysisDisplay"/> class.
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.WFAnalysisDisplay.waveform">
+            <summary>
+            WaveformBuffer To Display
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.WFAnalysisDisplay.period">
+            <summary>
+            WaveformBuffer To Display
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.WFAnalysisDisplay.GetDispSample(System.Single[],System.Single,System.Single)">
+            <summary>
+            Determines which sample in the given set is most relevant to display as
+            the "value" of the set.
+            </summary>
+            <param name="data">The data to be analyzed</param>
+            <param name="samplingRate">The data acquisition sampling rate (samp./sec.)</param>
+            <param name="bandwidthMaxF">The high-end pass-band cutoff frequency (samp./sec.)</param>
+            <returns>The value to be displayed.</returns>
+        </member>
+        <member name="F:OpenMedIC.WFAnalysisDisplay.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.WFAnalysisDisplay.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:OpenMedIC.WFAnalysisDisplay.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:OpenMedIC.WfdbAccess">
+            <summary>
+            PhysioNet is an Internet resource for biomedical research and development sponsored
+            by the NIH's National Center for Research Resources.  PhysioNet, PhysioBank, WFDB, 
+            and PhysioToolkit are the product of collaborative efforts by numerous people, too 
+            numerous to mention here; please visit the PhysioNet website (www.physionet.org) for 
+            details.
+            The term "Wfdb" is used throughout to indicate the suite of functions included in the
+            WFDB Library.
+            This is a static class to simplify and/or document the accessing of the WFDB methods
+            in wfdb-sharp.dll (namespace Wfdb).
+            </summary>
+        </member>
+        <member name="T:OpenMedIC.WfdbAccess.LastCall">
+            <summary>
+            Enumerator of functions that may return an integer 
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.WfdbAccess.LastCall.LastCall_SignalCount">
+            <summary>
+            Identifies the last called function as GetSignalCount (...).
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.WfdbAccess.LastCall.LastCall_SignalInfo">
+            <summary>
+            Identifies the last called function as GetSignalInfo (...).
+            Note that GetSignalInfo(...) doesn't return an integer, but it uses it internally.
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.WfdbAccess.newLine">
+            <summary>
+            New-Line string for multi-line strings.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.WfdbAccess.GetSearchPath">
+            <summary>
+            Gets the current record search path for the WFDB methods.  The default is
+            typically ". /wfdb/database http://www.physionet.org/physiobank/database".
+            Note that directory names may be mapped to DOS 8.3 format if needed.
+            </summary>
+            <returns>The current search path, as a space-delimited string.</returns>
+        </member>
+        <member name="M:OpenMedIC.WfdbAccess.SetSearchPath(System.String)">
+            <summary>
+            Sets the current record search path for the WFDB methods.  The default is
+            typically ". /wfdb/database http://www.physionet.org/physiobank/database".
+            The items in the path must be space- or semicolon-delimited; they can be 
+            relative or absolute paths (under Windows that means "d:/xxx/yyy/zzz"); 
+            under Windows they can contain backslashes instead of forward slashes.
+            Note dat directory names cannot contain spaces (because space is a 
+            delimiter), so names with spaces must be converted to DOS format 
+            ("This Directory" becomes "ThisDi~1").
+            </summary>
+            <param name="path">The new search path.</param>
+            <returns>True if successful, False otherwise.</returns>
+        </member>
+        <member name="M:OpenMedIC.WfdbAccess.CloseWfdb">
+            <summary>
+            Closes all open connections to objects in WFDB, including headers, data files,
+            and annotation files.  Recommended as a clean-up.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.WfdbAccess.GetErrMsgFromReturnID(System.Int32,OpenMedIC.WfdbAccess.LastCall)">
+            <summary>
+            Returns a descriptive error message to interpret the returned integer value from
+            several functions.
+            </summary>
+            <param name="returnID">The integer value to be interpreted.</param>
+            <param name="calledFn">The function that returned returnID.</param>
+            <returns>A descriptive error message.</returns>
+        </member>
+        <member name="M:OpenMedIC.WfdbAccess.GetSignalCount(System.String,System.String@)">
+            <summary>
+            Retrieves the number of signals in the specified record.
+            If an error occurs or the signal is not found, errMsg is filled with a meaningful
+            error message.
+            </summary>
+            <param name="record">[path/]name of the desired record.</param>
+            <param name="errMsg">If an error occurs, this contains the description of the error.</param>
+            <returns>The number of signals if successful, otherwise 0 or negative.</returns>
+        </member>
+        <member name="M:OpenMedIC.WfdbAccess.GetSamplingFrequency(System.String)">
+            <summary>
+            Retrieves the data sampling frequency for the specified record.  If an error occurs,
+            it returns:  -1 for "Unable to read header file", -2 for "Incorrect header file format".
+            </summary>
+            <param name="record">[path/]name of the desired record.</param>
+            <returns>The sampling frequency if successful, a negative number if an error occurs.</returns>
+        </member>
+        <member name="M:OpenMedIC.WfdbAccess.GetSignalInfo(System.String,Wfdb.WFDB_SiginfoArray,System.Int32,System.String@)">
+            <summary>
+            Retrieves signal information for the specified record, and stores it in siArray.
+            numSignals must match the dimension of siArray, and must be equal to or greater than
+            the number of signals in the first (and usually, the only) group of the record.
+            </summary>
+            <param name="record">[path/]name of the desired record.</param>
+            <param name="siArray">Storage for signal information to be returned.</param>
+            <param name="numSignals">Number of signals in the first (and usually, the only) group of the record.</param>
+            <param name="errMsg">Storage for verbose error messages.</param>
+            <returns>True if successful, False if an error occurs.</returns>
+        </member>
+        <member name="M:OpenMedIC.WfdbAccess.GetHeaderInfoStrings(System.String,System.String@)">
+            <summary>
+            Retrieves the information strings from the Header file.  These are effectively
+            free-text comments for the data.
+            </summary>
+            <param name="record">[path/]name of the desired record.</param>
+            <param name="errMsg">Storage for verbose error messages.</param>
+            <returns>The information strings for the specified record.</returns>
+        </member>
+        <member name="M:OpenMedIC.WfdbAccess.GetSigInfoArray(System.Int32,System.String@)">
+            <summary>
+            Initializes and returns a blank SigInfoArray object containing numItems SigInfo objects.
+            </summary>
+            <param name="numItems">Number of SigInfo objects in SigInfoArray</param>
+            <param name="errMsg">Storage for verbose error messages, if any.</param>
+            <returns>A blank SigInfoArray object of dimension numItems.</returns>
+        </member>
+        <member name="M:OpenMedIC.WfdbAccess.GetSignalFrame(Wfdb.WFDB_SampleArray@,Wfdb.WFDB_SiginfoArray,System.Int32,System.String@)">
+            <summary>
+            Retrieves a frame of data for each signal in the group or record.
+            </summary>
+            <param name="frameData">Data class to be initialized and filled with data.</param>
+            <param name="siArray">Signal Information array for the signals being read.</param>
+            <param name="numSignals">Number of signals being read (must match the dimension of siArray).</param>
+            <param name="errMsg">String where error messages, if any, are written.</param>
+            <returns>True if successful, False otherwise.  If False, then errMsg contains the explanation why.</returns>
+        </member>
+        <member name="M:OpenMedIC.WfdbAccess.OpenAnnotation(System.String,Wfdb.WFDB_AnninfoArray@,System.String,System.Boolean,System.String@)">
+            <summary>
+            Opens a SINGLE annotation (closing any other open annotations), according to
+            the passed parameters, and initializing and returning a WFDB_AnninfoArray object.
+            </summary>
+            <param name="record">Name of the record whose annotation we are opening.</param>
+            <param name="aiArray">Annotation Info array (one element), built and populated
+                                    by this method.</param>
+            <param name="annotName">Name (i.e., file extension) of the Annotation.</param>
+            <param name="openForRead">True to open for reading, False to open for writing.</param>
+            <param name="errMsg">Contains any error messages relevant to failed execution.</param>
+            <returns>True if successful, False if failed.  If failed, the cause is in errMsg.</returns>
+        </member>
+        <member name="M:OpenMedIC.WfdbAccess.GetAnnotation(System.String@)">
+            <summary>
+            Retrieves the next annotation from the currently open annotation file.
+            Annotation files are opened using OpenAnnotation (...).
+            </summary>
+            <param name="errMsg">Stores any error messages.</param>
+            <returns>The next annotation, if successful, otherwise null.</returns>
+        </member>
+        <member name="M:OpenMedIC.WfdbAccess.CloseAnnotation">
+            <summary>
+            Closes the open annotation (only one can be open at a time using this set of methods).
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.WfdbAccess.Seek(System.Int32,System.String@)">
+            <summary>
+            Moves the current position within the currently open file by the 
+            specified number of samples.
+            If numSamples is negative, then we move backwards, otherwise we
+            move forwards.
+            </summary>
+            <param name="numSamplesFromStart">Number of samples from start of file,
+            	where we want to be</param>
+            <param name="errMsg">If not successful, this string contains a meaningful
+            	message describing the problem</param>
+            <returns>true if successful, false if not.  If not successful, then 
+            	errMsg is populated with a meaningful message</returns>
+        </member>
+        <member name="T:OpenMedIC.WfdbException">
+            <summary>
+            PhysioNet is an Internet resource for biomedical research and development sponsored
+            by the NIH's National Center for Research Resources.  PhysioNet, PhysioBank, WFDB, 
+            and PhysioToolkit are the product of collaborative efforts by numerous people, too 
+            numerous to mention here; please visit the PhysioNet website (www.physionet.org) for 
+            details.
+            The term "Wfdb" is used throughout to indicate the suite of functions included in the
+            WFDB Library.
+            This class creates an exception for general exception throwing by Wfdb-related code.
+            </summary>
+        </member>
+        <member name="T:OpenMedIC.WfdbReader">
+            <summary>
+            PhysioNet is an Internet resource for biomedical research and development sponsored
+            by the NIH's National Center for Research Resources.  PhysioNet, PhysioBank, WFDB, 
+            and PhysioToolkit are the product of collaborative efforts by numerous people, too 
+            numerous to mention here; please visit the PhysioNet website (www.physionet.org) for 
+            details.
+            The term "Wfdb" is used throughout to indicate the suite of functions included in the
+            WFDB Library.
+            This class reads the header and data from a PhysioNet Database record, and outputs
+            the data as a DataSource would.  Note that, for now, a FileReader will only read data
+            from the first signal of a record.
+            <para>NOTE:  It is recommended to call the ReleaseWfdb() method when releasing an
+            instance of WfdbReader class.</para>
+            <para>NOTE:  The core Physionet WFDB code i NOT thread-safe.  This means that
+            calling it from multiple threads or instances of WfdbReader will cause unpredictable
+            behavior (possibly errors or wrong data being received).  The problem comes from
+            having only one instance of each file handle shared between all threads.</para>
+            <para>NOTE:  The init(...) method call GC.Collect() to force garbage collection
+            on the managed-code environment.  If you are running unmanaged code, before calling 
+            that method you must ensure that your unmanaged storage allocations are properly
+            protected or released.</para>
+            <para>NOTE:  The sample values are outputted as actual mV values.</para>
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.WfdbReader.initValues">
+            <summary>
+            Header information storage -- save the actual ChainInfo object
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.WfdbReader.#ctor(System.Boolean,System.String,System.String)">
+            <summary>
+            Full constructor:  requires a record name and an optional path.
+            </summary>
+            [param name="secondsPerStep">Interval between samples, in seconds or fraction thereof,
+            				e.g. 1 KHz = 1 ms per sample would have secondsPerStep = 0.001.  If
+            				autoOutput is TRUE and the file header has its own sample period value,
+            				then this param is ignored and the value in the file header is used 
+            				instead.[/param>
+            <param name="autoOutput">If TRUE, then we push data out to the Followers AND try to
+            				use the sample period value from the file header; if FALSE, we wait
+            				for whoever to pull out the data.</param>
+            <param name="path">A search path for the record;  if null, then the default path is used.</param>
+            <param name="rName">Must be an existing record name within the path.</param>
+        </member>
+        <member name="M:OpenMedIC.WfdbReader.Finalize">
+            <summary>
+            Release Wfdb connections.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.WfdbReader.nextVal">
+            <summary>
+            Determines the next value in the sequence - in this case, retrieves the next value from the
+            frame buffer.
+            </summary>
+            <returns>The next available value</returns>
+        </member>
+        <member name="M:OpenMedIC.WfdbReader.init(OpenMedIC.ChainInfo)">
+            <summary>
+            Override default behavior to:
+            - Save a local copy
+            - Get file header info
+            - Update iData accordingly
+            - Allow using header info to drive the output rates.
+            <para>NOTE:  This method call GC.Collect() to force garbage collection on the 
+            managed-code environment.  If you are running unmanaged code, before calling 
+            this method you must ensure that your unmanaged storage allocations are properly 
+            protected or released.</para>
+            </summary>
+        </member>
+        <member name="T:OpenMedIC.WfdbReader.Direction">
+            <summary>
+            Defines Forward and Backward directions, for (among others) the Skip method.
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.WfdbReader.Direction.Forward">
+            <summary>
+            Forward direction
+            </summary>
+        </member>
+        <member name="F:OpenMedIC.WfdbReader.Direction.Backward">
+            <summary>
+            Backward direction
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.WfdbReader.ReleaseWfdb">
+            <summary>
+            Releases all Wfdb-related resources.
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.WfdbReader.recordComplete">
+            <summary>
+            True if record reading is complete;  false otherwise.
+            </summary>
+        </member>
+        <member name="P:OpenMedIC.WfdbReader.WfdbPath">
+            <summary>
+            The current record search path for the WFDB methods.  The default is
+            typically ". /wfdb/database http://www.physionet.org/physiobank/database".
+            NOTE:  Directory names cannot contain spaces, since the directories list
+            is space-delimited.  However, directory names may be mapped to DOS 8.3 
+            format if needed to get around this restriction.
+            </summary>
+        </member>
+        <member name="M:OpenMedIC.WfdbReader.GoTo(System.UInt32)">
+            <summary>
+            Go to the specified time position in the current open file.
+            If the reader hasn't been init'd or it has completed reading the current file,
+            then the method returns without doing anything.
+            </summary>
+            <param name="posSecs">Exact time in file to go to</param>
+        </member>
+        <member name="M:OpenMedIC.WfdbReader.Skip(OpenMedIC.WfdbReader.Direction,System.UInt32)">
+            <summary>
+            Skip, or jump, in the desired direction by the desired number of seconds.
+            This will cause discontinuity in the data, with unknown effect on any
+            downstream post-processing (peak detection, heart rate calculation, filtering,
+            etc.).
+            If the reader hasn't been init'd or it has completed reading the current file,
+            then the method returns without doing anything.
+            </summary>
+            <param name="dir">Direction to skip (forward or backward)</param>
+            <param name="secs">How many seconds to skip, up to all the way to the
+            		beginning (dir=Backward) or the end (dir=Forward)</param>
+        </member>
+    </members>
+</doc>

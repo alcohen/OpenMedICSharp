@@ -1,0 +1,12 @@
+There are two installation files:
+
+ - setup.exe will install the appropriate version of the .NET
+   framework on your machine, over the internet.  If you already
+   have the appropriate version, you can skip this file.
+
+ - OMSetup.msi will install OpenMedIC on your machine:
+   - OpenMedIC.dll
+   - Other required DLLs (go into %system32%)
+   - Source code
+   - Documentation
+

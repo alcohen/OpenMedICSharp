@@ -1,0 +1,557 @@
+<html>
+<head>
+<base target="wwhelp_right">
+<title>OpenMedic Framework</title>
+<LINK rel="stylesheet" type="text/css" href="templates/wwhelp.css">
+<script>
+var AllowSearch = false;
+
+function AlwaysExpand(lcID) {
+   var loNode = document.getElementById(lcID);
+   if (loNode==null)
+    return;
+    
+   loNode.style.display="";
+   
+   loNode = document.getElementById("IMG" + lcID);
+   if (loNode != null)
+      loNode.src = "bmp/minus.gif";
+}
+function Expand(lcID) {
+   var loNode = document.getElementById(lcID);
+   if (loNode != null) {
+      if (loNode.style.display=="none")
+         loNode.style.display="";
+      else
+         loNode.style.display="none";
+   }
+
+   loNode = document.getElementById("IMG" + lcID);
+   if (loNode != null) {
+      if (loNode.src.indexOf("plus.gif") > -1)
+         loNode.src = "bmp/minus.gif";
+      else
+          loNode.src = "bmp/plus.gif";
+      }
+}
+function ExpandParents(lcId) 
+{
+   var loNode = document.getElementById(lcId);
+   if (loNode == null)
+      return;
+   
+   AlwaysExpand(lcId);
+
+   var loOriginal = loNode
+
+   while( loNode!=null) 
+   {
+      loNode = loNode.parentNode;
+
+      if (loNode == null)
+         break;
+      
+      lcId = loNode.id;
+      
+      if (lcId == null || lcId == "")
+         break;
+
+      if ( lcId.substr(0,1) == "_") 
+         ExpandParents(lcId);
+   }
+   
+   loOriginal.scrollIntoView(true);
+   window.scroll(-200,0);
+}
+function PageLoad() {
+   Expand('INDEXPAGE');
+   
+   // *** Expand all parent topics if an ID was passed
+   var lcQuery = window.location.search;
+   var lnMatch = lcQuery.search("id=");
+   if (lnMatch > -1) 
+   {
+   lcPage = lcQuery.substr(lnMatch + 3);
+   ExpandParents(lcPage);
+   }
+}
+</script>
+<style>
+.plussign 
+{
+cursor:hand;
+marginBottom:3px;
+}
+</style>
+</head>
+<body topmargin="0" leftmargin="0" style="background:white" onload="PageLoad();">
+<table class="tocbody" width="800">
+<tr><td class="banner" HEIGHT="25" VALIGN="CENTER">&nbsp;<b style="font-size:10pt">OpenMedic Framework</b>
+<script>
+if (AllowSearch && window.location.href.toLowerCase().substr(0,5) == "http:")
+{
+document.write("<div style='font-size:8pt;margin-top:2pt;margin-bottom:2pt'>&nbsp;<a href='search.aspx?title=OpenMedic+Framework' target='wwhelp_left'>Search</a> | <a href='keywords.htm' target='wwhelp_left'>Keywords</a></div></td></tr>");
+}
+</script>
+</table>
+<table width="800" class="tocbody">
+<tr><td><span class="tocbody">&nbsp;&nbsp;&nbsp;<img src="bmp/index.gif"> <a href="INDEXPAGE.htm" id="INDEXPAGE">OpenMedic Framework</a> <br>
+<img src="bmp/plus.gif" ID="IMG_1TY0XFN5V" class="plussign" onclick="Expand('_1TY0XFN5V');"> <img src="bmp/classheader.gif"> <a href="_1TY0XFN5V.htm" onclick="AlwaysExpand('_1TY0XFN5V');">Class BuildingBlock</a> <br>
+<span id="_1TY0XFN5V" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFN5W.htm" id="_1TY0XFN5W">addValue</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFN5X.htm" id="_1TY0XFN5X">addValues</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XFNK7" class="plussign" onclick="Expand('_1TY0XFNK7');"> <img src="bmp/classheader.gif"> <a href="_1TY0XFNK7.htm" onclick="AlwaysExpand('_1TY0XFNK7');">Class ChainInfo</a> <br>
+<span id="_1TY0XFNK7" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_1TY0XFNKP" class="plussign" onclick="Expand('_1TY0XFNKP');"> <img src="bmp/classconstructor.gif"> <a href="_1TY0XFNKP.htm" onclick="AlwaysExpand('_1TY0XFNKP');">Constructor</a> <br>
+<span id="_1TY0XFNKP" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classconstructor.gif"> <a href="_1TY0XFNKQ.htm" id="_1TY0XFNKQ">Constructor</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFNKN.htm" id="_1TY0XFNKN">clone</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFNKM.htm" id="_1TY0XFNKM">getTagFromValue</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFNK8.htm" id="_1TY0XFNK8">getTagText</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFNKO.htm" id="_1TY0XFNKO">setByTag</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFNL3.htm" id="_1TY0XFNL3">dataInfo</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFNL5.htm" id="_1TY0XFNL5">fileInfo</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFNL4.htm" id="_1TY0XFNL4">patientInfo</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFNL2.htm" id="_1TY0XFNL2">samplingPeriodSec</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XFNYY" class="plussign" onclick="Expand('_1TY0XFNYY');"> <img src="bmp/classheader.gif"> <a href="_1TY0XFNYY.htm" onclick="AlwaysExpand('_1TY0XFNYY');">Class CircularBuffer</a> <br>
+<span id="_1TY0XFNYY" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classconstructor.gif"> <a href="_1TY0XFNZV.htm" id="_1TY0XFNZV">Constructor</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFNZE.htm" id="_1TY0XFNZE">AddPoint</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFNZF.htm" id="_1TY0XFNZF">AddPoints</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFNZU.htm" id="_1TY0XFNZU">getPoint</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_1TY0XFNZH" class="plussign" onclick="Expand('_1TY0XFNZH');"> <img src="bmp/classmethod.gif"> <a href="_1TY0XFNZH.htm" onclick="AlwaysExpand('_1TY0XFNZH');">GetPointsSince</a> <br>
+<span id="_1TY0XFNZH" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFNZT.htm" id="_1TY0XFNZT">GetPointsSince</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFNZG.htm" id="_1TY0XFNZG">Reset</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFO09.htm" id="_1TY0XFO09">BuffLength</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFNZW.htm" id="_1TY0XFNZW">CurrInputIndex</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XFOE5" class="plussign" onclick="Expand('_1TY0XFOE5');"> <img src="bmp/classheader.gif"> <a href="_1TY0XFOE5.htm" onclick="AlwaysExpand('_1TY0XFOE5');">Class DataInfo</a> <br>
+<span id="_1TY0XFOE5" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_1TY0XFOEK" class="plussign" onclick="Expand('_1TY0XFOEK');"> <img src="bmp/classconstructor.gif"> <a href="_1TY0XFOEK.htm" onclick="AlwaysExpand('_1TY0XFOEK');">Constructor</a> <br>
+<span id="_1TY0XFOEK" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classconstructor.gif"> <a href="_1TY0XFOEL.htm" id="_1TY0XFOEL">Constructor</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFOE6.htm" id="_1TY0XFOE6">clone</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFOE7.htm" id="_1TY0XFOE7">setByTag</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFOEO.htm" id="_1TY0XFOEO">BitsPerSample</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFOEM.htm" id="_1TY0XFOEM">DataDescription</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFOF0.htm" id="_1TY0XFOF0">FullScaleReferenceVoltage</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFOF1.htm" id="_1TY0XFOF1">ScaleMultiplier</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFOEN.htm" id="_1TY0XFOEN">StartDateTime</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFOF2.htm" id="_1TY0XFOF2">ZeroOffset</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFOEP.htm" id="_1TY0XFOEP">ZeroReferenceVoltage</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XFOU7" class="plussign" onclick="Expand('_1TY0XFOU7');"> <img src="bmp/classheader.gif"> <a href="_1TY0XFOU7.htm" onclick="AlwaysExpand('_1TY0XFOU7');">Class DataSource</a> <br>
+<span id="_1TY0XFOU7" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classconstructor.gif"> <a href="_1TY0XFOUS.htm" id="_1TY0XFOUS">Constructor</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XFOV2.htm" id="_1TY0XFOV2">minTimerIntervalMSec</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFOUQ.htm" id="_1TY0XFOUQ">getNextValue</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFOUR.htm" id="_1TY0XFOUR">getNextValues</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFOU8.htm" id="_1TY0XFOU8">init</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFOUP.htm" id="_1TY0XFOUP">next</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFOUA.htm" id="_1TY0XFOUA">pause</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFOUN.htm" id="_1TY0XFOUN">resume</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFOU9.htm" id="_1TY0XFOU9">Terminate</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFOUO.htm" id="_1TY0XFOUO">trigger</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFOV4.htm" id="_1TY0XFOV4">autoOutput</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFOV3.htm" id="_1TY0XFOV3">stepSize</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XFPA9" class="plussign" onclick="Expand('_1TY0XFPA9');"> <img src="bmp/classheader.gif"> <a href="_1TY0XFPA9.htm" onclick="AlwaysExpand('_1TY0XFPA9');">Class FileHandler</a> <br>
+<span id="_1TY0XFPA9" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classconstructor.gif"> <a href="_1TY0XFPBM.htm" id="_1TY0XFPBM">Constructor</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XFPC5.htm" id="_1TY0XFPC5">asciiValueDelim</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XFPC4.htm" id="_1TY0XFPC4">headerEndDelim</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XFPC1.htm" id="_1TY0XFPC1">headerRowLeader</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XFPC3.htm" id="_1TY0XFPC3">headerRowTrailer</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XFPC0.htm" id="_1TY0XFPC0">headerStartDelim</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XFPC2.htm" id="_1TY0XFPC2">headerTagDelim</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFPB7.htm" id="_1TY0XFPB7">cleanFileName</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFPB6.htm" id="_1TY0XFPB6">cleanPath</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFPAP.htm" id="_1TY0XFPAP">clone</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFPB4.htm" id="_1TY0XFPB4">fileExists</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFPB5.htm" id="_1TY0XFPB5">fileNotExists</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFPBK.htm" id="_1TY0XFPBK">getExt</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFPBL.htm" id="_1TY0XFPBL">getTagFromLabel</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFPAQ.htm" id="_1TY0XFPAQ">setByTag</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFPAR.htm" id="_1TY0XFPAR">validatePath</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFPCF.htm" id="_1TY0XFPCF">dataFormat</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFPCH.htm" id="_1TY0XFPCH">multiFileNum</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFPCI.htm" id="_1TY0XFPCI">startTime</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFPCG.htm" id="_1TY0XFPCG">writerClassName</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XFPTS" class="plussign" onclick="Expand('_1TY0XFPTS');"> <img src="bmp/classheader.gif"> <a href="_1TY0XFPTS.htm" onclick="AlwaysExpand('_1TY0XFPTS');">Class FileReader</a> <br>
+<span id="_1TY0XFPTS" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_1TY0XFPU9" class="plussign" onclick="Expand('_1TY0XFPU9');"> <img src="bmp/classconstructor.gif"> <a href="_1TY0XFPU9.htm" onclick="AlwaysExpand('_1TY0XFPU9');">Constructor</a> <br>
+<span id="_1TY0XFPU9" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classconstructor.gif"> <a href="_1TY0XFPUA.htm" id="_1TY0XFPUA">Constructor</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFPU8.htm" id="_1TY0XFPU8">init</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFPUN.htm" id="_1TY0XFPUN">repeatAfterEndOfFile</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XFQDR" class="plussign" onclick="Expand('_1TY0XFQDR');"> <img src="bmp/classheader.gif"> <a href="_1TY0XFQDR.htm" onclick="AlwaysExpand('_1TY0XFQDR');">Class FileWriter</a> <br>
+<span id="_1TY0XFQDR" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_1TY0XFQE8" class="plussign" onclick="Expand('_1TY0XFQE8');"> <img src="bmp/classconstructor.gif"> <a href="_1TY0XFQE8.htm" onclick="AlwaysExpand('_1TY0XFQE8');">Constructor</a> <br>
+<span id="_1TY0XFQE8" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classconstructor.gif"> <a href="_1TY0XFQE9.htm" id="_1TY0XFQE9">Constructor</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classconstructor.gif"> <a href="_1TY0XFQEA.htm" id="_1TY0XFQEA">Constructor</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classconstructor.gif"> <a href="_1TY0XFQEM.htm" id="_1TY0XFQEM">Constructor</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFQDT.htm" id="_1TY0XFQDT">addValue</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFQE7.htm" id="_1TY0XFQE7">addValues</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFQDS.htm" id="_1TY0XFQDS">init</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFQF7.htm" id="_1TY0XFQF7">appendDateToFileName</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFQF6.htm" id="_1TY0XFQF6">appendExistingFile</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFQF8.htm" id="_1TY0XFQF8">appendTimeToFileName</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFQFH.htm" id="_1TY0XFQFH">createNewFileDaily</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFQFJ.htm" id="_1TY0XFQFJ">createNewFileWhenMaxSize</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFQEP.htm" id="_1TY0XFQEP">fileFullName</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFQEO.htm" id="_1TY0XFQEO">fileName</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFQEN.htm" id="_1TY0XFQEN">filePath</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFQF2.htm" id="_1TY0XFQF2">filePathName</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFQFI.htm" id="_1TY0XFQFI">maxAllowedFileSize</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFQF5.htm" id="_1TY0XFQF5">overwriteExistingFile</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFQF4.htm" id="_1TY0XFQF4">valuesWriteMode</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFQF3.htm" id="_1TY0XFQF3">writeValuesAsAscii</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XFQVZ" class="plussign" onclick="Expand('_1TY0XFQVZ');"> <img src="bmp/classheader.gif"> <a href="_1TY0XFQVZ.htm" onclick="AlwaysExpand('_1TY0XFQVZ');">Class Filter</a> <br>
+<span id="_1TY0XFQVZ" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classconstructor.gif"> <a href="_1TY0XFQW0.htm" id="_1TY0XFQW0">Constructor</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFQWF.htm" id="_1TY0XFQWF">filterDelay</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XFRQD" class="plussign" onclick="Expand('_1TY0XFRQD');"> <img src="bmp/classheader.gif"> <a href="_1TY0XFRQD.htm" onclick="AlwaysExpand('_1TY0XFRQD');">Class FIRFilter</a> <br>
+<span id="_1TY0XFRQD" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classconstructor.gif"> <a href="_1TY0XFRQG.htm" id="_1TY0XFRQG">Constructor</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFRQE.htm" id="_1TY0XFRQE">addValue</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFRQF.htm" id="_1TY0XFRQF">addValues</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFRQT.htm" id="_1TY0XFRQT">Bypass</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XFSAR" class="plussign" onclick="Expand('_1TY0XFSAR');"> <img src="bmp/classheader.gif"> <a href="_1TY0XFSAR.htm" onclick="AlwaysExpand('_1TY0XFSAR');">Class FunctionGen</a> <br>
+<span id="_1TY0XFSAR" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classconstructor.gif"> <a href="_1TY0XFSAT.htm" id="_1TY0XFSAT">Constructor</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFSAS.htm" id="_1TY0XFSAS">init</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFSB7.htm" id="_1TY0XFSB7">outputMultiplier</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XFSW1" class="plussign" onclick="Expand('_1TY0XFSW1');"> <img src="bmp/classheader.gif"> <a href="_1TY0XFSW1.htm" onclick="AlwaysExpand('_1TY0XFSW1');">Class GraphBase</a> <br>
+<span id="_1TY0XFSW1" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classconstructor.gif"> <a href="_1TY0XFSWW.htm" id="_1TY0XFSWW">Constructor</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classevent.gif"> <a href="_1TY0XFSZY.htm" id="_1TY0XFSZY">XAxisChanged</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classevent.gif"> <a href="_1TY0XFSZZ.htm" id="_1TY0XFSZZ">YAxisChanged</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFSWH.htm" id="_1TY0XFSWH">Reset</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFSXC.htm" id="_1TY0XFSXC">AutoRedraw</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFSXD.htm" id="_1TY0XFSXD">BorderBevelWidth</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFSXE.htm" id="_1TY0XFSXE">BorderMargin</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFSXF.htm" id="_1TY0XFSXF">Font</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFSXG.htm" id="_1TY0XFSXG">ForeColor</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFSXH.htm" id="_1TY0XFSXH">GSBackColor</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFSXR.htm" id="_1TY0XFSXR">GSBevelWidth</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFSXS.htm" id="_1TY0XFSXS">GSBottom</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFSXT.htm" id="_1TY0XFSXT">GSLeft</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFSXU.htm" id="_1TY0XFSXU">GSRight</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFSXV.htm" id="_1TY0XFSXV">GSTop</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFSXW.htm" id="_1TY0XFSXW">PixelsPerXUnit</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFSY7.htm" id="_1TY0XFSY7">PixelsPerYUnit</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFSY8.htm" id="_1TY0XFSY8">RightToLeft</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFSY9.htm" id="_1TY0XFSY9">TitleFont</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFSYA.htm" id="_1TY0XFSYA">TitleText</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFSYB.htm" id="_1TY0XFSYB">WFColor</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFSYC.htm" id="_1TY0XFSYC">WFWidth</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFSYN.htm" id="_1TY0XFSYN">XAxisDispMax</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFSYO.htm" id="_1TY0XFSYO">XAxisDispMin</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFSYP.htm" id="_1TY0XFSYP">XAxisNumberFont</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFSYQ.htm" id="_1TY0XFSYQ">XAxisNumberFormat</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFSYR.htm" id="_1TY0XFSYR">XAxisTicLength</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFSZ2.htm" id="_1TY0XFSZ2">XAxisTicWidth</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFSZ3.htm" id="_1TY0XFSZ3">YAxisCaptionFont</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFSZ4.htm" id="_1TY0XFSZ4">YAxisCaptionText</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFSZ5.htm" id="_1TY0XFSZ5">YAxisDispMax</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFSZ6.htm" id="_1TY0XFSZ6">YAxisDispMin</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFSZI.htm" id="_1TY0XFSZI">YAxisMaxNumTics</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFSZJ.htm" id="_1TY0XFSZJ">YAxisNumberFont</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFSZK.htm" id="_1TY0XFSZK">YAxisNumberFormat</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFSZL.htm" id="_1TY0XFSZL">YAxisTicLength</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFSZM.htm" id="_1TY0XFSZM">YAxisTicWidth</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XFU7C" class="plussign" onclick="Expand('_1TY0XFU7C');"> <img src="bmp/classheader.gif"> <a href="_1TY0XFU7C.htm" onclick="AlwaysExpand('_1TY0XFU7C');">Class NewDataTrigger</a> <br>
+<span id="_1TY0XFU7C" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classconstructor.gif"> <a href="_1TY0XFU87.htm" id="_1TY0XFU87">Constructor</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XFU88.htm" id="_1TY0XFU88">minRefreshMSec</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFU7T.htm" id="_1TY0XFU7T">addValue</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFU7U.htm" id="_1TY0XFU7U">addValues</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFU7S.htm" id="_1TY0XFU7S">init</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XFUNE" class="plussign" onclick="Expand('_1TY0XFUNE');"> <img src="bmp/classheader.gif"> <a href="_1TY0XFUNE.htm" onclick="AlwaysExpand('_1TY0XFUNE');">Class OpenMedICUtils</a> <br>
+<span id="_1TY0XFUNE" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classconstructor.gif"> <a href="_1TY0XFUNW.htm" id="_1TY0XFUNW">Constructor</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XFUO9.htm" id="_1TY0XFUO9">debugMode</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XFUOA.htm" id="_1TY0XFUOA">doPrint</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XFUOB.htm" id="_1TY0XFUOB">newLine</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFUNV.htm" id="_1TY0XFUNV">debugPrint</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFUNU.htm" id="_1TY0XFUNU">isEmpty</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XFV88" class="plussign" onclick="Expand('_1TY0XFV88');"> <img src="bmp/classheader.gif"> <a href="_1TY0XFV88.htm" onclick="AlwaysExpand('_1TY0XFV88');">Class PassThroughFilter</a> <br>
+<span id="_1TY0XFV88" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classconstructor.gif"> <a href="_1TY0XFV8P.htm" id="_1TY0XFV8P">Constructor</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFV89.htm" id="_1TY0XFV89">addValue</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFV8O.htm" id="_1TY0XFV8O">addValues</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XFVSN" class="plussign" onclick="Expand('_1TY0XFVSN');"> <img src="bmp/classheader.gif"> <a href="_1TY0XFVSN.htm" onclick="AlwaysExpand('_1TY0XFVSN');">Class PatientInfo</a> <br>
+<span id="_1TY0XFVSN" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_1TY0XFVV8" class="plussign" onclick="Expand('_1TY0XFVV8');"> <img src="bmp/classconstructor.gif"> <a href="_1TY0XFVV8.htm" onclick="AlwaysExpand('_1TY0XFVV8');">Constructor</a> <br>
+<span id="_1TY0XFVV8" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classconstructor.gif"> <a href="_1TY0XFVV9.htm" id="_1TY0XFVV9">Constructor</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classconstructor.gif"> <a href="_1TY0XFVVO.htm" id="_1TY0XFVVO">Constructor</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFVUU.htm" id="_1TY0XFVUU">clone</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFVUT.htm" id="_1TY0XFVUT">setByTag</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFVWJ.htm" id="_1TY0XFVWJ">Addr1</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFVWK.htm" id="_1TY0XFVWK">Addr2</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFVX1.htm" id="_1TY0XFVX1">Age</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFVWL.htm" id="_1TY0XFVWL">City</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFVX0.htm" id="_1TY0XFVX0">Country</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFVXE.htm" id="_1TY0XFVXE">DOB</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFVX2.htm" id="_1TY0XFVX2">DOBstring</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFVVQ.htm" id="_1TY0XFVVQ">FirstName</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFVXG.htm" id="_1TY0XFVXG">FullAddress</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFVXF.htm" id="_1TY0XFVXF">FullName</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFVW5.htm" id="_1TY0XFVW5">LastName</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFVW4.htm" id="_1TY0XFVW4">MiddleName</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFVVP.htm" id="_1TY0XFVVP">PatientID</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFVW6.htm" id="_1TY0XFVW6">Prefix</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFVWM.htm" id="_1TY0XFVWM">State</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFVW7.htm" id="_1TY0XFVW7">Suffix</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFVWZ.htm" id="_1TY0XFVWZ">Zip</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XFWZL" class="plussign" onclick="Expand('_1TY0XFWZL');"> <img src="bmp/classheader.gif"> <a href="_1TY0XFWZL.htm" onclick="AlwaysExpand('_1TY0XFWZL');">Class RTGraph</a> <br>
+<span id="_1TY0XFWZL" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classconstructor.gif"> <a href="_1TY0XFX02.htm" id="_1TY0XFX02">Constructor</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFWZN.htm" id="_1TY0XFWZN">DrawNew</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFWZM.htm" id="_1TY0XFWZM">RedrawGraph</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFX01.htm" id="_1TY0XFX01">Reset</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFX0J.htm" id="_1TY0XFX0J">CursColor</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFX0I.htm" id="_1TY0XFX0I">CursForeWidth</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFX0H.htm" id="_1TY0XFX0H">CursWidth</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFX0K.htm" id="_1TY0XFX0K">WFThis</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFX0W.htm" id="_1TY0XFX0W">XAxisDispMin</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XFXHU" class="plussign" onclick="Expand('_1TY0XFXHU');"> <img src="bmp/classheader.gif"> <a href="_1TY0XFXHU.htm" onclick="AlwaysExpand('_1TY0XFXHU');">Class Sample</a> <br>
+<span id="_1TY0XFXHU" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_1TY0XFXIQ" class="plussign" onclick="Expand('_1TY0XFXIQ');"> <img src="bmp/classconstructor.gif"> <a href="_1TY0XFXIQ.htm" onclick="AlwaysExpand('_1TY0XFXIQ');">Constructor</a> <br>
+<span id="_1TY0XFXIQ" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classconstructor.gif"> <a href="_1TY0XFXIR.htm" id="_1TY0XFXIR">Constructor</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFXHV.htm" id="_1TY0XFXHV">copyFrom</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFXI9.htm" id="_1TY0XFXI9">copyTo</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_1TY0XFXIA" class="plussign" onclick="Expand('_1TY0XFXIA');"> <img src="bmp/classmethod.gif"> <a href="_1TY0XFXIA.htm" onclick="AlwaysExpand('_1TY0XFXIA');">ToString</a> <br>
+<span id="_1TY0XFXIA" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFXIP.htm" id="_1TY0XFXIP">ToString</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFXJ5.htm" id="_1TY0XFXJ5">sampleValue</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XFYDI" class="plussign" onclick="Expand('_1TY0XFYDI');"> <img src="bmp/classheader.gif"> <a href="_1TY0XFYDI.htm" onclick="AlwaysExpand('_1TY0XFYDI');">Class Samples</a> <br>
+<span id="_1TY0XFYDI" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classconstructor.gif"> <a href="_1TY0XFYDZ.htm" id="_1TY0XFYDZ">Constructor</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFYDJ.htm" id="_1TY0XFYDJ">getRange</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFYDY.htm" id="_1TY0XFYDY">setRange</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFYEG.htm" id="_1TY0XFYEG">Item</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFYEE.htm" id="_1TY0XFYEE">maxSize</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFYEF.htm" id="_1TY0XFYEF">size</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XFYWM" class="plussign" onclick="Expand('_1TY0XFYWM');"> <img src="bmp/classheader.gif"> <a href="_1TY0XFYWM.htm" onclick="AlwaysExpand('_1TY0XFYWM');">Class Sender</a> <br>
+<span id="_1TY0XFYWM" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFYX3.htm" id="_1TY0XFYX3">addFollower</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFYXH.htm" id="_1TY0XFYXH">dropFollower</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFYX2.htm" id="_1TY0XFYX2">init</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFYXI.htm" id="_1TY0XFYXI">sendValue</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFYXJ.htm" id="_1TY0XFYXJ">sendValues</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFYX1.htm" id="_1TY0XFYX1">Terminate</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XFYXX.htm" id="_1TY0XFYXX">initDataValues</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XFZD4" class="plussign" onclick="Expand('_1TY0XFZD4');"> <img src="bmp/classheader.gif"> <a href="_1TY0XFZD4.htm" onclick="AlwaysExpand('_1TY0XFZD4');">Class SineWaveGen</a> <br>
+<span id="_1TY0XFZD4" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classconstructor.gif"> <a href="_1TY0XFZD5.htm" id="_1TY0XFZD5">Constructor</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XFZRF" class="plussign" onclick="Expand('_1TY0XFZRF');"> <img src="bmp/classheader.gif"> <a href="_1TY0XFZRF.htm" onclick="AlwaysExpand('_1TY0XFZRF');">Class SquareWaveGen</a> <br>
+<span id="_1TY0XFZRF" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classconstructor.gif"> <a href="_1TY0XFZRG.htm" id="_1TY0XFZRG">Constructor</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XG0BE" class="plussign" onclick="Expand('_1TY0XG0BE');"> <img src="bmp/classheader.gif"> <a href="_1TY0XG0BE.htm" onclick="AlwaysExpand('_1TY0XG0BE');">Class TimerThread</a> <br>
+<span id="_1TY0XG0BE" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classconstructor.gif"> <a href="_1TY0XG0EG.htm" id="_1TY0XG0EG">Constructor</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XG0E2.htm" id="_1TY0XG0E2">Pause</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XG0BF.htm" id="_1TY0XG0BF">Release</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XG0EF.htm" id="_1TY0XG0EF">Resume</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XG0E0.htm" id="_1TY0XG0E0">Start</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XG0E1.htm" id="_1TY0XG0E1">Stop</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XG14W" class="plussign" onclick="Expand('_1TY0XG14W');"> <img src="bmp/classheader.gif"> <a href="_1TY0XG14W.htm" onclick="AlwaysExpand('_1TY0XG14W');">Class TriangleWaveGen</a> <br>
+<span id="_1TY0XG14W" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classconstructor.gif"> <a href="_1TY0XG15C.htm" id="_1TY0XG15C">Constructor</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XG25D" class="plussign" onclick="Expand('_1TY0XG25D');"> <img src="bmp/classheader.gif"> <a href="_1TY0XG25D.htm" onclick="AlwaysExpand('_1TY0XG25D');">Class WaveformBuffer</a> <br>
+<span id="_1TY0XG25D" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classconstructor.gif"> <a href="_1TY0XG27J.htm" id="_1TY0XG27J">Constructor</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XG25E.htm" id="_1TY0XG25E">addValue</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XG25T.htm" id="_1TY0XG25T">addValues</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XG273.htm" id="_1TY0XG273">Clear</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/plus.gif" ID="IMG_1TY0XG25U" class="plussign" onclick="Expand('_1TY0XG25U');"> <img src="bmp/classmethod.gif"> <a href="_1TY0XG25U.htm" onclick="AlwaysExpand('_1TY0XG25U');">getPoints</a> <br>
+<span id="_1TY0XG25U" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XG268.htm" id="_1TY0XG268">getPoints</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XG27L.htm" id="_1TY0XG27L">BufferSize</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XG27Z.htm" id="_1TY0XG27Z">CurrentInputIndex</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XG280.htm" id="_1TY0XG280">NumSamples</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XG27K.htm" id="_1TY0XG27K">samplePeriod</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XG2O1" class="plussign" onclick="Expand('_1TY0XG2O1');"> <img src="bmp/classheader.gif"> <a href="_1TY0XG2O1.htm" onclick="AlwaysExpand('_1TY0XG2O1');">Class WaveGen</a> <br>
+<span id="_1TY0XG2O1" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classconstructor.gif"> <a href="_1TY0XG2O2.htm" id="_1TY0XG2O2">Constructor</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XG2OG.htm" id="_1TY0XG2OG">frequency</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XG35T" class="plussign" onclick="Expand('_1TY0XG35T');"> <img src="bmp/classheader.gif"> <a href="_1TY0XG35T.htm" onclick="AlwaysExpand('_1TY0XG35T');">Class WFAnalysisDisplay</a> <br>
+<span id="_1TY0XG35T" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classconstructor.gif"> <a href="_1TY0XG369.htm" id="_1TY0XG369">Constructor</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XG375.htm" id="_1TY0XG375">CursColor</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XG3CE.htm" id="_1TY0XG3CE">CursLineWidth</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XG39Q.htm" id="_1TY0XG39Q">CursRadius</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XG3AL.htm" id="_1TY0XG3AL">CursX</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XG3B1.htm" id="_1TY0XG3B1">CursY</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XG3B2.htm" id="_1TY0XG3B2">LastCursPos</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XG374.htm" id="_1TY0XG374">Period</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XG36P.htm" id="_1TY0XG36P">Waveform</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XG36R.htm" id="_1TY0XG36R">WfStartTime</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XG36Q.htm" id="_1TY0XG36Q">WfVisible</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XG3BH.htm" id="_1TY0XG3BH">XMajorGridColor</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XG3B3.htm" id="_1TY0XG3B3">XMajorGridInterval</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XG3BW.htm" id="_1TY0XG3BW">XMinorGridColor</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XG3BI.htm" id="_1TY0XG3BI">XMinorGridInterval</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XG3BY.htm" id="_1TY0XG3BY">YMajorGridColor</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XG3BX.htm" id="_1TY0XG3BX">YMajorGridInterval</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XG3CD.htm" id="_1TY0XG3CD">YMinorGridColor</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XG3CC.htm" id="_1TY0XG3CC">YMinorGridInterval</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XG3UK" class="plussign" onclick="Expand('_1TY0XG3UK');"> <img src="bmp/classheader.gif"> <a href="_1TY0XG3UK.htm" onclick="AlwaysExpand('_1TY0XG3UK');">Class WfdbAccess</a> <br>
+<span id="_1TY0XG3UK" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XG3X6.htm" id="_1TY0XG3X6">newLine</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XG3WR.htm" id="_1TY0XG3WR">CloseAnnotation</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XG3V1.htm" id="_1TY0XG3V1">CloseWfdb</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XG3WQ.htm" id="_1TY0XG3WQ">GetAnnotation</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XG3V2.htm" id="_1TY0XG3V2">GetErrMsgFromReturnID</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XG3VW.htm" id="_1TY0XG3VW">GetHeaderInfoStrings</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XG3VG.htm" id="_1TY0XG3VG">GetSamplingFrequency</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XG3UL.htm" id="_1TY0XG3UL">GetSearchPath</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XG3VX.htm" id="_1TY0XG3VX">GetSigInfoArray</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XG3VF.htm" id="_1TY0XG3VF">GetSignalCount</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XG3WB.htm" id="_1TY0XG3WB">GetSignalFrame</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XG3VV.htm" id="_1TY0XG3VV">GetSignalInfo</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XG3WC.htm" id="_1TY0XG3WC">OpenAnnotation</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XG3V0.htm" id="_1TY0XG3V0">SetSearchPath</a> <br>
+</span>
+&nbsp;&nbsp;&nbsp;<img src="bmp/classheader.gif"> <a href="_1TY0XG4BH.htm" id="_1TY0XG4BH">Class WfdbException</a> <br>
+<img src="bmp/plus.gif" ID="IMG_1TY0XG4UL" class="plussign" onclick="Expand('_1TY0XG4UL');"> <img src="bmp/classheader.gif"> <a href="_1TY0XG4UL.htm" onclick="AlwaysExpand('_1TY0XG4UL');">Class WfdbReader</a> <br>
+<span id="_1TY0XG4UL" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classconstructor.gif"> <a href="_1TY0XG4V2.htm" id="_1TY0XG4V2">Constructor</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XG4UM.htm" id="_1TY0XG4UM">init</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XG4V1.htm" id="_1TY0XG4V1">ReleaseWfdb</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XG4VH.htm" id="_1TY0XG4VH">recordComplete</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XG4VG.htm" id="_1TY0XG4VG">SamplingPeriod</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classproperty.gif"> <a href="_1TY0XG4VW.htm" id="_1TY0XG4VW">WfdbPath</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XFWGI" class="plussign" onclick="Expand('_1TY0XFWGI');"> <img src="bmp/delegate.gif"> <a href="_1TY0XFWGI.htm" onclick="AlwaysExpand('_1TY0XFWGI');">Delegate refreshDelegate</a> <br>
+<span id="_1TY0XFWGI" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classconstructor.gif"> <a href="_1TY0XFWHE.htm" id="_1TY0XFWHE">Constructor</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFWGZ.htm" id="_1TY0XFWGZ">BeginInvoke</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFWHD.htm" id="_1TY0XFWHD">EndInvoke</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFWGY.htm" id="_1TY0XFWGY">Invoke</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XG5D9" class="plussign" onclick="Expand('_1TY0XG5D9');"> <img src="bmp/delegate.gif"> <a href="_1TY0XG5D9.htm" onclick="AlwaysExpand('_1TY0XG5D9');">Delegate XAxisChangedHandler</a> <br>
+<span id="_1TY0XG5D9" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classconstructor.gif"> <a href="_1TY0XG5DP.htm" id="_1TY0XG5DP">Constructor</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XG5DB.htm" id="_1TY0XG5DB">BeginInvoke</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XG5DO.htm" id="_1TY0XG5DO">EndInvoke</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XG5DA.htm" id="_1TY0XG5DA">Invoke</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XG5RK" class="plussign" onclick="Expand('_1TY0XG5RK');"> <img src="bmp/delegate.gif"> <a href="_1TY0XG5RK.htm" onclick="AlwaysExpand('_1TY0XG5RK');">Delegate YAxisChangedHandler</a> <br>
+<span id="_1TY0XG5RK" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classconstructor.gif"> <a href="_1TY0XG5SG.htm" id="_1TY0XG5SG">Constructor</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XG5S0.htm" id="_1TY0XG5S0">BeginInvoke</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XG5S1.htm" id="_1TY0XG5S1">EndInvoke</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XG5RL.htm" id="_1TY0XG5RL">Invoke</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XFMB2" class="plussign" onclick="Expand('_1TY0XFMB2');"> <img src="bmp/enum.gif"> <a href="_1TY0XFMB2.htm" onclick="AlwaysExpand('_1TY0XFMB2');">Enumeration BevelDirection</a> <br>
+<span id="_1TY0XFMB2" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XFMBH.htm" id="_1TY0XFMBH">Inward</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XFMB3.htm" id="_1TY0XFMB3">Outward</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XFMPD" class="plussign" onclick="Expand('_1TY0XFMPD');"> <img src="bmp/enum.gif"> <a href="_1TY0XFMPD.htm" onclick="AlwaysExpand('_1TY0XFMPD');">Enumeration BevelStyle</a> <br>
+<span id="_1TY0XFMPD" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XFMPU.htm" id="_1TY0XFMPU">Raised</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XFMPT.htm" id="_1TY0XFMPT">Sunk</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XFRAB" class="plussign" onclick="Expand('_1TY0XFRAB');"> <img src="bmp/enum.gif"> <a href="_1TY0XFRAB.htm" onclick="AlwaysExpand('_1TY0XFRAB');">Enumeration filterTypes</a> <br>
+<span id="_1TY0XFRAB" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XFRAR.htm" id="_1TY0XFRAR">FIR</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XFRAQ.htm" id="_1TY0XFRAQ">IIR</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XFRAS.htm" id="_1TY0XFRAS">Other</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XFTSL" class="plussign" onclick="Expand('_1TY0XFTSL');"> <img src="bmp/enum.gif"> <a href="_1TY0XFTSL.htm" onclick="AlwaysExpand('_1TY0XFTSL');">Enumeration LastCall</a> <br>
+<span id="_1TY0XFTSL" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XFTT0.htm" id="_1TY0XFTT0">LastCall_SignalCount</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XFTT1.htm" id="_1TY0XFTT1">LastCall_SignalInfo</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XG1MP" class="plussign" onclick="Expand('_1TY0XG1MP');"> <img src="bmp/enum.gif"> <a href="_1TY0XG1MP.htm" onclick="AlwaysExpand('_1TY0XG1MP');">Enumeration varTags</a> <br>
+<span id="_1TY0XG1MP" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XG1PC.htm" id="_1TY0XG1PC">Addr1</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XG1PD.htm" id="_1TY0XG1PD">Addr2</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XG1Q6.htm" id="_1TY0XG1Q6">Age</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XG1O2.htm" id="_1TY0XG1O2">bitsPerSample</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XG1PE.htm" id="_1TY0XG1PE">City</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XG1PS.htm" id="_1TY0XG1PS">Country</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XG1O0.htm" id="_1TY0XG1O0">dataDescription</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XG1NK.htm" id="_1TY0XG1NK">dataFormat</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XG1Q7.htm" id="_1TY0XG1Q7">DOB</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XG1OX.htm" id="_1TY0XG1OX">FirstName</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XG1Q9.htm" id="_1TY0XG1Q9">FullAddress</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XG1Q8.htm" id="_1TY0XG1Q8">FullName</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XG1OG.htm" id="_1TY0XG1OG">fullScaleReferenceVoltage</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XG1OZ.htm" id="_1TY0XG1OZ">LastName</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XG1OY.htm" id="_1TY0XG1OY">MiddleName</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XG1NM.htm" id="_1TY0XG1NM">multiFileNum</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XG1PT.htm" id="_1TY0XG1PT">PatientID</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XG1OW.htm" id="_1TY0XG1OW">Prefix</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XG1N5.htm" id="_1TY0XG1N5">samplingPeriodSec</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XG1OH.htm" id="_1TY0XG1OH">scaleMultiplier</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XG1O1.htm" id="_1TY0XG1O1">startDateTime</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XG1NN.htm" id="_1TY0XG1NN">startTime</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XG1PQ.htm" id="_1TY0XG1PQ">State</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XG1PB.htm" id="_1TY0XG1PB">Suffix</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XG1NL.htm" id="_1TY0XG1NL">writerClassName</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XG1OV.htm" id="_1TY0XG1OV">zeroOffset</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XG1O3.htm" id="_1TY0XG1O3">zeroReferenceVoltage</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classfield.gif"> <a href="_1TY0XG1PR.htm" id="_1TY0XG1PR">Zip</a> <br>
+</span>
+<img src="bmp/plus.gif" ID="IMG_1TY0XFTEP" class="plussign" onclick="Expand('_1TY0XFTEP');"> <img src="bmp/interface.gif"> <a href="_1TY0XFTEP.htm" onclick="AlwaysExpand('_1TY0XFTEP');">Interface IReceiver</a> <br>
+<span id="_1TY0XFTEP" style="display:none">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFTF4.htm" id="_1TY0XFTF4">addValue</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFTF5.htm" id="_1TY0XFTF5">addValues</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="bmp/classmethod.gif"> <a href="_1TY0XFTEQ.htm" id="_1TY0XFTEQ">init</a> <br>
+</span>
+</span></td></tr></table>
+
+<script>
+// *** Expand all parent topics if an ID was passed
+var lcQuery = window.location.search;
+var lnMatch = lcQuery.search("id=");
+if (lnMatch > -1) 
+{
+   lcPage = lcQuery.substr(lnMatch + 3);
+   ExpandParents(lcPage);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="OpenMedIC.RTGraph">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>RTDisp.cs</FileName>
+      <HashCode>AIAAAAAAACCABAAAgACBQKACASAgEAAAABAJAIAQAEA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+  </Class>
+  <Class Name="OpenMedIC.WFAnalysisDisplay">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>WFAnalysisDisplay.cs</FileName>
+      <HashCode>AAgiYIQMAWKEDgAAIACAIiACECDg0AACyAFFAgBKZ0I=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenMedIC.WaveformBuffer" Collapsed="true">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>WaveformBuffer.cs</FileName>
+      <HashCode>AAAAAAACgAAAgAAACAAAAAEAAAAAEAAAAAAAAABAACA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenMedIC.GraphBase">
+    <Position X="3.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>GraphBase.cs</FileName>
+      <HashCode>AonNRwaJySJEJ5gCJAKyRAlqMgQS03AAfMJ4BCBGCUY=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Delegate Name="OpenMedIC.GraphBase.XAxisChangedHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>GraphBase.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="OpenMedIC.GraphBase.YAxisChangedHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>GraphBase.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Enum Name="OpenMedIC.GraphBase.BevelDirection">
+        <TypeIdentifier>
+          <NewMemberFileName>GraphBase.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="OpenMedIC.GraphBase.BevelStyle">
+        <TypeIdentifier>
+          <NewMemberFileName>GraphBase.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+  </Class>
+  <Class Name="OpenMedIC.OpenECG1Reader">
+    <Position X="9.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>OpenECG1Reader.cs</FileName>
+      <HashCode>AAAAAAAQCAgAAAAAAEAAAAAAAAABAAIABAAAAAAAAAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenMedIC.SerialReader">
+    <Position X="11.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>SerialReader.cs</FileName>
+      <HashCode>SBGCAAmAkEhAZCEAGAAAAAZgAAE4AK4ACEAWAEABICQ=</HashCode>
+    </TypeIdentifier>
+    <NestedTypes>
+      <Struct Name="OpenMedIC.SerialReader.dataValue" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SerialReader.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+      <Enum Name="OpenMedIC.SerialReader.Port" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SerialReader.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="OpenMedIC.SerialReader.BaudRateVal" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SerialReader.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+  </Class>
+  <Class Name="OpenMedIC.PassThroughFilter">
+    <Position X="6.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PassThroughFilter.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>

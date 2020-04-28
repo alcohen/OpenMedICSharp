@@ -1,0 +1,116 @@
+
+
+	
+<html>
+<head>
+<topictype value="CLASSHEADER"/>
+<title>Class WfdbAccess</title>
+<LINK rel="stylesheet" type="text/css" href="templates/wwhelp.css">
+<SCRIPT SRC="templates/wwhelp.js"></SCRIPT>
+</head>
+<body leftmargin=0 topmargin=0>
+<table border=0 width="100%" bgcolor="lightblue" class="banner" cellspacing="3">
+<tr><td valign="center">
+
+
+<span class="projectname">OpenMedic Framework</span>
+</td></tr><tr><td>
+<span class="topicname">
+<img src="bmp/CLASSHEADER.gif"> Class WfdbAccess
+</span>
+</td></tr>
+</table>
+
+<div class="contentpane">
+<br>
+PhysioNet is an Internet resource for biomedical research and development sponsored by the NIH's National Center for Research Resources.  PhysioNet, PhysioBank, WFDB,  and PhysioToolkit are the product of collaborative efforts by numerous people, too  numerous to mention here; please visit the PhysioNet website (www.physionet.org) for  details. The term "Wfdb" is used throughout to indicate the suite of functions included in the WFDB Library. This is a static class to simplify and/or document the accessing of the WFDB methods in wfdb-sharp.dll (namespace Wfdb).
+<br>
+
+
+
+<small>
+<br>
+<a href="http://msdn2.microsoft.com/en-us/library/System.Object.aspx" target="_1TY0XHKGP">System.Object</a><br>
+&nbsp;&nbsp;<b>OpenMedIC.WfdbAccess</b><br>
+
+</small>
+
+
+
+
+
+<br>
+<table border="0" cellpadding="3" width="96%">
+<pre class="SyntaxBox">
+private class sealedabstract WfdbAccess : object
+</pre>
+</table>
+
+
+
+
+
+
+
+  
+
+<table border="0" cellpadding="3" width="95%">
+
+  
+</table>
+
+<h3 class="outdent">Class Members</h3>
+<br>
+<table class='detailtable' border='1' cellpadding='3' align='center' width='95%'><tr><th Width='165'>Member</td><th Width='350'>Description</td></tr><tr><td Align='Left' VAlign='Top'><img src="bmp/classfield.gif" align="left"> <a href="_1ty0xg3x6.htm" >newLine</a></td>
+<td VAlign='Top'>New-Line string for multi-line strings.</td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classmethod.gif" align="left"> <a href="_1ty0xg3wr.htm" >CloseAnnotation</a></td>
+<td VAlign='Top'>Closes the open annotation (only one can be open at a time using this set of methods).<br><b><small>public static void CloseAnnotation();</small></b></td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classmethod.gif" align="left"> <a href="_1ty0xg3v1.htm" >CloseWfdb</a></td>
+<td VAlign='Top'>Closes all open connections to objects in WFDB, including headers, data files, and annotation files.  Recommended as a clean-up.<br><b><small>public static void CloseWfdb();</small></b></td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classmethod.gif" align="left"> <a href="_1ty0xg3wq.htm" >GetAnnotation</a></td>
+<td VAlign='Top'>Retrieves the next annotation from the currently open annotation file. Annotation files are opened using OpenAnnotation (...).<br><b><small>public static WFDB_Annotation GetAnnotation( ref string errMsg );</small></b></td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classmethod.gif" align="left"> <a href="_1ty0xg3v2.htm" >GetErrMsgFromReturnID</a></td>
+<td VAlign='Top'><br><b><small>public static string GetErrMsgFromReturnID( int returnID,<br>	LastCall calledFn );</small></b></td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classmethod.gif" align="left"> <a href="_1ty0xg3vw.htm" >GetHeaderInfoStrings</a></td>
+<td VAlign='Top'>Retrieves the information strings from the Header file.  These are effectively free-text comments for the data.<br><b><small>public static string GetHeaderInfoStrings( string record,<br>	ref string errMsg );</small></b></td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classmethod.gif" align="left"> <a href="_1ty0xg3vg.htm" >GetSamplingFrequency</a></td>
+<td VAlign='Top'>Retrieves the data sampling frequency for the specified record.  If an error occurs, it returns:  -1 for "Unable to read header file", -2 for "Incorrect header file format".<br><b><small>public static double GetSamplingFrequency( string record );</small></b></td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classmethod.gif" align="left"> <a href="_1ty0xg3ul.htm" >GetSearchPath</a></td>
+<td VAlign='Top'>Gets the current record search path for the WFDB methods.  The default is typically ". /wfdb/database http://www.physionet.org/physiobank/database". Note that directory names may be mapped to DOS 8.3 format if needed.<br><b><small>public static string GetSearchPath();</small></b></td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classmethod.gif" align="left"> <a href="_1ty0xg3vx.htm" >GetSigInfoArray</a></td>
+<td VAlign='Top'>Initializes and returns a blank SigInfoArray object containing numItems SigInfo objects.<br><b><small>public static WFDB_SiginfoArray GetSigInfoArray( int numItems,<br>	ref string errMsg );</small></b></td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classmethod.gif" align="left"> <a href="_1ty0xg3vf.htm" >GetSignalCount</a></td>
+<td VAlign='Top'>Retrieves the number of signals in the specified record. If an error occurs or the signal is not found, errMsg is filled with a meaningful error message.<br><b><small>public static int GetSignalCount( string record,<br>	ref string errMsg );</small></b></td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classmethod.gif" align="left"> <a href="_1ty0xg3wb.htm" >GetSignalFrame</a></td>
+<td VAlign='Top'>Retrieves a frame of data for each signal in the group or record.<br><b><small>public static bool GetSignalFrame( ref WFDB_SampleArray frameData,<br>	WFDB_SiginfoArray siArray,<br>	int numSignals,<br>	ref string errMsg );</small></b></td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classmethod.gif" align="left"> <a href="_1ty0xg3vv.htm" >GetSignalInfo</a></td>
+<td VAlign='Top'>Retrieves signal information for the specified record, and stores it in siArray. numSignals must match the dimension of siArray, and must be equal to or greater than the number of signals in the first (and usually, the only) group of the record.<br><b><small>public static bool GetSignalInfo( string record,<br>	WFDB_SiginfoArray siArray,<br>	int numSignals,<br>	ref string errMsg );</small></b></td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classmethod.gif" align="left"> <a href="_1ty0xg3wc.htm" >OpenAnnotation</a></td>
+<td VAlign='Top'>Opens a SINGLE annotation (closing any other open annotations), according to the passed parameters, and initializing and returning a WFDB_AnninfoArray object.<br><b><small>public static bool OpenAnnotation( string record,<br>	ref WFDB_AnninfoArray aiArray,<br>	string annotName,<br>	bool openForRead,<br>	ref string errMsg );</small></b></td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classmethod.gif" align="left"> <a href="_1ty0xg3v0.htm" >SetSearchPath</a></td>
+<td VAlign='Top'>Sets the current record search path for the WFDB methods.  The default is typically ". /wfdb/database http://www.physionet.org/physiobank/database". The items in the path must be space- or semicolon-delimited; they can be  relative or absolute paths (under Windows that means "d:/xxx/yyy/zzz");  under Windows they can contain backslashes instead of forward slashes. Note dat directory names cannot contain spaces (because space is a  delimiter), so names with spaces must be converted to DOS format  ("This Directory" becomes "ThisDi~1").<br><b><small>public static bool SetSearchPath( string path );</small></b></td></tr>
+</table><p>
+
+
+<h3 class="outdent">Requirements</h3>
+   
+
+<b>Namespace:</b> OpenMedIC<br>
+   
+
+   
+
+<b>Assembly:</b> openmedic.dll
+<br>
+   
+
+
+
+
+<br>
+</div>
+<hr>
+<small>Last Updated: <i>6/21/2006</i></small>
+
+<p><center><i>This page was generated by an unregistered version of <a href="http://www.west-wind.com/wwHelp">West Wind HTML Help Builder</a>.</span> <p></center></body>
+</html>

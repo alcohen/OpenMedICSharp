@@ -1,0 +1,26 @@
+
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual C# Express 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OMSineDemo", "OMSineDemo.csproj", "{F1B111E8-A84E-48CA-A2E7-D478A21292DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenMedIC", "..\OpenMedIC_code\OpenMedIC.csproj", "{B3EDF8A1-1CF9-4AD5-884F-0BA184911243}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1B111E8-A84E-48CA-A2E7-D478A21292DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1B111E8-A84E-48CA-A2E7-D478A21292DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1B111E8-A84E-48CA-A2E7-D478A21292DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1B111E8-A84E-48CA-A2E7-D478A21292DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3EDF8A1-1CF9-4AD5-884F-0BA184911243}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3EDF8A1-1CF9-4AD5-884F-0BA184911243}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3EDF8A1-1CF9-4AD5-884F-0BA184911243}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3EDF8A1-1CF9-4AD5-884F-0BA184911243}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

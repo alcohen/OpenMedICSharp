@@ -1,0 +1,128 @@
+
+
+	
+<html>
+<head>
+<topictype value="CLASSHEADER"/>
+<title>Class PatientInfo</title>
+<LINK rel="stylesheet" type="text/css" href="templates/wwhelp.css">
+<SCRIPT SRC="templates/wwhelp.js"></SCRIPT>
+</head>
+<body leftmargin=0 topmargin=0>
+<table border=0 width="100%" bgcolor="lightblue" class="banner" cellspacing="3">
+<tr><td valign="center">
+
+
+<span class="projectname">OpenMedic Framework</span>
+</td></tr><tr><td>
+<span class="topicname">
+<img src="bmp/CLASSHEADER.gif"> Class PatientInfo
+</span>
+</td></tr>
+</table>
+
+<div class="contentpane">
+<br>
+Stores and returns patient info as desired. If convenient, you can assign the full name to any one of the Name fields, and the whole address to any one of the Address fields (except Country), and they will be returned correctly by the fullName and fullAddress properties.
+<br>
+
+
+
+<small>
+<br>
+<a href="http://msdn2.microsoft.com/en-us/library/System.Object.aspx" target="_1TY0XHK9R">System.Object</a><br>
+&nbsp;&nbsp;<b>OpenMedIC.PatientInfo</b><br>
+
+</small>
+
+
+
+
+
+<br>
+<table border="0" cellpadding="3" width="96%">
+<pre class="SyntaxBox">
+public class PatientInfo : object
+</pre>
+</table>
+
+
+
+
+
+
+
+  
+
+<table border="0" cellpadding="3" width="95%">
+
+  
+</table>
+
+<h3 class="outdent">Class Members</h3>
+<br>
+<table class='detailtable' border='1' cellpadding='3' align='center' width='95%'><tr><th Width='165'>Member</td><th Width='350'>Description</td></tr><tr><td Align='Left' VAlign='Top'><img src="bmp/classconstructor.gif" align="left"> <a href="_1ty0xfvv8.htm" >Constructor</a></td>
+<td VAlign='Top'>This constructor only sets patient name. If convenient, you can assign the full name to any one of the Name fields, and it will still be returned correctly by the fullName property.</td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classmethod.gif" align="left"> <a href="_1ty0xfvuu.htm" >clone</a></td>
+<td VAlign='Top'>Creates a duplicate copy of this object and all its data.<br><b><small>public PatientInfo clone();</small></b></td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classmethod.gif" align="left"> <a href="_1ty0xfvut.htm" >setByTag</a></td>
+<td VAlign='Top'><br><b><small>public bool setByTag( varTags tag,<br>	string val );</small></b></td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfvwj.htm" >Addr1</a></td>
+<td VAlign='Top'>Patient's address, line 1</td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfvwk.htm" >Addr2</a></td>
+<td VAlign='Top'>Patient's address, line 2</td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfvx1.htm" >Age</a></td>
+<td VAlign='Top'>Patient's age at this time</td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfvwl.htm" >City</a></td>
+<td VAlign='Top'>Patient's address, city</td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfvx0.htm" >Country</a></td>
+<td VAlign='Top'>Patient's address, name of the country</td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfvxe.htm" >DOB</a></td>
+<td VAlign='Top'>Patient's date of birth, as a DateTime number</td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfvx2.htm" >DOBstring</a></td>
+<td VAlign='Top'>Patient's date of birth, as a formatted string</td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfvvq.htm" >FirstName</a></td>
+<td VAlign='Top'>Patient's first name (Given Name)</td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfvxg.htm" >FullAddress</a></td>
+<td VAlign='Top'>The address as a formatted concatenation of Addr1, Addr2, City, State Zip (Country)</td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfvxf.htm" >FullName</a></td>
+<td VAlign='Top'>The full name as a formatted concatenation of prefix, first, middle, last, suffix</td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfvw5.htm" >LastName</a></td>
+<td VAlign='Top'>Patient's last name (Surname)</td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfvw4.htm" >MiddleName</a></td>
+<td VAlign='Top'>Patient's middle name</td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfvvp.htm" >PatientID</a></td>
+<td VAlign='Top'>Unique patient identifier string</td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfvw6.htm" >Prefix</a></td>
+<td VAlign='Top'>Patient's prefix to their name, e.g., "Mr.", "Ms.", "Dr."</td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfvwm.htm" >State</a></td>
+<td VAlign='Top'>Patient's address, state</td></tr>
+<tr><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfvw7.htm" >Suffix</a></td>
+<td VAlign='Top'>Patient's suffix to their name, e.g., "MD, PhD", "Jr."</td></tr>
+<tr class='alternaterow'><td Align='Left' VAlign='Top'><img src="bmp/classproperty.gif" align="left"> <a href="_1ty0xfvwz.htm" >Zip</a></td>
+<td VAlign='Top'>Patient's address zip code</td></tr>
+</table><p>
+
+
+<h3 class="outdent">Requirements</h3>
+   
+
+<b>Namespace:</b> OpenMedIC<br>
+   
+
+   
+
+<b>Assembly:</b> openmedic.dll
+<br>
+   
+
+
+
+
+<br>
+</div>
+<hr>
+<small>Last Updated: <i>6/21/2006</i></small>
+
+<p><center><i>This page was generated by an unregistered version of <a href="http://www.west-wind.com/wwHelp">West Wind HTML Help Builder</a>.</span> <p></center></body>
+</html>
