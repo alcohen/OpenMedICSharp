@@ -30,10 +30,9 @@ namespace OpenMedIC
 	/// by other BuildingBlocks and IReceivers, such as filters, FileWriters, other
 	/// WaveformBuffers, etc.
 	/// </summary>
-	public class WaveformBuffer
+	public class WaveformBuffer : BuildingBlock
 	{
 		private CircularBuffer Buff;
-		public float stepPeriod { set; get; }
 
         /// <summary>
         /// Constructor;  initializes the circular buffer used by this instance.
@@ -49,13 +48,13 @@ namespace OpenMedIC
 		/// Adds the new Value to the Circular Buffer, then resumes default behavior
 		/// </summary>
 		/// <param name="newValue"></param>
-		public void addValue ( Sample newValue )
+		public override void addValue ( Sample newValue )
 		{
 			// Add value to circular buffer:
 			this.Buff.AddPoint ( newValue );
 
 			// Maintain default behavior:
-			//~addValue ( newValue );
+			base.addValue ( newValue );
 		}
 
 		/// <summary>
@@ -63,13 +62,13 @@ namespace OpenMedIC
 		/// </summary>
 		/// <param name="newValues">Zero-based array of samples.
 		///                         Note that the OLDEST sample is newValues[0]</param>
-		public void addValues ( Samples newValues )
+		public override void addValues ( Samples newValues )
 		{
 			// Add value to circular buffer:
 			this.Buff.AddPoints ( newValues );
 
 			// Maintain default behavior:
-			addValues ( newValues );
+			base.addValues ( newValues );
 		}
 
 		/// <summary>

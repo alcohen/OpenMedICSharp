@@ -1,10 +1,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2012 for Windows Desktop
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenMedIC", "OpenMedIC_code\OpenMedIC.csproj", "{B3EDF8A1-1CF9-4AD5-884F-0BA184911243}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenMedICish", "OpenMedIC_code\OpenMedICish.csproj", "{B3EDF8A1-1CF9-4AD5-884F-0BA184911243}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "OMSetup", "OMSetup\OMSetup.vdproj", "{2DB2CA8F-B0D7-4A7D-AFFC-A700E9AE8C43}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OMSineDemo", "OMSineDemo\OMSineDemo.csproj", "{F1B111E8-A84E-48CA-A2E7-D478A21292DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalVent", "OMSineDemo\GlobalVent.csproj", "{F1B111E8-A84E-48CA-A2E7-D478A21292DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,10 +16,6 @@ Global
 		{B3EDF8A1-1CF9-4AD5-884F-0BA184911243}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3EDF8A1-1CF9-4AD5-884F-0BA184911243}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3EDF8A1-1CF9-4AD5-884F-0BA184911243}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2DB2CA8F-B0D7-4A7D-AFFC-A700E9AE8C43}.Debug|Any CPU.ActiveCfg = Debug
-		{2DB2CA8F-B0D7-4A7D-AFFC-A700E9AE8C43}.Debug|Any CPU.Build.0 = Debug
-		{2DB2CA8F-B0D7-4A7D-AFFC-A700E9AE8C43}.Release|Any CPU.ActiveCfg = Release
-		{2DB2CA8F-B0D7-4A7D-AFFC-A700E9AE8C43}.Release|Any CPU.Build.0 = Release
 		{F1B111E8-A84E-48CA-A2E7-D478A21292DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F1B111E8-A84E-48CA-A2E7-D478A21292DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1B111E8-A84E-48CA-A2E7-D478A21292DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -27,5 +23,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D81AC6C1-EBE8-45F8-890A-4203C550BD06}
 	EndGlobalSection
 EndGlobal

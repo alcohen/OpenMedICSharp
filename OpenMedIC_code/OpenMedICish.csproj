@@ -136,6 +136,7 @@
     <Compile Include="ChainInfo.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Globals.cs" />
     <Compile Include="GraphBase.cs">
       <SubType>UserControl</SubType>
     </Compile>

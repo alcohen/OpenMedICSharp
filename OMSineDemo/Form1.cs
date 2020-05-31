@@ -22,10 +22,13 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO.Ports;
 using System.Text;
 using System.Windows.Forms;
 using OpenMedIC;
+using System.Text.RegularExpressions;
 
 namespace OMDemo1
 {
@@ -33,11 +36,21 @@ namespace OMDemo1
     {
         //Declare the OpenMedic Objects
         private SineWaveGen SineMaker;
-        private WaveformBuffer WFBuffer;
+        //private WaveformBuffer WFBuffer;
         private NewDataTrigger DisplayTrigger;
 
         //Declare sampling frequency
-        private const double secPerStep = 1.0 / 500.0;
+        private const float secPerStep =  (float)(1.0 / 10.0);
+
+
+        private Timer updateGraphTimer;
+        enum ReadingState {NothingYet, DelimiterFound, ReadingValue, }
+        SerialPort port;
+        //WaveformBuffer wfBuff;
+
+        //Regex regexLow;
+        MatchCollection matchCollectionHigh;
+        MatchCollection matchCollectionLow;
 
         public Form1()
         {
@@ -46,65 +59,98 @@ namespace OMDemo1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //Create the building blocks
-            SineMaker = new SineWaveGen ( secPerStep, true, 0.5); //0.5 Hz sine wave generator
-            WFBuffer = new WaveformBuffer(10000); //Buffer used by waveform graph
-            
-            //Delegate to be called when new points are added
-            //This delegate will determine when to refresh the graph
-            DisplayTrigger = new NewDataTrigger(new NewDataTrigger.refreshDelegate(NewData), true, true);
-            
-            //connect the building blocks
-            
-            //WFBufffer follows SineMaker in chain
-            SineMaker.addFollower(WFBuffer);
-            //DispTrigger follows WFBuff
-            WFBuffer.addFollower(DisplayTrigger);
-            //Graph display uses WFBuff
-            rtgMain.WFThis = WFBuffer;
+            Globals.wfLowBuff = new WaveformBuffer(10000);
+            Globals.wfLowBuff.stepPeriod = secPerStep;
+            Globals.wfHighBuff = new WaveformBuffer(10000);
+            Globals.wfHighBuff.stepPeriod = secPerStep;
+
+            //regexLow = new Regex(@"^[-+]?[0-9]*\.[0-9]+$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            rtgHigh.WFThis = Globals.wfHighBuff;
+            rtgLow.WFThis = Globals.wfLowBuff;
+            updateGraphTimer = new Timer();
+            updateGraphTimer.Interval = 100;
+            updateGraphTimer.Tick += new EventHandler(UpdateGraph);
+            updateGraphTimer.Enabled = true;
+            port = new SerialPort("COM9", 115200, Parity.None, 8, StopBits.One);
+            //port.ReadTimeout = 10;
+            port.Handshake = Handshake.RequestToSendXOnXOff;
+            port.DtrEnable = true;
+            port.RtsEnable = true;
+            port.ReadTimeout = 0;
+            port.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
+            port.Open();
+            port.DiscardInBuffer();
         }
-        private void NewData()
+
+        private void FetchNewData()
         {
+            /*
             // Refresh the graph:
             lock (rtgMain)	// We need to lock to avoid a potential collision
             {
                 rtgMain.DrawNew();
             }
+            */
         }
 
         private void btnStartStop_Click(object sender, EventArgs e)
         {
-            if (btnStartStop.Text == "Start")
-            {
-                //start the data flow
+        }
 
-                //start data chain that begins 
-                ChainInfo acqInfo = new ChainInfo();
-                //StartData.patientInfo = new PatientInfo("Johnny", "Q", "Public");
-                SineMaker.init(acqInfo);
+        private void UpdateGraph(Object sender, EventArgs e)
+        {
+            rtgHigh.DrawNew();
+            rtgLow.DrawNew();
+        }
 
-                //change the button to a pause button
-                btnStartStop.Text = "Pause";
-            }
-            else if (btnStartStop.Text == "Pause")
+        private static void DataReceivedHandler(
+            object sender,
+            SerialDataReceivedEventArgs e)
+        {
+            SerialPort sp = (SerialPort)sender;
+            try
             {
-                SineMaker.pause();
-                btnStartStop.Text = "Resume";
+                string indata = sp.ReadLine();
+                Debug.Write(indata);
+                //Sample s = new Sample(Convert.ToSingle(indata));
+                Regex regex = new Regex(@"^([HL]\s)[-+]?[0-9]*(\.[0-9]+)?\r$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+                MatchCollection matchCollection = regex.Matches(indata);
+                if (matchCollection.Count > 0)
+                {
+                    string sampType = indata.ToString().Substring(0, 1);
+                    float sampNum = Convert.ToSingle(indata.ToString().Substring(2));
+                    Sample s = new Sample(sampNum);
+                    
+                    if (sampType == "H")
+                    {
+                        Globals.wfHighBuff.addValue(s);
+                    }
+                    else
+                    {
+                        Globals.wfLowBuff.addValue(s);
+                    }
+                }
             }
-            else
+            catch (TimeoutException ex)
             {
-                //button text must be "Resume"
-                SineMaker.resume();
-                btnStartStop.Text = "Pause";
+                Debug.Write("----------------> nothin");
             }
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Release stuff:
-            SineMaker.Terminate();
-            WFBuffer.dropFollower(DisplayTrigger);
-            SineMaker.dropFollower(WFBuffer);
+             port.Close();
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_Click(object sender, EventArgs e)
+        {
+            port.Write(((Button)sender).Text.ToLower());
         }
     }
 }

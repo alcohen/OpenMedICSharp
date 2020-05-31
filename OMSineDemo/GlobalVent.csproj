@@ -76,9 +76,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OpenMedIC_code\OpenMedIC.csproj">
+    <ProjectReference Include="..\OpenMedIC_code\OpenMedICish.csproj">
       <Project>{B3EDF8A1-1CF9-4AD5-884F-0BA184911243}</Project>
-      <Name>OpenMedIC</Name>
+      <Name>OpenMedICish</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
