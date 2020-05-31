@@ -71,7 +71,7 @@ namespace OMDemo1
             updateGraphTimer.Interval = 100;
             updateGraphTimer.Tick += new EventHandler(UpdateGraph);
             updateGraphTimer.Enabled = true;
-            port = new SerialPort("COM9", 115200, Parity.None, 8, StopBits.One);
+            port = new SerialPort("COM7", 115200, Parity.None, 8, StopBits.One);
             //port.ReadTimeout = 10;
             port.Handshake = Handshake.RequestToSendXOnXOff;
             port.DtrEnable = true;

@@ -49,10 +49,6 @@ namespace OMDemo1
         private void InitializeComponent()
         {
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.rtgHigh = new OpenMedIC.RTGraph();
-            this.rtGraph1 = new OpenMedIC.RTGraph();
-            this.rtgLow = new OpenMedIC.RTGraph();
-            this.rtGraph3 = new OpenMedIC.RTGraph();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -61,167 +57,15 @@ namespace OMDemo1
             this.btnBToggle = new System.Windows.Forms.Button();
             this.btnCToggle = new System.Windows.Forms.Button();
             this.btnDToggle = new System.Windows.Forms.Button();
+            this.rtGraph3 = new OpenMedIC.RTGraph();
+            this.rtgLow = new OpenMedIC.RTGraph();
+            this.rtGraph1 = new OpenMedIC.RTGraph();
+            this.rtgHigh = new OpenMedIC.RTGraph();
             this.SuspendLayout();
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // rtgHigh
-            // 
-            this.rtgHigh.AutoRedraw = true;
-            this.rtgHigh.BorderBevelWidth = 4;
-            this.rtgHigh.BorderMargin = 5;
-            this.rtgHigh.CursColor = System.Drawing.Color.Blue;
-            this.rtgHigh.CursForeWidth = 10;
-            this.rtgHigh.CursWidth = 1;
-            this.rtgHigh.GSBackColor = System.Drawing.Color.Black;
-            this.rtgHigh.GSBevelWidth = 3;
-            this.rtgHigh.GSBottom = 4;
-            this.rtgHigh.GSLeft = 4;
-            this.rtgHigh.GSRight = 4;
-            this.rtgHigh.GSTop = 4;
-            this.rtgHigh.Location = new System.Drawing.Point(12, 12);
-            this.rtgHigh.Name = "rtgHigh";
-            this.rtgHigh.Size = new System.Drawing.Size(451, 220);
-            this.rtgHigh.TabIndex = 0;
-            this.rtgHigh.TitleFont = new System.Drawing.Font("Arial", 14F);
-            this.rtgHigh.TitleText = "Pressure High";
-            this.rtgHigh.WFColor = System.Drawing.Color.LimeGreen;
-            this.rtgHigh.WFThis = null;
-            this.rtgHigh.WFWidth = 3;
-            this.rtgHigh.XAxisDispMax = 10F;
-            this.rtgHigh.XAxisDispMin = 0F;
-            this.rtgHigh.XAxisNumberFont = new System.Drawing.Font("Arial", 10F);
-            this.rtgHigh.XAxisNumberFormat = "f2";
-            this.rtgHigh.XAxisTicLength = 5;
-            this.rtgHigh.XAxisTicWidth = 1;
-            this.rtgHigh.YAxisCaptionFont = new System.Drawing.Font("Arial", 12F);
-            this.rtgHigh.YAxisCaptionText = "Units";
-            this.rtgHigh.YAxisDispMax = 1300F;
-            this.rtgHigh.YAxisDispMin = 950F;
-            this.rtgHigh.YAxisMaxNumTics = 5;
-            this.rtgHigh.YAxisNumberFont = new System.Drawing.Font("Arial", 10F);
-            this.rtgHigh.YAxisNumberFormat = "f2";
-            this.rtgHigh.YAxisTicLength = 5;
-            this.rtgHigh.YAxisTicWidth = 1;
-            // 
-            // rtGraph1
-            // 
-            this.rtGraph1.AutoRedraw = true;
-            this.rtGraph1.BorderBevelWidth = 4;
-            this.rtGraph1.BorderMargin = 5;
-            this.rtGraph1.CursColor = System.Drawing.Color.Blue;
-            this.rtGraph1.CursForeWidth = 3;
-            this.rtGraph1.CursWidth = 1;
-            this.rtGraph1.GSBackColor = System.Drawing.Color.Black;
-            this.rtGraph1.GSBevelWidth = 3;
-            this.rtGraph1.GSBottom = 4;
-            this.rtGraph1.GSLeft = 4;
-            this.rtGraph1.GSRight = 4;
-            this.rtGraph1.GSTop = 4;
-            this.rtGraph1.Location = new System.Drawing.Point(494, 16);
-            this.rtGraph1.Name = "rtGraph1";
-            this.rtGraph1.Size = new System.Drawing.Size(451, 216);
-            this.rtGraph1.TabIndex = 2;
-            this.rtGraph1.TitleFont = new System.Drawing.Font("Arial", 14F);
-            this.rtGraph1.TitleText = "P/V";
-            this.rtGraph1.WFColor = System.Drawing.Color.LimeGreen;
-            this.rtGraph1.WFThis = null;
-            this.rtGraph1.WFWidth = 2;
-            this.rtGraph1.XAxisDispMax = 20F;
-            this.rtGraph1.XAxisDispMin = 0F;
-            this.rtGraph1.XAxisNumberFont = new System.Drawing.Font("Arial", 10F);
-            this.rtGraph1.XAxisNumberFormat = "f2";
-            this.rtGraph1.XAxisTicLength = 5;
-            this.rtGraph1.XAxisTicWidth = 1;
-            this.rtGraph1.YAxisCaptionFont = new System.Drawing.Font("Arial", 12F);
-            this.rtGraph1.YAxisCaptionText = "Units";
-            this.rtGraph1.YAxisDispMax = 100F;
-            this.rtGraph1.YAxisDispMin = 0F;
-            this.rtGraph1.YAxisMaxNumTics = 5;
-            this.rtGraph1.YAxisNumberFont = new System.Drawing.Font("Arial", 10F);
-            this.rtGraph1.YAxisNumberFormat = "f2";
-            this.rtGraph1.YAxisTicLength = 5;
-            this.rtGraph1.YAxisTicWidth = 1;
-            // 
-            // rtgLow
-            // 
-            this.rtgLow.AutoRedraw = true;
-            this.rtgLow.BorderBevelWidth = 4;
-            this.rtgLow.BorderMargin = 5;
-            this.rtgLow.CursColor = System.Drawing.Color.Blue;
-            this.rtgLow.CursForeWidth = 10;
-            this.rtgLow.CursWidth = 1;
-            this.rtgLow.GSBackColor = System.Drawing.Color.Black;
-            this.rtgLow.GSBevelWidth = 3;
-            this.rtgLow.GSBottom = 4;
-            this.rtgLow.GSLeft = 4;
-            this.rtgLow.GSRight = 4;
-            this.rtgLow.GSTop = 4;
-            this.rtgLow.Location = new System.Drawing.Point(12, 247);
-            this.rtgLow.Name = "rtgLow";
-            this.rtgLow.Size = new System.Drawing.Size(451, 220);
-            this.rtgLow.TabIndex = 3;
-            this.rtgLow.TitleFont = new System.Drawing.Font("Arial", 14F);
-            this.rtgLow.TitleText = "Flow";
-            this.rtgLow.WFColor = System.Drawing.Color.LimeGreen;
-            this.rtgLow.WFThis = null;
-            this.rtgLow.WFWidth = 3;
-            this.rtgLow.XAxisDispMax = 10F;
-            this.rtgLow.XAxisDispMin = 0F;
-            this.rtgLow.XAxisNumberFont = new System.Drawing.Font("Arial", 10F);
-            this.rtgLow.XAxisNumberFormat = "f2";
-            this.rtgLow.XAxisTicLength = 5;
-            this.rtgLow.XAxisTicWidth = 1;
-            this.rtgLow.YAxisCaptionFont = new System.Drawing.Font("Arial", 12F);
-            this.rtgLow.YAxisCaptionText = "Units";
-            this.rtgLow.YAxisDispMax = 1300F;
-            this.rtgLow.YAxisDispMin = 950F;
-            this.rtgLow.YAxisMaxNumTics = 5;
-            this.rtgLow.YAxisNumberFont = new System.Drawing.Font("Arial", 10F);
-            this.rtgLow.YAxisNumberFormat = "f2";
-            this.rtgLow.YAxisTicLength = 5;
-            this.rtgLow.YAxisTicWidth = 1;
-            // 
-            // rtGraph3
-            // 
-            this.rtGraph3.AutoRedraw = true;
-            this.rtGraph3.BorderBevelWidth = 4;
-            this.rtGraph3.BorderMargin = 5;
-            this.rtGraph3.CursColor = System.Drawing.Color.Blue;
-            this.rtGraph3.CursForeWidth = 3;
-            this.rtGraph3.CursWidth = 1;
-            this.rtGraph3.GSBackColor = System.Drawing.Color.Black;
-            this.rtGraph3.GSBevelWidth = 3;
-            this.rtGraph3.GSBottom = 4;
-            this.rtGraph3.GSLeft = 4;
-            this.rtGraph3.GSRight = 4;
-            this.rtGraph3.GSTop = 4;
-            this.rtGraph3.Location = new System.Drawing.Point(494, 251);
-            this.rtGraph3.Name = "rtGraph3";
-            this.rtGraph3.Size = new System.Drawing.Size(451, 216);
-            this.rtGraph3.TabIndex = 4;
-            this.rtGraph3.TitleFont = new System.Drawing.Font("Arial", 14F);
-            this.rtGraph3.TitleText = "F/V";
-            this.rtGraph3.WFColor = System.Drawing.Color.LimeGreen;
-            this.rtGraph3.WFThis = null;
-            this.rtGraph3.WFWidth = 2;
-            this.rtGraph3.XAxisDispMax = 20F;
-            this.rtGraph3.XAxisDispMin = 0F;
-            this.rtGraph3.XAxisNumberFont = new System.Drawing.Font("Arial", 10F);
-            this.rtGraph3.XAxisNumberFormat = "f2";
-            this.rtGraph3.XAxisTicLength = 5;
-            this.rtGraph3.XAxisTicWidth = 1;
-            this.rtGraph3.YAxisCaptionFont = new System.Drawing.Font("Arial", 12F);
-            this.rtGraph3.YAxisCaptionText = "Units";
-            this.rtGraph3.YAxisDispMax = 100F;
-            this.rtGraph3.YAxisDispMin = 0F;
-            this.rtGraph3.YAxisMaxNumTics = 5;
-            this.rtGraph3.YAxisNumberFont = new System.Drawing.Font("Arial", 10F);
-            this.rtGraph3.YAxisNumberFormat = "f2";
-            this.rtGraph3.YAxisTicLength = 5;
-            this.rtGraph3.YAxisTicWidth = 1;
             // 
             // textBox1
             // 
@@ -302,6 +146,162 @@ namespace OMDemo1
             this.btnDToggle.Text = "D";
             this.btnDToggle.UseVisualStyleBackColor = true;
             this.btnDToggle.Click += new System.EventHandler(this.button_Click);
+            // 
+            // rtGraph3
+            // 
+            this.rtGraph3.AutoRedraw = true;
+            this.rtGraph3.BorderBevelWidth = 4;
+            this.rtGraph3.BorderMargin = 5;
+            this.rtGraph3.CursColor = System.Drawing.Color.Blue;
+            this.rtGraph3.CursForeWidth = 3;
+            this.rtGraph3.CursWidth = 1;
+            this.rtGraph3.GSBackColor = System.Drawing.Color.Black;
+            this.rtGraph3.GSBevelWidth = 3;
+            this.rtGraph3.GSBottom = 4;
+            this.rtGraph3.GSLeft = 4;
+            this.rtGraph3.GSRight = 4;
+            this.rtGraph3.GSTop = 4;
+            this.rtGraph3.Location = new System.Drawing.Point(494, 251);
+            this.rtGraph3.Name = "rtGraph3";
+            this.rtGraph3.Size = new System.Drawing.Size(451, 216);
+            this.rtGraph3.TabIndex = 4;
+            this.rtGraph3.TitleFont = new System.Drawing.Font("Arial", 14F);
+            this.rtGraph3.TitleText = "F/V";
+            this.rtGraph3.WFColor = System.Drawing.Color.LimeGreen;
+            this.rtGraph3.WFThis = null;
+            this.rtGraph3.WFWidth = 2;
+            this.rtGraph3.XAxisDispMax = 20F;
+            this.rtGraph3.XAxisDispMin = 0F;
+            this.rtGraph3.XAxisNumberFont = new System.Drawing.Font("Arial", 10F);
+            this.rtGraph3.XAxisNumberFormat = "f2";
+            this.rtGraph3.XAxisTicLength = 5;
+            this.rtGraph3.XAxisTicWidth = 1;
+            this.rtGraph3.YAxisCaptionFont = new System.Drawing.Font("Arial", 12F);
+            this.rtGraph3.YAxisCaptionText = "Units";
+            this.rtGraph3.YAxisDispMax = 100F;
+            this.rtGraph3.YAxisDispMin = 0F;
+            this.rtGraph3.YAxisMaxNumTics = 5;
+            this.rtGraph3.YAxisNumberFont = new System.Drawing.Font("Arial", 10F);
+            this.rtGraph3.YAxisNumberFormat = "f2";
+            this.rtGraph3.YAxisTicLength = 5;
+            this.rtGraph3.YAxisTicWidth = 1;
+            // 
+            // rtgLow
+            // 
+            this.rtgLow.AutoRedraw = true;
+            this.rtgLow.BorderBevelWidth = 4;
+            this.rtgLow.BorderMargin = 5;
+            this.rtgLow.CursColor = System.Drawing.Color.Blue;
+            this.rtgLow.CursForeWidth = 10;
+            this.rtgLow.CursWidth = 1;
+            this.rtgLow.GSBackColor = System.Drawing.Color.Black;
+            this.rtgLow.GSBevelWidth = 3;
+            this.rtgLow.GSBottom = 4;
+            this.rtgLow.GSLeft = 4;
+            this.rtgLow.GSRight = 4;
+            this.rtgLow.GSTop = 4;
+            this.rtgLow.Location = new System.Drawing.Point(12, 247);
+            this.rtgLow.Name = "rtgLow";
+            this.rtgLow.Size = new System.Drawing.Size(451, 220);
+            this.rtgLow.TabIndex = 3;
+            this.rtgLow.TitleFont = new System.Drawing.Font("Arial", 14F);
+            this.rtgLow.TitleText = "Flow";
+            this.rtgLow.WFColor = System.Drawing.Color.LimeGreen;
+            this.rtgLow.WFThis = null;
+            this.rtgLow.WFWidth = 3;
+            this.rtgLow.XAxisDispMax = 10F;
+            this.rtgLow.XAxisDispMin = 0F;
+            this.rtgLow.XAxisNumberFont = new System.Drawing.Font("Arial", 10F);
+            this.rtgLow.XAxisNumberFormat = "f2";
+            this.rtgLow.XAxisTicLength = 5;
+            this.rtgLow.XAxisTicWidth = 1;
+            this.rtgLow.YAxisCaptionFont = new System.Drawing.Font("Arial", 12F);
+            this.rtgLow.YAxisCaptionText = "Units";
+            this.rtgLow.YAxisDispMax = 1300F;
+            this.rtgLow.YAxisDispMin = 950F;
+            this.rtgLow.YAxisMaxNumTics = 5;
+            this.rtgLow.YAxisNumberFont = new System.Drawing.Font("Arial", 10F);
+            this.rtgLow.YAxisNumberFormat = "f2";
+            this.rtgLow.YAxisTicLength = 5;
+            this.rtgLow.YAxisTicWidth = 1;
+            // 
+            // rtGraph1
+            // 
+            this.rtGraph1.AutoRedraw = true;
+            this.rtGraph1.BorderBevelWidth = 4;
+            this.rtGraph1.BorderMargin = 5;
+            this.rtGraph1.CursColor = System.Drawing.Color.Blue;
+            this.rtGraph1.CursForeWidth = 3;
+            this.rtGraph1.CursWidth = 1;
+            this.rtGraph1.GSBackColor = System.Drawing.Color.Black;
+            this.rtGraph1.GSBevelWidth = 3;
+            this.rtGraph1.GSBottom = 4;
+            this.rtGraph1.GSLeft = 4;
+            this.rtGraph1.GSRight = 4;
+            this.rtGraph1.GSTop = 4;
+            this.rtGraph1.Location = new System.Drawing.Point(494, 16);
+            this.rtGraph1.Name = "rtGraph1";
+            this.rtGraph1.Size = new System.Drawing.Size(451, 216);
+            this.rtGraph1.TabIndex = 2;
+            this.rtGraph1.TitleFont = new System.Drawing.Font("Arial", 14F);
+            this.rtGraph1.TitleText = "P/V";
+            this.rtGraph1.WFColor = System.Drawing.Color.LimeGreen;
+            this.rtGraph1.WFThis = null;
+            this.rtGraph1.WFWidth = 2;
+            this.rtGraph1.XAxisDispMax = 20F;
+            this.rtGraph1.XAxisDispMin = 0F;
+            this.rtGraph1.XAxisNumberFont = new System.Drawing.Font("Arial", 10F);
+            this.rtGraph1.XAxisNumberFormat = "f2";
+            this.rtGraph1.XAxisTicLength = 5;
+            this.rtGraph1.XAxisTicWidth = 1;
+            this.rtGraph1.YAxisCaptionFont = new System.Drawing.Font("Arial", 12F);
+            this.rtGraph1.YAxisCaptionText = "Units";
+            this.rtGraph1.YAxisDispMax = 100F;
+            this.rtGraph1.YAxisDispMin = 0F;
+            this.rtGraph1.YAxisMaxNumTics = 5;
+            this.rtGraph1.YAxisNumberFont = new System.Drawing.Font("Arial", 10F);
+            this.rtGraph1.YAxisNumberFormat = "f2";
+            this.rtGraph1.YAxisTicLength = 5;
+            this.rtGraph1.YAxisTicWidth = 1;
+            // 
+            // rtgHigh
+            // 
+            this.rtgHigh.AutoRedraw = true;
+            this.rtgHigh.BorderBevelWidth = 4;
+            this.rtgHigh.BorderMargin = 5;
+            this.rtgHigh.CursColor = System.Drawing.Color.Blue;
+            this.rtgHigh.CursForeWidth = 10;
+            this.rtgHigh.CursWidth = 1;
+            this.rtgHigh.GSBackColor = System.Drawing.Color.Black;
+            this.rtgHigh.GSBevelWidth = 3;
+            this.rtgHigh.GSBottom = 4;
+            this.rtgHigh.GSLeft = 4;
+            this.rtgHigh.GSRight = 4;
+            this.rtgHigh.GSTop = 4;
+            this.rtgHigh.Location = new System.Drawing.Point(12, 12);
+            this.rtgHigh.Name = "rtgHigh";
+            this.rtgHigh.Size = new System.Drawing.Size(451, 220);
+            this.rtgHigh.TabIndex = 0;
+            this.rtgHigh.TitleFont = new System.Drawing.Font("Arial", 14F);
+            this.rtgHigh.TitleText = "Pressure High";
+            this.rtgHigh.WFColor = System.Drawing.Color.LimeGreen;
+            this.rtgHigh.WFThis = null;
+            this.rtgHigh.WFWidth = 3;
+            this.rtgHigh.XAxisDispMax = 10F;
+            this.rtgHigh.XAxisDispMin = 0F;
+            this.rtgHigh.XAxisNumberFont = new System.Drawing.Font("Arial", 10F);
+            this.rtgHigh.XAxisNumberFormat = "f2";
+            this.rtgHigh.XAxisTicLength = 5;
+            this.rtgHigh.XAxisTicWidth = 1;
+            this.rtgHigh.YAxisCaptionFont = new System.Drawing.Font("Arial", 12F);
+            this.rtgHigh.YAxisCaptionText = "Units";
+            this.rtgHigh.YAxisDispMax = 1200F;
+            this.rtgHigh.YAxisDispMin = 1000F;
+            this.rtgHigh.YAxisMaxNumTics = 5;
+            this.rtgHigh.YAxisNumberFont = new System.Drawing.Font("Arial", 10F);
+            this.rtgHigh.YAxisNumberFormat = "f2";
+            this.rtgHigh.YAxisTicLength = 5;
+            this.rtgHigh.YAxisTicWidth = 1;
             // 
             // Form1
             // 
