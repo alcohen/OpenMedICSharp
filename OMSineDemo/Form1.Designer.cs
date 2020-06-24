@@ -48,6 +48,7 @@ namespace OMDemo1
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -61,6 +62,12 @@ namespace OMDemo1
             this.rtgLow = new OpenMedIC.RTGraph();
             this.rtGraph1 = new OpenMedIC.RTGraph();
             this.rtgHigh = new OpenMedIC.RTGraph();
+            this.tmrStateLoop = new System.Windows.Forms.Timer(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -115,7 +122,7 @@ namespace OMDemo1
             this.btnAToggle.TabIndex = 9;
             this.btnAToggle.Text = "A";
             this.btnAToggle.UseVisualStyleBackColor = true;
-            this.btnAToggle.Click += new System.EventHandler(this.button_Click);
+            this.btnAToggle.Click += new System.EventHandler(this.btnAToggle_Click);
             // 
             // btnBToggle
             // 
@@ -125,7 +132,7 @@ namespace OMDemo1
             this.btnBToggle.TabIndex = 10;
             this.btnBToggle.Text = "B";
             this.btnBToggle.UseVisualStyleBackColor = true;
-            this.btnBToggle.Click += new System.EventHandler(this.button_Click);
+            this.btnBToggle.Click += new System.EventHandler(this.btnBToggle_Click);
             // 
             // btnCToggle
             // 
@@ -135,7 +142,7 @@ namespace OMDemo1
             this.btnCToggle.TabIndex = 11;
             this.btnCToggle.Text = "C";
             this.btnCToggle.UseVisualStyleBackColor = true;
-            this.btnCToggle.Click += new System.EventHandler(this.button_Click);
+            this.btnCToggle.Click += new System.EventHandler(this.btnCToggle_Click);
             // 
             // btnDToggle
             // 
@@ -145,10 +152,11 @@ namespace OMDemo1
             this.btnDToggle.TabIndex = 12;
             this.btnDToggle.Text = "D";
             this.btnDToggle.UseVisualStyleBackColor = true;
-            this.btnDToggle.Click += new System.EventHandler(this.button_Click);
+            this.btnDToggle.Click += new System.EventHandler(this.btnDToggle_Click);
             // 
             // rtGraph3
             // 
+            this.rtGraph3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.rtGraph3.AutoRedraw = true;
             this.rtGraph3.BorderBevelWidth = 4;
             this.rtGraph3.BorderMargin = 5;
@@ -188,6 +196,7 @@ namespace OMDemo1
             // 
             // rtgLow
             // 
+            this.rtgLow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.rtgLow.AutoRedraw = true;
             this.rtgLow.BorderBevelWidth = 4;
             this.rtgLow.BorderMargin = 5;
@@ -205,7 +214,7 @@ namespace OMDemo1
             this.rtgLow.Size = new System.Drawing.Size(451, 220);
             this.rtgLow.TabIndex = 3;
             this.rtgLow.TitleFont = new System.Drawing.Font("Arial", 14F);
-            this.rtgLow.TitleText = "Flow";
+            this.rtgLow.TitleText = "Pressure Low";
             this.rtgLow.WFColor = System.Drawing.Color.LimeGreen;
             this.rtgLow.WFThis = null;
             this.rtgLow.WFWidth = 3;
@@ -217,8 +226,8 @@ namespace OMDemo1
             this.rtgLow.XAxisTicWidth = 1;
             this.rtgLow.YAxisCaptionFont = new System.Drawing.Font("Arial", 12F);
             this.rtgLow.YAxisCaptionText = "Units";
-            this.rtgLow.YAxisDispMax = 1300F;
-            this.rtgLow.YAxisDispMin = 950F;
+            this.rtgLow.YAxisDispMax = 100F;
+            this.rtgLow.YAxisDispMin = 0F;
             this.rtgLow.YAxisMaxNumTics = 5;
             this.rtgLow.YAxisNumberFont = new System.Drawing.Font("Arial", 10F);
             this.rtgLow.YAxisNumberFormat = "f2";
@@ -227,6 +236,7 @@ namespace OMDemo1
             // 
             // rtGraph1
             // 
+            this.rtGraph1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rtGraph1.AutoRedraw = true;
             this.rtGraph1.BorderBevelWidth = 4;
             this.rtGraph1.BorderMargin = 5;
@@ -295,19 +305,64 @@ namespace OMDemo1
             this.rtgHigh.XAxisTicWidth = 1;
             this.rtgHigh.YAxisCaptionFont = new System.Drawing.Font("Arial", 12F);
             this.rtgHigh.YAxisCaptionText = "Units";
-            this.rtgHigh.YAxisDispMax = 1200F;
-            this.rtgHigh.YAxisDispMin = 1000F;
+            this.rtgHigh.YAxisDispMax = 1000F;
+            this.rtgHigh.YAxisDispMin = 600F;
             this.rtgHigh.YAxisMaxNumTics = 5;
             this.rtgHigh.YAxisNumberFont = new System.Drawing.Font("Arial", 10F);
             this.rtgHigh.YAxisNumberFormat = "f2";
             this.rtgHigh.YAxisTicLength = 5;
             this.rtgHigh.YAxisTicWidth = 1;
             // 
+            // tmrStateLoop
+            // 
+            this.tmrStateLoop.Interval = 50;
+            this.tmrStateLoop.Tick += new System.EventHandler(this.tmrStateLoop_Tick);
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(255, 490);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(28, 29);
+            this.panel1.TabIndex = 13;
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(221, 490);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(28, 29);
+            this.panel2.TabIndex = 14;
+            // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(323, 490);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(28, 29);
+            this.panel3.TabIndex = 14;
+            // 
+            // panel4
+            // 
+            this.panel4.Location = new System.Drawing.Point(289, 490);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(28, 29);
+            this.panel4.TabIndex = 14;
+            // 
+            // panel5
+            // 
+            this.panel5.Location = new System.Drawing.Point(357, 490);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(28, 29);
+            this.panel5.TabIndex = 14;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(973, 580);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnDToggle);
             this.Controls.Add(this.btnCToggle);
             this.Controls.Add(this.btnBToggle);
@@ -344,6 +399,12 @@ namespace OMDemo1
         private System.Windows.Forms.Button btnBToggle;
         private System.Windows.Forms.Button btnCToggle;
         private System.Windows.Forms.Button btnDToggle;
+        private System.Windows.Forms.Timer tmrStateLoop;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
     }
 }
 

@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace OpenMedIC
+namespace OMDemo1
 {
-    static public class GlobalVars
+    class LEDs
     {
-        //static public 
     }
 }

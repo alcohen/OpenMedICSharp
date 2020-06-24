@@ -29,28 +29,19 @@ using System.Text;
 using System.Windows.Forms;
 using OpenMedIC;
 using System.Text.RegularExpressions;
+using System.Xml.Schema;
 
 namespace OMDemo1
 {
     public partial class Form1 : Form
     {
-        //Declare the OpenMedic Objects
-        private SineWaveGen SineMaker;
-        //private WaveformBuffer WFBuffer;
-        private NewDataTrigger DisplayTrigger;
-
         //Declare sampling frequency
-        private const float secPerStep =  (float)(1.0 / 10.0);
-
+        private const float secPerStepLow =  (float)(0.100);
+        private const float secPerStepHigh = (float)(0.100);
 
         private Timer updateGraphTimer;
-        enum ReadingState {NothingYet, DelimiterFound, ReadingValue, }
-        SerialPort port;
-        //WaveformBuffer wfBuff;
+        //SerialPort gPort;
 
-        //Regex regexLow;
-        MatchCollection matchCollectionHigh;
-        MatchCollection matchCollectionLow;
 
         public Form1()
         {
@@ -59,42 +50,36 @@ namespace OMDemo1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Globals.wfLowBuff = new WaveformBuffer(10000);
-            Globals.wfLowBuff.stepPeriod = secPerStep;
-            Globals.wfHighBuff = new WaveformBuffer(10000);
-            Globals.wfHighBuff.stepPeriod = secPerStep;
+            GlobalVars.wfLowBuff = new WaveformBuffer(10000);
+            GlobalVars.wfLowBuff.stepPeriod = secPerStepLow;
+            GlobalVars.wfHighBuff = new WaveformBuffer(10000);
+            GlobalVars.wfHighBuff.stepPeriod = secPerStepHigh;
 
-            //regexLow = new Regex(@"^[-+]?[0-9]*\.[0-9]+$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
-            rtgHigh.WFThis = Globals.wfHighBuff;
-            rtgLow.WFThis = Globals.wfLowBuff;
+            //regexLow = new Regex(@"^[-+]?[0-9]*\.[0-9]+$", RegexOptions.Compiled | RegexOptions.IgnoreCase);            
+            rtgHigh.WFThis = GlobalVars.wfHighBuff;
+            rtgLow.WFThis = GlobalVars.wfLowBuff;
             updateGraphTimer = new Timer();
             updateGraphTimer.Interval = 100;
             updateGraphTimer.Tick += new EventHandler(UpdateGraph);
             updateGraphTimer.Enabled = true;
-            port = new SerialPort("COM7", 115200, Parity.None, 8, StopBits.One);
-            //port.ReadTimeout = 10;
-            port.Handshake = Handshake.RequestToSendXOnXOff;
-            port.DtrEnable = true;
-            port.RtsEnable = true;
-            port.ReadTimeout = 0;
-            port.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
-            port.Open();
-            port.DiscardInBuffer();
-        }
 
-        private void FetchNewData()
-        {
-            /*
-            // Refresh the graph:
-            lock (rtgMain)	// We need to lock to avoid a potential collision
-            {
-                rtgMain.DrawNew();
-            }
-            */
+            //GlobalVars.gPort.Handshake = Handshake.RequestToSendXOnXOff;
+            //GlobalVars.gPort.DtrEnable = true;
+            //GlobalVars.gPort.RtsEnable = true;
+            GlobalVars.gPort.ReadTimeout = 1;
+            GlobalVars.gPort.ReadBufferSize = 2000;
+            GlobalVars.gPort.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
+
+            GlobalVars.gPort.Open();
+            GlobalVars.gPort.DiscardInBuffer();
+            GlobalVars.gValves.Clear();
+
+            tmrStateLoop.Enabled = true;
         }
 
         private void btnStartStop_Click(object sender, EventArgs e)
         {
+
         }
 
         private void UpdateGraph(Object sender, EventArgs e)
@@ -107,27 +92,36 @@ namespace OMDemo1
             object sender,
             SerialDataReceivedEventArgs e)
         {
+            long startMillis = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
+            double msToday = DateTime.Now.TimeOfDay.TotalMilliseconds;
+            //Debug.WriteLine(msToday);
             SerialPort sp = (SerialPort)sender;
+            //Debug.WriteLine()
             try
             {
                 string indata = sp.ReadLine();
                 Debug.Write(indata);
                 //Sample s = new Sample(Convert.ToSingle(indata));
-                Regex regex = new Regex(@"^([HL]\s)[-+]?[0-9]*(\.[0-9]+)?\r$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
-                MatchCollection matchCollection = regex.Matches(indata);
-                if (matchCollection.Count > 0)
+
+                string pattern = @"^([HL]=)[-+]?[0-9]*(\.[0-9]+)?\r$";
+                //Regex regex = new Regex(@"^([HL]=)[-+]?[0-9]*(\.[0-9]+)?\r$", RegexOptions.Compiled | RegexOptions.IgnoreCase);            
+                //MatchCollection matchCollection = regex.Matches(indata);
+                //if (matchCollection.Count > 0)
+                if (Regex.IsMatch(indata, pattern))
                 {
                     string sampType = indata.ToString().Substring(0, 1);
                     float sampNum = Convert.ToSingle(indata.ToString().Substring(2));
                     Sample s = new Sample(sampNum);
                     
-                    if (sampType == "H")
+                    if (sampType == "L")
                     {
-                        Globals.wfHighBuff.addValue(s);
+                        GlobalVars.wfLowBuff.addValue(s);
+                        GlobalVars.curPSys = s.sampleValue;
                     }
                     else
                     {
-                        Globals.wfLowBuff.addValue(s);
+                        GlobalVars.wfHighBuff.addValue(s);
+                        GlobalVars.curPBuff = s.sampleValue;
                     }
                 }
             }
@@ -135,12 +129,15 @@ namespace OMDemo1
             {
                 Debug.Write("----------------> nothin");
             }
+            long stopMillis = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
+            //~Debug.WriteLine(stopMillis - startMillis);
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Release stuff:
-             port.Close();
+            GlobalVars.gValves.Clear();
+            GlobalVars.gPort.Close();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -148,9 +145,36 @@ namespace OMDemo1
 
         }
 
-        private void button_Click(object sender, EventArgs e)
+        private void button_ClickOld(object sender, EventArgs e)
         {
-            port.Write(((Button)sender).Text.ToLower());
+            //port.Write(((Button)sender).Text.ToLower());
+            GlobalVars.gValves.SetValve(Valve.A, true);
+        }
+
+        private void btnAToggle_Click(object sender, EventArgs e)
+        {
+            //GlobalVars.gValves.SetValve(Valve.A, !GlobalVars.gValves.ValveStates[(int)Valve.A]);
+            GlobalVars.gValves.SetValve(Valve.A, !GlobalVars.gValves.ValveStates[(int)Valve.A]);
+        }
+
+        private void btnBToggle_Click(object sender, EventArgs e)
+        {
+            GlobalVars.gValves.SetValve(Valve.B, !GlobalVars.gValves.ValveStates[(int)Valve.B]);
+        }
+
+        private void btnCToggle_Click(object sender, EventArgs e)
+        {
+            GlobalVars.gValves.SetValve(Valve.C, !GlobalVars.gValves.ValveStates[(int)Valve.C]);
+        }
+
+        private void btnDToggle_Click(object sender, EventArgs e)
+        {
+            GlobalVars.gValves.SetValve(Valve.D, !GlobalVars.gValves.ValveStates[(int)Valve.D]);
+        }
+
+        private void tmrStateLoop_Tick(object sender, EventArgs e)
+        {
+            VentStateMachine.StateMachine();
         }
     }
 }
