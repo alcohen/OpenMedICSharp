@@ -158,6 +158,7 @@ namespace OMDemo1
 
         public static bool DoExhalationFill()
         {
+            Debug.WriteLine(GlobalVars.curPBuff);
             if (GlobalVars.curPBuff >= 800)
             {
                 return false;

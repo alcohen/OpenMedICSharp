@@ -18,6 +18,8 @@ namespace OMDemo1
         public static VentStateMachine.BreathStates BreathState = VentStateMachine.BreathStates.None;
         public static float curPBuff;
         public static float curPSys;
+        public static float curPAmbientBuf;
+        public static float curPAmbientSys;
         public static float PEEP = 30;
         public static float RespRate = 10;
         public static Stopwatch stopwatch = new Stopwatch();

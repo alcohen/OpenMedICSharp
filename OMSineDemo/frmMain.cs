@@ -33,7 +33,7 @@ using System.Xml.Schema;
 
 namespace OMDemo1
 {
-    public partial class Form1 : Form
+    public partial class frmMain : Form
     {
         //Declare sampling frequency
         private const float secPerStepLow =  (float)(0.100);
@@ -41,9 +41,11 @@ namespace OMDemo1
 
         private Timer updateGraphTimer;
         //SerialPort gPort;
+        Color outStateBackColor = Color.LightGray;
+        Color inStateBackColor = Color.Lime;
 
 
-        public Form1()
+        public frmMain()
         {
             InitializeComponent();
         }
@@ -54,6 +56,10 @@ namespace OMDemo1
             GlobalVars.wfLowBuff.stepPeriod = secPerStepLow;
             GlobalVars.wfHighBuff = new WaveformBuffer(10000);
             GlobalVars.wfHighBuff.stepPeriod = secPerStepHigh;
+
+            //declare ambient pressure offsets
+            GlobalVars.curPAmbientBuf = 1000;
+            GlobalVars.curPAmbientSys = 1000;
 
             //regexLow = new Regex(@"^[-+]?[0-9]*\.[0-9]+$", RegexOptions.Compiled | RegexOptions.IgnoreCase);            
             rtgHigh.WFThis = GlobalVars.wfHighBuff;
@@ -74,6 +80,8 @@ namespace OMDemo1
             GlobalVars.gPort.DiscardInBuffer();
             GlobalVars.gValves.Clear();
 
+            ClearStateIndicators();
+
             tmrStateLoop.Enabled = true;
         }
 
@@ -84,16 +92,22 @@ namespace OMDemo1
 
         private void UpdateGraph(Object sender, EventArgs e)
         {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
             rtgHigh.DrawNew();
             rtgLow.DrawNew();
+            stopwatch.Stop();
+            Debug.WriteLine("UpdateGraph: " + stopwatch.ElapsedMilliseconds);
         }
 
         private static void DataReceivedHandler(
             object sender,
             SerialDataReceivedEventArgs e)
         {
-            long startMillis = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
-            double msToday = DateTime.Now.TimeOfDay.TotalMilliseconds;
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+            //long startMillis = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
+            //double msToday = DateTime.Now.TimeOfDay.TotalMilliseconds;
             //Debug.WriteLine(msToday);
             SerialPort sp = (SerialPort)sender;
             //Debug.WriteLine()
@@ -115,11 +129,13 @@ namespace OMDemo1
                     
                     if (sampType == "L")
                     {
+                        s.sampleValue -= GlobalVars.curPAmbientSys;
                         GlobalVars.wfLowBuff.addValue(s);
                         GlobalVars.curPSys = s.sampleValue;
                     }
                     else
                     {
+                        s.sampleValue -= GlobalVars.curPAmbientBuf;
                         GlobalVars.wfHighBuff.addValue(s);
                         GlobalVars.curPBuff = s.sampleValue;
                     }
@@ -129,7 +145,9 @@ namespace OMDemo1
             {
                 Debug.Write("----------------> nothin");
             }
-            long stopMillis = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
+            stopwatch.Stop();
+            Debug.WriteLine("DataReceivedHandler: " + stopwatch.ElapsedMilliseconds);
+            //long stopMillis = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
             //~Debug.WriteLine(stopMillis - startMillis);
         }
 
@@ -175,6 +193,53 @@ namespace OMDemo1
         private void tmrStateLoop_Tick(object sender, EventArgs e)
         {
             VentStateMachine.StateMachine();
+            SetStateIndicatorLights();
         }
+
+        void SetStateIndicatorLights()
+        {
+            ClearStateIndicators();
+            switch (GlobalVars.BreathState)
+            {
+                case VentStateMachine.BreathStates.PreVentilation:
+                    lblPreVentilation.BackColor = inStateBackColor;
+                    break;
+
+                case VentStateMachine.BreathStates.PreVentilated:
+                    lblPreVentilation.BackColor = inStateBackColor;
+                    break;
+
+                case VentStateMachine.BreathStates.Inhalation:
+                    lblInhalation.BackColor = inStateBackColor;
+                    break;
+
+                case VentStateMachine.BreathStates.ExhalationFill:
+                    lblExhalation.BackColor = inStateBackColor;
+                    lblBufferRefill.BackColor = inStateBackColor;
+                    break;
+
+                case VentStateMachine.BreathStates.Exhalation:
+                    lblExhalation.BackColor = inStateBackColor;
+                    break;
+
+                case VentStateMachine.BreathStates.TimingPause:
+                    lblTimingPause.BackColor = inStateBackColor;
+                    break;
+                
+                default:
+                    break;
+            }
+
+        }
+
+        void ClearStateIndicators()
+        {
+            lblPreVentilation.BackColor = outStateBackColor;
+            lblInhalation.BackColor = outStateBackColor;
+            lblExhalation.BackColor = outStateBackColor;
+            lblTimingPause.BackColor = outStateBackColor;
+            lblBufferRefill.BackColor = outStateBackColor;
+        }
+
     }
 }
