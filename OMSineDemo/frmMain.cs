@@ -44,6 +44,8 @@ namespace OMDemo1
         Color outStateBackColor = Color.LightGray;
         Color inStateBackColor = Color.Lime;
 
+        AccurateTimer mTimer1;
+        Stopwatch TotalStopwatch = new Stopwatch();
 
         public frmMain()
         {
@@ -82,7 +84,18 @@ namespace OMDemo1
 
             ClearStateIndicators();
 
+            TotalStopwatch.Start();
+            int delay = 100;   // In milliseconds. 10 = 1/100th second.
+            mTimer1 = new AccurateTimer(this, new Action(TimerReturn), delay);
+            //delay = 100;
             tmrStateLoop.Enabled = true;
+        }
+
+        private void TimerReturn()
+        {
+            //Debug.WriteLine("AT=" + TotalStopwatch.ElapsedMilliseconds);
+            GlobalVars.wfLowBuff.addValue(new Sample(GlobalVars.curPSys - GlobalVars.curPAmbientSys));
+            GlobalVars.wfHighBuff.addValue(new Sample(GlobalVars.curPBuff- GlobalVars.curPAmbientSys));
         }
 
         private void btnStartStop_Click(object sender, EventArgs e)
@@ -97,47 +110,87 @@ namespace OMDemo1
             rtgHigh.DrawNew();
             rtgLow.DrawNew();
             stopwatch.Stop();
-            Debug.WriteLine("UpdateGraph: " + stopwatch.ElapsedMilliseconds);
+            //Debug.WriteLine("UpdateGraph: " + stopwatch.ElapsedMilliseconds);
         }
 
         private static void DataReceivedHandler(
             object sender,
             SerialDataReceivedEventArgs e)
         {
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
-            //long startMillis = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
-            //double msToday = DateTime.Now.TimeOfDay.TotalMilliseconds;
-            //Debug.WriteLine(msToday);
             SerialPort sp = (SerialPort)sender;
-            //Debug.WriteLine()
             try
             {
+                GlobalVars.serialIn += sp.ReadExisting();
+            }
+            catch (TimeoutException ex)
+            {
+                Debug.Write("----------------> nothin");
+            }
+
+            string[] splitted = GlobalVars.serialIn.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+            GlobalVars.serialIn = splitted[splitted.Length - 1];
+
+            for (int i = 0; i < splitted.Length-1; i++)
+            {
+                //string pattern = @"^([HL]=)[-+]?[0-9]*(\.[0-9]+)?\r$";
+                string pattern = @"^([HL]=)[-+]?[0-9]*(\.[0-9]+)?$";
+                if (Regex.IsMatch(splitted[i], pattern))
+                {
+                    string sampType = splitted[i].ToString().Substring(0, 1);
+                    float sampNum = Convert.ToSingle(splitted[i].ToString().Substring(2));
+                    if (sampType == "L")
+                    {
+                        GlobalVars.curPSys = sampNum;
+                    }
+                    else
+                    {
+                        GlobalVars.curPBuff = sampNum;
+                    }
+                }
+            }
+
+            //string pattern = @"^([HL]=)[-+]?[0-9]*(\.[0-9]+)?\r$";
+            //if (Regex.IsMatch(indata, pattern))
+            //{
+            //    string sampType = indata.ToString().Substring(0, 1);
+            //    float sampNum = Convert.ToSingle(indata.ToString().Substring(2));
+            //    if (sampType == "L")
+            //    {
+            //        GlobalVars.curPSys = sampNum;
+            //    }
+            //    else
+            //    {
+            //        GlobalVars.curPBuff = sampNum;
+            //    }
+            //}
+
+
+
+
+            /*
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+            SerialPort sp = (SerialPort)sender;
+            //sp.DiscardInBuffer();
+            try
+            {
+                Debug.WriteLine("SBT=" + DateTime.Now.Millisecond);
+                Debug.WriteLine("SB=" + sp.BytesToRead);
                 string indata = sp.ReadLine();
                 Debug.Write(indata);
-                //Sample s = new Sample(Convert.ToSingle(indata));
 
                 string pattern = @"^([HL]=)[-+]?[0-9]*(\.[0-9]+)?\r$";
-                //Regex regex = new Regex(@"^([HL]=)[-+]?[0-9]*(\.[0-9]+)?\r$", RegexOptions.Compiled | RegexOptions.IgnoreCase);            
-                //MatchCollection matchCollection = regex.Matches(indata);
-                //if (matchCollection.Count > 0)
                 if (Regex.IsMatch(indata, pattern))
                 {
                     string sampType = indata.ToString().Substring(0, 1);
                     float sampNum = Convert.ToSingle(indata.ToString().Substring(2));
-                    Sample s = new Sample(sampNum);
-                    
                     if (sampType == "L")
                     {
-                        s.sampleValue -= GlobalVars.curPAmbientSys;
-                        GlobalVars.wfLowBuff.addValue(s);
-                        GlobalVars.curPSys = s.sampleValue;
+                        GlobalVars.curPSys = sampNum;
                     }
                     else
                     {
-                        s.sampleValue -= GlobalVars.curPAmbientBuf;
-                        GlobalVars.wfHighBuff.addValue(s);
-                        GlobalVars.curPBuff = s.sampleValue;
+                        GlobalVars.curPBuff = sampNum;
                     }
                 }
             }
@@ -149,6 +202,7 @@ namespace OMDemo1
             Debug.WriteLine("DataReceivedHandler: " + stopwatch.ElapsedMilliseconds);
             //long stopMillis = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
             //~Debug.WriteLine(stopMillis - startMillis);
+            */
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -156,6 +210,7 @@ namespace OMDemo1
             // Release stuff:
             GlobalVars.gValves.Clear();
             GlobalVars.gPort.Close();
+            mTimer1.Stop();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)

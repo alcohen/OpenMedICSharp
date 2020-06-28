@@ -13,7 +13,7 @@ namespace OMDemo1
     {
         static public WaveformBuffer wfLowBuff;
         static public WaveformBuffer wfHighBuff;
-        public static SerialPort gPort = new SerialPort("COM5", 9600, Parity.None, 8, StopBits.One);
+        public static SerialPort gPort = new SerialPort("COM5", 115200, Parity.None, 8, StopBits.One);
         public static Valves gValves = new Valves();
         public static VentStateMachine.BreathStates BreathState = VentStateMachine.BreathStates.None;
         public static float curPBuff;
@@ -23,5 +23,6 @@ namespace OMDemo1
         public static float PEEP = 30;
         public static float RespRate = 10;
         public static Stopwatch stopwatch = new Stopwatch();
+        public static string serialIn = "";
     }
 }

@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
+using System.Windows.Forms;
 
 namespace OMDemo1
-{
-    class Timers
-    {
+{ 
         class AccurateTimer
         {
             private delegate void TimerEventDel(int id, int msg, IntPtr user, int dw1, int dw2);
@@ -48,5 +48,5 @@ namespace OMDemo1
                     mForm.BeginInvoke(mAction);
             }
         }
-    }
+    
 }
