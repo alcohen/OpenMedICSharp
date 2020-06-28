@@ -102,7 +102,7 @@ namespace OMDemo1
         public static bool DoPreVentilation()
         {
             //return DoTimedState();
-            if (GlobalVars.curPBuff >= 800)
+            if (GlobalVars.curPBuff >= 500)
             {
                 return false;
             }
@@ -139,7 +139,7 @@ namespace OMDemo1
 
         public static bool DoInhalation()
         {
-            if (GlobalVars.curPSys >= 75)
+            if (GlobalVars.curPSys >= 10)
             {
                 return false;
             }
@@ -159,7 +159,7 @@ namespace OMDemo1
         public static bool DoExhalationFill()
         {
             Debug.WriteLine(GlobalVars.curPBuff);
-            if (GlobalVars.curPBuff >= 800)
+            if (GlobalVars.curPBuff >= 500)
             {
                 return false;
             }

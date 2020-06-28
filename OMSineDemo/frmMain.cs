@@ -94,8 +94,8 @@ namespace OMDemo1
         private void TimerReturn()
         {
             //Debug.WriteLine("AT=" + TotalStopwatch.ElapsedMilliseconds);
-            GlobalVars.wfLowBuff.addValue(new Sample(GlobalVars.curPSys - GlobalVars.curPAmbientSys));
-            GlobalVars.wfHighBuff.addValue(new Sample(GlobalVars.curPBuff- GlobalVars.curPAmbientSys));
+            GlobalVars.wfLowBuff.addValue(new Sample(GlobalVars.curPSys));
+            GlobalVars.wfHighBuff.addValue(new Sample(GlobalVars.curPBuff));
         }
 
         private void btnStartStop_Click(object sender, EventArgs e)
@@ -140,11 +140,11 @@ namespace OMDemo1
                     float sampNum = Convert.ToSingle(splitted[i].ToString().Substring(2));
                     if (sampType == "L")
                     {
-                        GlobalVars.curPSys = sampNum;
+                        GlobalVars.curPSys = sampNum - GlobalVars.curPAmbientSys;
                     }
                     else
                     {
-                        GlobalVars.curPBuff = sampNum;
+                        GlobalVars.curPBuff = sampNum - GlobalVars.curPAmbientBuf;
                     }
                 }
             }
