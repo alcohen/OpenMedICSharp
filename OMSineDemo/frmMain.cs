@@ -61,7 +61,7 @@ namespace OMDemo1
 
             //declare ambient pressure offsets
             GlobalVars.curPAmbientBuf = 1000;
-            GlobalVars.curPAmbientSys = 1000;
+            GlobalVars.curPAmbientSys = 1005;
 
             //regexLow = new Regex(@"^[-+]?[0-9]*\.[0-9]+$", RegexOptions.Compiled | RegexOptions.IgnoreCase);            
             rtgHigh.WFThis = GlobalVars.wfHighBuff;
@@ -268,13 +268,13 @@ namespace OMDemo1
                     lblInhalation.BackColor = inStateBackColor;
                     break;
 
-                case VentStateMachine.BreathStates.ExhalationFill:
-                    lblExhalation.BackColor = inStateBackColor;
-                    lblBufferRefill.BackColor = inStateBackColor;
-                    break;
-
                 case VentStateMachine.BreathStates.Exhalation:
                     lblExhalation.BackColor = inStateBackColor;
+                    break;
+
+                case VentStateMachine.BreathStates.TimingPauseFill:
+                    lblTimingPause.BackColor = inStateBackColor;
+                    lblBufferRefill.BackColor = inStateBackColor;
                     break;
 
                 case VentStateMachine.BreathStates.TimingPause:

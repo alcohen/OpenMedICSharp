@@ -8,11 +8,13 @@ namespace OMDemo1
 {
     static class VentStateMachine
     {
-        public enum BreathStates { None, PreVentilation, PreVentilated, Inhalation, ExhalationFill, Exhalation, TimingPause };
+        public enum BreathStates { None, PreVentilation, PreVentilated, InhalationDebounce, Inhalation, InhalationHold, Exhalation, TimingPauseFill, TimingPause };
         public enum GasStates { NotFilling, O2Filling, AirFIlling };
 
         private static long millisStart = 0;
         private static long millisToRun = 0;
+
+        private static long debounceTime = 333; //ms
 
         public static void StateMachine()
         {
@@ -32,21 +34,26 @@ namespace OMDemo1
                 case BreathStates.PreVentilated:
                     if (!DoPreVentilated())
                     {
-                        ToInhalation();
+                        ToInhalationDebounce();
                     }
                     break;
 
+                case BreathStates.InhalationDebounce:
+                    if (!DoInhalationDebounce())
+                    {
+                        ToInhalation();
+                    }
+                    break;
         
                 case BreathStates.Inhalation:
                     if (!DoInhalation())
                     {
-                        ToExhalationFill();
+                        ToInhalationHold();
                     }
                     break;
 
-                case BreathStates.ExhalationFill:
-                    GlobalVars.stopwatch.Start();
-                    if (!DoExhalationFill())
+                case BreathStates.InhalationHold:
+                    if (!DoInhalationHold())
                     {
                         ToExhalation();
                     }
@@ -54,6 +61,13 @@ namespace OMDemo1
 
                 case BreathStates.Exhalation:
                     if (!DoExhalation())
+                    {
+                        ToTimingPauseFill();
+                    }
+                    break;
+
+                case BreathStates.TimingPauseFill:
+                    if (!DoTimingPauseFill())
                     {
                         ToTimingPause();
                     }
@@ -128,7 +142,20 @@ namespace OMDemo1
             return DoTimedState();
         }
 
-        public static void ToInhalation()
+        public static void ToInhalationDebounce()
+        {
+            GlobalVars.gValves.Clear();
+            GlobalVars.gValves.SetValves(false, false, true, false);
+            millisStart = GetMillis();
+            millisToRun = 0;
+            GlobalVars.BreathState = BreathStates.InhalationDebounce;
+        }
+
+        public static bool DoInhalationDebounce()
+        {
+            return DoTimedState();
+        }
+            public static void ToInhalation()
         {
             GlobalVars.gValves.Clear();
             GlobalVars.gValves.SetValves(false, false, true, false);
@@ -149,13 +176,23 @@ namespace OMDemo1
             }
         }
 
-        public static void ToExhalationFill()
+        public static void ToInhalationHold()
         {
             GlobalVars.gValves.Clear();
-            GlobalVars.gValves.SetValves(true, false, false, true);
-            GlobalVars.BreathState = BreathStates.ExhalationFill;
+            GlobalVars.gValves.SetValves(false, false, false, false);
+            //millisStart = GetMillis();
+            //millisToRun = 3000;
+            millisStart = GetMillis();
+            millisToRun = 4000;
+            GlobalVars.BreathState = BreathStates.InhalationHold;
         }
 
+        public static bool DoInhalationHold()
+        {
+            return DoTimedState();
+        }
+
+        /*
         public static bool DoExhalationFill()
         {
             Debug.WriteLine(GlobalVars.curPBuff);
@@ -168,6 +205,7 @@ namespace OMDemo1
                 return true;
             }
         }
+        */
 
         public static void ToExhalation()
         {
@@ -181,6 +219,26 @@ namespace OMDemo1
         public static bool DoExhalation()
         {
             if (GlobalVars.curPSys <= GlobalVars.PEEP)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        public static void ToTimingPauseFill()
+        {
+            GlobalVars.gValves.Clear();
+            GlobalVars.gValves.SetValves(true, false, false, false);
+            GlobalVars.BreathState = BreathStates.TimingPauseFill;
+        }
+
+        public static bool DoTimingPauseFill()
+        {
+            Debug.WriteLine(GlobalVars.curPBuff);
+            if (GlobalVars.curPBuff >= 500)
             {
                 return false;
             }

@@ -21,7 +21,7 @@ namespace OMDemo1
         public static float curPAmbientBuf;
         public static float curPAmbientSys;
         public static float PEEP = 5;
-        public static float RespRate = 5;
+        public static float RespRate = 8;
         public static Stopwatch stopwatch = new Stopwatch();
         public static string serialIn = "";
     }

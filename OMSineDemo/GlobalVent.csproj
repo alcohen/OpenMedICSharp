@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BoxcarFilter.cs" />
     <Compile Include="Timer.cs" />
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>

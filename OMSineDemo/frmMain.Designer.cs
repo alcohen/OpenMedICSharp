@@ -362,7 +362,7 @@ namespace OMDemo1
             this.rtgLow.XAxisTicWidth = 1;
             this.rtgLow.YAxisCaptionFont = new System.Drawing.Font("Arial", 12F);
             this.rtgLow.YAxisCaptionText = "Units";
-            this.rtgLow.YAxisDispMax = 50F;
+            this.rtgLow.YAxisDispMax = 30F;
             this.rtgLow.YAxisDispMin = 0F;
             this.rtgLow.YAxisMaxNumTics = 5;
             this.rtgLow.YAxisNumberFont = new System.Drawing.Font("Arial", 10F);
