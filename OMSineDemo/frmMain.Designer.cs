@@ -50,7 +50,6 @@ namespace OMDemo1
         {
             this.components = new System.ComponentModel.Container();
             this.tabMainTabSet = new System.Windows.Forms.TabControl();
-            this.tbpCal = new System.Windows.Forms.TabPage();
             this.tbpMain = new System.Windows.Forms.TabPage();
             this.rtGraph3 = new OpenMedIC.RTGraph();
             this.rtgFlow = new OpenMedIC.RTGraph();
@@ -58,8 +57,6 @@ namespace OMDemo1
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.btnFlow = new System.Windows.Forms.Button();
-            this.btnZero = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblBufferRefill = new System.Windows.Forms.Label();
             this.lblTimingPause = new System.Windows.Forms.Label();
@@ -76,12 +73,31 @@ namespace OMDemo1
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.rtgLow = new OpenMedIC.RTGraph();
+            this.tbpCal = new System.Windows.Forms.TabPage();
+            this.btnCalComplete = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblBank = new System.Windows.Forms.Label();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnCalZero = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tmrStateLoop = new System.Windows.Forms.Timer(this.components);
             this.tabMainTabSet.SuspendLayout();
             this.tbpMain.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.grpValveState.SuspendLayout();
+            this.tbpCal.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabMainTabSet
@@ -94,24 +110,12 @@ namespace OMDemo1
             this.tabMainTabSet.Size = new System.Drawing.Size(1094, 589);
             this.tabMainTabSet.TabIndex = 27;
             // 
-            // tbpCal
-            // 
-            this.tbpCal.Location = new System.Drawing.Point(4, 22);
-            this.tbpCal.Name = "tbpCal";
-            this.tbpCal.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpCal.Size = new System.Drawing.Size(1086, 563);
-            this.tbpCal.TabIndex = 0;
-            this.tbpCal.Text = "Calibrate";
-            this.tbpCal.UseVisualStyleBackColor = true;
-            // 
             // tbpMain
             // 
             this.tbpMain.Controls.Add(this.rtGraph3);
             this.tbpMain.Controls.Add(this.rtgFlow);
             this.tbpMain.Controls.Add(this.rtgHigh);
             this.tbpMain.Controls.Add(this.groupBox1);
-            this.tbpMain.Controls.Add(this.btnFlow);
-            this.tbpMain.Controls.Add(this.btnZero);
             this.tbpMain.Controls.Add(this.textBox1);
             this.tbpMain.Controls.Add(this.lblBufferRefill);
             this.tbpMain.Controls.Add(this.lblTimingPause);
@@ -282,24 +286,6 @@ namespace OMDemo1
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Manual";
             this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // btnFlow
-            // 
-            this.btnFlow.Location = new System.Drawing.Point(953, 40);
-            this.btnFlow.Name = "btnFlow";
-            this.btnFlow.Size = new System.Drawing.Size(113, 23);
-            this.btnFlow.TabIndex = 42;
-            this.btnFlow.Text = "Zero Flow";
-            this.btnFlow.UseVisualStyleBackColor = true;
-            // 
-            // btnZero
-            // 
-            this.btnZero.Location = new System.Drawing.Point(953, 11);
-            this.btnZero.Name = "btnZero";
-            this.btnZero.Size = new System.Drawing.Size(113, 23);
-            this.btnZero.TabIndex = 41;
-            this.btnZero.Text = "Zero Pressures";
-            this.btnZero.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
@@ -491,6 +477,175 @@ namespace OMDemo1
             this.rtgLow.YAxisTicLength = 5;
             this.rtgLow.YAxisTicWidth = 1;
             // 
+            // tbpCal
+            // 
+            this.tbpCal.Controls.Add(this.btnCalComplete);
+            this.tbpCal.Controls.Add(this.tableLayoutPanel1);
+            this.tbpCal.Controls.Add(this.textBox3);
+            this.tbpCal.Location = new System.Drawing.Point(4, 22);
+            this.tbpCal.Name = "tbpCal";
+            this.tbpCal.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpCal.Size = new System.Drawing.Size(1086, 563);
+            this.tbpCal.TabIndex = 0;
+            this.tbpCal.Text = "Calibrate";
+            this.tbpCal.UseVisualStyleBackColor = true;
+            // 
+            // btnCalComplete
+            // 
+            this.btnCalComplete.Location = new System.Drawing.Point(204, 260);
+            this.btnCalComplete.Name = "btnCalComplete";
+            this.btnCalComplete.Size = new System.Drawing.Size(75, 23);
+            this.btnCalComplete.TabIndex = 2;
+            this.btnCalComplete.Text = "Complete";
+            this.btnCalComplete.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.lblBank, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.numericUpDown3, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.numericUpDown2, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.numericUpDown1, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.button1, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.button2, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.button3, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.btnCalZero, 1, 1);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 56);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(315, 198);
+            this.tableLayoutPanel1.TabIndex = 1;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+            // 
+            // lblBank
+            // 
+            this.lblBank.BackColor = System.Drawing.Color.LightCyan;
+            this.lblBank.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblBank.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBank.Location = new System.Drawing.Point(160, 3);
+            this.lblBank.Margin = new System.Windows.Forms.Padding(3);
+            this.lblBank.Name = "lblBank";
+            this.lblBank.Size = new System.Drawing.Size(152, 33);
+            this.lblBank.TabIndex = 10;
+            this.lblBank.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numericUpDown3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown3.Location = new System.Drawing.Point(3, 164);
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(151, 26);
+            this.numericUpDown3.TabIndex = 9;
+            this.numericUpDown3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown3.ThousandsSeparator = true;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown2.Location = new System.Drawing.Point(3, 120);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(151, 26);
+            this.numericUpDown2.TabIndex = 8;
+            this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown2.ThousandsSeparator = true;
+            // 
+            // label4
+            // 
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(3, 42);
+            this.label4.Margin = new System.Windows.Forms.Padding(3);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(151, 33);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Zero";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.LightCyan;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 3);
+            this.label3.Margin = new System.Windows.Forms.Padding(3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(151, 33);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Flow";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Location = new System.Drawing.Point(3, 84);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(150, 26);
+            this.numericUpDown1.TabIndex = 4;
+            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown1.ThousandsSeparator = true;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.Location = new System.Drawing.Point(198, 86);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Sample";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button2.Location = new System.Drawing.Point(198, 125);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Sample";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button3.Location = new System.Drawing.Point(198, 165);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "Sample";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // btnCalZero
+            // 
+            this.btnCalZero.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCalZero.Location = new System.Drawing.Point(198, 47);
+            this.btnCalZero.Name = "btnCalZero";
+            this.btnCalZero.Size = new System.Drawing.Size(75, 23);
+            this.btnCalZero.TabIndex = 1;
+            this.btnCalZero.Text = "Sample";
+            this.btnCalZero.UseVisualStyleBackColor = true;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(6, 6);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(315, 44);
+            this.textBox3.TabIndex = 0;
+            this.textBox3.Text = "Calibrate by sampling known flow at zero plus three other points";
+            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
@@ -515,6 +670,12 @@ namespace OMDemo1
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.grpValveState.ResumeLayout(false);
+            this.tbpCal.ResumeLayout(false);
+            this.tbpCal.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -530,8 +691,6 @@ namespace OMDemo1
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Button btnFlow;
-        private System.Windows.Forms.Button btnZero;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblBufferRefill;
         private System.Windows.Forms.Label lblTimingPause;
@@ -550,6 +709,19 @@ namespace OMDemo1
         private OpenMedIC.RTGraph rtgLow;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Timer tmrStateLoop;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button btnCalZero;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Button btnCalComplete;
+        private System.Windows.Forms.Label lblBank;
+        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
 
