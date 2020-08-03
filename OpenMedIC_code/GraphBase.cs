@@ -29,7 +29,7 @@ using System.Windows.Forms;
 
 namespace OpenMedIC
 {
-    public abstract partial class GraphBase : UserControl
+    public partial class GraphBase : UserControl //Not abstract because visual components blow a fuse when base class is abstract
 	{
 
 		#region declarations

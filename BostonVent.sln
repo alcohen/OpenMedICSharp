@@ -4,7 +4,7 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenMedICish", "OpenMedIC_code\OpenMedICish.csproj", "{B3EDF8A1-1CF9-4AD5-884F-0BA184911243}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalVent", "OMSineDemo\GlobalVent.csproj", "{F1B111E8-A84E-48CA-A2E7-D478A21292DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BostonVent", "OMSineDemo\BostonVent.csproj", "{F1B111E8-A84E-48CA-A2E7-D478A21292DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
