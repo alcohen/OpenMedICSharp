@@ -87,7 +87,7 @@ namespace OMDemo1
             TotalStopwatch.Start();
             int delay = 100;   // In milliseconds. 10 = 1/100th second.
             mTimer1 = new AccurateTimer(this, new Action(TimerReturn), delay);
-            //delay = 100;
+            GlobalVars.gValves.SetValves(false, false, false, false); //close all valves
             tmrStateLoop.Enabled = true;
         }
 
@@ -148,62 +148,7 @@ namespace OMDemo1
                     }
                 }
             }
-
-            //string pattern = @"^([HL]=)[-+]?[0-9]*(\.[0-9]+)?\r$";
-            //if (Regex.IsMatch(indata, pattern))
-            //{
-            //    string sampType = indata.ToString().Substring(0, 1);
-            //    float sampNum = Convert.ToSingle(indata.ToString().Substring(2));
-            //    if (sampType == "L")
-            //    {
-            //        GlobalVars.curPSys = sampNum;
-            //    }
-            //    else
-            //    {
-            //        GlobalVars.curPBuff = sampNum;
-            //    }
-            //}
-
-
-
-
-            /*
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
-            SerialPort sp = (SerialPort)sender;
-            //sp.DiscardInBuffer();
-            try
-            {
-                Debug.WriteLine("SBT=" + DateTime.Now.Millisecond);
-                Debug.WriteLine("SB=" + sp.BytesToRead);
-                string indata = sp.ReadLine();
-                Debug.Write(indata);
-
-                string pattern = @"^([HL]=)[-+]?[0-9]*(\.[0-9]+)?\r$";
-                if (Regex.IsMatch(indata, pattern))
-                {
-                    string sampType = indata.ToString().Substring(0, 1);
-                    float sampNum = Convert.ToSingle(indata.ToString().Substring(2));
-                    if (sampType == "L")
-                    {
-                        GlobalVars.curPSys = sampNum;
-                    }
-                    else
-                    {
-                        GlobalVars.curPBuff = sampNum;
-                    }
-                }
-            }
-            catch (TimeoutException ex)
-            {
-                Debug.Write("----------------> nothin");
-            }
-            stopwatch.Stop();
-            Debug.WriteLine("DataReceivedHandler: " + stopwatch.ElapsedMilliseconds);
-            //long stopMillis = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
-            //~Debug.WriteLine(stopMillis - startMillis);
-            */
-        }
+         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -299,6 +244,14 @@ namespace OMDemo1
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void ckbA_CheckedChanged(object sender, EventArgs e)
+        {
+            if (((CheckBox)sender).Checked)
+             {
+                GlobalVars.gValves.SetValves(false, false, false, false);
+            }
         }
     }
 }

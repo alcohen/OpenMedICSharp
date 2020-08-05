@@ -89,6 +89,12 @@ namespace OMDemo1
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tmrStateLoop = new System.Windows.Forms.Timer(this.components);
+            this.tbpTesting = new System.Windows.Forms.TabPage();
+            this.ckbA = new System.Windows.Forms.CheckBox();
+            this.ckbD = new System.Windows.Forms.CheckBox();
+            this.ckbC = new System.Windows.Forms.CheckBox();
+            this.ckbB = new System.Windows.Forms.CheckBox();
+            this.grpbValveStates = new System.Windows.Forms.GroupBox();
             this.tabMainTabSet.SuspendLayout();
             this.tbpMain.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -98,12 +104,15 @@ namespace OMDemo1
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.tbpTesting.SuspendLayout();
+            this.grpbValveStates.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabMainTabSet
             // 
             this.tabMainTabSet.Controls.Add(this.tbpMain);
             this.tabMainTabSet.Controls.Add(this.tbpCal);
+            this.tabMainTabSet.Controls.Add(this.tbpTesting);
             this.tabMainTabSet.Location = new System.Drawing.Point(12, 12);
             this.tabMainTabSet.Name = "tabMainTabSet";
             this.tabMainTabSet.SelectedIndex = 0;
@@ -654,6 +663,71 @@ namespace OMDemo1
             // 
             this.tmrStateLoop.Interval = 50;
             // 
+            // tbpTesting
+            // 
+            this.tbpTesting.Controls.Add(this.grpbValveStates);
+            this.tbpTesting.Location = new System.Drawing.Point(4, 22);
+            this.tbpTesting.Name = "tbpTesting";
+            this.tbpTesting.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpTesting.Size = new System.Drawing.Size(1086, 563);
+            this.tbpTesting.TabIndex = 2;
+            this.tbpTesting.Text = "Testing";
+            this.tbpTesting.UseVisualStyleBackColor = true;
+            // 
+            // ckbA
+            // 
+            this.ckbA.AutoSize = true;
+            this.ckbA.Location = new System.Drawing.Point(24, 32);
+            this.ckbA.Name = "ckbA";
+            this.ckbA.Size = new System.Drawing.Size(90, 17);
+            this.ckbA.TabIndex = 0;
+            this.ckbA.Text = "Valve A open";
+            this.ckbA.UseVisualStyleBackColor = true;
+            this.ckbA.CheckedChanged += new System.EventHandler(this.ckbA_CheckedChanged);
+            // 
+            // ckbD
+            // 
+            this.ckbD.AutoSize = true;
+            this.ckbD.Location = new System.Drawing.Point(24, 101);
+            this.ckbD.Name = "ckbD";
+            this.ckbD.Size = new System.Drawing.Size(91, 17);
+            this.ckbD.TabIndex = 1;
+            this.ckbD.Text = "Valve D open";
+            this.ckbD.UseVisualStyleBackColor = true;
+            // 
+            // ckbC
+            // 
+            this.ckbC.AutoSize = true;
+            this.ckbC.Location = new System.Drawing.Point(24, 78);
+            this.ckbC.Name = "ckbC";
+            this.ckbC.Size = new System.Drawing.Size(90, 17);
+            this.ckbC.TabIndex = 2;
+            this.ckbC.Text = "Valve C open";
+            this.ckbC.UseVisualStyleBackColor = true;
+            // 
+            // ckbB
+            // 
+            this.ckbB.AutoSize = true;
+            this.ckbB.Location = new System.Drawing.Point(24, 55);
+            this.ckbB.Name = "ckbB";
+            this.ckbB.Size = new System.Drawing.Size(90, 17);
+            this.ckbB.TabIndex = 3;
+            this.ckbB.Text = "Valve B open";
+            this.ckbB.UseVisualStyleBackColor = true;
+            // 
+            // grpbValveStates
+            // 
+            this.grpbValveStates.Controls.Add(this.ckbA);
+            this.grpbValveStates.Controls.Add(this.ckbB);
+            this.grpbValveStates.Controls.Add(this.ckbD);
+            this.grpbValveStates.Controls.Add(this.ckbC);
+            this.grpbValveStates.Location = new System.Drawing.Point(40, 32);
+            this.grpbValveStates.Name = "grpbValveStates";
+            this.grpbValveStates.Size = new System.Drawing.Size(139, 141);
+            this.grpbValveStates.TabIndex = 4;
+            this.grpbValveStates.TabStop = false;
+            this.grpbValveStates.Text = "Valve States";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -676,6 +750,9 @@ namespace OMDemo1
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.tbpTesting.ResumeLayout(false);
+            this.grpbValveStates.ResumeLayout(false);
+            this.grpbValveStates.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -722,6 +799,12 @@ namespace OMDemo1
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TabPage tbpTesting;
+        private System.Windows.Forms.CheckBox ckbA;
+        private System.Windows.Forms.GroupBox grpbValveStates;
+        private System.Windows.Forms.CheckBox ckbB;
+        private System.Windows.Forms.CheckBox ckbD;
+        private System.Windows.Forms.CheckBox ckbC;
     }
 }
 
