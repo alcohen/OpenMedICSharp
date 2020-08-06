@@ -246,11 +246,11 @@ namespace OMDemo1
 
         }
 
-        private void ckbA_CheckedChanged(object sender, EventArgs e)
+        private void ckbAny_CheckedChanged(object sender, EventArgs e)
         {
             if (((CheckBox)sender).Checked)
              {
-                GlobalVars.gValves.SetValves(false, false, false, false);
+                GlobalVars.gValves.SetValve(Valve.A, true);                
             }
         }
     }

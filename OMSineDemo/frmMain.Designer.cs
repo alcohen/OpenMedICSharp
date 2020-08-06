@@ -683,7 +683,7 @@ namespace OMDemo1
             this.ckbA.TabIndex = 0;
             this.ckbA.Text = "Valve A open";
             this.ckbA.UseVisualStyleBackColor = true;
-            this.ckbA.CheckedChanged += new System.EventHandler(this.ckbA_CheckedChanged);
+            this.ckbA.CheckedChanged += new System.EventHandler(this.ckbAny_CheckedChanged);
             // 
             // ckbD
             // 
