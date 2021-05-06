@@ -225,14 +225,7 @@ namespace OpenMedIC
                     follower.addValues(newValues);
                 }
             }
-            //lock ( followers )
-            //{
-            //	foreach (object cur in followers)
-            //	{
-            //		follower = (IReceiver)cur;
-            //		follower.addValues(newValues);
-            //	}
-			//}
+ 
 		}
 
 	}	// End of CLASS

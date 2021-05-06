@@ -142,6 +142,9 @@
     <Compile Include="GraphBase.Designer.cs">
       <DependentUpon>GraphBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="GraphBaseChicane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="IReceiver.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -216,8 +219,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="ClassDiagram.cd" />
-    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
